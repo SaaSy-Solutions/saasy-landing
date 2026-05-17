@@ -29,12 +29,12 @@ export function DashboardGraphic(): React.ReactElement {
             app.hellosaasy.ai — Command Center
           </span>
         </div>
-        {/* Real product screenshot */}
+        {/* Real product screenshot — annotated hero */}
         <Image
-          src="/images/product/dashboard-overview.png"
-          alt="SaaSy Command Center dashboard showing business health, daily briefing, and action items"
-          width={1280}
-          height={800}
+          src="/images/product/dashboard-overview-annotated.png"
+          alt="SaaSy Command Center dashboard showing real-time health scoring, proactive churn signals, and smart integration recommendations"
+          width={1440}
+          height={900}
           className="w-full"
           priority
         />

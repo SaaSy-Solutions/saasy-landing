@@ -16,7 +16,7 @@ const FEATURES: ScreenshotFeature[] = [
       "Manage companies, contacts, deals, and pipelines in one place — no spreadsheet juggling.",
     imageSrc: "/images/product/customers-list.png",
     imageAlt:
-      "SaaSy CRM companies list showing Beacon Veterinary, Clearwater Analytics, and other customers with industry and stage tags",
+      "SaaSy CRM companies list showing Beacon Veterinary, Clearwater Analytics, Ironforge Metalworks, and other customers with industry tags and stage badges",
     badge: "CRM",
   },
   {
@@ -93,6 +93,33 @@ export function ProductScreenshots(): React.ReactElement {
               text-lg text-saasy-muted"
           >
             Real screenshots from a live SaaSy account.
+          </p>
+        </div>
+
+        {/* Demo screencast */}
+        <div className="mb-24">
+          <div className="glow-border overflow-hidden rounded-2xl shadow-2xl">
+            {/* Title bar */}
+            <div className="flex items-center gap-2 border-b border-saasy-border bg-saasy-card/90 px-4 py-2.5">
+              <div className="h-3 w-3 rounded-full bg-red-500/60" />
+              <div className="h-3 w-3 rounded-full bg-yellow-500/60" />
+              <div className="h-3 w-3 rounded-full bg-green-500/60" />
+              <span className="ml-3 font-[family-name:var(--font-poppins)] text-xs text-saasy-muted">
+                app.hellosaasy.ai — Live product tour
+              </span>
+            </div>
+            {/* GIF demo — autoloops, no controls needed */}
+            <Image
+              src="/images/product/demo-tour.gif"
+              alt="SaaSy product tour: Command Center → CRM Companies → Alerts → Integrations → Ask SaaSy AI"
+              width={1200}
+              height={750}
+              className="w-full"
+              unoptimized
+            />
+          </div>
+          <p className="mt-4 text-center font-[family-name:var(--font-poppins)] text-sm text-saasy-muted">
+            A 15-second tour across the Command Center, CRM, Alerts, Integrations, and AI chat.
           </p>
         </div>
 
