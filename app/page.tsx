@@ -16,6 +16,7 @@ import { MarketingFooter } from "./components/MarketingFooter";
 import { ConsultingPromo } from "./components/ConsultingPromo";
 import { SiteNav } from "./components/SiteNav";
 import { Hero } from "./components/Hero";
+import { ProductScreenshots } from "./components/ProductScreenshots";
 
 /* ═══════════════════════════ PAGE ═══════════════════════════════ */
 
@@ -110,6 +111,9 @@ export default function Home(): React.ReactElement {
           </div>
         </div>
       </section>
+
+      {/* ─────────── Product Screenshots ─────────── */}
+      <ProductScreenshots />
 
       {/* ─────────────── Who It's For ─────────────── */}
       <WhoItsFor />
