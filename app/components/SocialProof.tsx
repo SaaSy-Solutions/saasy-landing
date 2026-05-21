@@ -1,83 +1,60 @@
+import Link from "next/link";
+
+/**
+ * Honest social-proof block for the pre-launch period.
+ *
+ * Replaces fabricated testimonials and metrics with a "private
+ * beta" framing. Swap back to a logo bar + real testimonials
+ * once 3+ design partners agree to be named (see follow-up
+ * issues filed against #711).
+ */
 export function SocialProof(): React.ReactElement {
-  const metrics = [
-    { value: "2,400+", label: "Businesses launched" },
-    { value: "< 2 min", label: "Average setup time" },
-    { value: "98%", label: "Trial-to-paid rate" },
-  ];
-
-  const testimonials = [
-    {
-      quote:
-        "SaaSy handled all the compliance paperwork I didn't even know I needed. Saved me weeks.",
-      author: "Maria K.",
-      role: "Founder, Bloom Studio",
-    },
-    {
-      quote:
-        "The daily briefing alone is worth the price. It's like having a COO in my pocket.",
-      author: "James T.",
-      role: "CEO, NorthPeak Consulting",
-    },
-    {
-      quote:
-        "We went from idea to first revenue in 3 weeks with SaaSy guiding every step.",
-      author: "Priya S.",
-      role: "Co-founder, DataLens",
-    },
-  ];
-
   return (
     <section className="border-t border-saasy-border py-24 sm:py-32">
-      <div className="mx-auto max-w-6xl px-6">
-        {/* Metrics bar */}
+      <div className="mx-auto max-w-3xl px-6 text-center">
         <div
-          className="mx-auto mb-16 grid max-w-3xl grid-cols-1
-            gap-8 sm:grid-cols-3"
+          className="inline-flex items-center gap-2 rounded-full
+            border border-saasy-pink/20 bg-saasy-pink/5 px-4
+            py-1.5"
         >
-          {metrics.map((metric) => (
-            <div key={metric.label} className="text-center">
-              <div
-                className="font-[family-name:var(--font-poppins)]
-                  text-3xl font-bold text-white"
-              >
-                {metric.value}
-              </div>
-              <div
-                className="mt-1 font-[family-name:var(--font-poppins)]
-                  text-sm text-saasy-muted"
-              >
-                {metric.label}
-              </div>
-            </div>
-          ))}
+          <span
+            className="h-2 w-2 rounded-full bg-saasy-pink"
+          />
+          <span
+            className="font-[family-name:var(--font-poppins)]
+              text-sm text-saasy-pink"
+          >
+            Currently in private beta
+          </span>
         </div>
 
-        {/* Testimonials grid */}
-        <div className="grid gap-6 sm:grid-cols-3">
-          {testimonials.map((t) => (
-            <blockquote
-              key={t.author}
-              className="rounded-2xl border border-saasy-border
-                bg-saasy-card/50 p-6"
-            >
-              <p
-                className="font-[family-name:var(--font-poppins)]
-                  leading-relaxed text-saasy-muted"
-              >
-                &ldquo;{t.quote}&rdquo;
-              </p>
-              <footer className="mt-4">
-                <div
-                  className="font-[family-name:var(--font-poppins)]
-                    text-sm font-semibold text-white"
-                >
-                  {t.author}
-                </div>
-                <div className="text-sm text-saasy-muted">{t.role}</div>
-              </footer>
-            </blockquote>
-          ))}
-        </div>
+        <h2
+          className="mt-6 font-[family-name:var(--font-poppins)]
+            text-3xl font-bold text-white sm:text-4xl"
+        >
+          Help shape SaaSy from day one
+        </h2>
+
+        <p
+          className="mx-auto mt-4 max-w-xl
+            font-[family-name:var(--font-poppins)] text-lg
+            leading-relaxed text-saasy-muted"
+        >
+          We&rsquo;re working with a small group of early design
+          partners. You get hands-on access, your feedback ships
+          in days not quarters, and your logo goes on this page
+          when we&rsquo;re ready to launch.
+        </p>
+
+        <Link
+          href="https://app.hellosaasy.ai/signup?source=beta"
+          className="mt-8 inline-flex rounded-full bg-saasy-pink
+            px-8 py-4 font-[family-name:var(--font-poppins)]
+            text-base font-semibold uppercase tracking-wider
+            text-white transition-colors hover:bg-saasy-rose"
+        >
+          Apply for early access
+        </Link>
       </div>
     </section>
   );

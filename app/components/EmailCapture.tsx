@@ -114,8 +114,8 @@ export function EmailCapture(): React.ReactElement {
             font-[family-name:var(--font-poppins)]
             text-saasy-muted"
         >
-          Join 2,400+ founders getting weekly insights on
-          business formation, compliance, scaling, and automation strategies.
+          Get occasional updates on what we&rsquo;re shipping,
+          plus early access to new features as they roll out.
         </p>
 
         <form
