@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { DashboardGraphic } from "./DashboardGraphic";
+import { HeroScreenshot } from "./HeroScreenshot";
 
 export function Hero(): React.ReactElement {
   return (
@@ -94,8 +94,8 @@ export function Hero(): React.ReactElement {
           required.
         </p>
 
-        {/* Abstract dashboard */}
-        <DashboardGraphic />
+        {/* Real product screenshot */}
+        <HeroScreenshot />
       </div>
     </section>
   );
