@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import { IconCompliance, IconCRM, IconAI, IconAlerts } from "./components/Icons";
-import { DashboardGraphic } from "./components/DashboardGraphic";
 import { FeatureCard } from "./components/FeatureCard";
 import { WhoItsFor } from "./components/WhoItsFor";
 import { PricingCard, PricingToggle } from "./components/Pricing";

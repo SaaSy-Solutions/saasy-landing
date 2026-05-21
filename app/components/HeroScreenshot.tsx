@@ -2,10 +2,10 @@ import Image from "next/image";
 import { ScreenshotCallout } from "./ScreenshotCallout";
 
 /**
- * Hero product screenshot. Replaces the abstract DashboardGraphic
- * with a real /dashboard/health capture from the Acme Outdoor Co
- * demo tenant. Annotations are JSX overlays so the PNG can be
- * re-captured without rework.
+ * Hero product screenshot. Replaces the previous abstract hero
+ * graphic with a real /dashboard/health capture from the Acme
+ * Outdoor Co demo tenant. Annotations are JSX overlays so the
+ * PNG can be re-captured without rework.
  */
 export function HeroScreenshot(): React.ReactElement {
   return (
