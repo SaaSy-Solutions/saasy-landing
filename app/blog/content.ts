@@ -258,7 +258,7 @@ The goal is to make your CS team feel like they have superpowers — not to make
       "Here's what to watch for before it costs you.",
     date: "2026-05-15",
     readTime: "6 min read",
-    author: "Macon Clanan",
+    author: "Macon Wright",
     sections: [
       {
         heading:
@@ -332,7 +332,7 @@ SaaSy was built to handle the tracking so you don't have to think about it. Star
       "actually hold up under pressure.",
     date: "2026-05-18",
     readTime: "6 min read",
-    author: "Macon Clanan",
+    author: "Macon Wright",
     sections: [
       {
         heading:
@@ -489,7 +489,7 @@ See how consolidated operations feel. Start your free 14-day trial.`,
       "predicts whether your business will be alive next year.",
     date: "2026-05-22",
     readTime: "5 min read",
-    author: "Macon Clanan",
+    author: "Macon Wright",
     sections: [
       {
         heading: "The Dashboard Trap",
