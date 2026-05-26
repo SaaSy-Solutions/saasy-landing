@@ -20,7 +20,7 @@ export const POSTS: BlogPost[] = [
       "business risks early and protect revenue before problems escalate.",
     date: "2026-03-15",
     readTime: "5 min read",
-    author: "Maya Chen",
+    author: "Ray Clanan",
     sections: [
       {
         heading: "The Silent Revenue Killer",
@@ -88,7 +88,7 @@ If you're still tracking customer health in spreadsheets — or worse, not track
       "operational setup that every new founder needs to get right.",
     date: "2026-03-08",
     readTime: "7 min read",
-    author: "Jordan Park",
+    author: "Ray Clanan",
     sections: [
       {
         heading:
@@ -183,7 +183,7 @@ The best onboarding doesn't feel like onboarding. It feels like your product nat
       "operations so founders can focus on growth.",
     date: "2026-02-28",
     readTime: "6 min read",
-    author: "Alex Rivera",
+    author: "Ray Clanan",
     sections: [
       {
         heading: "Separating Signal from Noise",
@@ -258,7 +258,7 @@ The goal is to make your CS team feel like they have superpowers — not to make
       "Here's what to watch for before it costs you.",
     date: "2026-05-15",
     readTime: "6 min read",
-    author: "Taylor Reed",
+    author: "Macon Clanan",
     sections: [
       {
         heading:
@@ -332,7 +332,7 @@ SaaSy was built to handle the tracking so you don't have to think about it. Star
       "actually hold up under pressure.",
     date: "2026-05-18",
     readTime: "6 min read",
-    author: "Samira Patel",
+    author: "Macon Clanan",
     sections: [
       {
         heading:
@@ -410,7 +410,7 @@ If you're running multiple businesses, you already know the pain of managing the
       "Here's why consolidation beats best-in-class.",
     date: "2026-05-20",
     readTime: "5 min read",
-    author: "Jesse Kim",
+    author: "Ray Clanan",
     sections: [
       {
         heading: "Count Your Subscriptions",
@@ -455,11 +455,12 @@ The reporting layer. If you're logging into multiple dashboards to get a complet
       {
         heading: "How Many Tools Do You Actually Need?",
         body: `Honestly? A small business can operate effectively on 5-6 core tools:
+
 1. An all-in-one business operating platform (CRM, compliance, guidance)
 2. A communication tool (Slack, Teams, email)
 3. A payment processor (Stripe, Square)
 4. Document creation and storage (Google Workspace, Microsoft 365)
-5. A specialized tool for your core function (design, development, inventory, etc.)
+5. A specialized tool for your core function (design, development, inventory)
 6. Banking and accounting
 
 Everything else should be critically evaluated. If a tool doesn't save you more time per week than it costs in subscription, integration, and switching overhead, cut it.`,
@@ -488,7 +489,7 @@ See how consolidated operations feel. Start your free 14-day trial.`,
       "predicts whether your business will be alive next year.",
     date: "2026-05-22",
     readTime: "5 min read",
-    author: "Dana Foster",
+    author: "Macon Clanan",
     sections: [
       {
         heading: "The Dashboard Trap",
