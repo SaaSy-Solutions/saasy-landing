@@ -175,21 +175,16 @@ export default function PrivacyPolicyPage() {
                 servers is encrypted using TLS 1.2 or higher
               </li>
               <li>
-                <span className="text-white font-medium">SOC 2 compliance</span>{" "}
-                &mdash; our infrastructure and processes are audited against
-                SOC 2 Type II controls
+                <span className="text-white font-medium">
+                  Per-tenant isolation
+                </span>{" "}
+                &mdash; each account&rsquo;s data is logically isolated, enforced
+                at the database level so data is never shared across accounts
               </li>
               <li>
                 <span className="text-white font-medium">Access controls</span>{" "}
                 &mdash; internal access to production systems is restricted to
                 authorized personnel with multi-factor authentication
-              </li>
-              <li>
-                <span className="text-white font-medium">
-                  Regular security audits
-                </span>{" "}
-                &mdash; we conduct periodic security assessments and
-                penetration testing to identify and address vulnerabilities
               </li>
             </ul>
           </section>

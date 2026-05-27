@@ -4,58 +4,48 @@ import { SiteNav } from "../components/SiteNav";
 import { MarketingFooter } from "../components/MarketingFooter";
 
 export const metadata: Metadata = {
-  title: "Customers — SaaSy",
+  title: "How Founders Use SaaSy — SaaSy",
   description:
-    "See how founders use SaaSy to save time, cut costs, " +
-    "and stay on top of every business they run.",
+    "See how SaaSy is built to help founders save time, cut " +
+    "costs, and stay on top of every business they run.",
 };
 
-interface CaseStudy {
-  company: string;
-  industry: string;
-  metric: string;
-  metricLabel: string;
-  quote: string;
-  author: string;
-  authorTitle: string;
+interface UseCase {
+  persona: string;
+  headline: string;
+  description: string;
 }
 
-const CASE_STUDIES: CaseStudy[] = [
+// Illustrative use cases — what SaaSy is built to do, framed around the
+// founders we build for. Deliberately NOT presented as named customer
+// testimonials with hard metrics: we're in beta and won't fabricate
+// results. Swap to real, named stories once design partners agree to be
+// featured (see follow-ups against #711).
+const USE_CASES: UseCase[] = [
   {
-    company: "DataFlow",
-    industry: "E-commerce & Logistics",
-    metric: "100%",
-    metricLabel: "compliance deadlines met",
-    quote:
-      "Before SaaSy, I missed a state tax filing and " +
-      "ate a $4K penalty. Now every deadline is tracked " +
-      "automatically — I haven't missed one since.",
-    author: "Sarah Chen",
-    authorTitle: "Founder & CEO",
+    persona: "First-time founders",
+    headline: "Never miss a deadline",
+    description:
+      "Track every license renewal, tax filing, and regulatory " +
+      "deadline automatically, with proactive alerts before " +
+      "anything is due — so a forgotten filing never becomes a " +
+      "penalty.",
   },
   {
-    company: "ScaleUp",
-    industry: "Multi-brand Retail",
-    metric: "15 hrs",
-    metricLabel: "saved per week",
-    quote:
-      "I run three businesses. SaaSy replaced the " +
-      "spreadsheets, the bookkeeper check-ins, and two " +
-      "SaaS subscriptions. I got my weekends back.",
-    author: "Marcus Rivera",
-    authorTitle: "Serial Entrepreneur",
+    persona: "Agency owners",
+    headline: "One dashboard, every business",
+    description:
+      "Run multiple ventures from a single place, each with its " +
+      "own financials, compliance calendar, and insights. Less " +
+      "tool-switching, fewer things slipping through the cracks.",
   },
   {
-    company: "CloudMetrics",
-    industry: "Professional Services",
-    metric: "$48K",
-    metricLabel: "operational costs cut annually",
-    quote:
-      "SaaSy flagged redundant software subscriptions " +
-      "I forgot I was paying for. It paid for itself " +
-      "in the first month.",
-    author: "Emily Park",
-    authorTitle: "Founder",
+    persona: "Serial entrepreneurs",
+    headline: "Spot wasted spend",
+    description:
+      "Surface redundant software subscriptions and creeping " +
+      "operational costs across your stack, so you can cut what " +
+      "you're no longer using.",
   },
 ];
 
@@ -69,64 +59,50 @@ export default function CustomersPage() {
             className="font-[family-name:var(--font-poppins)]
               text-sm font-medium text-saasy-pink"
           >
-            Trusted by 200+ founders
+            Now in public beta
           </p>
           <h1
             className="mt-2 font-[family-name:var(--font-poppins)]
               text-4xl font-bold tracking-tight text-white"
           >
-            Customer Stories
+            How founders use SaaSy
           </h1>
           <p
             className="mt-4 font-[family-name:var(--font-poppins)]
               text-lg text-saasy-muted"
           >
-            See how founders use SaaSy to save time, cut
-            costs, and stay on top of every business they run.
+            SaaSy is built for founders who run the business and the
+            back office. Here&rsquo;s how it&rsquo;s designed to help
+            at every stage.
           </p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-3">
-          {CASE_STUDIES.map(study => (
+          {USE_CASES.map(useCase => (
             <div
-              key={study.company}
+              key={useCase.headline}
               className="glow-border flex flex-col rounded-xl
                 bg-saasy-card p-8"
             >
-              <div className="mb-6">
-                <p
-                  className="font-[family-name:var(--font-poppins)]
-                    text-4xl font-bold text-saasy-pink"
-                >
-                  {study.metric}
-                </p>
-                <p
-                  className="mt-1 font-[family-name:var(--font-poppins)]
-                    text-sm text-saasy-muted"
-                >
-                  {study.metricLabel}
-                </p>
-              </div>
               <p
-                className="flex-1 font-[family-name:var(--font-poppins)]
+                className="font-[family-name:var(--font-poppins)]
+                  text-sm font-medium text-saasy-pink"
+              >
+                {useCase.persona}
+              </p>
+              <h2
+                className="mt-2 font-[family-name:var(--font-poppins)]
+                  text-xl font-semibold text-white"
+              >
+                {useCase.headline}
+              </h2>
+              <p
+                className="mt-3 flex-1
+                  font-[family-name:var(--font-poppins)]
                   text-sm leading-relaxed text-saasy-text"
               >
-                &ldquo;{study.quote}&rdquo;
+                {useCase.description}
               </p>
-              <div className="mt-6 border-t border-saasy-border pt-4">
-                <p
-                  className="font-[family-name:var(--font-poppins)]
-                    text-sm font-semibold text-white"
-                >
-                  {study.author}
-                </p>
-                <p
-                  className="font-[family-name:var(--font-poppins)]
-                    text-xs text-saasy-muted"
-                >
-                  {study.authorTitle}, {study.company}
-                </p>
-              </div>
             </div>
           ))}
         </div>
@@ -136,7 +112,7 @@ export default function CustomersPage() {
             className="font-[family-name:var(--font-poppins)]
               text-xl font-semibold text-white"
           >
-            Ready to see results like these?
+            Ready to put SaaSy to work?
           </h2>
           <div className="mt-6 flex justify-center gap-4">
             <Link

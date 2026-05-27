@@ -11,7 +11,7 @@ const FAQ_ITEMS = [
   {
     question: "Is my data secure?",
     answer:
-      "Absolutely. We use enterprise-grade encryption (AES-256 at rest, TLS 1.2+ in transit), SOC 2 compliance, and strict tenant isolation. Your business data is never shared across accounts.",
+      "Yes. We encrypt your data at rest (AES-256) and in transit (TLS 1.2+), with strict per-tenant isolation enforced at the database level — your business data is never shared across accounts.",
   },
   {
     question: "Can I manage multiple businesses?",
