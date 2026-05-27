@@ -285,7 +285,14 @@ export default function FeaturesPage(): React.ReactElement {
               className="glow-border rounded-2xl bg-saasy-card/80 p-8
                 backdrop-blur-sm"
             >
-              <div className="grid grid-cols-2 gap-4">
+              <p
+                className="font-[family-name:var(--font-poppins)]
+                  text-xs font-semibold uppercase tracking-wider
+                  text-saasy-muted"
+              >
+                Works with
+              </p>
+              <div className="mt-4 grid grid-cols-2 gap-4">
                 {[
                   { slug: "stripe", name: "Stripe" },
                   { slug: "hubspot", name: "HubSpot" },
@@ -294,22 +301,15 @@ export default function FeaturesPage(): React.ReactElement {
                 ].map((brand) => (
                   <div
                     key={brand.slug}
-                    className="flex items-center justify-center gap-3
-                      rounded-xl border border-saasy-border
-                      bg-saasy-darker/60 px-4 py-6"
+                    className="flex items-center justify-center
+                      rounded-xl bg-white px-5 py-5 ring-1 ring-black/5"
                   >
                     <img
                       src={`/connectors/${brand.slug}.svg`}
                       alt={brand.name}
-                      className="h-7 w-7"
+                      className="h-6 w-auto"
                       loading="lazy"
                     />
-                    <span
-                      className="font-[family-name:var(--font-poppins)]
-                        text-sm font-medium text-saasy-text"
-                    >
-                      {brand.name}
-                    </span>
                   </div>
                 ))}
               </div>
