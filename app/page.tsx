@@ -46,9 +46,9 @@ export default function Home(): React.ReactElement {
           className="mx-auto grid max-w-4xl grid-cols-2
             gap-8 px-6 py-12 sm:grid-cols-4"
         >
-          <TrustBadge label="99.9%" sublabel="Uptime SLA" />
-          <TrustBadge label="SOC 2" sublabel="Compliant" />
           <TrustBadge label="256-bit" sublabel="Encryption" />
+          <TrustBadge label="TLS 1.2+" sublabel="In transit" />
+          <TrustBadge label="Tenant" sublabel="Isolation" />
           <TrustBadge
             label="GDPR"
             sublabel="Ready"
@@ -236,9 +236,9 @@ export default function Home(): React.ReactElement {
               font-[family-name:var(--font-poppins)] text-lg
               text-saasy-muted"
           >
-            Join thousands of entrepreneurs using SaaSy to build
-            and grow their businesses. Start your 14-day free
-            trial today.
+            Start building and growing your business with SaaSy.
+            Begin your 14-day free trial today — no credit card
+            required.
           </p>
           <Link
             href="https://app.hellosaasy.ai/signup"
