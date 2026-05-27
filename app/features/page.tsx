@@ -299,7 +299,7 @@ export default function FeaturesPage(): React.ReactElement {
                       bg-saasy-darker/60 px-4 py-6"
                   >
                     <img
-                      src={`https://cdn.simpleicons.org/${brand.slug}/94a3b8`}
+                      src={`/connectors/${brand.slug}.svg`}
                       alt={brand.name}
                       className="h-7 w-7"
                       loading="lazy"
