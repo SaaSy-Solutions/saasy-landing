@@ -127,6 +127,15 @@ export function MarketingFooter(): React.ReactElement {
             <ul className="space-y-3">
               <li>
                 <a
+                  href="https://docs.hellosaasy.ai"
+                  className="text-saasy-muted font-[family-name:var(--font-poppins)]
+                    text-sm hover:text-white transition-colors"
+                >
+                  Documentation
+                </a>
+              </li>
+              <li>
+                <a
                   href="mailto:support@hellosaasy.ai"
                   className="text-saasy-muted font-[family-name:var(--font-poppins)]
                     text-sm hover:text-white transition-colors"

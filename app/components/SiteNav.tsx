@@ -15,6 +15,7 @@ const NAV_LINKS: NavLink[] = [
   { href: "/services", label: "Services" },
   { href: "/blog", label: "Blog" },
   { href: "/integrations", label: "Integrations" },
+  { href: "https://docs.hellosaasy.ai", label: "Docs" },
 ];
 
 /** Unified site navigation for all pages. */
