@@ -21,7 +21,7 @@ export function Hero(): React.ReactElement {
             className="font-[family-name:var(--font-poppins)]
               text-sm text-saasy-pink"
           >
-            Now in public beta
+            Now in beta — early access open
           </span>
         </div>
 

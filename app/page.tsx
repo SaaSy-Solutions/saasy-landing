@@ -46,9 +46,9 @@ export default function Home(): React.ReactElement {
           className="mx-auto grid max-w-4xl grid-cols-2
             gap-8 px-6 py-12 sm:grid-cols-4"
         >
-          <TrustBadge label="99.9%" sublabel="Uptime SLA" />
-          <TrustBadge label="SOC 2" sublabel="Compliant" />
-          <TrustBadge label="256-bit" sublabel="Encryption" />
+          <TrustBadge label="AES-256" sublabel="Encryption" />
+          <TrustBadge label="TLS 1.2+" sublabel="In transit" />
+          <TrustBadge label="Tenant" sublabel="Isolation" />
           <TrustBadge
             label="GDPR"
             sublabel="Ready"

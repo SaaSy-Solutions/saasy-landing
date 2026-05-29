@@ -6,56 +6,34 @@ import { MarketingFooter } from "../components/MarketingFooter";
 export const metadata: Metadata = {
   title: "Customers — SaaSy",
   description:
-    "See how founders use SaaSy to save time, cut costs, " +
-    "and stay on top of every business they run.",
+    "SaaSy is in beta. Real, named customer stories will live " +
+    "here as our first founders hit their milestones.",
 };
 
-interface CaseStudy {
-  company: string;
-  industry: string;
-  metric: string;
-  metricLabel: string;
-  quote: string;
-  author: string;
-  authorTitle: string;
+/** What SaaSy is built to help founders do (capability, not testimonial). */
+interface Outcome {
+  title: string;
+  body: string;
 }
 
-const CASE_STUDIES: CaseStudy[] = [
+const OUTCOMES: Outcome[] = [
   {
-    company: "DataFlow",
-    industry: "E-commerce & Logistics",
-    metric: "100%",
-    metricLabel: "compliance deadlines met",
-    quote:
-      "Before SaaSy, I missed a state tax filing and " +
-      "ate a $4K penalty. Now every deadline is tracked " +
-      "automatically — I haven't missed one since.",
-    author: "Sarah Chen",
-    authorTitle: "Founder & CEO",
+    title: "Never miss a deadline",
+    body:
+      "Track licenses, permits, and filings with reminders ahead " +
+      "of each due date — not a scramble after one passes.",
   },
   {
-    company: "ScaleUp",
-    industry: "Multi-brand Retail",
-    metric: "15 hrs",
-    metricLabel: "saved per week",
-    quote:
-      "I run three businesses. SaaSy replaced the " +
-      "spreadsheets, the bookkeeper check-ins, and two " +
-      "SaaS subscriptions. I got my weekends back.",
-    author: "Marcus Rivera",
-    authorTitle: "Serial Entrepreneur",
+    title: "Get hours back",
+    body:
+      "One dashboard in place of spreadsheets, manual check-ins, " +
+      "and constant tool-switching across every business you run.",
   },
   {
-    company: "CloudMetrics",
-    industry: "Professional Services",
-    metric: "$48K",
-    metricLabel: "operational costs cut annually",
-    quote:
-      "SaaSy flagged redundant software subscriptions " +
-      "I forgot I was paying for. It paid for itself " +
-      "in the first month.",
-    author: "Emily Park",
-    authorTitle: "Founder",
+    title: "Cut wasted spend",
+    body:
+      "Surface redundant subscriptions and costs you forgot you " +
+      "were paying, so your stack stops quietly eating your margin.",
   },
 ];
 
@@ -69,7 +47,7 @@ export default function CustomersPage() {
             className="font-[family-name:var(--font-poppins)]
               text-sm font-medium text-saasy-pink"
           >
-            Trusted by 200+ founders
+            Now in beta
           </p>
           <h1
             className="mt-2 font-[family-name:var(--font-poppins)]
@@ -78,55 +56,47 @@ export default function CustomersPage() {
             Customer Stories
           </h1>
           <p
-            className="mt-4 font-[family-name:var(--font-poppins)]
+            className="mx-auto mt-4 max-w-2xl
+              font-[family-name:var(--font-poppins)]
               text-lg text-saasy-muted"
           >
-            See how founders use SaaSy to save time, cut
-            costs, and stay on top of every business they run.
+            SaaSy is brand new and we&rsquo;re building alongside
+            our first founders. Real, named stories will live here
+            as our early customers hit their milestones — no stock
+            photos, no invented quotes.
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-3">
-          {CASE_STUDIES.map(study => (
+        <div className="mt-16 text-center">
+          <h2
+            className="font-[family-name:var(--font-poppins)]
+              text-sm font-semibold uppercase tracking-wider
+              text-saasy-muted"
+          >
+            What SaaSy is built to do
+          </h2>
+        </div>
+
+        <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-3">
+          {OUTCOMES.map(outcome => (
             <div
-              key={study.company}
+              key={outcome.title}
               className="glow-border flex flex-col rounded-xl
                 bg-saasy-card p-8"
             >
-              <div className="mb-6">
-                <p
-                  className="font-[family-name:var(--font-poppins)]
-                    text-4xl font-bold text-saasy-pink"
-                >
-                  {study.metric}
-                </p>
-                <p
-                  className="mt-1 font-[family-name:var(--font-poppins)]
-                    text-sm text-saasy-muted"
-                >
-                  {study.metricLabel}
-                </p>
-              </div>
-              <p
-                className="flex-1 font-[family-name:var(--font-poppins)]
-                  text-sm leading-relaxed text-saasy-text"
+              <h3
+                className="font-[family-name:var(--font-poppins)]
+                  text-xl font-semibold text-white"
               >
-                &ldquo;{study.quote}&rdquo;
+                {outcome.title}
+              </h3>
+              <p
+                className="mt-3 flex-1
+                  font-[family-name:var(--font-poppins)]
+                  text-sm leading-relaxed text-saasy-muted"
+              >
+                {outcome.body}
               </p>
-              <div className="mt-6 border-t border-saasy-border pt-4">
-                <p
-                  className="font-[family-name:var(--font-poppins)]
-                    text-sm font-semibold text-white"
-                >
-                  {study.author}
-                </p>
-                <p
-                  className="font-[family-name:var(--font-poppins)]
-                    text-xs text-saasy-muted"
-                >
-                  {study.authorTitle}, {study.company}
-                </p>
-              </div>
             </div>
           ))}
         </div>
@@ -136,7 +106,7 @@ export default function CustomersPage() {
             className="font-[family-name:var(--font-poppins)]
               text-xl font-semibold text-white"
           >
-            Ready to see results like these?
+            Want to be one of our first stories?
           </h2>
           <div className="mt-6 flex justify-center gap-4">
             <Link
