@@ -1,12 +1,12 @@
 import Link from "next/link";
 
 /**
- * Honest social-proof block for the pre-launch period.
+ * Honest social-proof block for the beta period.
  *
- * Replaces fabricated testimonials and metrics with a "private
- * beta" framing. Swap back to a logo bar + real testimonials
- * once 3+ design partners agree to be named (see follow-up
- * issues filed against #711).
+ * Replaces fabricated testimonials and metrics with open
+ * "now in beta / early access" framing. Swap back to a logo bar
+ * + real testimonials once 3+ customers agree to be named (see
+ * follow-up issues filed against #711).
  */
 export function SocialProof(): React.ReactElement {
   return (
@@ -24,7 +24,7 @@ export function SocialProof(): React.ReactElement {
             className="font-[family-name:var(--font-poppins)]
               text-sm text-saasy-pink"
           >
-            Currently in private beta
+            Currently in beta
           </span>
         </div>
 
@@ -40,10 +40,10 @@ export function SocialProof(): React.ReactElement {
             font-[family-name:var(--font-poppins)] text-lg
             leading-relaxed text-saasy-muted"
         >
-          We&rsquo;re working with a small group of early design
-          partners. You get hands-on access, your feedback ships
-          in days not quarters, and your logo goes on this page
-          when we&rsquo;re ready to launch.
+          We&rsquo;re in the early days and building alongside our
+          first customers. You get hands-on access, your feedback
+          ships in days not quarters, and your story could be on
+          this page as we grow.
         </p>
 
         <Link
@@ -53,7 +53,7 @@ export function SocialProof(): React.ReactElement {
             text-base font-semibold uppercase tracking-wider
             text-white transition-colors hover:bg-saasy-rose"
         >
-          Apply for early access
+          Start free trial
         </Link>
       </div>
     </section>
