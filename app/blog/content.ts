@@ -13,8 +13,8 @@ export const POSTS: BlogPost[] = [
   {
     slug: "reduce-churn-with-health-scoring",
     title:
-      "How Intelligent Health Scoring Helped Founders " +
-      "Protect $380K in Revenue",
+      "How Intelligent Health Scoring Helps Founders " +
+      "Protect Revenue",
     excerpt:
       "Learn how founders use health scoring to spot " +
       "business risks early and protect revenue before problems escalate.",
@@ -28,7 +28,7 @@ export const POSTS: BlogPost[] = [
 
 Customer health scoring flips that. Instead of reacting to cancellations, you build a model that continuously evaluates every account's likelihood of renewing. Think of it as a credit score for your customer relationships — a single number that aggregates dozens of behavioral signals into something actionable.
 
-When we first rolled this out across our portfolio of 2,400 SMB accounts, our monthly churn rate was sitting at 4.2%. Twelve months later it was down to 2.9%. That 30% reduction translated to roughly $380K in preserved ARR.`,
+The math is what makes it compelling. For a SMB SaaS portfolio carrying a 4.2% monthly churn rate, pulling that down to 2.9% — a 30% reduction — can preserve hundreds of thousands in ARR over a year. That's the prize health scoring goes after: catching at-risk accounts while you can still do something about them.`,
       },
       {
         heading: "The Five Signals That Actually Matter",
@@ -38,9 +38,9 @@ Product usage depth is the strongest predictor. Not just logins — you need to 
 
 Support ticket sentiment carries more weight than volume. A customer who files frequent tickets but keeps it neutral ("How do I...") is actually healthier than one who rarely files but sounds frustrated ("This still doesn't work"). We run basic sentiment classification on every ticket and weight negative-sentiment tickets 3x in the score.
 
-NPS and survey responses give you direct signal, but the absence of a response is itself a signal. Customers who stop responding to surveys have a 2.3x higher churn rate in our data than those who respond, even with low scores. At least a detractor is still engaged enough to tell you they're unhappy.
+NPS and survey responses give you direct signal, but the absence of a response is itself a signal. Customers who stop responding to surveys tend to churn at materially higher rates than those who respond — even the detractors. At least a detractor is still engaged enough to tell you they're unhappy.
 
-Payment patterns reveal risk early. Failed payments, downgrades, seat removals, delayed renewals — all contribute. We found that customers who remove even one seat within the first 90 days churn at 4x the baseline rate.
+Payment patterns reveal risk early. Failed payments, downgrades, seat removals, delayed renewals — all contribute. Early seat removals, even a single seat in the first 90 days, are one of the strongest leading indicators of churn.
 
 Engagement with your team matters. Customers who attend QBRs, respond to CSM emails, and join webinars churn at half the rate of those who go dark. We track response time to CSM outreach as a proxy for relationship health.`,
       },
@@ -52,23 +52,23 @@ We allocate weights roughly like this: product usage gets 35% of the total score
 
 For thresholds, use three tiers. Accounts scoring 70-100 are healthy — standard touchpoints and expansion plays. Accounts at 40-69 are at risk — they trigger a proactive outreach sequence from the CSM within 48 hours. Accounts below 40 are critical — they get an immediate executive-sponsored save attempt.
 
-The key insight is that your initial weights will be wrong, and that's fine. Run the model for 60 days, then compare predictions against actual churn. Adjust the weights based on which signals were actually predictive for your customer base. We recalibrate quarterly and see meaningful improvements each time.`,
+The key insight is that your initial weights will be wrong, and that's fine. Run the model for 60 days, then compare predictions against actual churn. Adjust the weights based on which signals were actually predictive for your customer base. Recalibrate quarterly and the model gets sharper each cycle.`,
       },
       {
-        heading: "A Real Example",
-        body: `One of our mid-market accounts — a 50-seat deployment paying $24K ARR — had always been considered a happy customer. NPS of 8, renewed on time the previous year, responsive primary admin.
+        heading: "What This Looks Like in Practice",
+        body: `Picture a mid-market account — a 50-seat deployment paying $24K ARR — that everyone considers happy. NPS of 8, renewed on time last year, responsive primary admin.
 
-Then we implemented health scoring and their score came in at 52. The reason: seat utilization had dropped from 78% to 31% over three months, and their usage of our reporting module had gone to zero. Something had changed internally.
+Then health scoring puts their score at 52. The reason: seat utilization has dropped from 78% to 31% over three months, and their usage of the reporting module has gone to zero. Something has changed internally.
 
-Our CSM reached out within 24 hours. Turned out the customer had hired a new VP of Operations who was evaluating competitors. They were already in a pilot with another vendor. Because we caught it early, we scheduled an executive meeting, showed them the improvements we'd shipped that they hadn't seen, and retained the account with a 12-month renewal.
+A CSM reaches out within 24 hours. It turns out the customer has hired a new VP of Operations who's evaluating competitors — already in a pilot with another vendor. Because the risk surfaced early, the team schedules an executive meeting, walks them through improvements they hadn't seen, and saves the account with a 12-month renewal.
 
-Without health scoring, we'd have found out when they sent the cancellation notice — probably too late to save it.`,
+Without health scoring, you find out when the cancellation notice arrives — probably too late to save it.`,
       },
       {
-        heading: "Results and How SaaSy Automates This",
-        body: `After 12 months of running our health scoring program, monthly gross churn dropped from 4.2% to 2.9%. Net revenue retention improved from 98% to 107% as the CS team shifted time from reactive saves to proactive expansion. Average save rate on at-risk accounts went from 15% to 41%.
+        heading: "Why It Works, and How SaaSy Automates It",
+        body: `Run this discipline consistently and the gains compound: gross churn trends down, net revenue retention climbs as the CS team shifts from reactive saves to proactive expansion, and save rates on at-risk accounts improve as outreach gets earlier and better-targeted.
 
-The hardest part wasn't building the model — it was operationalizing it. Making sure scores updated daily, alerts fired reliably, and CSMs actually acted on the data. That's the problem SaaSy was built to solve.
+The hardest part isn't building the model — it's operationalizing it. Making sure scores updated daily, alerts fired reliably, and CSMs actually acted on the data. That's the problem SaaSy was built to solve.
 
 SaaSy continuously computes health scores across all your accounts by pulling data from your product analytics, support desk, billing system, and CRM. When an account's score drops below your configured threshold, it triggers the right playbook: alerting the assigned CSM, drafting a personalized outreach email, and scheduling a check-in. No spreadsheets, no manual score calculations, no accounts falling through the cracks.
 
@@ -98,7 +98,7 @@ If you're still tracking customer health in spreadsheets — or worse, not track
 
 Onboarding is where these numbers are decided. Customers who reach their first meaningful value moment within the first week retain at 3-5x the rate of those who don't. Yet most SaaS companies treat onboarding as an afterthought — a welcome email and a link to the docs.
 
-We've onboarded over 800 SMB customers at this point, and the difference between our best and worst cohorts comes down to how structured the first 30 days are. This checklist is what we've refined through all of those experiences.`,
+Across the onboarding programs we've built and studied, the difference between the best and worst cohorts comes down to how structured the first 30 days are. This checklist distills what consistently works.`,
       },
       {
         heading: "Pre-Onboarding",
@@ -106,7 +106,7 @@ We've onboarded over 800 SMB customers at this point, and the difference between
 
 Send a welcome email within 5 minutes of signup. Not a generic "Welcome to our platform" — a specific email that tells them exactly what to do first and how long it will take. "Your account is ready. The first step takes about 3 minutes: connect your Stripe account so we can analyze your revenue data." One clear action, not five.
 
-If your product requires data import or integration setup, offer to do it for them. We found that offering a "white glove" data import for new customers — even self-serve SMB accounts — increased Week 1 activation by 34%. It costs maybe 20 minutes of a support engineer's time and pays for itself many times over in retention.
+If your product requires data import or integration setup, offer to do it for them. Offering a "white glove" data import for new customers — even self-serve SMB accounts — can meaningfully lift Week 1 activation. It costs maybe 20 minutes of a support engineer's time and pays for itself many times over in retention.
 
 Pre-populate the account with sample data or a demo workspace. Customers need to see what "good" looks like before they can get there themselves. An empty dashboard is the worst possible first experience.
 
@@ -142,19 +142,19 @@ Week 4: Conduct a formal 30-day review. This can be async (a personalized email 
         heading: "Measuring What Matters",
         body: `You can't improve onboarding without measuring it rigorously. Here are the metrics we track:
 
-Time to First Value (TTFV): The number of hours or days from signup to the customer's first meaningful outcome. For SMB self-serve, aim for under 24 hours. We reduced our TTFV from 8 days to 2.5 days by pre-populating dashboards with sample data.
+Time to First Value (TTFV): The number of hours or days from signup to the customer's first meaningful outcome. For SMB self-serve, aim for under 24 hours. Pre-populating dashboards with sample data is one of the fastest ways to cut TTFV — often dramatically.
 
-Activation Rate: The percentage of new signups who complete your defined activation criteria within 14 days. Industry average for SMB SaaS is around 35-45%. We target 65% and currently hit 61%.
+Activation Rate: The percentage of new signups who complete your defined activation criteria within 14 days. Industry average for SMB SaaS is around 35-45%. A well-run onboarding program should aim for 65%+.
 
 Feature Adoption Breadth: Of your top 10 features, how many does the average new customer use within 30 days? Low breadth means they're getting narrow value and are vulnerable to a competitor that nails that one use case. We aim for 6 of 10 features adopted by Day 30.
 
 Day 7 and Day 30 Retention: If Day 7 retention drops below 80%, something in your first-week experience is broken.
 
-These aren't vanity metrics — each one correlates directly with long-term retention. Customers who hit all four benchmarks in their first month have a 94% 12-month retention rate, compared to 62% for those who miss two or more.`,
+These aren't vanity metrics — each one correlates directly with long-term retention. Customers who hit all four benchmarks in their first month retain dramatically better over 12 months than those who miss several.`,
       },
       {
         heading: "Common Mistakes",
-        body: `After watching hundreds of onboarding journeys, the same mistakes come up repeatedly.
+        body: `Across the onboarding programs we've studied, the same mistakes come up repeatedly.
 
 Information overload on Day 1. Sending a new customer 5 emails, 3 video links, a PDF guide, and a calendar invite within the first 24 hours is counterproductive. Sequence your communications: one action per message, one message per day.
 
@@ -197,7 +197,7 @@ The core question isn't "Can we use AI here?" — it's "Does AI do this better t
         heading: "What Actually Works",
         body: `After extensive testing, three AI applications consistently deliver measurable ROI in customer success.
 
-Predictive churn modeling is the most impactful. Traditional churn analysis is backward-looking — you analyze why customers left and hope to spot the pattern next time. ML-based churn models analyze hundreds of behavioral signals simultaneously and identify risk patterns that humans can't see. Our model considers product usage trends, support interaction patterns, billing changes, engagement velocity, and dozens of derived features. It identifies accounts likely to churn 45-60 days before cancellation with 78% precision.
+Predictive churn modeling is the most impactful. Traditional churn analysis is backward-looking — you analyze why customers left and hope to spot the pattern next time. ML-based churn models analyze hundreds of behavioral signals simultaneously and identify risk patterns that humans can't see. A good model weighs product usage trends, support interaction patterns, billing changes, engagement velocity, and dozens of derived features — and can flag accounts likely to churn weeks before cancellation, early enough to actually intervene.
 
 A rule-based system might flag "accounts with less than 3 logins per week." A trained model does something different — it learns that low logins plus declining feature breadth plus a recent support ticket with negative sentiment, occurring specifically in months 4-6 of the customer lifecycle, predicts churn with much higher confidence than any single rule. It finds non-obvious combinations.
 
@@ -211,7 +211,7 @@ Smart alerting with context is the third. Not just "Account X's score dropped" �
 
 Generic chatbots replacing CSM interactions. We tested an AI chatbot for handling renewal conversations and basic account check-ins. Customers hated it. Customer success is fundamentally a relationship business, and customers — especially in B2B SaaS — want to talk to a person who understands their business, not a bot that generates plausible-sounding responses. Chatbots work fine for support ticket deflection. They fail badly when used for relationship-critical touchpoints.
 
-Over-automated outreach sequences. We experimented with fully AI-generated email campaigns triggered by health score changes. The emails were grammatically perfect and personalized with account data. Open rates were fine. But response rates were 40% lower than human-written emails from the assigned CSM. Customers can tell when communication is automated, and in a relationship where they're paying you thousands of dollars per year, they expect a human touch.
+Over-automated outreach sequences. Teams that lean on fully AI-generated email campaigns triggered by health-score changes tend to find the same thing: the emails are grammatically perfect and personalized with account data, open rates are fine, but response rates lag human-written emails from the assigned CSM. Customers can tell when communication is automated, and in a relationship where they're paying you thousands of dollars per year, they expect a human touch.
 
 "AI-powered insights" that are just dashboards. Some tools market basic analytics as AI insights. Showing you that usage dropped last week isn't AI — it's a SQL query with a chart. Real AI-driven insights surface non-obvious patterns, predict future outcomes, or recommend actions. If it could be built with a GROUP BY clause and a threshold, it's not AI.
 
@@ -227,7 +227,7 @@ AI as automation means the system detects a trigger and executes a response with
 
 The practical framework I use: automate the data collection and analysis. Automate the alerting and prioritization. Automate the routine communications. But keep humans in the loop for any interaction where the customer would care whether a human or machine is on the other end.
 
-This isn't a philosophical preference — it's backed by our data. Accounts managed with AI-assisted human CSMs have 23% better NRR than accounts managed with fully automated CS workflows. The AI makes the human more effective, but doesn't replace them.`,
+This isn't a philosophical preference. Across the teams we've seen, accounts managed by AI-assisted human CSMs consistently outperform fully automated CS workflows on net revenue retention. The AI makes the human more effective, but doesn't replace them.`,
       },
       {
         heading: "How SaaSy Approaches AI",
