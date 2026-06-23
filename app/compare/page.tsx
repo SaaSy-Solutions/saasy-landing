@@ -2,12 +2,22 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { SiteNav } from "../components/SiteNav";
 import { MarketingFooter } from "../components/MarketingFooter";
+import { ogImage } from "../components/ogAssets";
 
 export const metadata: Metadata = {
   title: "Compare — SaaSy vs Alternatives",
   description:
     "See how SaaSy compares to spreadsheets, hiring, and other " +
     "tools for running your business.",
+  openGraph: {
+    siteName: "SaaSy",
+    type: "website",
+    images: [ogImage("compare")],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [ogImage("compare").url],
+  },
 };
 
 interface ComparisonRow {

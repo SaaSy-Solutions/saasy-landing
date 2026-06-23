@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SiteNav } from "../components/SiteNav";
 import { MarketingFooter } from "../components/MarketingFooter";
+import { videoUrl } from "../components/videoAssets";
 
 export const metadata: Metadata = {
   title: "Changelog — SaaSy",
@@ -128,7 +129,31 @@ export default function ChangelogPage() {
           New features, improvements, and fixes.
         </p>
 
-        <div className="mt-10 space-y-12">
+        {/* Latest release, as a short looping clip (video/src/WhatsNew.tsx) */}
+        <div className="relative mt-10">
+          <div
+            className="absolute inset-0 -m-3 rounded-2xl
+              bg-gradient-to-br from-saasy-pink/5 to-saasy-orange/5 blur-xl"
+          />
+          <div
+            className="glow-border relative overflow-hidden rounded-2xl
+              bg-saasy-card/80 p-2 backdrop-blur-sm"
+          >
+            <video
+              className="h-auto w-full rounded-lg"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-label="What's new in the latest SaaSy release"
+            >
+              <source src={videoUrl("whats-new.mp4")} type="video/mp4" />
+            </video>
+          </div>
+        </div>
+
+        <div className="mt-12 space-y-12">
           {CHANGELOG.map(entry => (
             <div key={entry.version}>
               <div className="flex items-center gap-3">

@@ -25,9 +25,25 @@ src/
   FeatureLoop.tsx   6s feature micro-loop (1080x1080)     -> FeatureHealth/Churn/Ask
   SocialAd.tsx      15s social ad (vertical + square)     -> SocialVertical/Square
   HowItWorks.tsx    75s explainer (1920x1080)             -> HowItWorks
+  OgCard.tsx        1200x630 share-card still (per page)  -> OgCard  (--props)
+  BlogTeaser.tsx    10s per-post teaser (1080x1080)       -> BlogTeaser (--props)
+  FeatureClip.tsx   6s text-free feature clip (1200x900)  -> FeatureClip (--props)
+  WhatsNew.tsx      12s release clip (1280x720)           -> WhatsNew
+  ConnectLoop.tsx   8s integrations loop (1280x720)       -> ConnectLoop
+  data/posts.ts     blog metadata mirror (OG + teasers)
   Root.tsx          registers every composition
+scripts/
+  render-all.mjs        render every still + clip into out/ (per-variant --props)
+  upload-to-tigris.py   upload out/ to the bucket (og/ -> og/, rest -> videos/)
 public/screenshots/ real demo-tenant screenshots (copied from ../public)
 ```
+
+Where these land on the site:
+- OG cards → `<page>` `metadata.openGraph.images` via `app/components/ogAssets.ts`
+  (one per marketing page + per blog post; served at `assets.hellosaasy.ai/og/`).
+- FeatureClip → `/features` rows (`FeatureShowcase video=` prop).
+- WhatsNew → `/changelog`; ConnectLoop → `/integrations`.
+- BlogTeaser → distribution assets (post on X/LinkedIn) at `…/videos/blog/`.
 
 ## Preview
 
@@ -40,6 +56,15 @@ npm run dev          # opens Remotion Studio - scrub/preview every composition
 Render into the gitignored `out/` folder, then upload to Tigris. The site picks
 up the new files automatically (same URLs; `immutable` cache, so re-renders are
 overwrites — hard-refresh to bust a browser cache during review).
+
+**All OG cards + clips at once** (then upload):
+
+```bash
+node scripts/render-all.mjs      # -> out/og/*.png, out/blog/*.mp4, out/*.mp4
+# then the upload command below (uploads og/ + videos/ in one pass)
+```
+
+**The core marketing videos individually:**
 
 ```bash
 mkdir -p out

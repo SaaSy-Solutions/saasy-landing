@@ -1,5 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { ogImage } from "../components/ogAssets";
+import { videoUrl } from "../components/videoAssets";
 import { SiteNav } from "../components/SiteNav";
 import { MarketingFooter } from "../components/MarketingFooter";
 import { FeatureShowcase } from "../components/FeatureShowcase";
@@ -26,9 +28,11 @@ export const metadata: Metadata = {
     url: "https://hellosaasy.ai/features",
     siteName: "SaaSy",
     type: "website",
+    images: [ogImage("features")],
   },
   twitter: {
     card: "summary_large_image",
+    images: [ogImage("features").url],
     title: "Features — SaaSy",
     description:
       "Customer health scoring, churn alerts, an AI co-founder, and " +
@@ -139,6 +143,7 @@ export default function FeaturesPage(): React.ReactElement {
             and expansion opportunities. No more bouncing between
             7 tools to find the one metric that matters this week."
           image="/screenshots/dashboard-hero.png"
+          video={videoUrl("feature-clip-health.mp4")}
           alt="SaaSy health dashboard overview with stats and critical customer cards"
           imageWidth={1195}
           imageHeight={900}
@@ -152,6 +157,7 @@ export default function FeaturesPage(): React.ReactElement {
             patterns. Sorted so the ones who need attention show
             up first."
           image="/screenshots/churn-alerts.png"
+          video={videoUrl("feature-clip-churn.mp4")}
           alt="Full customer health grid with color-coded scores from critical red to healthy green"
           imageWidth={1195}
           imageHeight={900}
@@ -222,6 +228,7 @@ export default function FeaturesPage(): React.ReactElement {
             timeline, notes, and MRR, all in one place instead
             of six tabs."
           image="/screenshots/customer-detail.png"
+          video={videoUrl("feature-clip-customer.mp4")}
           alt="Customer detail page for Sundial Bakery with company info card and activity sidebar"
           imageWidth={1195}
           imageHeight={900}
@@ -235,6 +242,7 @@ export default function FeaturesPage(): React.ReactElement {
             churn, what's worth doing today. Answers cite the
             actual records they came from."
           image="/screenshots/ask-saasy.png"
+          video={videoUrl("feature-clip-ask.mp4")}
           alt="Ask SaaSy chat interface with quick-prompt buttons for common business questions"
           imageWidth={1195}
           imageHeight={500}

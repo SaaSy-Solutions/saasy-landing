@@ -23,6 +23,13 @@ interface FeatureShowcaseProps {
   imageHeight: number;
   /** Optional annotation overlays positioned over the screenshot. */
   callouts?: FeatureShowcaseCallout[];
+  /**
+   * Optional looping product clip (MP4 URL). When set, replaces the static
+   * screenshot with an autoplaying/muted/looping video (the screenshot is the
+   * poster). The clip carries its own animated callout, so `callouts` are
+   * dropped in video mode.
+   */
+  video?: string;
   /** When true, screenshot renders on the left instead of the right. */
   reverse?: boolean;
 }
@@ -40,6 +47,7 @@ export function FeatureShowcase({
   imageWidth,
   imageHeight,
   callouts,
+  video,
   reverse,
 }: FeatureShowcaseProps): React.ReactElement {
   return (
@@ -77,23 +85,40 @@ export function FeatureShowcase({
               rounded-2xl bg-saasy-card/80 p-2 backdrop-blur-sm"
           >
             <div className="relative">
-              <Image
-                src={image}
-                alt={alt}
-                width={imageWidth}
-                height={imageHeight}
-                sizes="(max-width: 1024px) 100vw, 600px"
-                className="h-auto w-full rounded-lg"
-              />
-              {callouts?.map((c, i) => (
-                <ScreenshotCallout
-                  key={i}
-                  top={c.top}
-                  left={c.left}
-                  arrow={c.arrow}
-                  label={c.label}
-                />
-              ))}
+              {video ? (
+                <video
+                  className="h-auto w-full rounded-lg"
+                  poster={image}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  aria-label={alt}
+                >
+                  <source src={video} type="video/mp4" />
+                </video>
+              ) : (
+                <>
+                  <Image
+                    src={image}
+                    alt={alt}
+                    width={imageWidth}
+                    height={imageHeight}
+                    sizes="(max-width: 1024px) 100vw, 600px"
+                    className="h-auto w-full rounded-lg"
+                  />
+                  {callouts?.map((c, i) => (
+                    <ScreenshotCallout
+                      key={i}
+                      top={c.top}
+                      left={c.left}
+                      arrow={c.arrow}
+                      label={c.label}
+                    />
+                  ))}
+                </>
+              )}
             </div>
           </div>
         </div>

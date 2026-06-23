@@ -2,11 +2,22 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SiteNav } from '../components/SiteNav';
 import { MarketingFooter } from '../components/MarketingFooter';
+import { ogImage } from '../components/ogAssets';
+import { videoUrl } from '../components/videoAssets';
 
 export const metadata: Metadata = {
   title: 'Integrations | SaaSy',
   description:
     'Connect SaaSy with the tools you already use. Stripe, HubSpot, Intercom, and more.',
+  openGraph: {
+    siteName: 'SaaSy',
+    type: 'website',
+    images: [ogImage('integrations')],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: [ogImage('integrations').url],
+  },
 };
 
 interface Integration {
@@ -77,6 +88,30 @@ export default function IntegrationsPage() {
             complete view of your business.
           </p>
         </header>
+
+        {/* "Connected in a minute" loop (video/src/ConnectLoop.tsx) */}
+        <div className="relative mb-14 mx-auto max-w-3xl">
+          <div
+            className="absolute inset-0 -m-3 rounded-2xl
+              bg-gradient-to-br from-saasy-pink/5 to-saasy-orange/5 blur-xl"
+          />
+          <div
+            className="glow-border relative overflow-hidden rounded-2xl
+              bg-saasy-card/80 p-2 backdrop-blur-sm"
+          >
+            <video
+              className="h-auto w-full rounded-lg"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-label="Connect Stripe, HubSpot, Salesforce, and Slack in about a minute"
+            >
+              <source src={videoUrl("connect.mp4")} type="video/mp4" />
+            </video>
+          </div>
+        </div>
 
         {/* Integration cards grid */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

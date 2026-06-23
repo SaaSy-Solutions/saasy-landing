@@ -3,12 +3,22 @@ import type { Metadata } from "next";
 import { SiteNav } from "../components/SiteNav";
 import { MarketingFooter } from "../components/MarketingFooter";
 import { POSTS } from "./content";
+import { ogImage } from "../components/ogAssets";
 
 export const metadata: Metadata = {
   title: "Blog — SaaSy",
   description:
     "Insights on business operations, founder strategies, " +
     "and scaling with automation.",
+  openGraph: {
+    siteName: "SaaSy",
+    type: "website",
+    images: [ogImage("blog")],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [ogImage("blog").url],
+  },
 };
 
 export default function BlogPage() {

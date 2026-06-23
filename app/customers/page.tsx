@@ -2,12 +2,22 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { SiteNav } from "../components/SiteNav";
 import { MarketingFooter } from "../components/MarketingFooter";
+import { ogImage } from "../components/ogAssets";
 
 export const metadata: Metadata = {
   title: "Customers — SaaSy",
   description:
     "SaaSy is in beta. Real, named customer stories will live " +
     "here as our first founders hit their milestones.",
+  openGraph: {
+    siteName: "SaaSy",
+    type: "website",
+    images: [ogImage("customers")],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [ogImage("customers").url],
+  },
 };
 
 /** What SaaSy is built to help founders do (capability, not testimonial). */

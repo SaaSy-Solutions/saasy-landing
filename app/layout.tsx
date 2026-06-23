@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { ogImage } from "./components/ogAssets";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -10,6 +11,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://hellosaasy.ai"),
   title: "SaaSy — Your Intelligent Business Co-Founder",
   description:
     "intelligent business operating system that guides " +
@@ -31,6 +33,7 @@ export const metadata: Metadata = {
     url: "https://hellosaasy.ai",
     siteName: "SaaSy",
     type: "website",
+    images: [ogImage("home")],
   },
   twitter: {
     card: "summary_large_image",
@@ -38,6 +41,7 @@ export const metadata: Metadata = {
     description:
       "intelligent business operating system that guides " +
       "entrepreneurs from idea to thriving enterprise.",
+    images: [ogImage("home").url],
   },
 };
 

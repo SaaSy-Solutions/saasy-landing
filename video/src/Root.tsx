@@ -4,6 +4,12 @@ import { HeroLoop } from "./HeroLoop";
 import { FeatureLoop, featureLoopSchema, featureVariants } from "./FeatureLoop";
 import { SocialAd, socialAdSchema, SocialAdProps } from "./SocialAd";
 import { HowItWorks } from "./HowItWorks";
+import { OgCard, ogCardSchema, ogCards } from "./OgCard";
+import { BlogTeaser, blogTeaserSchema } from "./BlogTeaser";
+import { FeatureClip, featureClipSchema, featureClips } from "./FeatureClip";
+import { WhatsNew, whatsNewSchema, whatsNewLatest } from "./WhatsNew";
+import { ConnectLoop } from "./ConnectLoop";
+import { POSTS } from "./data/posts";
 
 /**
  * SaaSy marketing video system. All compositions share the brand kit in
@@ -86,6 +92,64 @@ export const RemotionRoot: React.FC = () => {
         fps={30}
         width={1920}
         height={1080}
+      />
+
+      {/* OG / social share card — rendered as a still per page/post via --props. */}
+      <Composition
+        id="OgCard"
+        component={OgCard}
+        schema={ogCardSchema}
+        defaultProps={ogCards[0].props}
+        durationInFrames={1}
+        fps={30}
+        width={1200}
+        height={630}
+      />
+
+      {/* Per-post blog teaser — rendered once per post via --props. */}
+      <Composition
+        id="BlogTeaser"
+        component={BlogTeaser}
+        schema={blogTeaserSchema}
+        defaultProps={{ title: POSTS[0].title, readTime: POSTS[0].readTime, kicker: "From the SaaSy blog" }}
+        durationInFrames={300}
+        fps={30}
+        width={1080}
+        height={1080}
+      />
+
+      {/* Text-free feature clips for the /features showcase rows. */}
+      <Composition
+        id="FeatureClip"
+        component={FeatureClip}
+        schema={featureClipSchema}
+        defaultProps={featureClips.health}
+        durationInFrames={180}
+        fps={30}
+        width={1200}
+        height={900}
+      />
+
+      {/* "What's new" release clip — defaults to the latest changelog entry. */}
+      <Composition
+        id="WhatsNew"
+        component={WhatsNew}
+        schema={whatsNewSchema}
+        defaultProps={whatsNewLatest}
+        durationInFrames={360}
+        fps={30}
+        width={1280}
+        height={720}
+      />
+
+      {/* Integrations "connected in a minute" loop. */}
+      <Composition
+        id="ConnectLoop"
+        component={ConnectLoop}
+        durationInFrames={240}
+        fps={30}
+        width={1280}
+        height={720}
       />
     </>
   );

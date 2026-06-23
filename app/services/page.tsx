@@ -2,12 +2,22 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteNav } from "../components/SiteNav";
 import { MarketingFooter } from "../components/MarketingFooter";
+import { ogImage } from "../components/ogAssets";
 
 export const metadata: Metadata = {
   title: "Services | SaaSy Solutions",
   description:
     "Custom automation, integrations, and systems consulting from " +
     "the team behind SaaSy. 25+ years of senior engineering experience.",
+  openGraph: {
+    siteName: "SaaSy",
+    type: "website",
+    images: [ogImage("services")],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [ogImage("services").url],
+  },
 };
 
 interface Service {

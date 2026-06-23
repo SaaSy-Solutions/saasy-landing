@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { SiteNav } from "../../components/SiteNav";
 import { MarketingFooter } from "../../components/MarketingFooter";
 import { POSTS } from "../content";
+import { ogImageForPost } from "../../components/ogAssets";
 
 export function generateStaticParams(): {
   slug: string;
@@ -21,9 +22,24 @@ export async function generateMetadata({
   if (!post) {
     return { title: "Post Not Found — SaaSy" };
   }
+  const image = ogImageForPost(post.slug, post.title);
   return {
     title: `${post.title} — SaaSy Blog`,
     description: post.excerpt,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: `https://hellosaasy.ai/blog/${post.slug}`,
+      siteName: "SaaSy",
+      type: "article",
+      images: [image],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [image.url],
+    },
   };
 }
 
