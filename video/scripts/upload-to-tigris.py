@@ -37,7 +37,8 @@ for mp4 in sorted(VIDEO_DIR.glob("*.mp4")):
             "CacheControl": "public, max-age=31536000, immutable",
         },
     )
-    url = f"https://{BUCKET}.fly.storage.tigris.dev/{key}"
+    # Public reads go through Tigris's public domain, not the S3 API endpoint.
+    url = f"https://{BUCKET}.t3.tigrisfiles.io/{key}"
     print(f"uploaded {mp4.name} ({mp4.stat().st_size // 1024} KB) -> {url}")
     uploaded += 1
 
