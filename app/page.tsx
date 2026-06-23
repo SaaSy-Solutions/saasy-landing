@@ -15,6 +15,7 @@ import { MarketingFooter } from "./components/MarketingFooter";
 import { ConsultingPromo } from "./components/ConsultingPromo";
 import { SiteNav } from "./components/SiteNav";
 import { Hero } from "./components/Hero";
+import { ProductDemo } from "./components/ProductDemo";
 
 /* ═══════════════════════════ PAGE ═══════════════════════════════ */
 
@@ -82,6 +83,10 @@ export default function Home(): React.ReactElement {
               guidance.
             </p>
           </div>
+
+          {/* Product walkthrough video — the destination for the hero's
+              "See how it works" CTA. */}
+          <ProductDemo />
 
           <div
             className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"

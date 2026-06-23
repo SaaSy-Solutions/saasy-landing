@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { HeroScreenshot } from "./HeroScreenshot";
+import { HeroVideo } from "./HeroVideo";
 
 export function Hero(): React.ReactElement {
   return (
@@ -94,8 +94,8 @@ export function Hero(): React.ReactElement {
           required.
         </p>
 
-        {/* Real product screenshot */}
-        <HeroScreenshot />
+        {/* Product demo video (Remotion-rendered loop), PNG poster fallback */}
+        <HeroVideo />
       </div>
     </section>
   );
