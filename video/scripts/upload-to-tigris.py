@@ -37,8 +37,10 @@ for mp4 in sorted(VIDEO_DIR.glob("*.mp4")):
             "CacheControl": "public, max-age=31536000, immutable",
         },
     )
-    # Public reads go through Tigris's public domain, not the S3 API endpoint.
-    url = f"https://{BUCKET}.t3.tigrisfiles.io/{key}"
+    # Public reads go through the branded custom domain (assets.hellosaasy.ai),
+    # not the S3 API endpoint. The raw bucket domain also works:
+    # f"https://{BUCKET}.t3.tigrisfiles.io/{key}"
+    url = f"https://assets.hellosaasy.ai/{key}"
     print(f"uploaded {mp4.name} ({mp4.stat().st_size // 1024} KB) -> {url}")
     uploaded += 1
 

@@ -59,10 +59,17 @@ uv run --with boto3 --no-project python scripts/upload-to-tigris.py
 ```
 
 The bucket was provisioned with `flyctl storage create -n saasy-marketing-assets
--o personal --public`. Anonymous reads use Tigris's **public domain** — NOT the
-`fly.storage.tigris.dev` S3 API endpoint, which requires auth and 403s in a
-browser:
-`https://saasy-marketing-assets.t3.tigrisfiles.io/videos/<file>.mp4`.
+-o personal --public`. Public reads are served over the branded custom domain:
+`https://assets.hellosaasy.ai/videos/<file>.mp4`
+
+That's a **DNS-only** (un-proxied) Cloudflare CNAME
+`assets` → `saasy-marketing-assets.t3.tigrisbucket.io`, registered on the bucket
+via `flyctl storage update saasy-marketing-assets --custom-domain
+assets.hellosaasy.ai`; Tigris issues/renews the TLS cert through that CNAME, so
+it must stay DNS-only (orange-cloud proxying breaks cert renewal). The raw Tigris
+public domain (`saasy-marketing-assets.t3.tigrisfiles.io`) also works; the
+`fly.storage.tigris.dev` S3 API endpoint does NOT (it requires auth, 403s in a
+browser).
 
 Quick one-frame sanity check (no full render):
 

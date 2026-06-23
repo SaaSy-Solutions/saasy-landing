@@ -4,12 +4,14 @@
  * build. Bucket: `saasy-marketing-assets` (public). Source + render pipeline
  * live in `video/`; re-upload after re-rendering (see video/README.md).
  *
- * NOTE: anonymous reads must use Tigris's public domain (`*.t3.tigrisfiles.io`),
- * NOT the `fly.storage.tigris.dev` S3 API endpoint — the latter requires auth
- * and returns 403 to browsers.
+ * Served via the branded custom domain `assets.hellosaasy.ai`, a DNS-only
+ * (un-proxied) Cloudflare CNAME → `saasy-marketing-assets.t3.tigrisbucket.io`
+ * with a Tigris-issued TLS cert. This is vendor-neutral: moving off Tigris later
+ * is a one-line DNS change, no site edits. (The raw `*.t3.tigrisfiles.io` public
+ * domain also works; the `fly.storage.tigris.dev` S3 endpoint does NOT — it
+ * requires auth and 403s in a browser.)
  */
-const VIDEO_BASE =
-  "https://saasy-marketing-assets.t3.tigrisfiles.io/videos";
+const VIDEO_BASE = "https://assets.hellosaasy.ai/videos";
 
 export function videoUrl(name: string): string {
   return `${VIDEO_BASE}/${name}`;
