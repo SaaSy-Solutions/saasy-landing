@@ -2,9 +2,11 @@
 
 Programmatic, brand-consistent marketing videos for hellosaasy.ai. Self-contained
 Remotion project — its own `package.json` / `node_modules`, isolated from the
-Next.js site. Renders MP4s into `../public/videos/`, embedded on the site as
-plain `<video>` tags (no `@remotion/player`, so the static GitHub-Pages build
-stays lightweight).
+Next.js site. Renders MP4s that are **hosted on Tigris** (Fly's S3-compatible
+object storage, bucket `saasy-marketing-assets`, public) and referenced by URL on
+the site via plain `<video>` tags — so the binaries stay out of the GitHub Pages
+repo and the static build stays small. The site's URL base lives in
+`app/components/videoAssets.ts`.
 
 Design spec: `../docs/superpowers/specs/2026-06-23-remotion-marketing-videos-design.md`
 
@@ -33,17 +35,32 @@ public/screenshots/ real demo-tenant screenshots (copied from ../public)
 npm run dev          # opens Remotion Studio - scrub/preview every composition
 ```
 
-## Render (outputs to ../public/videos/)
+## Render + publish
+
+Render into the gitignored `out/` folder, then upload to Tigris. The site picks
+up the new files automatically (same URLs; `immutable` cache, so re-renders are
+overwrites — hard-refresh to bust a browser cache during review).
 
 ```bash
-npx remotion render HeroLoop       ../public/videos/hero-loop.mp4
-npx remotion render FeatureHealth  ../public/videos/feature-health.mp4
-npx remotion render FeatureChurn   ../public/videos/feature-churn.mp4
-npx remotion render FeatureAsk     ../public/videos/feature-ask.mp4
-npx remotion render SocialVertical ../public/videos/social-vertical.mp4
-npx remotion render SocialSquare   ../public/videos/social-square.mp4
-npx remotion render HowItWorks     ../public/videos/how-it-works.mp4
+mkdir -p out
+npx remotion render HeroLoop       out/hero-loop.mp4
+npx remotion render FeatureHealth  out/feature-health.mp4
+npx remotion render FeatureChurn   out/feature-churn.mp4
+npx remotion render FeatureAsk     out/feature-ask.mp4
+npx remotion render SocialVertical out/social-vertical.mp4
+npx remotion render SocialSquare   out/social-square.mp4
+npx remotion render HowItWorks     out/how-it-works.mp4
+
+# Upload (creds from `flyctl storage` output / Tigris dashboard — never commit):
+AWS_ACCESS_KEY_ID=... AWS_SECRET_ACCESS_KEY=... \
+AWS_ENDPOINT_URL_S3=https://fly.storage.tigris.dev \
+BUCKET_NAME=saasy-marketing-assets \
+uv run --with boto3 --no-project python scripts/upload-to-tigris.py
 ```
+
+The bucket was provisioned with `flyctl storage create -n saasy-marketing-assets
+-o personal --public`. Public URL pattern:
+`https://saasy-marketing-assets.fly.storage.tigris.dev/videos/<file>.mp4`.
 
 Quick one-frame sanity check (no full render):
 

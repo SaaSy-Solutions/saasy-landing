@@ -1,6 +1,6 @@
 /**
  * Hero product-demo video. Replaces the static HeroScreenshot with the
- * Remotion-rendered loop (video/src/HeroLoop.tsx → public/videos/hero-loop.mp4).
+ * Remotion-rendered loop (video/src/HeroLoop.tsx), served from Tigris.
  *
  * Autoplays muted + looped (the only way browsers allow hero autoplay). The
  * existing dashboard PNG is the poster, so the hero still looks complete before
@@ -8,6 +8,8 @@
  * no layout shift. The video already contains its own animated callouts, so the
  * static JSX overlays from HeroScreenshot are intentionally dropped here.
  */
+import { videoUrl } from "./videoAssets";
+
 export function HeroVideo(): React.ReactElement {
   return (
     <div className="relative mx-auto mt-16 max-w-4xl">
@@ -35,7 +37,7 @@ export function HeroVideo(): React.ReactElement {
           aria-label="SaaSy product demo: customer health scores, churn alerts,
             and Ask SaaSy"
         >
-          <source src="/videos/hero-loop.mp4" type="video/mp4" />
+          <source src={videoUrl("hero-loop.mp4")} type="video/mp4" />
         </video>
       </div>
     </div>

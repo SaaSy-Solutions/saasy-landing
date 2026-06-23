@@ -1,12 +1,14 @@
 /**
  * "How it works" explainer player. Embeds the Remotion-rendered explainer
- * (video/src/HowItWorks.tsx → public/videos/how-it-works.mp4) as the demo the
- * hero's "See how it works" CTA scrolls to.
+ * (video/src/HowItWorks.tsx, served from Tigris) as the demo the hero's
+ * "See how it works" CTA scrolls to.
  *
  * Uses native `controls` (not autoplay) since it's a 75s narrative the visitor
  * chooses to watch, with the dashboard screenshot as poster so the frame looks
  * intentional before play.
  */
+import { videoUrl } from "./videoAssets";
+
 export function ProductDemo(): React.ReactElement {
   return (
     <div className="mx-auto mb-20 max-w-4xl">
@@ -29,7 +31,7 @@ export function ProductDemo(): React.ReactElement {
             preload="metadata"
             aria-label="How SaaSy works — a 75-second product walkthrough"
           >
-            <source src="/videos/how-it-works.mp4" type="video/mp4" />
+            <source src={videoUrl("how-it-works.mp4")} type="video/mp4" />
           </video>
         </div>
       </div>
