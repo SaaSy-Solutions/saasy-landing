@@ -1,0 +1,70 @@
+name: Render & upload marketing videos
+
+# Manual only — never runs on push, so it can't interfere with the Pages
+# deploy. Renders the Remotion compositions in video/ and uploads the MP4s to
+# the public Tigris bucket (saasy-marketing-assets). The site references them by
+# URL, so nothing is committed back to the repo.
+#
+# Dispatch against the branch that contains the video/ project, e.g.:
+#   gh workflow run render-videos.yml --ref <branch> -f subset=hero-only
+on:
+  workflow_dispatch:
+    inputs:
+      subset:
+        description: Which videos to render
+        type: choice
+        default: all
+        options:
+          - all
+          - hero-only
+
+permissions:
+  contents: read
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: video
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Remotion project deps
+        run: npm ci
+
+      - name: Render compositions
+        env:
+          SUBSET: ${{ inputs.subset }}
+        run: |
+          set -euo pipefail
+          mkdir -p out
+          render() { npx remotion render "$1" "out/$2"; }
+
+          render HeroLoop hero-loop.mp4
+          if [ "$SUBSET" = "all" ]; then
+            render FeatureHealth  feature-health.mp4
+            render FeatureChurn   feature-churn.mp4
+            render FeatureAsk     feature-ask.mp4
+            render SocialVertical social-vertical.mp4
+            render SocialSquare   social-square.mp4
+            render HowItWorks     how-it-works.mp4
+          fi
+          ls -lh out
+
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Upload to Tigris
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_ENDPOINT_URL_S3: ${{ vars.AWS_ENDPOINT_URL_S3 }}
+          BUCKET_NAME: ${{ vars.BUCKET_NAME }}
+        run: uv run --with boto3 --no-project python scripts/upload-to-tigris.py
