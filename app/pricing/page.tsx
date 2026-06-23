@@ -16,6 +16,10 @@ export default function PricingPage(): React.ReactElement {
   const prices = interval === "annual" ? annual : monthly;
   const billingLabel =
     interval === "annual" ? "/mo billed annually" : "/mo";
+  const unionAddon =
+    interval === "annual"
+      ? { band50: 79, band250: 199 }
+      : { band50: 99, band250: 249 };
 
   return (
     <div className="min-h-screen bg-saasy-dark">
@@ -182,11 +186,21 @@ export default function PricingPage(): React.ReactElement {
               >
                 <li className="flex items-center justify-between gap-4">
                   <span>Up to 50 members</span>
-                  <span className="text-saasy-muted/70">Quote</span>
+                  <span className="font-semibold text-white">
+                    ${unionAddon.band50}
+                    <span className="text-saasy-muted/70">
+                      {billingLabel}
+                    </span>
+                  </span>
                 </li>
                 <li className="flex items-center justify-between gap-4">
                   <span>Up to 250 members</span>
-                  <span className="text-saasy-muted/70">Quote</span>
+                  <span className="font-semibold text-white">
+                    ${unionAddon.band250}
+                    <span className="text-saasy-muted/70">
+                      {billingLabel}
+                    </span>
+                  </span>
                 </li>
                 <li className="flex items-center justify-between gap-4">
                   <span>250+ members</span>
@@ -197,8 +211,9 @@ export default function PricingPage(): React.ReactElement {
                 className="mb-6 font-[family-name:var(--font-poppins)]
                   text-sm text-saasy-muted"
               >
-                Pricing scales with your active union roster. Tell us
-                your headcount and trades and we&apos;ll put a number to it.
+                Added to your Growth or Scale plan. Larger rosters
+                (250+) are custom-quoted &mdash; tell us your headcount
+                and trades.
               </p>
               <a
                 href="mailto:sales@hellosaasy.ai?subject=Union%20%26%20Labor%20Compliance%20add-on"
