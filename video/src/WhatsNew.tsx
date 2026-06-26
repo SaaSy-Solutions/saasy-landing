@@ -5,6 +5,7 @@ import {
   useCurrentFrame,
 } from "remotion";
 import { BrandBackground, COLORS, EASE_OUT, FONT, GradientText, Logo } from "./brand";
+import changelog from "../../app/changelog/changelog.json";
 
 /**
  * "What's new" release clip (1280×720, ~12s, silent + captions). Parameterized
@@ -72,7 +73,7 @@ export const WhatsNew: React.FC<WhatsNewProps> = ({ version, title, items }) => 
                 key={i}
                 style={{
                   display: "flex",
-                  alignItems: "center",
+                  alignItems: "flex-start",
                   gap: 18,
                   opacity: p,
                   translate: `${(1 - p) * -24}px 0px`,
@@ -89,11 +90,26 @@ export const WhatsNew: React.FC<WhatsNewProps> = ({ version, title, items }) => 
                     padding: "4px 12px",
                     minWidth: 110,
                     textAlign: "center",
+                    flexShrink: 0,
+                    marginTop: 4,
                   }}
                 >
                   {item.type}
                 </span>
-                <span style={{ fontFamily: FONT, fontSize: 30, color: COLORS.text }}>
+                {/* Clamp to 2 lines so long changelog copy can't overflow 720p. */}
+                <span
+                  style={{
+                    fontFamily: FONT,
+                    fontSize: 28,
+                    lineHeight: 1.25,
+                    color: COLORS.text,
+                    maxWidth: 940,
+                    display: "-webkit-box",
+                    WebkitLineClamp: 2,
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden",
+                  }}
+                >
                   {item.text}
                 </span>
               </div>
@@ -105,14 +121,28 @@ export const WhatsNew: React.FC<WhatsNewProps> = ({ version, title, items }) => 
   );
 };
 
-/** Latest changelog entry — mirror app/changelog/page.tsx. */
+/** changelog.json item type -> clip badge label. */
+const TYPE_LABEL: Record<string, "New" | "Improved" | "Fixed"> = {
+  feature: "New",
+  improvement: "Improved",
+  fix: "Fixed",
+};
+
+// How many items the clip shows before it gets too dense to read at 720p.
+const MAX_ITEMS = 5;
+
+/**
+ * Latest release clip, derived from the newest entry in
+ * app/changelog/changelog.json (the single source of truth shared with
+ * app/changelog/page.tsx). Re-rendered on changelog changes by
+ * .github/workflows/render-whatsnew.yml. The output filename is version-stamped
+ * (whats-new-<version>.mp4) so each release is a fresh, cache-busted asset.
+ */
+const latest = changelog.entries[0];
 export const whatsNewLatest: WhatsNewProps = {
-  version: "1.4.0",
-  title: "ROI Calculator & International Support",
-  items: [
-    { type: "New", text: "ROI savings calculator on the pricing page" },
-    { type: "New", text: "Country selector with US/Canada state & province support" },
-    { type: "Improved", text: "Signup form trimmed from 6 fields to 4" },
-    { type: "Fixed", text: "Added Content Security Policy headers" },
-  ],
+  version: latest.version,
+  title: latest.title,
+  items: latest.items
+    .slice(0, MAX_ITEMS)
+    .map((item) => ({ type: TYPE_LABEL[item.type] ?? "New", text: item.text })),
 };

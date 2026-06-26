@@ -1,0 +1,64 @@
+name: Render What's New changelog video
+
+# Keeps the /changelog header clip in sync with the changelog. Renders the
+# WhatsNew Remotion composition (which reads app/changelog/changelog.json) to a
+# version-stamped file and uploads it to the public Tigris bucket. The stamped
+# name (whats-new-<version>.mp4) is required because uploads are cached
+# immutably for a year — a fixed name would never refresh in browsers/CDN.
+#
+# The /changelog page references whats-new-<latest version>.mp4, so this must
+# run (and finish) before/with the Pages deploy for a new release. It triggers
+# automatically when the changelog changes, and can be dispatched manually.
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "app/changelog/changelog.json"
+      - "video/src/WhatsNew.tsx"
+      - "video/src/brand/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: render-whatsnew
+  cancel-in-progress: true
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: video
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Remotion project deps
+        run: npm ci
+
+      - name: Render WhatsNew at versioned filename
+        run: |
+          set -euo pipefail
+          VERSION=$(node -p "require('../app/changelog/changelog.json').entries[0].version")
+          echo "Rendering What's New clip for v${VERSION}"
+          mkdir -p out
+          npx remotion render WhatsNew "out/whats-new-${VERSION}.mp4"
+          ls -lh out
+
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Upload to Tigris
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_ENDPOINT_URL_S3: ${{ vars.AWS_ENDPOINT_URL_S3 }}
+          BUCKET_NAME: ${{ vars.BUCKET_NAME }}
+        run: uv run --with boto3 --no-project python scripts/upload-to-tigris.py
