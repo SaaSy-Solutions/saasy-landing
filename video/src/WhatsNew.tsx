@@ -2,22 +2,30 @@ import { z } from "zod";
 import {
   AbsoluteFill,
   interpolate,
+  Series,
   useCurrentFrame,
 } from "remotion";
 import { BrandBackground, COLORS, EASE_OUT, FONT, GradientText, Logo } from "./brand";
 import changelog from "../../app/changelog/changelog.json";
 
 /**
- * "What's new" release clip (1280×720, ~12s, silent + captions). Parameterized
- * by a changelog entry so it can be re-rendered each release. Defaults to the
- * latest entry (see whatsNewLatest). Embedded on /changelog and shareable.
+ * "What's new" release reel (1280×720, silent + captions). Cycles through the
+ * most recent releases — newest first — as a momentum reel, cross-dissolving
+ * between scenes. Driven entirely by app/changelog/changelog.json (the single
+ * source of truth shared with app/changelog/page.tsx) and re-rendered on
+ * changelog changes by .github/workflows/render-whatsnew.yml. The output
+ * filename is version-stamped (whats-new-<latest version>.mp4) so each release
+ * is a fresh, cache-busted asset.
  */
-export const whatsNewSchema = z.object({
+
+const sceneSchema = z.object({
   version: z.string(),
   title: z.string(),
   items: z.array(z.object({ type: z.enum(["New", "Improved", "Fixed"]), text: z.string() })),
 });
+export const whatsNewSchema = z.object({ scenes: z.array(sceneSchema) });
 
+export type WhatsNewScene = z.infer<typeof sceneSchema>;
 export type WhatsNewProps = z.infer<typeof whatsNewSchema>;
 
 const TYPE_COLOR: Record<string, string> = {
@@ -26,17 +34,58 @@ const TYPE_COLOR: Record<string, string> = {
   Fixed: COLORS.muted,
 };
 
-export const WhatsNew: React.FC<WhatsNewProps> = ({ version, title, items }) => {
+/** changelog.json item type -> clip badge label. */
+const TYPE_LABEL: Record<string, "New" | "Improved" | "Fixed"> = {
+  feature: "New",
+  improvement: "Improved",
+  fix: "Fixed",
+};
+
+// How many releases to cycle through, how many items per scene, and the per-scene
+// timing. Kept small so the loop stays watchable (full history lives as text on
+// the changelog page below the clip).
+const MAX_SCENES = 3;
+const MAX_ITEMS = 4;
+const SCENE_FRAMES = 210; // 7s per release at 30fps
+const FADE_FRAMES = 18; // cross-dissolve / overlap window
+
+/** Build the scene list from the newest changelog entries. */
+const buildScenes = (): WhatsNewScene[] =>
+  changelog.entries.slice(0, MAX_SCENES).map((entry) => ({
+    version: entry.version,
+    title: entry.title,
+    items: entry.items
+      .slice(0, MAX_ITEMS)
+      .map((item) => ({ type: TYPE_LABEL[item.type] ?? "New", text: item.text })),
+  }));
+
+export const whatsNewScenes: WhatsNewScene[] = buildScenes();
+export const whatsNewDefault: WhatsNewProps = { scenes: whatsNewScenes };
+
+/** Total composition length for the cross-dissolved Series (see Root.tsx). */
+export const whatsNewDuration =
+  SCENE_FRAMES + Math.max(0, whatsNewScenes.length - 1) * (SCENE_FRAMES - FADE_FRAMES);
+
+const Scene: React.FC<WhatsNewScene> = ({ version, title, items }) => {
   const frame = useCurrentFrame();
-  const head = interpolate(frame, [4, 24], [0, 1], {
+  // Fade the whole scene in/out so overlapping Series sequences cross-dissolve.
+  const enter = interpolate(frame, [0, FADE_FRAMES], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+    easing: EASE_OUT,
+  });
+  const exit = interpolate(frame, [SCENE_FRAMES - FADE_FRAMES, SCENE_FRAMES], [1, 0], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+  const head = interpolate(frame, [2, 20], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: EASE_OUT,
   });
 
   return (
-    <AbsoluteFill style={{ backgroundColor: COLORS.dark }}>
-      <BrandBackground />
+    <AbsoluteFill style={{ opacity: enter * exit }}>
       <AbsoluteFill style={{ padding: 72, justifyContent: "center" }}>
         <div style={{ opacity: head, translate: `0px ${(1 - head) * 20}px` }}>
           <div style={{ display: "flex", alignItems: "center", gap: 18, marginBottom: 8 }}>
@@ -62,7 +111,7 @@ export const WhatsNew: React.FC<WhatsNewProps> = ({ version, title, items }) => 
 
         <div style={{ marginTop: 44, display: "flex", flexDirection: "column", gap: 20 }}>
           {items.map((item, i) => {
-            const at = 30 + i * 16;
+            const at = 24 + i * 14;
             const p = interpolate(frame, [at, at + 14], [0, 1], {
               extrapolateLeft: "clamp",
               extrapolateRight: "clamp",
@@ -121,28 +170,22 @@ export const WhatsNew: React.FC<WhatsNewProps> = ({ version, title, items }) => 
   );
 };
 
-/** changelog.json item type -> clip badge label. */
-const TYPE_LABEL: Record<string, "New" | "Improved" | "Fixed"> = {
-  feature: "New",
-  improvement: "Improved",
-  fix: "Fixed",
-};
-
-// How many items the clip shows before it gets too dense to read at 720p.
-const MAX_ITEMS = 5;
-
-/**
- * Latest release clip, derived from the newest entry in
- * app/changelog/changelog.json (the single source of truth shared with
- * app/changelog/page.tsx). Re-rendered on changelog changes by
- * .github/workflows/render-whatsnew.yml. The output filename is version-stamped
- * (whats-new-<version>.mp4) so each release is a fresh, cache-busted asset.
- */
-const latest = changelog.entries[0];
-export const whatsNewLatest: WhatsNewProps = {
-  version: latest.version,
-  title: latest.title,
-  items: latest.items
-    .slice(0, MAX_ITEMS)
-    .map((item) => ({ type: TYPE_LABEL[item.type] ?? "New", text: item.text })),
+export const WhatsNew: React.FC<WhatsNewProps> = ({ scenes }) => {
+  return (
+    <AbsoluteFill style={{ backgroundColor: COLORS.dark }}>
+      <BrandBackground />
+      <Series>
+        {scenes.map((scene, i) => (
+          <Series.Sequence
+            key={`${scene.version}-${i}`}
+            durationInFrames={SCENE_FRAMES}
+            // Overlap each scene with the previous one so they cross-dissolve.
+            offset={i === 0 ? 0 : -FADE_FRAMES}
+          >
+            <Scene {...scene} />
+          </Series.Sequence>
+        ))}
+      </Series>
+    </AbsoluteFill>
+  );
 };

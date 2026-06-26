@@ -7,7 +7,7 @@ import { HowItWorks } from "./HowItWorks";
 import { OgCard, ogCardSchema, ogCards } from "./OgCard";
 import { BlogTeaser, blogTeaserSchema } from "./BlogTeaser";
 import { FeatureClip, featureClipSchema, featureClips } from "./FeatureClip";
-import { WhatsNew, whatsNewSchema, whatsNewLatest } from "./WhatsNew";
+import { WhatsNew, whatsNewSchema, whatsNewDefault, whatsNewDuration } from "./WhatsNew";
 import { ConnectLoop } from "./ConnectLoop";
 import { POSTS } from "./data/posts";
 
@@ -130,13 +130,13 @@ export const RemotionRoot: React.FC = () => {
         height={900}
       />
 
-      {/* "What's new" release clip — defaults to the latest changelog entry. */}
+      {/* "What's new" reel — cycles the latest changelog entries, newest first. */}
       <Composition
         id="WhatsNew"
         component={WhatsNew}
         schema={whatsNewSchema}
-        defaultProps={whatsNewLatest}
-        durationInFrames={360}
+        defaultProps={whatsNewDefault}
+        durationInFrames={whatsNewDuration}
         fps={30}
         width={1280}
         height={720}
