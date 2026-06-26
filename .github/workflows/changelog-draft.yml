@@ -58,6 +58,11 @@ jobs:
       - name: Open curation PR
         uses: peter-evans/create-pull-request@v6
         with:
+          # The org blocks the Actions bot from creating PRs, so prefer a
+          # saasy-landing-scoped PAT (Contents + Pull requests: write) when set.
+          # Falls back to GITHUB_TOKEN, which works only if the org enables
+          # "Allow GitHub Actions to create and approve pull requests".
+          token: ${{ secrets.CHANGELOG_PR_TOKEN || secrets.GITHUB_TOKEN }}
           commit-message: "chore(changelog): draft entry from merged PRs"
           branch: changelog/draft
           delete-branch: true
