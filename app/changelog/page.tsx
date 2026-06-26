@@ -25,10 +25,21 @@ interface ChangelogEntry {
 // from merged saas-platform PRs (see .github/workflows/changelog-draft.yml).
 const CHANGELOG = changelogData.entries as ChangelogEntry[];
 
-// The header clip is re-rendered per release to a version-stamped filename by
-// .github/workflows/render-whatsnew.yml (uploads are cached immutably, so the
-// version in the name is what busts the cache). Track the latest entry.
-const whatsNewVideo = `whats-new-${CHANGELOG[0].version}.mp4`;
+// The header clip is re-rendered by .github/workflows/render-whatsnew.yml from
+// the latest 3 entries. Uploads are cached immutably, so the filename is
+// content-addressed: <version>-<hash of the entries the clip shows>. Any
+// changelog change yields a new URL, busting the cache. The workflow computes
+// the SAME name (keep the two fnv1a's in sync).
+const fnv1a = (s: string): string => {
+  let h = 2166136261;
+  for (let i = 0; i < s.length; i++) {
+    h ^= s.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return (h >>> 0).toString(36);
+};
+const whatsNewRev = fnv1a(JSON.stringify(CHANGELOG.slice(0, 3)));
+const whatsNewVideo = `whats-new-${CHANGELOG[0].version}-${whatsNewRev}.mp4`;
 
 const TYPE_STYLES: Record<
   string,

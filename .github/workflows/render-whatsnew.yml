@@ -43,13 +43,24 @@ jobs:
       - name: Install Remotion project deps
         run: npm ci
 
-      - name: Render WhatsNew at versioned filename
+      - name: Render WhatsNew at content-addressed filename
         run: |
           set -euo pipefail
-          VERSION=$(node -p "require('../app/changelog/changelog.json').entries[0].version")
-          echo "Rendering What's New clip for v${VERSION}"
+          # Content-addressed name: whats-new-<version>-<fnv1a of latest 3
+          # entries>.mp4. Must match app/changelog/page.tsx exactly.
+          NAME=$(node -e '
+            const d = require("../app/changelog/changelog.json");
+            const fnv1a = (s) => {
+              let h = 2166136261;
+              for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
+              return (h >>> 0).toString(36);
+            };
+            const rev = fnv1a(JSON.stringify(d.entries.slice(0, 3)));
+            process.stdout.write(`whats-new-${d.entries[0].version}-${rev}.mp4`);
+          ')
+          echo "Rendering ${NAME}"
           mkdir -p out
-          npx remotion render WhatsNew "out/whats-new-${VERSION}.mp4"
+          npx remotion render WhatsNew "out/${NAME}"
           ls -lh out
 
       - name: Setup uv
