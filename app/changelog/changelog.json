@@ -1,16 +1,85 @@
 {
   "entries": [
     {
+      "version": "1.8.0",
+      "date": "2026-06-26",
+      "title": "Guided Execution, SOPs & Always-Closed Books",
+      "items": [
+        {
+          "type": "feature",
+          "text": "Guided journey across your whole business — next-best-step recommendations from formation through launch, operations, and scale"
+        },
+        {
+          "type": "feature",
+          "text": "Ask SaaSy in context — get advice on any step or screen, now with cited sources and a clear professional-advice boundary"
+        },
+        {
+          "type": "feature",
+          "text": "My Work — one unified task list across all your businesses and connected tools"
+        },
+        {
+          "type": "feature",
+          "text": "SOP library — author standard operating procedures with AI and collect employee sign-off"
+        },
+        {
+          "type": "feature",
+          "text": "AI document drafting — proposals and business docs rendered on branded, letterhead PDFs"
+        },
+        {
+          "type": "feature",
+          "text": "Continuous-close accounting keeps your books always up to date"
+        },
+        {
+          "type": "feature",
+          "text": "Proactive regulatory monitoring with alerts when rules that affect you change"
+        },
+        {
+          "type": "feature",
+          "text": "What-if business simulation to model decisions before you make them"
+        },
+        {
+          "type": "improvement",
+          "text": "Industry-aware onboarding auto-configures your workspace and chart of accounts"
+        },
+        {
+          "type": "improvement",
+          "text": "Automatic sales-tax nexus detection across states"
+        },
+        {
+          "type": "fix",
+          "text": "Resolved several dashboard crashes (customers, payroll runs, and insights pages)"
+        }
+      ]
+    },
+    {
       "version": "1.7.0",
       "date": "2026-06-20",
       "title": "AI CFO, Benchmarking & CRM Projects",
       "items": [
-        { "type": "feature", "text": "AI CFO — a weekly executive brief, with a short branded video, that reads your numbers and tells you what to do next" },
-        { "type": "feature", "text": "Anonymous peer benchmarking — see how your key metrics compare against similar businesses" },
-        { "type": "feature", "text": "CRM Projects — manage delivery with tasks, notes, files, and an AI project health score" },
-        { "type": "feature", "text": "Research Agent — live company, market, and competitor intelligence grounded in real-time web data" },
-        { "type": "improvement", "text": "Outcome Ledger — every recommendation now tracks its measured dollar impact in a Value Delivered report" },
-        { "type": "improvement", "text": "CSV export for contacts, companies, projects, and invoices" }
+        {
+          "type": "feature",
+          "text": "AI CFO — a weekly executive brief, with a short branded video, that reads your numbers and tells you what to do next"
+        },
+        {
+          "type": "feature",
+          "text": "Anonymous peer benchmarking — see how your key metrics compare against similar businesses"
+        },
+        {
+          "type": "feature",
+          "text": "CRM Projects — manage delivery with tasks, notes, files, and an AI project health score"
+        },
+        {
+          "type": "feature",
+          "text": "Research Agent — live company, market, and competitor intelligence grounded in real-time web data"
+        },
+        {
+          "type": "improvement",
+          "text": "Outcome Ledger — every recommendation now tracks its measured dollar impact in a Value Delivered report"
+        },
+        {
+          "type": "improvement",
+          "text": "CSV export for contacts, companies, projects, and invoices"
+        }
       ]
     },
     {
@@ -18,12 +87,30 @@
       "date": "2026-05-28",
       "title": "Single Sign-On & Connected Accounts",
       "items": [
-        { "type": "feature", "text": "Sign in with Google or Microsoft (SSO)" },
-        { "type": "feature", "text": "Connect Google and Microsoft email & calendar with two-way sync" },
-        { "type": "feature", "text": "New connectors — Slack, Square, DocuSign, Calendly, QuickBooks, FreshBooks, and Gusto" },
-        { "type": "feature", "text": "Automatic company enrichment during onboarding from public registry and web signals" },
-        { "type": "improvement", "text": "Audit log viewer with filters, per-event detail, and CSV export" },
-        { "type": "improvement", "text": "Self-service GDPR data export, anonymization, and account deletion" }
+        {
+          "type": "feature",
+          "text": "Sign in with Google or Microsoft (SSO)"
+        },
+        {
+          "type": "feature",
+          "text": "Connect Google and Microsoft email & calendar with two-way sync"
+        },
+        {
+          "type": "feature",
+          "text": "New connectors — Slack, Square, DocuSign, Calendly, QuickBooks, FreshBooks, and Gusto"
+        },
+        {
+          "type": "feature",
+          "text": "Automatic company enrichment during onboarding from public registry and web signals"
+        },
+        {
+          "type": "improvement",
+          "text": "Audit log viewer with filters, per-event detail, and CSV export"
+        },
+        {
+          "type": "improvement",
+          "text": "Self-service GDPR data export, anonymization, and account deletion"
+        }
       ]
     },
     {
@@ -31,10 +118,22 @@
       "date": "2026-04-30",
       "title": "Account Security",
       "items": [
-        { "type": "feature", "text": "Two-factor authentication (2FA) with trusted-device skip" },
-        { "type": "feature", "text": "Active sessions page to review and revoke signed-in devices" },
-        { "type": "improvement", "text": "Step-up verification before sensitive account changes" },
-        { "type": "improvement", "text": "IP allowlist and blocklist controls in Security settings" }
+        {
+          "type": "feature",
+          "text": "Two-factor authentication (2FA) with trusted-device skip"
+        },
+        {
+          "type": "feature",
+          "text": "Active sessions page to review and revoke signed-in devices"
+        },
+        {
+          "type": "improvement",
+          "text": "Step-up verification before sensitive account changes"
+        },
+        {
+          "type": "improvement",
+          "text": "IP allowlist and blocklist controls in Security settings"
+        }
       ]
     },
     {
@@ -42,11 +141,26 @@
       "date": "2026-03-20",
       "title": "ROI Calculator & International Support",
       "items": [
-        { "type": "feature", "text": "ROI savings calculator on pricing page" },
-        { "type": "feature", "text": "Country selector in onboarding with US/Canada state/province support" },
-        { "type": "improvement", "text": "Reduced signup form from 6 fields to 4" },
-        { "type": "improvement", "text": "Organization ID remembered between login sessions" },
-        { "type": "fix", "text": "Added Content Security Policy headers" }
+        {
+          "type": "feature",
+          "text": "ROI savings calculator on pricing page"
+        },
+        {
+          "type": "feature",
+          "text": "Country selector in onboarding with US/Canada state/province support"
+        },
+        {
+          "type": "improvement",
+          "text": "Reduced signup form from 6 fields to 4"
+        },
+        {
+          "type": "improvement",
+          "text": "Organization ID remembered between login sessions"
+        },
+        {
+          "type": "fix",
+          "text": "Added Content Security Policy headers"
+        }
       ]
     },
     {
@@ -54,9 +168,18 @@
       "date": "2026-03-10",
       "title": "Command Palette & Health Scoring",
       "items": [
-        { "type": "feature", "text": "Cmd+K command palette for quick navigation" },
-        { "type": "feature", "text": "Customer health scoring with churn prediction" },
-        { "type": "improvement", "text": "Dashboard daily briefing with AI recommendations" }
+        {
+          "type": "feature",
+          "text": "Cmd+K command palette for quick navigation"
+        },
+        {
+          "type": "feature",
+          "text": "Customer health scoring with churn prediction"
+        },
+        {
+          "type": "improvement",
+          "text": "Dashboard daily briefing with AI recommendations"
+        }
       ]
     },
     {
@@ -64,9 +187,18 @@
       "date": "2026-02-25",
       "title": "Stripe Billing & Onboarding Wizard",
       "items": [
-        { "type": "feature", "text": "Stripe-powered billing with annual/monthly toggle" },
-        { "type": "feature", "text": "3-step onboarding wizard with stage detection" },
-        { "type": "improvement", "text": "httpOnly cookie auth replacing localStorage tokens" }
+        {
+          "type": "feature",
+          "text": "Stripe-powered billing with annual/monthly toggle"
+        },
+        {
+          "type": "feature",
+          "text": "3-step onboarding wizard with stage detection"
+        },
+        {
+          "type": "improvement",
+          "text": "httpOnly cookie auth replacing localStorage tokens"
+        }
       ]
     }
   ]
