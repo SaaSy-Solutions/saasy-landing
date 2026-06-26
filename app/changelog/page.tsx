@@ -25,6 +25,11 @@ interface ChangelogEntry {
 // from merged saas-platform PRs (see .github/workflows/changelog-draft.yml).
 const CHANGELOG = changelogData.entries as ChangelogEntry[];
 
+// The header clip is re-rendered per release to a version-stamped filename by
+// .github/workflows/render-whatsnew.yml (uploads are cached immutably, so the
+// version in the name is what busts the cache). Track the latest entry.
+const whatsNewVideo = `whats-new-${CHANGELOG[0].version}.mp4`;
+
 const TYPE_STYLES: Record<
   string,
   { label: string; className: string }
@@ -80,7 +85,7 @@ export default function ChangelogPage() {
               preload="metadata"
               aria-label="What's new in the latest SaaSy release"
             >
-              <source src={videoUrl("whats-new.mp4")} type="video/mp4" />
+              <source src={videoUrl(whatsNewVideo)} type="video/mp4" />
             </video>
           </div>
         </div>
