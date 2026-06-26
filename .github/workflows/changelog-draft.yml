@@ -1,0 +1,76 @@
+name: Draft changelog from merged PRs
+
+# Drafts a new changelog entry from saas-platform PRs merged since the last
+# entry in app/changelog/changelog.json, then opens a PR for a human to curate
+# the wording, version, and title before it ships to the public changelog.
+#
+# Runs weekly and on demand. It never publishes directly — the PR is the gate.
+#
+# Requires a repo/org secret CHANGELOG_SOURCE_TOKEN: a token with read access to
+# pull requests in SaaSy-Solutions/saas-platform (fine-grained PAT, "Pull
+# requests: read", or a GitHub App installation token). The default GITHUB_TOKEN
+# only sees this repo, so it can't read the source repo's PRs.
+on:
+  schedule:
+    - cron: "0 16 * * 1" # Mondays 16:00 UTC
+  workflow_dispatch:
+    inputs:
+      since:
+        description: "Override the 'merged after' date (YYYY-MM-DD)"
+        required: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: changelog-draft
+  cancel-in-progress: false
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Generate draft entry
+        env:
+          GH_TOKEN: ${{ secrets.CHANGELOG_SOURCE_TOKEN }}
+          SINCE: ${{ inputs.since }}
+        run: |
+          set -euo pipefail
+          if [ -z "${GH_TOKEN:-}" ]; then
+            echo "CHANGELOG_SOURCE_TOKEN is not set — skipping." >&2
+            exit 0
+          fi
+          if [ -n "${SINCE:-}" ]; then
+            node scripts/gen-changelog.mjs --since "$SINCE"
+          else
+            node scripts/gen-changelog.mjs
+          fi
+
+      - name: Open curation PR
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore(changelog): draft entry from merged PRs"
+          branch: changelog/draft
+          delete-branch: true
+          title: "Changelog draft — review before publishing"
+          body: |
+            Auto-drafted from merged `saas-platform` PRs by
+            `.github/workflows/changelog-draft.yml`.
+
+            **Before merging:**
+            - Replace the `DRAFT-<date>` version with a real release number.
+            - Rewrite the title and item wording for a customer audience.
+            - Delete internal/noise items; keep what users actually see.
+
+            The page reads `app/changelog/changelog.json` directly, so merging
+            this triggers the Pages deploy.
+          add-paths: app/changelog/changelog.json

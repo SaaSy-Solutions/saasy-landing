@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SiteNav } from "../components/SiteNav";
 import { MarketingFooter } from "../components/MarketingFooter";
 import { videoUrl } from "../components/videoAssets";
+import changelogData from "./changelog.json";
 
 export const metadata: Metadata = {
   title: "Changelog — SaaSy",
@@ -20,78 +21,9 @@ interface ChangelogEntry {
   }[];
 }
 
-const CHANGELOG: ChangelogEntry[] = [
-  {
-    version: "1.4.0",
-    date: "2026-03-20",
-    title: "ROI Calculator & International Support",
-    items: [
-      {
-        type: "feature",
-        text: "ROI savings calculator on pricing page",
-      },
-      {
-        type: "feature",
-        text: "Country selector in onboarding with " +
-          "US/Canada state/province support",
-      },
-      {
-        type: "improvement",
-        text: "Reduced signup form from 6 fields to 4",
-      },
-      {
-        type: "improvement",
-        text: "Organization ID remembered between " +
-          "login sessions",
-      },
-      {
-        type: "fix",
-        text: "Added Content Security Policy headers",
-      },
-    ],
-  },
-  {
-    version: "1.3.0",
-    date: "2026-03-10",
-    title: "Command Palette & Health Scoring",
-    items: [
-      {
-        type: "feature",
-        text: "Cmd+K command palette for quick navigation",
-      },
-      {
-        type: "feature",
-        text: "Customer health scoring with churn prediction",
-      },
-      {
-        type: "improvement",
-        text: "Dashboard daily briefing with AI " +
-          "recommendations",
-      },
-    ],
-  },
-  {
-    version: "1.2.0",
-    date: "2026-02-25",
-    title: "Stripe Billing & Onboarding Wizard",
-    items: [
-      {
-        type: "feature",
-        text: "Stripe-powered billing with annual/" +
-          "monthly toggle",
-      },
-      {
-        type: "feature",
-        text: "3-step onboarding wizard with stage detection",
-      },
-      {
-        type: "improvement",
-        text: "httpOnly cookie auth replacing " +
-          "localStorage tokens",
-      },
-    ],
-  },
-];
+// Source of truth is changelog.json, which scripts/gen-changelog.mjs drafts
+// from merged saas-platform PRs (see .github/workflows/changelog-draft.yml).
+const CHANGELOG = changelogData.entries as ChangelogEntry[];
 
 const TYPE_STYLES: Record<
   string,
