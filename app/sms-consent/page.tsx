@@ -42,8 +42,8 @@ export default function SmsConsentPage() {
             SaaSy (operated by SaaSy Solutions LLC) can send you SMS text
             messages to keep your business running smoothly. We only send
             messages to phone numbers that have explicitly opted in. Complete the
-            form below to consent, or opt in during account registration where a
-            dedicated SMS consent checkbox is presented.
+            form below to consent. Opting in is optional and is never required to
+            create an account or use SaaSy.
           </p>
         </header>
 
@@ -67,12 +67,6 @@ export default function SmsConsentPage() {
                   Account notifications
                 </span>{" "}
                 &mdash; important updates about your account and activity
-              </li>
-              <li>
-                <span className="text-white font-medium">
-                  Authentication codes
-                </span>{" "}
-                &mdash; one-time passcodes to securely verify your identity
               </li>
               <li>
                 <span className="text-white font-medium">

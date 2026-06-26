@@ -141,9 +141,9 @@ export function SmsConsentForm(): React.ReactElement {
         >
           I agree to receive SMS messages from SaaSy. By checking this box, you
           agree to receive SMS messages from SaaSy related to account
-          notifications, authentication codes, appointment reminders, billing
-          updates, and customer support communications. Message frequency
-          varies. Message and data rates may apply. Reply{" "}
+          notifications, appointment reminders, billing updates, and customer
+          support communications. Message frequency varies. Message and data
+          rates may apply. Reply{" "}
           <span className="font-semibold text-white">STOP</span> to opt out or{" "}
           <span className="font-semibold text-white">HELP</span> for assistance.
           Consent is not a condition of purchase.
