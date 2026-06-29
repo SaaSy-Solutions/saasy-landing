@@ -1,6 +1,273 @@
 {
   "entries": [
     {
+      "version": "DRAFT-2026-06-29",
+      "date": "2026-06-29",
+      "title": "Draft — edit version, title & wording before publishing",
+      "items": [
+        {
+          "type": "feature",
+          "text": "Phase 3B construction billing + job costing (AIA pay apps, GL, vendor bills, P&L)"
+        },
+        {
+          "type": "feature",
+          "text": "Seed curated HIPAA and PCI DSS framework controls"
+        },
+        {
+          "type": "feature",
+          "text": "Seed NAICS industry requirements for cold start"
+        },
+        {
+          "type": "feature",
+          "text": "Federal tax-deadline calendar in AI CFO brief"
+        },
+        {
+          "type": "feature",
+          "text": "Unified-people-service — full People/Talent lifecycle + payroll integration (14 slices)"
+        },
+        {
+          "type": "feature",
+          "text": "SAM.gov contract-opportunity bid board (Phase 2)"
+        },
+        {
+          "type": "feature",
+          "text": "SAM.gov contractor exclusions (Phase 2)"
+        },
+        {
+          "type": "feature",
+          "text": "Ingest SAM bid board from no-key daily CSV extract"
+        },
+        {
+          "type": "feature",
+          "text": "Report backend errors to Sentry across deployed services"
+        },
+        {
+          "type": "feature",
+          "text": "Run SAM opportunity + exclusion ingest via in-process cron"
+        },
+        {
+          "type": "feature",
+          "text": "Internal service-to-service auth for transactional email (Closes #2362)"
+        },
+        {
+          "type": "feature",
+          "text": "OLMS LM-2 union financial reports connector"
+        },
+        {
+          "type": "feature",
+          "text": "Auto-detect discovery answers + roadmap respects them (Closes #2220, Closes #2219)"
+        },
+        {
+          "type": "feature",
+          "text": "SAM.gov bid board UI for federal contract opportunities"
+        },
+        {
+          "type": "feature",
+          "text": "Real workflow counts on overview, drop fabricated stats (#2374 landing)"
+        },
+        {
+          "type": "feature",
+          "text": "Wire the proactive event pipeline (Closes #2371, Closes #2376)"
+        },
+        {
+          "type": "feature",
+          "text": "Persist actions + list_actions + action feed UI (Closes #2370)"
+        },
+        {
+          "type": "feature",
+          "text": "Opportunity.ingested event + tenant bid-board bookmarks (Closes #2372)"
+        },
+        {
+          "type": "feature",
+          "text": "Screen vendors/AP against federal debarment + screening UI (Closes #2373)"
+        },
+        {
+          "type": "feature",
+          "text": "Wire the real VisualBuilder into /workflows/builder (Closes #2374)"
+        },
+        {
+          "type": "feature",
+          "text": "Seed sales-tax rates + nexus thresholds for all 50 states + DC (Closes #2264)"
+        },
+        {
+          "type": "feature",
+          "text": "Seed NAICS 2022 + SIC crosswalk reference tables (Closes #2263)"
+        },
+        {
+          "type": "feature",
+          "text": "Dual-stack bind + gated public-edge guard for internal notifications (Closes #2419)"
+        },
+        {
+          "type": "feature",
+          "text": "SaaSy mascot page-transition flourish (Macon #2443)"
+        },
+        {
+          "type": "feature",
+          "text": "Scoped accountant + auditor professional logins (Macon #2454)"
+        },
+        {
+          "type": "feature",
+          "text": "Per-account identity columns — multi-account phase 1 (Macon #2453)"
+        },
+        {
+          "type": "feature",
+          "text": "Native payroll engine — calc core + employees/W-4 + run engine (Phase 3C slices 1-3)"
+        },
+        {
+          "type": "feature",
+          "text": "Connect multiple accounts per provider — multi-account phase 2 (Macon #2453)"
+        },
+        {
+          "type": "feature",
+          "text": "Seed public holiday calendar + business-day helpers (Closes #2267)"
+        },
+        {
+          "type": "feature",
+          "text": "Connected-accounts UI + list endpoint — multi-account phase 3 (Macon #2453)"
+        },
+        {
+          "type": "feature",
+          "text": "Per-user integration ownership, opt-in — multi-account phase 4 (Macon #2453)"
+        },
+        {
+          "type": "fix",
+          "text": "Protect active CARGO_TARGET_DIR by run-id in runner cleanup"
+        },
+        {
+          "type": "fix",
+          "text": "Drop unused ConstantTimeEq import breaking Test Suite"
+        },
+        {
+          "type": "fix",
+          "text": "Contractor name on fringe remittance header"
+        },
+        {
+          "type": "fix",
+          "text": "Constant-time comparison for metrics auth tokens (Closes #2333)"
+        },
+        {
+          "type": "fix",
+          "text": "Provision per-tenant inbound webhook secrets + fix GitHub 401"
+        },
+        {
+          "type": "fix",
+          "text": "Carry signup data into onboarding + persist to Business Details + industry dropdown (Closes #2214, Closes #2222, Closes #2327, Closes #2217)"
+        },
+        {
+          "type": "fix",
+          "text": "Surface SAM ingest errors without leaking api_key"
+        },
+        {
+          "type": "fix",
+          "text": "Correct notification-service URL so verification/welcome/reset emails are dispatched (refs #2221)"
+        },
+        {
+          "type": "fix",
+          "text": "Stream SAM opportunities CSV to avoid OOM on 512MB"
+        },
+        {
+          "type": "fix",
+          "text": "Discovery request now passes CSRF validation (Closes #2218)"
+        },
+        {
+          "type": "fix",
+          "text": "Readable input text + correct product-tour alignment (Closes #2216, Closes #2215)"
+        },
+        {
+          "type": "fix",
+          "text": "Redirect orphan /value-dashboard to canonical /dashboard/value-delivered (Closes #2375)"
+        },
+        {
+          "type": "fix",
+          "text": "Redirect orphan /tickets to real /dashboard/support"
+        },
+        {
+          "type": "fix",
+          "text": "Central tenant-path guard closes cross-tenant IDOR (Closes #2393)"
+        },
+        {
+          "type": "fix",
+          "text": "Enable cache-core/redis feature to unblock saasy-operations Docker build"
+        },
+        {
+          "type": "fix",
+          "text": "Authz on create_user / suspend / reactivate / audit-log (#2393 follow-ups)"
+        },
+        {
+          "type": "fix",
+          "text": "Handle empty 2xx response bodies in api-client (Closes #2408)"
+        },
+        {
+          "type": "fix",
+          "text": "Tenant-scope business/checklist write repos (#2393 defense-in-depth)"
+        },
+        {
+          "type": "fix",
+          "text": "Replace fabricated metrics with an honest preview (Closes #2377)"
+        },
+        {
+          "type": "fix",
+          "text": "Map nested SAM v4 exclusion fields (not flat keys)"
+        },
+        {
+          "type": "fix",
+          "text": "Align transactional-notification response contract + tolerant decode (Closes #2417)"
+        },
+        {
+          "type": "fix",
+          "text": "Repair test target bit-rot + deserialize regex bug"
+        },
+        {
+          "type": "fix",
+          "text": "Own crm_webhook_* tables to end shared-DB collision (Closes #2422)"
+        },
+        {
+          "type": "fix",
+          "text": "Wire real lead capture + surface errors (Closes #2420)"
+        },
+        {
+          "type": "fix",
+          "text": "Migration formalizing notifications legacy-column relax (Closes #2418)"
+        },
+        {
+          "type": "fix",
+          "text": "Make email change/verify confirmation links work logged-out"
+        },
+        {
+          "type": "fix",
+          "text": "Store auth tokens in httpOnly cookies (Closes #2395)"
+        },
+        {
+          "type": "fix",
+          "text": "Onboarding greyed-out controls + entity-structure-first order (Macon batch)"
+        },
+        {
+          "type": "fix",
+          "text": "Dark-mode control contrast, sidebar FAB overlap, tour alignment (Macon batch)"
+        },
+        {
+          "type": "fix",
+          "text": "Make token-revocation disable/failures observable (Closes #2397)"
+        },
+        {
+          "type": "fix",
+          "text": "Ask SaaSy empty/stalled responses + retry, dashboard report button (Macon batch)"
+        },
+        {
+          "type": "fix",
+          "text": "Allowlist autonomy invite_user roles + force approval for elevated grants (Closes #2396)"
+        },
+        {
+          "type": "fix",
+          "text": "Route /api/v1/contact/sales to operations-service — completes #2420 (Closes #2420)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop /auth/login session_expired redirect loop"
+        }
+      ]
+    },
+    {
       "version": "1.8.0",
       "date": "2026-06-26",
       "title": "Guided Execution, SOPs & Always-Closed Books",
