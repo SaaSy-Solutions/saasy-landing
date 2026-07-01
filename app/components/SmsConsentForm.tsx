@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { OPS_API_BASE } from "../../lib/api";
 
 type SubmitStatus = "idle" | "loading" | "success" | "error";
 
@@ -32,23 +33,24 @@ export function SmsConsentForm(): React.ReactElement {
     setStatus("loading");
 
     try {
-      const res = await fetch("/api/sms-consent", {
+      const res = await fetch(`${OPS_API_BASE}/api/v1/marketing/sms-consent`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ phone, consent: true }),
+        body: JSON.stringify({ phone, consent: true, source: "sms-consent-page" }),
       });
 
       if (!res.ok) {
-        throw new Error("Submission failed");
+        throw new Error(`Submission failed (${res.status})`);
       }
 
       setStatus("success");
     } catch {
-      // The marketing site is statically hosted; the request is best-effort.
-      // The consent itself is recorded against the user's account inside the
-      // product. Treat a network failure here as a successful disclosure
-      // acknowledgement rather than blocking the user.
-      setStatus("success");
+      // The consent event must be durably recorded to count — never fake
+      // a success. Show an honest retry path instead.
+      setStatus("error");
+      setErrorMsg(
+        "We couldn't record your opt-in just now. Please try again in a minute."
+      );
     }
   }
 
@@ -63,7 +65,7 @@ export function SmsConsentForm(): React.ReactElement {
             rounded-full bg-saasy-pink/20"
         >
           <svg
-            className="h-7 w-7 text-saasy-pink"
+            className="h-7 w-7 text-saasy-pink-soft"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -77,10 +79,10 @@ export function SmsConsentForm(): React.ReactElement {
             />
           </svg>
         </div>
-        <h3 className="font-[family-name:var(--font-poppins)] text-2xl font-bold text-white">
+        <h3 className="text-2xl font-bold text-white">
           Consent recorded
         </h3>
-        <p className="mt-2 font-[family-name:var(--font-poppins)] text-saasy-muted">
+        <p className="mt-2 text-saasy-muted">
           Thanks &mdash; we&apos;ve received your SMS opt-in. You can reply{" "}
           <span className="font-semibold text-white">STOP</span> at any time to
           unsubscribe, or <span className="font-semibold text-white">HELP</span>{" "}
@@ -97,14 +99,14 @@ export function SmsConsentForm(): React.ReactElement {
         px-6 py-8 sm:px-10"
       noValidate
     >
-      <h2 className="font-[family-name:var(--font-poppins)] text-xl font-semibold text-white">
+      <h2 className="text-xl font-semibold text-white">
         SMS Opt-In Form
       </h2>
 
       <div className="mt-6">
         <label
           htmlFor="phone"
-          className="block font-[family-name:var(--font-poppins)] text-sm font-medium text-white"
+          className="block text-sm font-medium text-white"
         >
           Phone Number
         </label>
@@ -118,8 +120,8 @@ export function SmsConsentForm(): React.ReactElement {
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
           className="mt-2 w-full rounded-lg border border-saasy-border
-            bg-saasy-dark/60 px-4 py-3 font-[family-name:var(--font-poppins)]
-            text-white placeholder:text-saasy-muted/60 outline-none
+            bg-saasy-dark/60 px-4 py-3
+            text-white placeholder:text-saasy-muted outline-none
             focus:border-saasy-pink focus:ring-1 focus:ring-saasy-pink"
         />
       </div>
@@ -132,12 +134,12 @@ export function SmsConsentForm(): React.ReactElement {
           checked={agreed}
           onChange={(e) => setAgreed(e.target.checked)}
           className="mt-1 h-5 w-5 flex-shrink-0 rounded border-saasy-border
-            bg-saasy-dark/60 text-saasy-pink accent-saasy-pink
+            bg-saasy-dark/60 text-saasy-pink-soft accent-saasy-pink
             focus:ring-saasy-pink"
         />
         <label
           htmlFor="sms-consent"
-          className="font-[family-name:var(--font-poppins)] text-sm leading-relaxed text-saasy-muted"
+          className="text-sm leading-relaxed text-saasy-muted"
         >
           I agree to receive SMS messages from SaaSy. By checking this box, you
           agree to receive SMS messages from SaaSy related to account
@@ -153,7 +155,7 @@ export function SmsConsentForm(): React.ReactElement {
       {errorMsg ? (
         <p
           role="alert"
-          className="mt-4 font-[family-name:var(--font-poppins)] text-sm text-saasy-rose"
+          className="mt-4 text-sm text-red-400"
         >
           {errorMsg}
         </p>
@@ -162,9 +164,9 @@ export function SmsConsentForm(): React.ReactElement {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="mt-6 w-full rounded-lg bg-saasy-pink px-6 py-3
-          font-[family-name:var(--font-poppins)] font-semibold text-white
-          transition hover:bg-saasy-rose disabled:cursor-not-allowed
+        className="mt-6 w-full rounded-lg bg-saasy-rose px-6 py-3
+          font-semibold text-white
+          transition hover:bg-saasy-rose-bright disabled:cursor-not-allowed
           disabled:opacity-60"
       >
         {status === "loading" ? "Submitting…" : "Opt in to SMS"}

@@ -1,22 +1,22 @@
 export function WhoItsFor(): React.ReactElement {
   const personas = [
     {
-      title: "First-time Founders",
+      title: "Construction & trades",
       description:
-        "Launching your first business and overwhelmed by compliance, registration, and operations. SaaSy walks you through every step so nothing falls through the cracks.",
-      benefit: "From idea to launch, stress-free",
+        "Public-works GCs and subs living in prevailing-wage paperwork. SaaSy tracks your licenses and filings, runs WH-347 certified payroll, and keeps every bid deadline on your radar.",
+      benefit: "Certified payroll without the Sunday spreadsheet",
     },
     {
-      title: "Agency Owners",
+      title: "Unions & labor organizations",
       description:
-        "Running multiple client businesses and juggling filings, renewals, and contacts across all of them. Manage up to 5 businesses from one dashboard with Growth.",
-      benefit: "One dashboard for every business",
+        "Dues checkoff, CBA wage scales, and Taft-Hartley fringe remittance are a full-time job. SaaSy calculates them from signed authorizations and cuts the NACHA files for you.",
+      benefit: "Dues and fringe, remitted right, every month",
     },
     {
-      title: "Serial Entrepreneurs",
+      title: "Agencies & service firms",
       description:
-        "Scaling a portfolio of businesses and need custom automations and priority support. Unlimited businesses, dedicated onboarding, and advanced analytics on Scale.",
-      benefit: "Scale without the back-office chaos",
+        "You bill for your time, so admin is pure loss. Built-in CRM, invoicing, and customer health scores that flag the client who's about to walk — before they do.",
+      benefit: "Know which client is drifting before they ghost you",
     },
   ];
 
@@ -24,13 +24,15 @@ export function WhoItsFor(): React.ReactElement {
     <section className="border-t border-saasy-border py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto mb-16 max-w-2xl text-center">
-          <h2
-            className="font-[family-name:var(--font-poppins)]
-              text-3xl font-bold text-white sm:text-4xl"
-          >
-            Built for every entrepreneur who{" "}
-            <span className="gradient-text">means business</span>
+          <h2 className="text-3xl font-bold text-white sm:text-4xl">
+            For businesses that{" "}
+            <span className="gradient-text">mean business</span>
           </h2>
+          <p className="mt-4 text-lg text-saasy-muted">
+            Not another dashboard for startups pitching startups.
+            SaaSy is built for the people who keep payroll running
+            and the lights on.
+          </p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-3">
@@ -40,26 +42,18 @@ export function WhoItsFor(): React.ReactElement {
               className="rounded-2xl border border-saasy-border
                 bg-saasy-card/50 p-8"
             >
-              <h3
-                className="mb-3 font-[family-name:var(--font-poppins)]
-                  text-xl font-semibold text-white"
-              >
+              <h3 className="mb-3 text-xl font-semibold text-white">
                 {persona.title}
               </h3>
-              <p
-                className="font-[family-name:var(--font-poppins)]
-                  leading-relaxed text-saasy-muted"
-              >
+              <p className="leading-relaxed text-saasy-muted">
                 {persona.description}
               </p>
-              <div
-                className="mt-4 rounded-lg bg-saasy-pink/10
-                  border border-saasy-pink/20 p-3 text-sm
-                  font-medium text-saasy-pink
-                  font-[family-name:var(--font-poppins)]"
+              <p
+                className="mt-4 text-sm font-medium
+                  text-saasy-pink-soft"
               >
                 {persona.benefit}
-              </div>
+              </p>
             </div>
           ))}
         </div>

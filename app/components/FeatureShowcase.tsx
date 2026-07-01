@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ScreenshotCallout } from "./ScreenshotCallout";
+import { AutoplayVideo } from "./AutoplayVideo";
 
 export interface FeatureShowcaseCallout {
   top: string;
@@ -26,8 +27,8 @@ interface FeatureShowcaseProps {
   /**
    * Optional looping product clip (MP4 URL). When set, replaces the static
    * screenshot with an autoplaying/muted/looping video (the screenshot is the
-   * poster). The clip carries its own animated callout, so `callouts` are
-   * dropped in video mode.
+   * poster; reduced-motion visitors get the poster only). The clip carries
+   * its own animated callout, so `callouts` are dropped in video mode.
    */
   video?: string;
   /** When true, screenshot renders on the left instead of the right. */
@@ -59,67 +60,47 @@ export function FeatureShowcase({
           }`}
       >
         <div>
-          <h2
-            className="font-[family-name:var(--font-poppins)]
-              text-3xl font-bold text-white sm:text-4xl"
-          >
+          <h2 className="text-3xl font-bold text-white sm:text-4xl">
             {title}
           </h2>
-          <p
-            className="mt-4
-              font-[family-name:var(--font-poppins)]
-              text-lg leading-relaxed text-saasy-muted"
-          >
+          <p className="mt-4 text-lg leading-relaxed text-saasy-muted">
             {body}
           </p>
         </div>
 
-        <div className="relative">
-          <div
-            className="absolute inset-0 -m-4 rounded-2xl
-              bg-gradient-to-br from-saasy-pink/5
-              to-saasy-orange/5 blur-xl"
-          />
-          <div
-            className="glow-border relative overflow-hidden
-              rounded-2xl bg-saasy-card/80 p-2 backdrop-blur-sm"
-          >
-            <div className="relative">
-              {video ? (
-                <video
+        <div
+          className="relative overflow-hidden rounded-2xl border
+            border-saasy-border bg-saasy-card/80 p-2"
+        >
+          <div className="relative">
+            {video ? (
+              <AutoplayVideo
+                src={video}
+                poster={image}
+                label={alt}
+                preload="none"
+              />
+            ) : (
+              <>
+                <Image
+                  src={image}
+                  alt={alt}
+                  width={imageWidth}
+                  height={imageHeight}
+                  sizes="(max-width: 1024px) 100vw, 600px"
                   className="h-auto w-full rounded-lg"
-                  poster={image}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                  aria-label={alt}
-                >
-                  <source src={video} type="video/mp4" />
-                </video>
-              ) : (
-                <>
-                  <Image
-                    src={image}
-                    alt={alt}
-                    width={imageWidth}
-                    height={imageHeight}
-                    sizes="(max-width: 1024px) 100vw, 600px"
-                    className="h-auto w-full rounded-lg"
+                />
+                {callouts?.map((c, i) => (
+                  <ScreenshotCallout
+                    key={i}
+                    top={c.top}
+                    left={c.left}
+                    arrow={c.arrow}
+                    label={c.label}
                   />
-                  {callouts?.map((c, i) => (
-                    <ScreenshotCallout
-                      key={i}
-                      top={c.top}
-                      left={c.left}
-                      arrow={c.arrow}
-                      label={c.label}
-                    />
-                  ))}
-                </>
-              )}
-            </div>
+                ))}
+              </>
+            )}
           </div>
         </div>
       </div>

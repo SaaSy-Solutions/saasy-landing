@@ -1,12 +1,36 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { OPS_API_BASE } from "../../lib/api";
 
 type SubmitStatus = "idle" | "loading" | "success" | "error";
 
 function isValidEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
+
+/**
+ * POST a newsletter signup to the operations service. Resolves on a
+ * durable 2xx; throws on any non-2xx or network failure so callers show
+ * an honest error state instead of a false success.
+ */
+async function submitNewsletterSignup(
+  email: string,
+  source: string
+): Promise<void> {
+  const res = await fetch(`${OPS_API_BASE}/api/v1/marketing/newsletter`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, source }),
+  });
+
+  if (!res.ok) {
+    throw new Error(`Signup failed (${res.status})`);
+  }
+}
+
+const SUBMIT_ERROR_MSG =
+  "We couldn't save your signup just now. Please try again in a minute.";
 
 export function EmailCapture(): React.ReactElement {
   const [email, setEmail] = useState<string>("");
@@ -27,20 +51,11 @@ export function EmailCapture(): React.ReactElement {
     setStatus("loading");
 
     try {
-      const res = await fetch("/api/newsletter", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      });
-
-      if (!res.ok) {
-        throw new Error("Signup failed");
-      }
-
+      await submitNewsletterSignup(email, "newsletter-section");
       setStatus("success");
     } catch {
-      // MVP: treat as success since backend isn't wired yet
-      setStatus("success");
+      setStatus("error");
+      setErrorMsg(SUBMIT_ERROR_MSG);
     }
   }
 
@@ -58,7 +73,7 @@ export function EmailCapture(): React.ReactElement {
               bg-saasy-pink/20"
           >
             <svg
-              className="h-7 w-7 text-saasy-pink"
+              className="h-7 w-7 text-saasy-pink-soft"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -72,20 +87,13 @@ export function EmailCapture(): React.ReactElement {
               />
             </svg>
           </div>
-          <h3
-            className="font-[family-name:var(--font-poppins)]
-              text-2xl font-bold text-white"
-          >
-            You&apos;re in!
+          <h3 className="text-2xl font-bold text-white">
+            You&apos;re on the list.
           </h3>
-          <p
-            className="mt-2
-              font-[family-name:var(--font-poppins)]
-              text-saasy-muted"
-          >
-            Check your inbox for a welcome email. We&apos;ll
-            send you weekly insights on business formation,
-            compliance, scaling, and automation strategies.
+          <p className="mt-2 text-saasy-muted">
+            We&apos;ll send occasional product updates and early access
+            to new features as they ship. No spam, and you can
+            unsubscribe anytime.
           </p>
         </div>
       </section>
@@ -104,16 +112,11 @@ export function EmailCapture(): React.ReactElement {
       >
         <h2
           id="newsletter-heading"
-          className="font-[family-name:var(--font-poppins)]
-            text-2xl font-bold text-white sm:text-3xl"
+          className="text-2xl font-bold text-white sm:text-3xl"
         >
           Get product updates
         </h2>
-        <p
-          className="mx-auto mt-3 max-w-lg
-            font-[family-name:var(--font-poppins)]
-            text-saasy-muted"
-        >
+        <p className="mx-auto mt-3 max-w-lg text-saasy-muted">
           Get occasional updates on what we&rsquo;re shipping,
           plus early access to new features as they roll out.
         </p>
@@ -142,9 +145,8 @@ export function EmailCapture(): React.ReactElement {
             }
             aria-invalid={errorMsg ? true : undefined}
             className="flex-1 rounded-lg border border-saasy-border
-              bg-saasy-dark px-4 py-3
-              font-[family-name:var(--font-poppins)] text-sm
-              text-white placeholder-saasy-muted/60
+              bg-saasy-dark px-4 py-3 text-sm
+              text-white placeholder-saasy-muted
               transition-colors
               focus:border-saasy-pink focus:outline-none
               focus:ring-1 focus:ring-saasy-pink"
@@ -152,10 +154,9 @@ export function EmailCapture(): React.ReactElement {
           <button
             type="submit"
             disabled={status === "loading"}
-            className="rounded-full bg-saasy-pink px-6 py-3
-              font-[family-name:var(--font-poppins)] text-sm
+            className="rounded-full bg-saasy-rose px-6 py-3 text-sm
               font-semibold text-white
-              transition-colors hover:bg-saasy-rose
+              transition-colors hover:bg-saasy-rose-bright
               disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {status === "loading" ? "Subscribing..." : "Subscribe"}
@@ -166,17 +167,13 @@ export function EmailCapture(): React.ReactElement {
           <p
             id="newsletter-error"
             role="alert"
-            className="mt-2 text-sm text-red-400
-              font-[family-name:var(--font-poppins)]"
+            className="mt-2 text-sm text-red-400"
           >
             {errorMsg}
           </p>
         )}
 
-        <p
-          className="mt-4 text-xs text-saasy-muted/70
-            font-[family-name:var(--font-poppins)]"
-        >
+        <p className="mt-4 text-xs text-saasy-muted">
           No spam. Unsubscribe anytime.
         </p>
       </div>
@@ -204,19 +201,11 @@ export function FooterEmailCapture(): React.ReactElement {
     setStatus("loading");
 
     try {
-      const res = await fetch("/api/newsletter", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      });
-
-      if (!res.ok) {
-        throw new Error("Signup failed");
-      }
-
+      await submitNewsletterSignup(email, "footer");
       setStatus("success");
     } catch {
-      setStatus("success");
+      setStatus("error");
+      setErrorMsg(SUBMIT_ERROR_MSG);
     }
   }
 
@@ -229,7 +218,7 @@ export function FooterEmailCapture(): React.ReactElement {
             px-4 py-3"
         >
           <svg
-            className="h-5 w-5 shrink-0 text-saasy-pink"
+            className="h-5 w-5 shrink-0 text-saasy-pink-soft"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -242,11 +231,9 @@ export function FooterEmailCapture(): React.ReactElement {
               d="M5 13l4 4L19 7"
             />
           </svg>
-          <p
-            className="text-sm text-saasy-muted
-              font-[family-name:var(--font-poppins)]"
-          >
-            You&apos;re subscribed! Watch your inbox.
+          <p className="text-sm text-saasy-muted">
+            You&apos;re subscribed. We&apos;ll be in touch when
+            there&apos;s something worth reading.
           </p>
         </div>
       </div>
@@ -262,20 +249,15 @@ export function FooterEmailCapture(): React.ReactElement {
         className="rounded-lg border border-saasy-border
           bg-saasy-card/40 px-4 py-5 sm:px-6"
       >
-        <h4
+        <h3
           id="footer-newsletter-heading"
-          className="text-white
-            font-[family-name:var(--font-poppins)]
-            text-sm font-semibold"
+          className="text-white text-sm font-semibold"
         >
           Stay in the loop
-        </h4>
-        <p
-          className="mt-1 text-xs text-saasy-muted
-            font-[family-name:var(--font-poppins)]"
-        >
-          Weekly compliance updates, growth strategies, and
-          founder wins. No spam.
+        </h3>
+        <p className="mt-1 max-w-md text-xs text-saasy-muted">
+          Occasional product updates and practical guides for
+          running your business. No spam.
         </p>
         <form
           onSubmit={handleSubmit}
@@ -303,9 +285,8 @@ export function FooterEmailCapture(): React.ReactElement {
             }
             aria-invalid={errorMsg ? true : undefined}
             className="flex-1 rounded-md border border-saasy-border
-              bg-saasy-dark px-3 py-2
-              font-[family-name:var(--font-poppins)] text-sm
-              text-white placeholder-saasy-muted/60
+              bg-saasy-dark px-3 py-2 text-sm
+              text-white placeholder-saasy-muted
               transition-colors
               focus:border-saasy-pink focus:outline-none
               focus:ring-1 focus:ring-saasy-pink"
@@ -313,10 +294,9 @@ export function FooterEmailCapture(): React.ReactElement {
           <button
             type="submit"
             disabled={status === "loading"}
-            className="rounded-full bg-saasy-pink px-4 py-2
-              font-[family-name:var(--font-poppins)] text-sm
+            className="rounded-full bg-saasy-rose px-4 py-2 text-sm
               font-semibold text-white
-              transition-colors hover:bg-saasy-rose
+              transition-colors hover:bg-saasy-rose-bright
               disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {status === "loading" ? "..." : "Subscribe"}
@@ -326,8 +306,7 @@ export function FooterEmailCapture(): React.ReactElement {
           <p
             id="footer-newsletter-error"
             role="alert"
-            className="mt-1 text-xs text-red-400
-              font-[family-name:var(--font-poppins)]"
+            className="mt-1 text-xs text-red-400"
           >
             {errorMsg}
           </p>

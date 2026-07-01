@@ -31,12 +31,12 @@ const FAQ_ITEMS = [
   {
     question: "What integrations do you support?",
     answer:
-      "Connect your Stripe for automatic financial tracking, your email for CRM sync, and Slack for real-time business alerts — no manual data entry. We also support HubSpot, Salesforce, and Jira, with an open API on Growth plans and above.",
+      "Connect Stripe for automatic financial tracking and Slack for real-time business alerts — no manual data entry. HubSpot, Salesforce, and Jira connectors are rolling out to beta customers now, and Growth plans and above include an open API.",
   },
   {
     question: "How long does setup take?",
     answer:
-      "Most founders are up and running in under 2 minutes. Answer a few questions about your business, and SaaSy builds your personalized action plan immediately.",
+      "Most owners are up and running in under 10 minutes. Answer a few questions about your business, and SaaSy builds your personalized action plan immediately.",
   },
 ];
 
@@ -48,7 +48,7 @@ export function FAQ(): React.ReactElement {
       <div className="mx-auto max-w-3xl px-6">
         <h2
           className="mb-12 text-center
-            font-[family-name:var(--font-poppins)]
+
             text-3xl font-bold text-white sm:text-4xl"
         >
           Frequently asked questions
@@ -72,7 +72,7 @@ export function FAQ(): React.ReactElement {
                   >
                     <span
                       className="text-white
-                        font-[family-name:var(--font-poppins)]
+
                         text-base font-medium"
                     >
                       {item.question}
@@ -96,8 +96,7 @@ export function FAQ(): React.ReactElement {
                 {isOpen && (
                   <dd>
                     <p
-                      className="text-saasy-muted
-                        font-[family-name:var(--font-poppins)]
+                      className="max-w-[65ch] text-saasy-muted
                         text-sm pb-4 pt-3"
                     >
                       {item.answer}

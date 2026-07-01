@@ -44,7 +44,7 @@ export function ScreenshotCallout({
       <div
         className="relative rounded-full border border-saasy-pink/40
           bg-saasy-darker/90 px-3 py-1.5 shadow-lg backdrop-blur-sm
-          font-[family-name:var(--font-poppins)] text-xs
+           text-xs
           font-medium text-white"
       >
         {label}

@@ -4,7 +4,7 @@ import { HeroVideo } from "./HeroVideo";
 export function Hero(): React.ReactElement {
   return (
     <section
-      className="hero-gradient grid-pattern relative
+      className="hero-gradient relative
         overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-32"
     >
       <div className="mx-auto max-w-4xl px-6 text-center">
@@ -17,32 +17,29 @@ export function Hero(): React.ReactElement {
           <span
             className="h-2 w-2 rounded-full bg-saasy-pink"
           />
-          <span
-            className="font-[family-name:var(--font-poppins)]
-              text-sm text-saasy-pink"
-          >
-            Now in beta — early access open
+          <span className="text-sm text-saasy-pink-soft">
+            In open beta — anyone can sign up
           </span>
         </div>
 
         <h1
-          className="font-[family-name:var(--font-poppins)]
-            text-5xl leading-[1.1] font-extrabold tracking-tight
+          className="text-5xl leading-[1.1] font-extrabold tracking-tight
             text-white sm:text-7xl"
         >
-          Your intelligent business
+          Your entire back office,
           <br />
-          <span className="gradient-text">co-founder</span>
+          <span className="gradient-text">handled</span>
         </h1>
 
         <p
-          className="mx-auto mt-6 max-w-2xl
-            font-[family-name:var(--font-poppins)] text-lg
+          className="mx-auto mt-6 max-w-2xl text-lg
             leading-relaxed text-saasy-muted sm:text-xl"
         >
-          SaaSy guides you from first idea to thriving
-          enterprise. Every stage of your business journey,
-          managed by technology that works alongside you.
+          CRM, invoicing, compliance, and customer intelligence —
+          run by AI agents that flag problems before they cost you
+          money. Built for contractors, unions, agencies, and
+          every owner who&rsquo;d rather run the business than
+          the busywork.
         </p>
 
         {/* CTAs */}
@@ -52,19 +49,17 @@ export function Hero(): React.ReactElement {
         >
           <Link
             href="https://app.hellosaasy.ai/signup"
-            className="cta-pulse inline-flex rounded-full
-              bg-saasy-pink px-8 py-4
-              font-[family-name:var(--font-poppins)] text-base
-              font-semibold uppercase tracking-wider text-white
-              transition-colors hover:bg-saasy-rose"
+            className="inline-flex rounded-full
+              bg-saasy-rose px-8 py-4 text-base
+              font-semibold text-white
+              transition-colors hover:bg-saasy-rose-bright"
           >
-            Start Free Trial
+            Start free trial
           </Link>
           <Link
             href="#features"
             className="inline-flex items-center gap-2 rounded-full
-              border border-saasy-border px-8 py-4
-              font-[family-name:var(--font-poppins)] text-base
+              border border-saasy-border px-8 py-4 text-base
               font-semibold text-saasy-muted transition-colors
               hover:border-saasy-pink/30 hover:text-white"
           >
@@ -85,13 +80,9 @@ export function Hero(): React.ReactElement {
           </Link>
         </div>
 
-        <p
-          className="mt-4
-            font-[family-name:var(--font-poppins)]
-            text-sm text-saasy-muted"
-        >
-          14-day free trial on Growth plan. No credit card
-          required.
+        <p className="mt-4 text-sm text-saasy-muted">
+          Free for 14 days with full Growth access. No credit
+          card required.
         </p>
 
         {/* Product demo video (Remotion-rendered loop), PNG poster fallback */}

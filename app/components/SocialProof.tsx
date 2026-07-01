@@ -20,24 +20,17 @@ export function SocialProof(): React.ReactElement {
           <span
             className="h-2 w-2 rounded-full bg-saasy-pink"
           />
-          <span
-            className="font-[family-name:var(--font-poppins)]
-              text-sm text-saasy-pink"
-          >
+          <span className="text-sm text-saasy-pink-soft">
             Currently in beta
           </span>
         </div>
 
-        <h2
-          className="mt-6 font-[family-name:var(--font-poppins)]
-            text-3xl font-bold text-white sm:text-4xl"
-        >
+        <h2 className="mt-6 text-3xl font-bold text-white sm:text-4xl">
           Help shape SaaSy from day one
         </h2>
 
         <p
-          className="mx-auto mt-4 max-w-xl
-            font-[family-name:var(--font-poppins)] text-lg
+          className="mx-auto mt-4 max-w-xl text-lg
             leading-relaxed text-saasy-muted"
         >
           We&rsquo;re in the early days and building alongside our
@@ -48,10 +41,9 @@ export function SocialProof(): React.ReactElement {
 
         <Link
           href="https://app.hellosaasy.ai/signup?source=beta"
-          className="mt-8 inline-flex rounded-full bg-saasy-pink
-            px-8 py-4 font-[family-name:var(--font-poppins)]
-            text-base font-semibold uppercase tracking-wider
-            text-white transition-colors hover:bg-saasy-rose"
+          className="mt-8 inline-flex rounded-full bg-saasy-rose
+            px-8 py-4 text-base font-semibold
+            text-white transition-colors hover:bg-saasy-rose-bright"
         >
           Start free trial
         </Link>

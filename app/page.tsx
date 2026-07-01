@@ -3,21 +3,46 @@
 import { useState } from "react";
 import Link from "next/link";
 import { IconCompliance, IconCRM, IconAI, IconAlerts } from "./components/Icons";
-import { FeatureCard } from "./components/FeatureCard";
 import { WhoItsFor } from "./components/WhoItsFor";
 import { PricingCard, PricingToggle } from "./components/Pricing";
 import { SocialProof } from "./components/SocialProof";
 import { TrustBadge } from "./components/TrustBadge";
 import { FAQ } from "./components/FAQ";
 import { BlogHighlights } from "./components/BlogHighlights";
-import { EmailCapture } from "./components/EmailCapture";
 import { MarketingFooter } from "./components/MarketingFooter";
-import { ConsultingPromo } from "./components/ConsultingPromo";
 import { SiteNav } from "./components/SiteNav";
 import { Hero } from "./components/Hero";
 import { ProductDemo } from "./components/ProductDemo";
 
 /* ═══════════════════════════ PAGE ═══════════════════════════════ */
+
+/** Core capabilities — everything listed here is live in the product. */
+const CAPABILITIES = [
+  {
+    icon: <IconAI />,
+    title: "Customer health scoring",
+    description:
+      "Every account scored 0-100 on usage, payments, and support signals — so you see who's drifting toward the exit while there's still time to call.",
+  },
+  {
+    icon: <IconCRM />,
+    title: "Built-in CRM & invoicing",
+    description:
+      "Contacts, deals, projects, and billing in one place. No duct tape between four tools that don't talk to each other.",
+  },
+  {
+    icon: <IconCompliance />,
+    title: "Compliance tracker",
+    description:
+      "Licenses, permits, filings, and certified-payroll deadlines tracked automatically. Reminders land before the due date, not after the fine.",
+  },
+  {
+    icon: <IconAlerts />,
+    title: "Proactive alerts",
+    description:
+      "Email or Slack pings when something needs you: a churn risk, a deadline, an invoice going stale. The system watches so you don't have to.",
+  },
+];
 
 export default function Home(): React.ReactElement {
   const [pricingInterval, setPricingInterval] = useState<
@@ -42,17 +67,27 @@ export default function Home(): React.ReactElement {
       {/* ─────────────── Trust Bar ─────────────────── */}
       <section
         className="border-y border-saasy-border bg-saasy-card/30"
+        aria-label="Security and data practices"
       >
         <div
           className="mx-auto grid max-w-4xl grid-cols-2
             gap-8 px-6 py-12 sm:grid-cols-4"
         >
-          <TrustBadge label="AES-256" sublabel="Encryption" />
-          <TrustBadge label="TLS 1.2+" sublabel="In transit" />
-          <TrustBadge label="Tenant" sublabel="Isolation" />
           <TrustBadge
-            label="GDPR"
-            sublabel="Ready"
+            label="Encrypted"
+            sublabel="At rest and in transit"
+          />
+          <TrustBadge
+            label="Your data stays yours"
+            sublabel="Strict per-account isolation"
+          />
+          <TrustBadge
+            label="GDPR-ready"
+            sublabel="Export or delete anytime"
+          />
+          <TrustBadge
+            label="Real humans"
+            sublabel="US-based support"
           />
         </div>
       </section>
@@ -64,23 +99,15 @@ export default function Home(): React.ReactElement {
       <section id="features" className="py-24 sm:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto mb-16 max-w-2xl text-center">
-            <h2
-              className="font-[family-name:var(--font-poppins)]
-                text-3xl font-bold text-white sm:text-4xl"
-            >
-              Everything your business needs to{" "}
-              <span className="gradient-text">
-                thrive
-              </span>
+            <h2 className="text-3xl font-bold text-white sm:text-4xl">
+              Software that{" "}
+              <span className="gradient-text">does the work</span>,
+              not just the reporting
             </h2>
-            <p
-              className="mt-4
-                font-[family-name:var(--font-poppins)]
-                text-lg text-saasy-muted"
-            >
-              From formation to scaling, SaaSy manages every
-              stage of your business lifecycle with intelligent
-              guidance.
+            <p className="mt-4 text-lg text-saasy-muted">
+              Most tools show you charts of the problem. SaaSy&rsquo;s
+              agents chase the deadline, score the customer, and draft
+              the follow-up — then tell you what they did.
             </p>
           </div>
 
@@ -88,29 +115,34 @@ export default function Home(): React.ReactElement {
               "See how it works" CTA. */}
           <ProductDemo />
 
+          {/* Plain two-column capability list — deliberately not a wall
+              of identical cards. */}
           <div
-            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
+            className="grid gap-x-16 gap-y-12 sm:grid-cols-2"
           >
-            <FeatureCard
-              icon={<IconCompliance />}
-              title="Compliance Tracker"
-              description="Automated tracking of licenses, permits, and filings. Get reminders before deadlines, not after."
-            />
-            <FeatureCard
-              icon={<IconCRM />}
-              title="Built-in CRM"
-              description="Manage contacts, deals, and customer relationships from day one. No separate tool needed."
-            />
-            <FeatureCard
-              icon={<IconAI />}
-              title="Smart Guidance"
-              description="Personalized recommendations for your business at every growth stage. Like having a mentor on call."
-            />
-            <FeatureCard
-              icon={<IconAlerts />}
-              title="Proactive Alerts"
-              description="Timely notifications about deadlines, opportunities, and risks via email or Slack."
-            />
+            {CAPABILITIES.map((cap) => (
+              <div key={cap.title} className="flex gap-5">
+                <div className="mt-1 shrink-0">{cap.icon}</div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white">
+                    {cap.title}
+                  </h3>
+                  <p className="mt-2 leading-relaxed text-saasy-muted">
+                    {cap.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link
+              href="/features"
+              className="text-sm font-medium text-saasy-pink-soft
+                transition-colors hover:text-white"
+            >
+              See every feature in real screenshots &rarr;
+            </Link>
           </div>
         </div>
       </section>
@@ -125,19 +157,13 @@ export default function Home(): React.ReactElement {
       >
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto mb-10 max-w-2xl text-center">
-            <h2
-              className="font-[family-name:var(--font-poppins)]
-                text-3xl font-bold text-white sm:text-4xl"
-            >
+            <h2 className="text-3xl font-bold text-white sm:text-4xl">
               Simple, transparent pricing
             </h2>
-            <p
-              className="mt-4
-                font-[family-name:var(--font-poppins)]
-                text-lg text-saasy-muted"
-            >
-              14-day free trial on every plan. No credit card
-              required.
+            <p className="mt-4 text-lg text-saasy-muted">
+              Every trial starts with full Growth access, free for
+              14 days. Pick your plan when you&rsquo;re ready — no
+              credit card up front.
             </p>
           </div>
 
@@ -193,22 +219,26 @@ export default function Home(): React.ReactElement {
             />
           </div>
 
-          {/* Consulting upsell */}
-          <p
-            className="mt-10 text-center
-              font-[family-name:var(--font-poppins)] text-sm
-              text-saasy-muted"
-          >
-            Need custom automations, integrations, or a dedicated
-            engineering partner?{" "}
-            <a
-              href="https://saasysolutionsllc.com/consultation"
-              className="font-medium text-saasy-orange
+          <div className="mt-10 text-center">
+            <Link
+              href="/compare"
+              className="text-sm font-medium text-saasy-pink-soft
                 transition-colors hover:text-white"
             >
-              Talk to our consulting team &rarr;
-            </a>
-          </p>
+              See how SaaSy compares to the tools it replaces &rarr;
+            </Link>
+            <p className="mx-auto mt-4 max-w-xl text-sm text-saasy-muted">
+              Need custom automations, integrations, or a dedicated
+              engineering partner?{" "}
+              <a
+                href="https://saasysolutionsllc.com/consultation"
+                className="font-medium text-saasy-orange
+                  transition-colors hover:text-white"
+              >
+                Talk to our consulting team &rarr;
+              </a>
+            </p>
+          </div>
         </div>
       </section>
 
@@ -218,43 +248,42 @@ export default function Home(): React.ReactElement {
       {/* ─────────────── Blog Highlights ─────────── */}
       <BlogHighlights />
 
-      {/* ─────────────── Email Capture ────────────── */}
-      <EmailCapture />
-
-      {/* ──────── Consulting Cross-Promo ─────────── */}
-      <ConsultingPromo />
-
       {/* ───────────── Final CTA ──────────────────── */}
       <section className="border-t border-saasy-border">
         <div
           className="hero-gradient mx-auto max-w-4xl px-6
             py-24 text-center sm:py-32"
         >
-          <h2
-            className="font-[family-name:var(--font-poppins)]
-              text-3xl font-bold text-white sm:text-5xl"
-          >
+          <h2 className="text-3xl font-bold text-white sm:text-5xl">
             Ready to run your business smarter?
           </h2>
           <p
-            className="mx-auto mt-4 max-w-xl
-              font-[family-name:var(--font-poppins)] text-lg
+            className="mx-auto mt-4 max-w-xl text-lg
               text-saasy-muted"
           >
-            Join thousands of entrepreneurs using SaaSy to build
-            and grow their businesses. Start your 14-day free
-            trial today.
+            We&rsquo;re in open beta, building alongside our first
+            customers — which means your feedback ships in days,
+            and your first two weeks are free.
           </p>
           <Link
             href="https://app.hellosaasy.ai/signup"
-            className="cta-pulse mt-8 inline-flex rounded-full
-              bg-saasy-pink px-8 py-4
-              font-[family-name:var(--font-poppins)] text-base
-              font-semibold uppercase tracking-wider text-white
-              transition-colors hover:bg-saasy-rose"
+            className="mt-8 inline-flex rounded-full
+              bg-saasy-rose px-8 py-4 text-base
+              font-semibold text-white
+              transition-colors hover:bg-saasy-rose-bright"
           >
             Start your free trial
           </Link>
+          <p className="mt-4 text-sm text-saasy-muted">
+            Want a walkthrough first?{" "}
+            <a
+              href="https://app.hellosaasy.ai/contact-sales"
+              className="font-medium text-saasy-pink-soft
+                transition-colors hover:text-white"
+            >
+              Talk to sales
+            </a>
+          </p>
         </div>
       </section>
 

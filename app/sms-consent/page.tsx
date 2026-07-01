@@ -16,13 +16,13 @@ export default function SmsConsentPage() {
         <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4">
           <Link
             href="/"
-            className="font-[family-name:var(--font-poppins)] text-xl font-bold"
+            className=" text-xl font-bold"
           >
             <span className="gradient-text">SaaSy</span>
           </Link>
           <Link
             href="/"
-            className="font-[family-name:var(--font-poppins)] text-sm text-saasy-pink hover:text-saasy-rose underline"
+            className=" text-sm text-saasy-pink-soft hover:text-saasy-rose underline"
           >
             &larr; Back to home
           </Link>
@@ -32,13 +32,13 @@ export default function SmsConsentPage() {
       {/* Content */}
       <div className="max-w-3xl mx-auto px-6 py-16">
         <header className="mb-12">
-          <h1 className="text-white font-[family-name:var(--font-poppins)] text-3xl font-bold">
+          <h1 className="text-white  text-3xl font-bold">
             SMS Consent
           </h1>
-          <p className="mt-3 font-[family-name:var(--font-poppins)] text-saasy-muted text-sm">
+          <p className="mt-3  text-saasy-muted text-sm">
             Last updated: June 2026
           </p>
-          <p className="mt-5 text-saasy-muted font-[family-name:var(--font-poppins)] leading-relaxed">
+          <p className="mt-5 text-saasy-muted  leading-relaxed">
             SaaSy (operated by SaaSy Solutions LLC) can send you SMS text
             messages to keep your business running smoothly. We only send
             messages to phone numbers that have explicitly opted in. Complete the
@@ -55,13 +55,13 @@ export default function SmsConsentPage() {
         <div className="space-y-10">
           {/* What messages you'll receive */}
           <section>
-            <h2 className="text-white font-[family-name:var(--font-poppins)] text-xl font-semibold mb-4">
+            <h2 className="text-white  text-xl font-semibold mb-4">
               What messages you&apos;ll receive
             </h2>
-            <p className="text-saasy-muted font-[family-name:var(--font-poppins)] leading-relaxed mb-3">
+            <p className="text-saasy-muted  leading-relaxed mb-3">
               If you opt in, SaaSy may send you SMS messages related to:
             </p>
-            <ul className="list-disc pl-6 space-y-2 text-saasy-muted font-[family-name:var(--font-poppins)] leading-relaxed">
+            <ul className="list-disc pl-6 space-y-2 text-saasy-muted  leading-relaxed">
               <li>
                 <span className="text-white font-medium">
                   Account notifications
@@ -90,10 +90,10 @@ export default function SmsConsentPage() {
 
           {/* Frequency, rates, opt-out */}
           <section>
-            <h2 className="text-white font-[family-name:var(--font-poppins)] text-xl font-semibold mb-4">
+            <h2 className="text-white  text-xl font-semibold mb-4">
               Frequency, rates &amp; how to opt out
             </h2>
-            <ul className="list-disc pl-6 space-y-2 text-saasy-muted font-[family-name:var(--font-poppins)] leading-relaxed">
+            <ul className="list-disc pl-6 space-y-2 text-saasy-muted  leading-relaxed">
               <li>
                 <span className="text-white font-medium">
                   Message frequency varies
@@ -118,7 +118,7 @@ export default function SmsConsentPage() {
                 assistance, or contact us at{" "}
                 <a
                   href="mailto:support@hellosaasy.ai"
-                  className="text-saasy-pink hover:text-saasy-rose underline"
+                  className="text-saasy-pink-soft hover:text-saasy-rose underline"
                 >
                   support@hellosaasy.ai
                 </a>
@@ -135,10 +135,10 @@ export default function SmsConsentPage() {
 
           {/* Privacy */}
           <section>
-            <h2 className="text-white font-[family-name:var(--font-poppins)] text-xl font-semibold mb-4">
+            <h2 className="text-white  text-xl font-semibold mb-4">
               Your privacy
             </h2>
-            <p className="text-saasy-muted font-[family-name:var(--font-poppins)] leading-relaxed">
+            <p className="text-saasy-muted  leading-relaxed">
               We do not sell or share your phone number or SMS opt-in
               information with third parties or affiliates for their marketing or
               promotional purposes. Mobile information collected for SMS consent
@@ -146,14 +146,14 @@ export default function SmsConsentPage() {
               details on how we handle your data, see our{" "}
               <Link
                 href="/privacy"
-                className="text-saasy-pink hover:text-saasy-rose underline"
+                className="text-saasy-pink-soft hover:text-saasy-rose underline"
               >
                 Privacy Policy
               </Link>{" "}
               and{" "}
               <Link
                 href="/terms"
-                className="text-saasy-pink hover:text-saasy-rose underline"
+                className="text-saasy-pink-soft hover:text-saasy-rose underline"
               >
                 Terms of Service
               </Link>
@@ -164,19 +164,19 @@ export default function SmsConsentPage() {
 
         {/* Footer */}
         <footer className="mt-16 border-t border-saasy-border pt-8">
-          <p className="font-[family-name:var(--font-poppins)] text-sm text-saasy-muted">
+          <p className=" text-sm text-saasy-muted">
             &copy; 2023–2026 SaaSy Solutions LLC. All rights reserved.
           </p>
           <div className="mt-3 flex gap-6">
             <Link
               href="/privacy"
-              className="font-[family-name:var(--font-poppins)] text-sm text-saasy-pink hover:text-saasy-rose underline"
+              className=" text-sm text-saasy-pink-soft hover:text-saasy-rose underline"
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms"
-              className="font-[family-name:var(--font-poppins)] text-sm text-saasy-pink hover:text-saasy-rose underline"
+              className=" text-sm text-saasy-pink-soft hover:text-saasy-rose underline"
             >
               Terms of Service
             </Link>

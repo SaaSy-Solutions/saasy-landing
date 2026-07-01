@@ -29,18 +29,19 @@ export default function PricingPage(): React.ReactElement {
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto mb-10 max-w-2xl text-center">
             <h1
-              className="font-[family-name:var(--font-poppins)]
+              className="
                 text-4xl font-bold text-white sm:text-5xl"
             >
               Simple, transparent pricing
             </h1>
             <p
               className="mt-4
-                font-[family-name:var(--font-poppins)]
+
                 text-lg text-saasy-muted"
             >
-              14-day free trial on every plan. No credit card required.
-              Switch or cancel anytime.
+              Every trial starts with full Growth access, free for 14
+              days. Pick your plan when you're ready — no credit card
+              up front. Switch or cancel anytime.
             </p>
           </div>
 
@@ -48,6 +49,7 @@ export default function PricingPage(): React.ReactElement {
             <PricingToggle interval={interval} onChange={setInterval} />
           </div>
 
+          <h2 className="sr-only">Plans</h2>
           <div
             className="mx-auto grid max-w-5xl gap-8
               lg:grid-cols-3"
@@ -94,8 +96,7 @@ export default function PricingPage(): React.ReactElement {
           </div>
 
           <p
-            className="mt-10 text-center
-              font-[family-name:var(--font-poppins)] text-sm
+            className="mx-auto mt-10 max-w-xl text-center text-sm
               text-saasy-muted"
           >
             Need custom automations, integrations, or a dedicated
@@ -115,20 +116,19 @@ export default function PricingPage(): React.ReactElement {
         <div className="mx-auto max-w-5xl px-6">
           <div className="mx-auto mb-10 max-w-2xl text-center">
             <p
-              className="mb-3 font-[family-name:var(--font-poppins)]
-                text-sm font-semibold uppercase tracking-wider
-                text-saasy-pink"
+              className="mb-3
+                text-sm font-semibold text-saasy-pink-soft"
             >
               Add-on
             </p>
             <h2
-              className="font-[family-name:var(--font-poppins)]
+              className="
                 text-3xl font-bold text-white sm:text-4xl"
             >
-              <span className="gradient-text">Union &amp; Labor Compliance</span>
+              Union &amp; Labor Compliance
             </h2>
             <p
-              className="mt-4 font-[family-name:var(--font-poppins)]
+              className="mt-4
                 text-lg text-saasy-muted"
             >
               Built for unionized employers and contractors on
@@ -143,7 +143,7 @@ export default function PricingPage(): React.ReactElement {
           >
             <div>
               <h3
-                className="mb-5 font-[family-name:var(--font-poppins)]
+                className="mb-5
                   text-lg font-semibold text-white"
               >
                 What it does
@@ -159,7 +159,7 @@ export default function PricingPage(): React.ReactElement {
                   <li
                     key={item}
                     className="flex items-start gap-3
-                      font-[family-name:var(--font-poppins)]
+
                       text-sm text-saasy-muted"
                   >
                     <IconCheck />
@@ -174,21 +174,21 @@ export default function PricingPage(): React.ReactElement {
                 bg-saasy-dark/60 p-6 sm:p-8"
             >
               <h3
-                className="mb-5 font-[family-name:var(--font-poppins)]
+                className="mb-5
                   text-lg font-semibold text-white"
               >
                 Priced by active members
               </h3>
               <ul
                 className="mb-6 flex-1 space-y-3
-                  font-[family-name:var(--font-poppins)]
+
                   text-sm text-saasy-muted"
               >
                 <li className="flex items-center justify-between gap-4">
                   <span>Up to 50 members</span>
                   <span className="font-semibold text-white">
                     ${unionAddon.band50}
-                    <span className="text-saasy-muted/70">
+                    <span className="text-saasy-muted">
                       {billingLabel}
                     </span>
                   </span>
@@ -197,18 +197,18 @@ export default function PricingPage(): React.ReactElement {
                   <span>Up to 250 members</span>
                   <span className="font-semibold text-white">
                     ${unionAddon.band250}
-                    <span className="text-saasy-muted/70">
+                    <span className="text-saasy-muted">
                       {billingLabel}
                     </span>
                   </span>
                 </li>
                 <li className="flex items-center justify-between gap-4">
                   <span>250+ members</span>
-                  <span className="text-saasy-muted/70">Custom</span>
+                  <span className="text-saasy-muted">Custom</span>
                 </li>
               </ul>
               <p
-                className="mb-6 font-[family-name:var(--font-poppins)]
+                className="mb-6
                   text-sm text-saasy-muted"
               >
                 Added to your Growth or Scale plan. Larger rosters
@@ -217,11 +217,10 @@ export default function PricingPage(): React.ReactElement {
               </p>
               <a
                 href="mailto:sales@hellosaasy.ai?subject=Union%20%26%20Labor%20Compliance%20add-on"
-                className="block rounded-full bg-saasy-pink py-3.5
-                  text-center font-[family-name:var(--font-poppins)]
-                  text-sm font-semibold uppercase tracking-wider
-                  text-white transition-all duration-200
-                  hover:bg-saasy-rose"
+                className="block rounded-full bg-saasy-rose py-3.5
+                  text-center
+                  text-sm font-semibold text-white transition-all duration-200
+                  hover:bg-saasy-rose-bright"
               >
                 Talk to sales
               </a>
@@ -234,14 +233,14 @@ export default function PricingPage(): React.ReactElement {
         <div className="mx-auto max-w-3xl px-6">
           <h2
             className="mb-10 text-center
-              font-[family-name:var(--font-poppins)]
+
               text-3xl font-bold text-white"
           >
             What's included
           </h2>
           <div
             className="grid gap-6 sm:grid-cols-2
-              font-[family-name:var(--font-poppins)] text-saasy-muted"
+               text-saasy-muted"
           >
             <div>
               <h3 className="mb-2 font-semibold text-white">
@@ -282,12 +281,11 @@ export default function PricingPage(): React.ReactElement {
           </div>
           <div className="mt-10 text-center">
             <Link
-              href="/#features"
-              className="font-[family-name:var(--font-poppins)]
-                text-sm text-saasy-pink hover:text-saasy-rose
-                underline"
+              href="/compare"
+              className="
+                text-sm text-saasy-pink-soft hover:text-white underline"
             >
-              See full feature comparison &rarr;
+              See how SaaSy compares to the tools it replaces &rarr;
             </Link>
           </div>
         </div>

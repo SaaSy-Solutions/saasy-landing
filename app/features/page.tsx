@@ -113,20 +113,20 @@ export default function FeaturesPage(): React.ReactElement {
 
       {/* ─────────────────── Hero ─────────────────── */}
       <header
-        className="hero-gradient grid-pattern relative
+        className="hero-gradient relative
           overflow-hidden pt-32 pb-16 sm:pt-40 sm:pb-20"
       >
         <div className="mx-auto max-w-4xl px-6 text-center">
           <h1
-            className="font-[family-name:var(--font-poppins)]
+            className="
               text-4xl leading-[1.1] font-extrabold tracking-tight
               text-white sm:text-6xl"
           >
-            What you actually <span className="gradient-text">see</span>
+            What you actually <span className="gradient-text">get</span>
           </h1>
           <p
             className="mx-auto mt-6 max-w-2xl
-              font-[family-name:var(--font-poppins)] text-lg
+               text-lg
               leading-relaxed text-saasy-muted sm:text-xl"
           >
             Real screenshots from a working SaaSy account. No mockups,
@@ -168,14 +168,14 @@ export default function FeaturesPage(): React.ReactElement {
           <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-2xl">
               <h2
-                className="font-[family-name:var(--font-poppins)]
+                className="
                   text-3xl font-bold text-white sm:text-4xl"
               >
                 Under the hood
               </h2>
               <p
                 className="mt-4
-                  font-[family-name:var(--font-poppins)]
+
                   text-lg leading-relaxed text-saasy-muted"
               >
                 The signals SaaSy watches so you don&rsquo;t have to. Each
@@ -202,14 +202,14 @@ export default function FeaturesPage(): React.ReactElement {
                 >
                   <div className="mb-5">{cap.icon}</div>
                   <h3
-                    className="font-[family-name:var(--font-poppins)]
+                    className="
                       text-xl font-semibold text-white"
                   >
                     {cap.title}
                   </h3>
                   <p
                     className="mt-3
-                      font-[family-name:var(--font-poppins)]
+
                       leading-relaxed text-saasy-muted"
                   >
                     {cap.body}
@@ -256,14 +256,14 @@ export default function FeaturesPage(): React.ReactElement {
           >
             <div>
               <h2
-                className="font-[family-name:var(--font-poppins)]
+                className="
                   text-3xl font-bold text-white sm:text-4xl"
               >
                 Connect the tools you already use
               </h2>
               <p
                 className="mt-4
-                  font-[family-name:var(--font-poppins)]
+
                   text-lg leading-relaxed text-saasy-muted"
               >
                 Connect Stripe, HubSpot, Salesforce, and your help desk
@@ -279,7 +279,7 @@ export default function FeaturesPage(): React.ReactElement {
                   <li
                     key={point}
                     className="flex items-start gap-3
-                      font-[family-name:var(--font-poppins)]
+
                       text-saasy-muted"
                   >
                     <IconCheck />
@@ -294,9 +294,8 @@ export default function FeaturesPage(): React.ReactElement {
                 backdrop-blur-sm"
             >
               <p
-                className="font-[family-name:var(--font-poppins)]
-                  text-xs font-semibold uppercase tracking-wider
-                  text-saasy-muted"
+                className="
+                  text-xs font-semibold text-saasy-muted"
               >
                 Works with
               </p>
@@ -324,7 +323,7 @@ export default function FeaturesPage(): React.ReactElement {
               <Link
                 href="/integrations"
                 className="mt-6 inline-flex
-                  font-[family-name:var(--font-poppins)] text-sm
+                   text-sm
                   font-medium text-saasy-orange transition-colors
                   hover:text-white"
               >
@@ -341,26 +340,26 @@ export default function FeaturesPage(): React.ReactElement {
               text-center sm:py-32"
           >
             <h2
-              className="font-[family-name:var(--font-poppins)]
+              className="
                 text-3xl font-bold text-white sm:text-4xl"
             >
               See it in your own account
             </h2>
             <p
               className="mx-auto mt-4 max-w-xl
-                font-[family-name:var(--font-poppins)]
+
                 text-lg text-saasy-muted"
             >
-              14-day free trial on the Growth plan. No credit card
+              Free for 14 days with full Growth access. No credit card
               required.
             </p>
             <Link
               href="https://app.hellosaasy.ai/signup"
-              className="cta-pulse mt-8 inline-flex rounded-full
-                bg-saasy-pink px-8 py-4
-                font-[family-name:var(--font-poppins)] text-base
-                font-semibold uppercase tracking-wider text-white
-                transition-colors hover:bg-saasy-rose"
+              className="mt-8 inline-flex rounded-full
+                bg-saasy-rose px-8 py-4
+                 text-base
+                font-semibold text-white
+                transition-colors hover:bg-saasy-rose-bright"
             >
               Start free trial
             </Link>

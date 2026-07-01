@@ -54,20 +54,20 @@ export default function CustomersPage() {
       <div className="mx-auto max-w-6xl px-6 pt-28 pb-20">
         <div className="text-center">
           <p
-            className="font-[family-name:var(--font-poppins)]
-              text-sm font-medium text-saasy-pink"
+            className="
+              text-sm font-medium text-saasy-pink-soft"
           >
             Now in beta
           </p>
           <h1
-            className="mt-2 font-[family-name:var(--font-poppins)]
+            className="mt-2
               text-4xl font-bold tracking-tight text-white"
           >
             Customer Stories
           </h1>
           <p
             className="mx-auto mt-4 max-w-2xl
-              font-[family-name:var(--font-poppins)]
+
               text-lg text-saasy-muted"
           >
             SaaSy is brand new and we&rsquo;re building alongside
@@ -79,9 +79,8 @@ export default function CustomersPage() {
 
         <div className="mt-16 text-center">
           <h2
-            className="font-[family-name:var(--font-poppins)]
-              text-sm font-semibold uppercase tracking-wider
-              text-saasy-muted"
+            className="
+              text-sm font-semibold text-saasy-muted"
           >
             What SaaSy is built to do
           </h2>
@@ -95,14 +94,14 @@ export default function CustomersPage() {
                 bg-saasy-card p-8"
             >
               <h3
-                className="font-[family-name:var(--font-poppins)]
+                className="
                   text-xl font-semibold text-white"
               >
                 {outcome.title}
               </h3>
               <p
                 className="mt-3 flex-1
-                  font-[family-name:var(--font-poppins)]
+
                   text-sm leading-relaxed text-saasy-muted"
               >
                 {outcome.body}
@@ -113,7 +112,7 @@ export default function CustomersPage() {
 
         <div className="mt-16 text-center">
           <h2
-            className="font-[family-name:var(--font-poppins)]
+            className="
               text-xl font-semibold text-white"
           >
             Want to be one of our first stories?
@@ -121,17 +120,17 @@ export default function CustomersPage() {
           <div className="mt-6 flex justify-center gap-4">
             <Link
               href="https://app.hellosaasy.ai/signup"
-              className="rounded-full bg-saasy-pink px-6 py-2.5
-                font-[family-name:var(--font-poppins)] text-sm
-                font-semibold uppercase tracking-wider text-white
-                transition-colors hover:bg-saasy-rose"
+              className="rounded-full bg-saasy-rose px-6 py-2.5
+                 text-sm
+                font-semibold text-white
+                transition-colors hover:bg-saasy-rose-bright"
             >
-              Start Free Trial
+              Start free trial
             </Link>
             <Link
               href="https://app.hellosaasy.ai/contact-sales"
               className="rounded-full border border-saasy-border px-6
-                py-2.5 font-[family-name:var(--font-poppins)] text-sm
+                py-2.5  text-sm
                 font-semibold text-saasy-text transition-colors
                 hover:border-saasy-muted hover:text-white"
             >

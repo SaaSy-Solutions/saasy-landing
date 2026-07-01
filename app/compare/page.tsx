@@ -113,7 +113,7 @@ export default function ComparePage() {
             text-center sm:py-28"
         >
           <h1
-            className="font-[family-name:var(--font-poppins)]
+            className="
               text-3xl font-bold sm:text-5xl"
           >
             How SaaSy{" "}
@@ -121,7 +121,7 @@ export default function ComparePage() {
           </h1>
           <p
             className="mx-auto mt-4 max-w-2xl
-              font-[family-name:var(--font-poppins)] text-lg
+               text-lg
               text-saasy-muted"
           >
             Replace your spreadsheets, your bookkeeper, your
@@ -139,12 +139,12 @@ export default function ComparePage() {
               <thead>
                 <tr
                   className="border-b border-saasy-border
-                    font-[family-name:var(--font-poppins)]"
+                    "
                 >
                   <th className="py-4 pr-6 font-semibold text-saasy-muted">
                     Feature
                   </th>
-                  <th className="py-4 px-4 font-bold text-saasy-pink">
+                  <th className="py-4 px-4 font-bold text-saasy-pink-soft">
                     SaaSy
                   </th>
                   <th className="py-4 px-4 font-semibold text-saasy-muted">
@@ -158,7 +158,7 @@ export default function ComparePage() {
                   </th>
                 </tr>
               </thead>
-              <tbody className="font-[family-name:var(--font-poppins)]">
+              <tbody className="">
                 {COMPARISONS.map((row) => (
                   <tr
                     key={row.feature}
@@ -167,7 +167,7 @@ export default function ComparePage() {
                     <td className="py-4 pr-6 font-medium">
                       {row.feature}
                     </td>
-                    <td className="py-4 px-4 text-saasy-pink font-medium">
+                    <td className="py-4 px-4 text-saasy-pink-soft font-medium">
                       {row.saasy}
                     </td>
                     <td className="py-4 px-4 text-saasy-muted">
@@ -194,14 +194,14 @@ export default function ComparePage() {
             text-center"
         >
           <h2
-            className="font-[family-name:var(--font-poppins)]
+            className="
               text-2xl font-bold sm:text-3xl"
           >
             The bottom line
           </h2>
           <p
             className="mx-auto mt-4 max-w-2xl
-              font-[family-name:var(--font-poppins)] text-lg
+               text-lg
               text-saasy-muted"
           >
             SaaSy gives you compliance tracking, CRM, smart guidance,
@@ -212,10 +212,10 @@ export default function ComparePage() {
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
               href="https://app.hellosaasy.ai/signup"
-              className="inline-flex rounded-full bg-saasy-pink px-8
-                py-4 font-[family-name:var(--font-poppins)] text-base
-                font-semibold uppercase tracking-wider text-white
-                transition-colors hover:bg-saasy-rose"
+              className="inline-flex rounded-full bg-saasy-rose px-8
+                py-4  text-base
+                font-semibold text-white
+                transition-colors hover:bg-saasy-rose-bright"
             >
               Start free trial
             </Link>
@@ -223,16 +223,16 @@ export default function ComparePage() {
               href="/#pricing"
               className="inline-flex rounded-full border
                 border-saasy-pink/40 px-8 py-4
-                font-[family-name:var(--font-poppins)] text-base
-                font-semibold uppercase tracking-wider text-saasy-pink
-                transition-colors hover:bg-saasy-pink/10"
+                 text-base
+                font-semibold text-saasy-pink-soft
+                transition-colors hover:bg-saasy-rose-bright/10"
             >
               View pricing
             </Link>
           </div>
 
           <p
-            className="mt-8 font-[family-name:var(--font-poppins)]
+            className="mt-8
               text-sm text-saasy-muted"
           >
             Need something more custom?{" "}

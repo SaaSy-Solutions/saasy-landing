@@ -9,12 +9,16 @@ interface NavLink {
   label: string;
 }
 
+/**
+ * Five top-level destinations — deliberately at the working-memory
+ * limit. Services and Integrations live in the footer; Compare is
+ * linked from Pricing.
+ */
 const NAV_LINKS: NavLink[] = [
   { href: "/features", label: "Features" },
   { href: "/pricing", label: "Pricing" },
-  { href: "/services", label: "Services" },
+  { href: "/customers", label: "Customers" },
   { href: "/blog", label: "Blog" },
-  { href: "/integrations", label: "Integrations" },
   { href: "https://docs.hellosaasy.ai", label: "Docs" },
 ];
 
@@ -61,11 +65,10 @@ export function SiteNav(): React.ReactElement {
           <Link
             href="/"
             className="flex items-center gap-2
-              font-[family-name:var(--font-poppins)]
               text-xl font-bold text-white"
           >
             <img src="/logomark.svg" alt="" className="h-7 w-7" />
-            <span className="gradient-text">SaaSy</span>
+            <span>SaaSy</span>
           </Link>
 
           {/* Desktop links */}
@@ -74,9 +77,7 @@ export function SiteNav(): React.ReactElement {
               <Link
                 key={link.href}
                 href={resolveHref(link.href)}
-                className={`hidden
-                  font-[family-name:var(--font-poppins)]
-                  text-sm transition-colors
+                className={`hidden text-sm transition-colors
                   hover:text-white md:block ${
                     isActive(link.href)
                       ? "text-white"
@@ -88,31 +89,29 @@ export function SiteNav(): React.ReactElement {
             ))}
             <Link
               href="https://app.hellosaasy.ai/login"
-              className="hidden
-                font-[family-name:var(--font-poppins)]
-                text-sm text-saasy-muted transition-colors
-                hover:text-white md:block"
+              className="hidden text-sm text-saasy-muted
+                transition-colors hover:text-white md:block"
             >
-              Sign In
+              Sign in
             </Link>
             <Link
               href="https://app.hellosaasy.ai/signup"
-              className="hidden rounded-full bg-saasy-pink px-4
-                py-2 font-[family-name:var(--font-poppins)]
-                text-sm font-semibold uppercase tracking-wider
-                text-white transition-colors hover:bg-saasy-rose
+              className="hidden rounded-full bg-saasy-rose px-4
+                py-2 text-sm font-semibold text-white
+                transition-colors hover:bg-saasy-rose-bright
                 md:flex"
             >
               Start free trial
             </Link>
 
-            {/* Hamburger button — visible only below md */}
+            {/* Hamburger button — visible only below md. 44px tap
+                target (thumb-friendly). */}
             <button
               type="button"
               aria-label={open ? "Close menu" : "Open menu"}
               aria-expanded={open}
               onClick={() => setOpen((v) => !v)}
-              className="flex h-9 w-9 items-center
+              className="flex h-11 w-11 items-center
                 justify-center rounded-lg border
                 border-saasy-border text-saasy-muted
                 transition-colors
@@ -181,8 +180,7 @@ export function SiteNav(): React.ReactElement {
         >
           <span
             className="flex items-center gap-2
-              font-[family-name:var(--font-poppins)]
-              text-lg font-bold gradient-text"
+              text-lg font-bold text-white"
           >
             <img src="/logomark.svg" alt="" className="h-6 w-6" />
             SaaSy
@@ -191,7 +189,7 @@ export function SiteNav(): React.ReactElement {
             type="button"
             aria-label="Close menu"
             onClick={close}
-            className="flex h-8 w-8 items-center
+            className="flex h-11 w-11 items-center
               justify-center rounded-lg text-saasy-muted
               transition-colors hover:text-white"
           >
@@ -219,9 +217,8 @@ export function SiteNav(): React.ReactElement {
               key={link.href}
               href={resolveHref(link.href)}
               onClick={close}
-              className={`rounded-lg px-3 py-3
-                font-[family-name:var(--font-poppins)]
-                text-base transition-colors
+              className={`rounded-lg px-3 py-3 text-base
+                transition-colors
                 hover:bg-saasy-border/30
                 hover:text-white ${
                   isActive(link.href)
@@ -244,24 +241,22 @@ export function SiteNav(): React.ReactElement {
             onClick={close}
             className="w-full rounded-lg border
               border-saasy-border px-4 py-3 text-center
-              font-[family-name:var(--font-poppins)] text-sm
-              font-semibold text-saasy-muted
+              text-sm font-semibold text-saasy-muted
               transition-colors
               hover:border-saasy-pink/40
               hover:text-white"
           >
-            Sign In
+            Sign in
           </Link>
           <Link
             href="https://app.hellosaasy.ai/signup"
             onClick={close}
-            className="w-full rounded-full bg-saasy-pink px-4
-              py-3 text-center
-              font-[family-name:var(--font-poppins)] text-sm
-              font-semibold uppercase tracking-wider text-white
-              transition-colors hover:bg-saasy-rose"
+            className="w-full rounded-full bg-saasy-rose px-4
+              py-3 text-center text-sm
+              font-semibold text-white
+              transition-colors hover:bg-saasy-rose-bright"
           >
-            Start Free Trial
+            Start free trial
           </Link>
         </div>
       </div>

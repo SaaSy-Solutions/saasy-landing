@@ -195,7 +195,7 @@ export function IconCheck(): React.ReactElement {
     <svg
       viewBox="0 0 20 20"
       fill="currentColor"
-      className="h-5 w-5 shrink-0 text-saasy-pink"
+      className="h-5 w-5 shrink-0 text-saasy-pink-soft"
       aria-hidden="true"
     >
       <path

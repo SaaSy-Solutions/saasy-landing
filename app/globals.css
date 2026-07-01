@@ -1,17 +1,24 @@
 @import "tailwindcss";
 
 @theme {
-  --color-saasy-dark: #1A2435;
+  --color-saasy-dark: #1a2435;
   --color-saasy-darker: #111827;
   --color-saasy-card: #1e293b;
   --color-saasy-card-hover: #263045;
   --color-saasy-border: #2d3a4e;
-  --color-saasy-pink: #E45074;
-  --color-saasy-rose: #A4293F;
-  --color-saasy-orange: #DB6E36;
+  --color-saasy-pink: #e45074;
+  --color-saasy-rose: #a4293f;
+  --color-saasy-orange: #db6e36;
   --color-saasy-text: #e2e8f0;
   --color-saasy-muted: #94a3b8;
-  --color-saasy-popular: #DB6E36;
+  --color-saasy-popular: #db6e36;
+  /* Brand-guide-sanctioned tints/shades (the guide allows tints and
+     shades within the palette) added for WCAG 2.1 AA:
+     - rose-bright: hover state for rose CTA fills (white text ≥ 5.5:1)
+     - pink-soft: readable tint for small pink text on the dark bg
+       (≥ 6:1, vs 4.2:1 for raw pink) */
+  --color-saasy-rose-bright: #b93a52;
+  --color-saasy-pink-soft: #f07e9b;
 }
 
 html {
@@ -21,83 +28,53 @@ html {
 body {
   background-color: var(--color-saasy-dark);
   color: var(--color-saasy-text);
+  font-family: var(--font-poppins), system-ui, -apple-system, sans-serif;
 }
 
-/* Gradient text utility */
+/* Even line lengths on headings; fewer orphans in prose. */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* Accent word inside a heading. Historically a pink→orange
+   background-clip gradient; now a solid brand accent — emphasis via
+   color, not decoration. Headings are large text, so pink on the navy
+   body bg (≈4.2:1) clears the WCAG AA large-text bar. */
 .gradient-text {
-  background: linear-gradient(
-    135deg,
-    var(--color-saasy-pink),
-    var(--color-saasy-orange)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-saasy-pink);
 }
 
-/* Glow effects */
+/* Legacy effect classes, intentionally neutralized. The glow/pulse
+   treatment was the stock AI-SaaS look and is off-brand (the style
+   guide's sanctioned accents are geometric shapes and photography,
+   not glows). Kept as named classes so older pages don't break. */
 .glow-teal {
-  box-shadow: 0 0 40px rgba(228, 80, 116, 0.15),
-    0 0 80px rgba(228, 80, 116, 0.05);
+  box-shadow: none;
 }
 
 .glow-border {
-  border: 1px solid rgba(228, 80, 116, 0.2);
+  border: 1px solid var(--color-saasy-border);
 }
 
-/* Animated gradient background for hero */
+/* Subtle single wash behind hero sections — depth without the
+   triple-radial neon haze. */
 .hero-gradient {
   background: radial-gradient(
-      ellipse 80% 50% at 50% -20%,
-      rgba(228, 80, 116, 0.12),
-      transparent
-    ),
-    radial-gradient(
-      ellipse 60% 40% at 80% 50%,
-      rgba(219, 110, 54, 0.06),
-      transparent
-    ),
-    radial-gradient(
-      ellipse 50% 30% at 20% 80%,
-      rgba(164, 41, 63, 0.06),
-      transparent
-    );
+    ellipse 80% 50% at 50% -20%,
+    rgba(228, 80, 116, 0.07),
+    transparent
+  );
 }
 
-/* Grid pattern overlay */
-.grid-pattern {
-  background-image: linear-gradient(
-      rgba(45, 58, 78, 0.3) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(45, 58, 78, 0.3) 1px,
-      transparent 1px
-    );
-  background-size: 60px 60px;
-}
-
-/* Pricing card popular highlight */
+/* Pricing card highlight: a confident border, no glow. */
 .popular-glow {
-  box-shadow: 0 0 60px rgba(228, 80, 116, 0.15),
-    0 0 120px rgba(228, 80, 116, 0.05);
   border-color: var(--color-saasy-pink);
-}
-
-/* Subtle pulse animation for CTA */
-@keyframes pulse-glow {
-  0%,
-  100% {
-    box-shadow: 0 0 20px rgba(228, 80, 116, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(228, 80, 116, 0.5);
-  }
-}
-
-.cta-pulse {
-  animation: pulse-glow 3s ease-in-out infinite;
 }
 
 /* Health bar animation */
@@ -128,4 +105,21 @@ body {
 
 .fade-up {
   animation: fade-up 0.6s ease-out forwards;
+}
+
+/* Reduced motion: kill animations/transitions and smooth scrolling.
+   Content is always visible by default (reveals only enhance), so the
+   instant variant is complete, not broken. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

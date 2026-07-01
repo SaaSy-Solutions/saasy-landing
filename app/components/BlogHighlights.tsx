@@ -33,13 +33,13 @@ export function BlogHighlights(): React.ReactElement {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto mb-12 max-w-2xl text-center">
           <h2
-            className="font-[family-name:var(--font-poppins)]
+            className="
               text-3xl font-bold text-white sm:text-4xl"
           >
             From our blog
           </h2>
           <p
-            className="mt-4 font-[family-name:var(--font-poppins)]
+            className="mt-4
               text-lg text-saasy-muted"
           >
             Insights on customer success, churn
@@ -57,20 +57,20 @@ export function BlogHighlights(): React.ReactElement {
                 transition-all duration-300 group block"
             >
               <h3
-                className="text-white font-[family-name:var(--font-poppins)]
-                  text-lg font-semibold group-hover:text-saasy-pink
+                className="text-white
+                  text-lg font-semibold group-hover:text-saasy-pink-soft
                   transition-colors"
               >
                 {post.title}
               </h3>
               <p
-                className="text-saasy-muted font-[family-name:var(--font-poppins)]
+                className="text-saasy-muted
                   text-sm mt-2"
               >
                 {post.description}
               </p>
               <span
-                className="text-saasy-pink text-sm font-medium
+                className="text-saasy-pink-soft text-sm font-medium
                   mt-4 inline-block"
               >
                 Read more &rarr;
@@ -82,8 +82,8 @@ export function BlogHighlights(): React.ReactElement {
         <div className="mt-10 text-center">
           <Link
             href="/blog"
-            className="font-[family-name:var(--font-poppins)]
-              text-saasy-pink text-sm font-medium
+            className="
+              text-saasy-pink-soft text-sm font-medium
               hover:underline transition-colors"
           >
             View all posts &rarr;

@@ -3,33 +3,41 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ogImage } from "./components/ogAssets";
 
+/**
+ * Poppins is the brand's designated web font (the style guide's primary,
+ * Sofia Pro, is Adobe-licensed and not held — Poppins is its sanctioned
+ * fallback). Weight roles: 400 body · 500 medium labels · 600 semibold
+ * headings/buttons · 700 bold · 800 display. Applied on <body> via
+ * globals.css; components should not restate the family.
+ */
 const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-poppins",
   display: "swap",
-  weight: ["400", "500", "600", "800", "900"],
+  weight: ["400", "500", "600", "700", "800"],
 });
+
+const DESCRIPTION =
+  "The AI-powered back office for small business — CRM, invoicing, " +
+  "compliance, and customer intelligence that flags problems before " +
+  "they cost you. Built for contractors, unions, and service firms.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://hellosaasy.ai"),
-  title: "SaaSy — Your Intelligent Business Co-Founder",
-  description:
-    "intelligent business operating system that guides " +
-    "entrepreneurs from idea to thriving enterprise. " +
-    "Formation, compliance, CRM, and smart guidance — all in one.",
+  title: "SaaSy — Your entire back office, handled",
+  description: DESCRIPTION,
   keywords: [
-    "entrepreneur",
-    "business formation",
-    "compliance",
-    "CRM",
-    "smart guidance",
+    "small business software",
     "business operating system",
+    "CRM",
+    "compliance",
+    "certified payroll",
+    "union dues",
+    "customer health scoring",
   ],
   openGraph: {
-    title: "SaaSy — Your Intelligent Business Co-Founder",
-    description:
-      "intelligent business operating system that guides " +
-      "entrepreneurs from idea to thriving enterprise.",
+    title: "SaaSy — Your entire back office, handled",
+    description: DESCRIPTION,
     url: "https://hellosaasy.ai",
     siteName: "SaaSy",
     type: "website",
@@ -37,34 +45,30 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SaaSy — Your Intelligent Business Co-Founder",
-    description:
-      "intelligent business operating system that guides " +
-      "entrepreneurs from idea to thriving enterprise.",
+    title: "SaaSy — Your entire back office, handled",
+    description: DESCRIPTION,
     images: [ogImage("home").url],
   },
 };
 
 const structuredData = {
-  '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
-  name: 'SaaSy',
-  applicationCategory: 'BusinessApplication',
-  operatingSystem: 'Web',
-  description:
-    'intelligent business operating system that guides ' +
-    'entrepreneurs from idea to thriving enterprise.',
-  url: 'https://hellosaasy.ai',
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "SaaSy",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  description: DESCRIPTION,
+  url: "https://hellosaasy.ai",
   offers: {
-    '@type': 'AggregateOffer',
-    lowPrice: '49',
-    highPrice: '399',
-    priceCurrency: 'USD',
+    "@type": "AggregateOffer",
+    lowPrice: "49",
+    highPrice: "399",
+    priceCurrency: "USD",
   },
   creator: {
-    '@type': 'Organization',
-    name: 'SaaSy Solutions LLC',
-    url: 'https://saasysolutionsllc.com',
+    "@type": "Organization",
+    name: "SaaSy Solutions LLC",
+    url: "https://saasysolutionsllc.com",
   },
 };
 

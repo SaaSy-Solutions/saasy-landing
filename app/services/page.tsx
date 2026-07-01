@@ -134,14 +134,13 @@ export default function ServicesPage() {
             text-center sm:pb-20"
         >
           <p
-            className="font-[family-name:var(--font-poppins)]
-              text-sm font-semibold uppercase tracking-wider
-              text-saasy-orange"
+            className="
+              text-sm font-semibold text-saasy-orange"
           >
             SaaSy Solutions &middot; 25+ Years of Experience
           </p>
           <h1
-            className="mt-3 font-[family-name:var(--font-poppins)]
+            className="mt-3
               text-3xl font-bold sm:text-5xl"
           >
             Custom AI Systems,{" "}
@@ -151,7 +150,7 @@ export default function ServicesPage() {
           </h1>
           <p
             className="mx-auto mt-4 max-w-2xl
-              font-[family-name:var(--font-poppins)] text-lg
+               text-lg
               text-saasy-muted"
           >
             SaaSy the platform handles the day-to-day. But when you
@@ -164,9 +163,8 @@ export default function ServicesPage() {
             <a
               href="https://saasysolutionsllc.com/consultation"
               className="inline-flex rounded-full bg-saasy-orange
-                px-8 py-4 font-[family-name:var(--font-poppins)]
-                text-base font-semibold uppercase tracking-wider
-                text-white transition-colors hover:bg-[#c45f2e]"
+                px-8 py-4
+                text-base font-semibold text-white transition-colors hover:bg-[#c45f2e]"
             >
               Schedule a consultation
             </a>
@@ -174,9 +172,8 @@ export default function ServicesPage() {
               href="https://saasysolutionsllc.com"
               className="inline-flex rounded-full border
                 border-saasy-orange/40 px-8 py-4
-                font-[family-name:var(--font-poppins)] text-base
-                font-semibold uppercase tracking-wider
-                text-saasy-orange transition-colors
+                 text-base
+                font-semibold text-saasy-orange transition-colors
                 hover:bg-saasy-orange/10"
             >
               Visit saasysolutionsllc.com
@@ -198,13 +195,13 @@ export default function ServicesPage() {
                   hover:border-saasy-orange/40 hover:bg-saasy-card/50"
               >
                 <h3
-                  className="font-[family-name:var(--font-poppins)]
+                  className="
                     text-lg font-bold text-white"
                 >
                   {service.name}
                 </h3>
                 <p
-                  className="mt-2 font-[family-name:var(--font-poppins)]
+                  className="mt-2
                     text-sm leading-relaxed text-saasy-muted"
                 >
                   {service.description}
@@ -215,7 +212,7 @@ export default function ServicesPage() {
                     <li
                       key={item}
                       className="flex items-center gap-2
-                        font-[family-name:var(--font-poppins)]
+
                         text-sm text-saasy-muted"
                     >
                       <span className="text-saasy-orange">&#10003;</span>
@@ -226,7 +223,7 @@ export default function ServicesPage() {
 
                 <div className="mt-5 flex items-center justify-between">
                   <span
-                    className="font-[family-name:var(--font-poppins)]
+                    className="
                       text-sm text-saasy-muted"
                   >
                     Starting at{" "}
@@ -235,7 +232,7 @@ export default function ServicesPage() {
                     </span>
                   </span>
                   <span
-                    className="font-[family-name:var(--font-poppins)]
+                    className="
                       text-sm font-medium text-saasy-orange
                       transition-colors group-hover:text-white"
                   >
@@ -255,14 +252,14 @@ export default function ServicesPage() {
             sm:py-20"
         >
           <h2
-            className="font-[family-name:var(--font-poppins)]
+            className="
               text-2xl font-bold sm:text-3xl"
           >
             Engagement tiers
           </h2>
           <p
             className="mx-auto mt-3 max-w-xl
-              font-[family-name:var(--font-poppins)] text-base
+               text-base
               text-saasy-muted"
           >
             Fixed monthly pricing. No hourly billing surprises. No
@@ -278,28 +275,27 @@ export default function ServicesPage() {
                 bg-saasy-card/30 p-6"
             >
               <p
-                className="font-[family-name:var(--font-poppins)]
-                  text-sm font-semibold uppercase tracking-wider
-                  text-saasy-muted"
+                className="
+                  text-sm font-semibold text-saasy-muted"
               >
                 Essentials
               </p>
               <p className="mt-1">
                 <span
-                  className="font-[family-name:var(--font-poppins)]
+                  className="
                     text-3xl font-bold text-white"
                 >
                   $3,500
                 </span>
                 <span
-                  className="font-[family-name:var(--font-poppins)]
+                  className="
                     text-saasy-muted"
                 >
                   /mo
                 </span>
               </p>
               <p
-                className="mt-3 font-[family-name:var(--font-poppins)]
+                className="mt-3
                   text-sm text-saasy-muted"
               >
                 For businesses ready to automate core processes with
@@ -313,28 +309,27 @@ export default function ServicesPage() {
                 bg-saasy-card/50 p-6 ring-1 ring-saasy-orange/20"
             >
               <p
-                className="font-[family-name:var(--font-poppins)]
-                  text-sm font-semibold uppercase tracking-wider
-                  text-saasy-orange"
+                className="
+                  text-sm font-semibold text-saasy-orange"
               >
                 Growth Systems
               </p>
               <p className="mt-1">
                 <span
-                  className="font-[family-name:var(--font-poppins)]
+                  className="
                     text-3xl font-bold text-white"
                 >
                   $6,500
                 </span>
                 <span
-                  className="font-[family-name:var(--font-poppins)]
+                  className="
                     text-saasy-muted"
                 >
                   /mo
                 </span>
               </p>
               <p
-                className="mt-3 font-[family-name:var(--font-poppins)]
+                className="mt-3
                   text-sm text-saasy-muted"
               >
                 Comprehensive automation and integration for
@@ -348,28 +343,27 @@ export default function ServicesPage() {
                 bg-saasy-card/30 p-6"
             >
               <p
-                className="font-[family-name:var(--font-poppins)]
-                  text-sm font-semibold uppercase tracking-wider
-                  text-saasy-muted"
+                className="
+                  text-sm font-semibold text-saasy-muted"
               >
                 Scale
               </p>
               <p className="mt-1">
                 <span
-                  className="font-[family-name:var(--font-poppins)]
+                  className="
                     text-3xl font-bold text-white"
                 >
                   $12,000
                 </span>
                 <span
-                  className="font-[family-name:var(--font-poppins)]
+                  className="
                     text-saasy-muted"
                 >
                   /mo
                 </span>
               </p>
               <p
-                className="mt-3 font-[family-name:var(--font-poppins)]
+                className="mt-3
                   text-sm text-saasy-muted"
               >
                 Full-stack systems ownership &mdash; your fractional
@@ -381,9 +375,8 @@ export default function ServicesPage() {
           <a
             href="https://saasysolutionsllc.com/pricing"
             className="mt-8 inline-flex rounded-full bg-saasy-orange
-              px-8 py-4 font-[family-name:var(--font-poppins)]
-              text-base font-semibold uppercase tracking-wider
-              text-white transition-colors hover:bg-[#c45f2e]"
+              px-8 py-4
+              text-base font-semibold text-white transition-colors hover:bg-[#c45f2e]"
           >
             View full pricing details
           </a>
@@ -397,14 +390,14 @@ export default function ServicesPage() {
             sm:py-20"
         >
           <h2
-            className="font-[family-name:var(--font-poppins)]
+            className="
               text-2xl font-bold sm:text-3xl"
           >
             Not sure what you need?
           </h2>
           <p
             className="mx-auto mt-3 max-w-xl
-              font-[family-name:var(--font-poppins)] text-base
+               text-base
               text-saasy-muted"
           >
             Book a free consultation. We&apos;ll assess your current
@@ -415,10 +408,9 @@ export default function ServicesPage() {
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <a
               href="https://saasysolutionsllc.com/consultation"
-              className="inline-flex rounded-full bg-saasy-pink
-                px-8 py-4 font-[family-name:var(--font-poppins)]
-                text-base font-semibold uppercase tracking-wider
-                text-white transition-colors hover:bg-saasy-rose"
+              className="inline-flex rounded-full bg-saasy-rose
+                px-8 py-4
+                text-base font-semibold text-white transition-colors hover:bg-saasy-rose-bright"
             >
               Book free consultation
             </a>
@@ -426,9 +418,9 @@ export default function ServicesPage() {
               href="/#pricing"
               className="inline-flex rounded-full border
                 border-saasy-pink/40 px-8 py-4
-                font-[family-name:var(--font-poppins)] text-base
-                font-semibold uppercase tracking-wider text-saasy-pink
-                transition-colors hover:bg-saasy-pink/10"
+                 text-base
+                font-semibold text-saasy-pink-soft
+                transition-colors hover:bg-saasy-rose-bright/10"
             >
               Or start with the platform
             </Link>
