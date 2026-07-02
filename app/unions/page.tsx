@@ -253,16 +253,29 @@ export default function UnionsPage(): React.ReactElement {
                 violation on this run before it could reach a
                 compliance officer.
               </p>
-              <a
-                href="/screenshots/wh347-certified-payroll.png"
-                target="_blank"
-                rel="noopener"
-                className="mt-4 inline-block text-sm font-medium
-                  text-saasy-pink-soft underline transition-colors
-                  hover:text-white"
-              >
-                Open the full-size run &rarr;
-              </a>
+              <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:gap-6">
+                <a
+                  href="/screenshots/wh347-certified-payroll.png"
+                  target="_blank"
+                  rel="noopener"
+                  className="text-sm font-medium text-saasy-pink-soft
+                    underline transition-colors hover:text-white"
+                >
+                  Open the full-size run &rarr;
+                </a>
+                <a
+                  href="/downloads/sample-wh347.csv"
+                  download
+                  className="text-sm font-medium text-saasy-pink-soft
+                    underline transition-colors hover:text-white"
+                >
+                  Download this run&rsquo;s WH-347 export (CSV) &rarr;
+                </a>
+              </div>
+              <p className="mt-2 text-xs text-saasy-muted">
+                The CSV is the exact file the Download button produces
+                in the app &mdash; open it in Excel and check the math.
+              </p>
             </div>
             <a
               href="/screenshots/wh347-certified-payroll.png"
@@ -383,6 +396,24 @@ export default function UnionsPage(): React.ReactElement {
                 </div>
               ))}
             </dl>
+          </div>
+        </section>
+
+        {/* ─────────── Where this stands (honest) ─────────── */}
+        <section className="border-t border-saasy-border py-16 sm:py-20">
+          <div className="mx-auto max-w-2xl px-6 text-center">
+            <h2 className="text-2xl font-bold text-white sm:text-3xl">
+              A straight answer on where this stands
+            </h2>
+            <p className="mt-4 text-lg leading-relaxed text-saasy-muted">
+              SaaSy is in open beta and we&rsquo;re onboarding union
+              employers one at a time, founder-led. You won&rsquo;t
+              find a logo wall here yet &mdash; you&rsquo;ll find the
+              engineers who built the dues engine on your onboarding
+              calls, and a payroll run you can inspect line by line
+              above. If that trade works for you, we&rsquo;ll earn the
+              logo wall together.
+            </p>
           </div>
         </section>
 

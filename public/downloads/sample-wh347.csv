@@ -1,0 +1,7 @@
+Worker Name,SSN (last 4),Classification,Mon ST,Mon OT,Tue ST,Tue OT,Wed ST,Wed OT,Thu ST,Thu OT,Fri ST,Fri OT,Sat ST,Sat OT,Sun ST,Sun OT,Total ST,Total OT,Hourly Rate,OT Rate,Gross (This Project),Gross (All Jobs),Deductions,Total Deductions,Net Pay
+Aiden McCarthy,,Carpenter — Apprentice (60%),8,0,8,0,8,0,8,0,8,0,,,,,40,0,33.20,49.80,1328.00,1328.00,federal_wh:159.36; fica:101.59; state_wh:53.12; union_dues:34.00,348.07,979.93
+Dana Whitfield,,Laborer — Group 1,8,0,8,0,8,0,8,0,8,0,,,,,40,0,42.87,64.31,1714.80,1714.80,federal_wh:205.77; fica:131.18; state_wh:68.59; union_dues:34.00,439.54,1275.26
+Jake Tran,,Laborer — Group 1,8,0,8,0,8,0,8,0,8,0,,,,,40,0,42.87,64.31,1714.80,1714.80,federal_wh:205.77; fica:131.18; state_wh:68.59; union_dues:34.00,439.54,1275.26
+Miguel Herrera,,Operating Engineer — Group 4,8,0,8,0,8,0,8,0,8,0,0,4,,,40,4,64.12,96.18,2949.52,2949.52,federal_wh:353.94; fica:225.63; state_wh:117.98; union_dues:37.40,734.95,2214.57
+Rosa Delgado,,Cement Mason,8,0,8,0,8,0,8,0,8,0,,,,,40,0,51.08,76.62,2043.20,2043.20,federal_wh:245.18; fica:156.30; state_wh:81.72; union_dues:34.00,517.20,1526.00
+Sam Okafor,,Carpenter — Journeyman,8,0,8,0,8,0,8,0,8,0,0,4,,,40,4,55.33,83.00,2545.20,2545.16,federal_wh:305.41; fica:194.70; state_wh:101.80; union_dues:37.40,639.31,1905.89
