@@ -55,6 +55,9 @@ jobs:
             render SocialVertical social-vertical.mp4
             render SocialSquare   social-square.mp4
             render HowItWorks     how-it-works.mp4
+            # OG cards, per-feature clips, blog teasers, whats-new,
+            # connect loop — everything else the site references.
+            node scripts/render-all.mjs
           fi
           ls -lh out
 
