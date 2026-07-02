@@ -247,26 +247,45 @@ export default function UnionsPage(): React.ReactElement {
               <p className="mt-4 text-lg leading-relaxed text-saasy-muted">
                 Not a mockup: a WH-347 certified payroll run inside
                 SaaSy — six workers across four classifications on a
-                Caltrans corridor job, with an apprentice on the
-                roster, Saturday overtime, and dues checkoff in the
-                deductions. Review it line by line, then export the
-                form and the LCPtracker file.
+                Caltrans corridor job, with Saturday overtime and dues
+                checkoff in the deductions. And look closely at the
+                bottom panel: SaaSy caught an apprentice-ratio
+                violation on this run before it could reach a
+                compliance officer.
               </p>
+              <a
+                href="/screenshots/wh347-certified-payroll.png"
+                target="_blank"
+                rel="noopener"
+                className="mt-4 inline-block text-sm font-medium
+                  text-saasy-pink-soft underline transition-colors
+                  hover:text-white"
+              >
+                Open the full-size run &rarr;
+              </a>
             </div>
-            <div
-              className="relative overflow-hidden rounded-2xl border
-                border-saasy-border bg-saasy-card/80 p-2"
+            <a
+              href="/screenshots/wh347-certified-payroll.png"
+              target="_blank"
+              rel="noopener"
+              className="relative block overflow-hidden rounded-2xl
+                border border-saasy-border bg-saasy-card/80 p-2
+                transition-colors hover:border-saasy-pink/30"
+              aria-label="Open the full-size WH-347 payroll run screenshot"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/screenshots/wh347-certified-payroll.png"
                 alt="SaaSy certified payroll run: WH-347 worker grid for a
                   prevailing-wage highway project with classifications,
-                  daily hours, overtime, deductions, and net pay"
+                  daily hours, overtime, deductions, and an
+                  apprentice-ratio violation flagged by the compliance
+                  panel"
+                width={1195}
+                height={900}
                 className="h-auto w-full rounded-lg"
-                loading="lazy"
               />
-            </div>
+            </a>
           </div>
         </section>
 
