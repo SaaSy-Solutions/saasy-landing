@@ -91,6 +91,10 @@ const FAQ_ITEMS = [
     a: "Yes. Each agreement carries its own classifications, wage scales, fringe schedules, and dues rules. Members are assigned per-CBA, and a payroll run applies the right agreement to the right person.",
   },
   {
+    q: "We've run dues on the same desktop program for 20 years. How does our data get in?",
+    a: "You don't retype anything. Send us whatever your current system exports (a spreadsheet, a report, anything that prints to CSV) and we load your member roster, classifications, dues rules, and authorization records for you during onboarding. You review the loaded roster against your own records before the first run.",
+  },
+  {
     q: "What about non-federal prevailing-wage jobs?",
     a: "State prevailing-wage classifications work the same way as Davis-Bacon: set the job's wage determination and certified payroll picks it up.",
   },
@@ -230,6 +234,42 @@ export default function UnionsPage(): React.ReactElement {
           </div>
         </section>
 
+        {/* ─────────── Evidence: the WH-347, rendered ─────────── */}
+        <section className="border-t border-saasy-border py-24 sm:py-32">
+          <div
+            className="mx-auto grid max-w-6xl items-center gap-12
+              px-6 lg:grid-cols-2 lg:gap-16"
+          >
+            <div>
+              <h2 className="text-3xl font-bold text-white sm:text-4xl">
+                This is a real payroll run
+              </h2>
+              <p className="mt-4 text-lg leading-relaxed text-saasy-muted">
+                Not a mockup: a WH-347 certified payroll run inside
+                SaaSy — six workers across four classifications on a
+                Caltrans corridor job, with an apprentice on the
+                roster, Saturday overtime, and dues checkoff in the
+                deductions. Review it line by line, then export the
+                form and the LCPtracker file.
+              </p>
+            </div>
+            <div
+              className="relative overflow-hidden rounded-2xl border
+                border-saasy-border bg-saasy-card/80 p-2"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/screenshots/wh347-certified-payroll.png"
+                alt="SaaSy certified payroll run: WH-347 worker grid for a
+                  prevailing-wage highway project with classifications,
+                  daily hours, overtime, deductions, and net pay"
+                className="h-auto w-full rounded-lg"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </section>
+
         {/* ─────────── Pricing ─────────── */}
         <section
           id="pricing"
@@ -337,9 +377,9 @@ export default function UnionsPage(): React.ReactElement {
               Bring us your CBA
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-saasy-muted">
-              Send over your agreement and headcount, and we&rsquo;ll
-              show you your own dues, fringe, and certified payroll
-              running in SaaSy.
+              Attach your agreement right on the form, add your
+              headcount, and we&rsquo;ll return a same-day quote with
+              your own dues, fringe, and certified payroll mapped out.
             </p>
             <a
               href="https://app.hellosaasy.ai/contact-sales?topic=union-add-on"
