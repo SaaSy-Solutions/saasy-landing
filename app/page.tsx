@@ -90,6 +90,17 @@ export default function Home(): React.ReactElement {
             sublabel="US-based support"
           />
         </div>
+        <p className="pb-10 text-center text-sm text-saasy-muted">
+          Not just badges:{" "}
+          <Link
+            href="/privacy"
+            className="text-saasy-pink-soft underline
+              transition-colors hover:text-white"
+          >
+            read exactly how we handle your data
+          </Link>
+          .
+        </p>
       </section>
 
       {/* ─────────────── Social Proof ──────────────── */}

@@ -1,29 +1,88 @@
 {
   "entries": [
     {
+      "version": "1.9.0",
+      "date": "2026-06-29",
+      "title": "Built for Contractors: Construction Billing, Payroll & Government Contracting",
+      "items": [
+        {
+          "type": "feature",
+          "text": "Construction billing & job costing \u2014 AIA-style pay applications, job-level P&L, vendor bills, and general ledger for contractors running project work."
+        },
+        {
+          "type": "feature",
+          "text": "Native payroll engine \u2014 run payroll in-house with W-4 handling, per-employee calculations, and certified-payroll support for prevailing-wage jobs."
+        },
+        {
+          "type": "feature",
+          "text": "Union & labor compliance \u2014 certified payroll with per-fund Taft-Hartley fringe remittance and an OLMS LM-2 financial-reports connector."
+        },
+        {
+          "type": "feature",
+          "text": "Government contracting \u2014 a SAM.gov bid board for federal opportunities, plus automatic screening of vendors and AP against the federal debarment (exclusions) list."
+        },
+        {
+          "type": "feature",
+          "text": "People & Talent \u2014 a full HR lifecycle module that connects to payroll: hiring, onboarding, records, and reviews in one place."
+        },
+        {
+          "type": "feature",
+          "text": "Proactive Actions \u2014 SaaSy now surfaces a live feed of recommended actions and acts on the ones you approve, instead of waiting to be asked."
+        },
+        {
+          "type": "feature",
+          "text": "AI CFO now tracks federal tax deadlines in your weekly executive brief."
+        },
+        {
+          "type": "feature",
+          "text": "Multi-account connections \u2014 link more than one account per provider and set per-user ownership, so teammates only see what they connected."
+        },
+        {
+          "type": "improvement",
+          "text": "Onboarding carries your signup details straight into your business profile, with an industry picker that tailors your setup from the first screen."
+        },
+        {
+          "type": "improvement",
+          "text": "Broader out-of-the-box coverage \u2014 sales-tax rates and nexus thresholds for all 50 states + DC, NAICS 2022 industry data, HIPAA and PCI DSS control libraries, and a public-holiday calendar."
+        },
+        {
+          "type": "improvement",
+          "text": "Contact Sales now captures real leads and confirms delivery, and email change/verification links work even when you're signed out."
+        },
+        {
+          "type": "fix",
+          "text": "Dashboards and workflow stats now show real counts from your data \u2014 the last fabricated placeholder metrics are gone."
+        },
+        {
+          "type": "fix",
+          "text": "Verification, welcome, and password-reset emails now dispatch reliably; sign-in no longer gets stuck in a session-expired redirect loop."
+        }
+      ]
+    },
+    {
       "version": "1.8.0",
       "date": "2026-06-26",
       "title": "Guided Execution, SOPs & Always-Closed Books",
       "items": [
         {
           "type": "feature",
-          "text": "Guided journey across your whole business — next-best-step recommendations from formation through launch, operations, and scale"
+          "text": "Guided journey across your whole business \u2014 next-best-step recommendations from formation through launch, operations, and scale"
         },
         {
           "type": "feature",
-          "text": "Ask SaaSy in context — get advice on any step or screen, now with cited sources and a clear professional-advice boundary"
+          "text": "Ask SaaSy in context \u2014 get advice on any step or screen, now with cited sources and a clear professional-advice boundary"
         },
         {
           "type": "feature",
-          "text": "My Work — one unified task list across all your businesses and connected tools"
+          "text": "My Work \u2014 one unified task list across all your businesses and connected tools"
         },
         {
           "type": "feature",
-          "text": "SOP library — author standard operating procedures with AI and collect employee sign-off"
+          "text": "SOP library \u2014 author standard operating procedures with AI and collect employee sign-off"
         },
         {
           "type": "feature",
-          "text": "AI document drafting — proposals and business docs rendered on branded, letterhead PDFs"
+          "text": "AI document drafting \u2014 proposals and business docs rendered on branded, letterhead PDFs"
         },
         {
           "type": "feature",
@@ -58,23 +117,23 @@
       "items": [
         {
           "type": "feature",
-          "text": "AI CFO — a weekly executive brief, with a short branded video, that reads your numbers and tells you what to do next"
+          "text": "AI CFO \u2014 a weekly executive brief, with a short branded video, that reads your numbers and tells you what to do next"
         },
         {
           "type": "feature",
-          "text": "Anonymous peer benchmarking — see how your key metrics compare against similar businesses"
+          "text": "Anonymous peer benchmarking \u2014 see how your key metrics compare against similar businesses"
         },
         {
           "type": "feature",
-          "text": "CRM Projects — manage delivery with tasks, notes, files, and an AI project health score"
+          "text": "CRM Projects \u2014 manage delivery with tasks, notes, files, and an AI project health score"
         },
         {
           "type": "feature",
-          "text": "Research Agent — live company, market, and competitor intelligence grounded in real-time web data"
+          "text": "Research Agent \u2014 live company, market, and competitor intelligence grounded in real-time web data"
         },
         {
           "type": "improvement",
-          "text": "Outcome Ledger — every recommendation now tracks its measured dollar impact in a Value Delivered report"
+          "text": "Outcome Ledger \u2014 every recommendation now tracks its measured dollar impact in a Value Delivered report"
         },
         {
           "type": "improvement",
@@ -97,7 +156,7 @@
         },
         {
           "type": "feature",
-          "text": "New connectors — Slack, Square, DocuSign, Calendly, QuickBooks, FreshBooks, and Gusto"
+          "text": "New connectors \u2014 Slack, Square, DocuSign, Calendly, QuickBooks, FreshBooks, and Gusto"
         },
         {
           "type": "feature",

@@ -11,13 +11,14 @@ interface NavLink {
 
 /**
  * Five top-level destinations — deliberately at the working-memory
- * limit. Services and Integrations live in the footer; Compare is
- * linked from Pricing.
+ * limit. Customers, Services, and Integrations live in the footer; Compare is
+ * linked from Pricing. /unions leads the nav as the strongest
+ * vertical converter.
  */
 const NAV_LINKS: NavLink[] = [
   { href: "/features", label: "Features" },
   { href: "/pricing", label: "Pricing" },
-  { href: "/customers", label: "Customers" },
+  { href: "/unions", label: "For unions" },
   { href: "/blog", label: "Blog" },
   { href: "https://docs.hellosaasy.ai", label: "Docs" },
 ];
