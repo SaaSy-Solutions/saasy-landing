@@ -8,7 +8,7 @@
  * animated callouts, so the static JSX overlays from HeroScreenshot are
  * intentionally dropped here.
  */
-import { videoUrl } from "./videoAssets";
+import { revVideoUrl } from "./videoAssets";
 import { AutoplayVideo } from "./AutoplayVideo";
 
 export function HeroVideo(): React.ReactElement {
@@ -19,7 +19,7 @@ export function HeroVideo(): React.ReactElement {
           border-saasy-border bg-saasy-card/80 p-2 sm:p-3"
       >
         <AutoplayVideo
-          src={videoUrl("hero-loop.mp4")}
+          src={revVideoUrl("hero-loop.mp4")}
           poster="/screenshots/dashboard-hero.png"
           label="SaaSy product demo: customer health scores, churn alerts,
             and Ask SaaSy"

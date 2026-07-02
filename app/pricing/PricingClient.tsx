@@ -247,8 +247,8 @@ export function PricingPageClient(): React.ReactElement {
                 14-day free trial
               </h3>
               <p className="text-sm">
-                Full access to every feature on your chosen plan. No
-                credit card required to start.
+                Full Growth-plan access for every trial. No credit
+                card required to start.
               </p>
             </div>
             <div>

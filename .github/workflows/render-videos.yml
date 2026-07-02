@@ -45,7 +45,10 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p out
-          render() { npx remotion render "$1" "out/$2"; }
+          # Media rev: uploaded URLs are immutable-cached, so every reshoot
+          # ships under new filenames (see video/media-rev.json).
+          REV=$(node -p 'require("./media-rev.json").rev')
+          render() { npx remotion render "$1" "out/${2%.mp4}-${REV}.mp4"; }
 
           render HeroLoop hero-loop.mp4
           if [ "$SUBSET" = "all" ]; then

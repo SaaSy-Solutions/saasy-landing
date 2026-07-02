@@ -7,7 +7,7 @@
  * chooses to watch, with the dashboard screenshot as poster so the frame looks
  * intentional before play.
  */
-import { videoUrl } from "./videoAssets";
+import { revVideoUrl } from "./videoAssets";
 
 export function ProductDemo(): React.ReactElement {
   return (
@@ -24,7 +24,7 @@ export function ProductDemo(): React.ReactElement {
           preload="metadata"
           aria-label="How SaaSy works — a 75-second product walkthrough"
         >
-          <source src={videoUrl("how-it-works.mp4")} type="video/mp4" />
+          <source src={revVideoUrl("how-it-works.mp4")} type="video/mp4" />
         </video>
       </div>
     </div>

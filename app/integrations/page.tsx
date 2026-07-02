@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { SiteNav } from '../components/SiteNav';
 import { MarketingFooter } from '../components/MarketingFooter';
 import { ogImage } from '../components/ogAssets';
-import { videoUrl } from '../components/videoAssets';
+import { revVideoUrl } from '../components/videoAssets';
 
 export const metadata: Metadata = {
   title: 'Integrations | SaaSy',
@@ -108,7 +108,7 @@ export default function IntegrationsPage() {
               preload="metadata"
               aria-label="Connect Stripe, HubSpot, Salesforce, and Slack in about a minute"
             >
-              <source src={videoUrl("connect.mp4")} type="video/mp4" />
+              <source src={revVideoUrl("connect.mp4")} type="video/mp4" />
             </video>
           </div>
         </div>

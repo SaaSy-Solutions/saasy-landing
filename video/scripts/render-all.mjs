@@ -11,7 +11,7 @@
  * a single argv entry, so titles with spaces/punctuation need no escaping.
  */
 import { execFileSync } from "node:child_process";
-import { mkdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 
 const render = (kind, id, out, props) => {
   const args = ["remotion", kind, id, out];
@@ -23,6 +23,9 @@ const render = (kind, id, out, props) => {
   console.log("›", "npx", args.join(" "));
   execFileSync("npx", args, { stdio: "inherit" });
 };
+
+const REV = JSON.parse(readFileSync(new URL("../media-rev.json", import.meta.url), "utf8")).rev;
+const rev = (name) => name.replace(/\.mp4$/, `-${REV}.mp4`);
 
 mkdirSync("out/og", { recursive: true });
 mkdirSync("out/blog", { recursive: true });
@@ -76,11 +79,11 @@ for (const post of posts) {
 
 console.log("=== Feature clips (text-free) ===");
 for (const [key, props] of Object.entries(featureClips)) {
-  render("render", "FeatureClip", `out/feature-clip-${key}.mp4`, props);
+  render("render", "FeatureClip", rev(`out/feature-clip-${key}.mp4`), props);
 }
 
 console.log("=== What's new + Connect ===");
 render("render", "WhatsNew", "out/whats-new.mp4");
-render("render", "ConnectLoop", "out/connect.mp4");
+render("render", "ConnectLoop", rev("out/connect.mp4"));
 
 console.log("done");

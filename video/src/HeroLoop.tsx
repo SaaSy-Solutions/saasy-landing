@@ -200,7 +200,8 @@ const SceneDashboard: React.FC = () => {
           arrow="down"
           enterAt={28}
         />
-        <FloatingStat label="Avg. health" to={82} suffix="" enterAt={44} />
+        {/* Matches the Avg Health Score in the reshot dashboard-hero.png */}
+        <FloatingStat label="Avg. health" to={51} suffix="" enterAt={44} />
       </ScreenshotCard>
       <Caption enterAt={60} style={{ marginTop: 40, fontSize: 36, fontWeight: 600 }}>
         See customer health the moment it changes
