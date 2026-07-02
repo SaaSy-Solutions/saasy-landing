@@ -14,6 +14,11 @@ const FAQ_ITEMS = [
       "Yes, and we're happy to bore you with specifics: AES-256 encryption at rest, TLS 1.2+ in transit, and strict per-account isolation. Your data never mingles with anyone else's, and you can export or delete it whenever you like.",
   },
   {
+    question: "Is my data used to train AI models?",
+    answer:
+      "No. Your data answers your questions and runs your workflows, full stop. The AI providers we use are contractually barred from training on your data, we don't build models on it either, and every AI call your account makes is metered and visible in your billing settings.",
+  },
+  {
     question: "Can I manage multiple businesses?",
     answer:
       "Yes. Plenty of our customers run more than one company. Switch between them from a single dashboard; each keeps its own financials, compliance calendar, and health scores.",

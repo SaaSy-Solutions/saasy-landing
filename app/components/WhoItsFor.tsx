@@ -1,5 +1,16 @@
+import Link from "next/link";
+
+interface Persona {
+  title: string;
+  description: string;
+  benefit: string;
+  /** Optional deep link to a vertical landing page. */
+  href?: string;
+  linkLabel?: string;
+}
+
 export function WhoItsFor(): React.ReactElement {
-  const personas = [
+  const personas: Persona[] = [
     {
       title: "Construction & trades",
       description:
@@ -11,6 +22,8 @@ export function WhoItsFor(): React.ReactElement {
       description:
         "Dues checkoff, CBA wage scales, and Taft-Hartley fringe remittance are a full-time job. SaaSy calculates them from signed authorizations and cuts the NACHA files for you.",
       benefit: "Dues and fringe, remitted right, every month",
+      href: "/unions",
+      linkLabel: "See the union compliance add-on →",
     },
     {
       title: "Agencies & service firms",
@@ -54,6 +67,16 @@ export function WhoItsFor(): React.ReactElement {
               >
                 {persona.benefit}
               </p>
+              {persona.href && (
+                <Link
+                  href={persona.href}
+                  className="mt-3 inline-block text-sm font-medium
+                    text-saasy-muted underline transition-colors
+                    hover:text-white"
+                >
+                  {persona.linkLabel}
+                </Link>
+              )}
             </div>
           ))}
         </div>

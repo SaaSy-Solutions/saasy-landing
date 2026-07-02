@@ -133,7 +133,14 @@ export function PricingPageClient(): React.ReactElement {
             >
               Built for unionized employers and contractors on
               prevailing-wage / Davis-Bacon public works. Attaches to a
-              Growth or Scale plan.
+              Growth or Scale plan.{" "}
+              <Link
+                href="/unions"
+                className="font-medium text-saasy-pink-soft underline
+                  transition-colors hover:text-white"
+              >
+                See the full union page &rarr;
+              </Link>
             </p>
           </div>
 

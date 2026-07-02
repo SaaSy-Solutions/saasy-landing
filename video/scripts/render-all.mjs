@@ -41,6 +41,7 @@ const ogPages = [
   { name: "compare", props: { eyebrow: "Compare", title: "SaaSy vs the", highlight: "alternatives" } },
   { name: "services", props: { eyebrow: "Services", title: "Custom automations &", highlight: "consulting" } },
   { name: "blog", props: { eyebrow: "Blog", title: "Ideas for", highlight: "building smarter" } },
+  { name: "unions", props: { eyebrow: "Union & Labor Compliance", title: "Certified payroll without the", highlight: "Sunday spreadsheet" } },
 ];
 
 // ── Blog posts (mirror src/data/posts.ts) ──────────────────────────────────
@@ -56,7 +57,7 @@ const posts = [
 
 // ── Feature clips (mirror FeatureClip.tsx featureClips) ─────────────────────
 const featureClips = {
-  health: { screenshot: "screenshots/dashboard-hero.png", callout: { label: "6 at risk this week", top: "40%", left: "28%", arrow: "down" }, stat: { label: "Avg. health", to: 82, suffix: "" } },
+  health: { screenshot: "screenshots/dashboard-hero.png", callout: { label: "6 at risk this week", top: "40%", left: "28%", arrow: "down" }, stat: { label: "Avg. health", to: 51, suffix: "" } },
   churn: { screenshot: "screenshots/churn-alerts.png", callout: { label: "Acted on in time", top: "18%", left: "32%", arrow: "up" } },
   ask: { screenshot: "screenshots/ask-saasy.png", callout: { label: "Plain-English answers", top: "26%", left: "8%", arrow: "left" } },
   customer: { screenshot: "screenshots/customer-detail.png", callout: { label: "The full story, one click", top: "20%", left: "30%", arrow: "up" } },
