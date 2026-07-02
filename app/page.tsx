@@ -28,7 +28,7 @@ const CAPABILITIES = [
     icon: <IconCRM />,
     title: "Built-in CRM & invoicing",
     description:
-      "Contacts, deals, projects, and billing in one place. No duct tape between four tools that don't talk to each other.",
+      "Contacts, deals, projects, and billing in one place, with nothing duct-taped between them.",
   },
   {
     icon: <IconCompliance />,

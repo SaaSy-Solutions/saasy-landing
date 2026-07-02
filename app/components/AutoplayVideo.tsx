@@ -83,7 +83,7 @@ export function AutoplayVideo({
         aria-label={paused ? "Play demo video" : "Pause demo video"}
         className="absolute right-3 bottom-3 flex h-11 w-11
           items-center justify-center rounded-full
-          bg-saasy-darker/80 text-white opacity-60
+          bg-saasy-darker/80 text-white opacity-80
           transition-opacity hover:opacity-100
           focus-visible:opacity-100 focus-visible:outline
           focus-visible:outline-2 focus-visible:outline-saasy-pink"

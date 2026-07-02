@@ -3,7 +3,6 @@ import Link from "next/link";
 import { ogImage } from "../components/ogAssets";
 import { SiteNav } from "../components/SiteNav";
 import { MarketingFooter } from "../components/MarketingFooter";
-import { IconCheck } from "../components/Icons";
 
 const DESCRIPTION =
   "Union dues checkoff, CBA wage scales, Taft-Hartley fringe remittance, " +
@@ -130,9 +129,9 @@ export default function UnionsPage(): React.ReactElement {
               leading-relaxed text-saasy-muted sm:text-xl"
           >
             Dues checkoff, CBA wage scales, Taft-Hartley fringe, and
-            WH-347 forms, computed from the same payroll run. Built
-            for unionized employers and contractors on
-            prevailing-wage public works.
+            WH-347 forms, computed from the same payroll run. For the
+            employers and contractors who remit, and the locals who
+            have to reconcile what arrives.
           </p>
           <div
             className="mt-10 flex flex-col items-center
@@ -162,7 +161,7 @@ export default function UnionsPage(): React.ReactElement {
       <main>
         {/* ─────────── Who this is for ─────────── */}
         <section className="border-t border-saasy-border py-16 sm:py-20">
-          <div className="mx-auto max-w-4xl px-6 text-center">
+          <div className="mx-auto max-w-2xl px-6 text-center">
             <p className="text-lg leading-relaxed text-saasy-muted">
               If your payroll involves{" "}
               <span className="font-semibold text-white">
@@ -242,9 +241,10 @@ export default function UnionsPage(): React.ReactElement {
                 Priced by active members
               </h2>
               <p className="mt-4 text-lg text-saasy-muted">
-                The add-on attaches to a Growth or Scale plan. No
-                per-seat games: you pay for the members you actually
-                remit for.
+                The add-on attaches to a Growth ($149/mo) or Scale
+                ($399/mo) plan, so a 50-member shop runs $248/mo all
+                in. No per-seat games: you pay for the members you
+                actually remit for.
               </p>
             </div>
 
@@ -315,11 +315,10 @@ export default function UnionsPage(): React.ReactElement {
             <dl className="space-y-8">
               {FAQ_ITEMS.map((item) => (
                 <div key={item.q}>
-                  <dt className="flex items-start gap-3 text-base font-semibold text-white">
-                    <IconCheck />
+                  <dt className="text-base font-semibold text-white">
                     {item.q}
                   </dt>
-                  <dd className="mt-2 max-w-[65ch] pl-8 text-sm leading-relaxed text-saasy-muted">
+                  <dd className="mt-2 max-w-[65ch] text-sm leading-relaxed text-saasy-muted">
                     {item.a}
                   </dd>
                 </div>

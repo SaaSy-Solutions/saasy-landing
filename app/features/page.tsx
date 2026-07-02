@@ -140,8 +140,8 @@ export default function FeaturesPage(): React.ReactElement {
         <FeatureShowcase
           title="See your whole business at a glance"
           body="One view for customer health, at-risk accounts,
-            and expansion opportunities. No more bouncing between
-            7 tools to find the one metric that matters this week."
+            and expansion opportunities. The metric that matters
+            this week is on the first screen you open."
           image="/screenshots/dashboard-hero.png"
           video={revVideoUrl("feature-clip-health.mp4")}
           alt="SaaSy health dashboard overview with stats and critical customer cards"
@@ -261,10 +261,10 @@ export default function FeaturesPage(): React.ReactElement {
 
                   text-lg leading-relaxed text-saasy-muted"
               >
-                Connect Stripe and Slack today; HubSpot and Salesforce
-                are rolling out to beta customers now. Every connected
-                source feeds the same per-customer health score. OAuth
-                in about a minute, no CSV uploads.
+                Connect Stripe and Slack today; HubSpot, Salesforce,
+                and Jira are rolling out to beta customers now. Every
+                connected source feeds the same per-customer health
+                score. OAuth in about a minute, no CSV uploads.
               </p>
               <ul className="mt-6 space-y-3">
                 {[

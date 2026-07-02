@@ -90,7 +90,7 @@ const SceneHeadline: React.FC = () => {
   return (
     <Center>
       <Pill style={{ marginBottom: 36, opacity: line1 }}>
-        Now in beta — early access open
+        Open beta: anyone can sign up
       </Pill>
       <div
         style={{
