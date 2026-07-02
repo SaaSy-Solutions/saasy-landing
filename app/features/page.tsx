@@ -238,7 +238,7 @@ export default function FeaturesPage(): React.ReactElement {
             actual records they came from."
           image="/screenshots/ask-saasy.png"
           video={revVideoUrl("feature-clip-ask.mp4")}
-          alt="Ask SaaSy chat interface with quick-prompt buttons for common business questions"
+          alt="Ask SaaSy answering 'Which customers are at risk?' with tables of critical and high-risk customers, health scores, and MRR, grounded in live account data"
           imageWidth={1195}
           imageHeight={500}
         />
