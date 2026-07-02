@@ -83,7 +83,7 @@ export function SmsConsentForm(): React.ReactElement {
           Consent recorded
         </h3>
         <p className="mt-2 text-saasy-muted">
-          Thanks &mdash; we&apos;ve received your SMS opt-in. You can reply{" "}
+          Thanks! We&apos;ve received your SMS opt-in. You can reply{" "}
           <span className="font-semibold text-white">STOP</span> at any time to
           unsubscribe, or <span className="font-semibold text-white">HELP</span>{" "}
           for assistance. Message and data rates may apply.

@@ -6,37 +6,37 @@ const FAQ_ITEMS = [
   {
     question: "How does SaaSy handle compliance tracking?",
     answer:
-      "SaaSy monitors your regulatory deadlines, tax filings, and license renewals automatically. You get proactive alerts before anything is due — so you never miss a deadline or pay a late fee.",
+      "SaaSy watches your regulatory deadlines, tax filings, and license renewals for you. When something's coming due, you hear about it early enough to actually do something about it. Late fees fund other people's software.",
   },
   {
     question: "Is my data secure?",
     answer:
-      "Absolutely. We use enterprise-grade encryption (AES-256 at rest, TLS 1.2+ in transit) and strict tenant isolation, so your business data is never shared across accounts.",
+      "Yes, and we're happy to bore you with specifics: AES-256 encryption at rest, TLS 1.2+ in transit, and strict per-account isolation. Your data never mingles with anyone else's, and you can export or delete it whenever you like.",
   },
   {
     question: "Can I manage multiple businesses?",
     answer:
-      "Yes. SaaSy is built for founders who run more than one venture. Switch between businesses from a single dashboard — each with its own financials, compliance calendar, and intelligent insights.",
+      "Yes. Plenty of our customers run more than one company. Switch between them from a single dashboard; each keeps its own financials, compliance calendar, and health scores.",
   },
   {
     question: "What happens after my trial ends?",
     answer:
-      "Your 14-day trial includes full Growth plan access — no credit card required. When it ends, choose any plan to continue. Your data is preserved for 30 days if you need more time to decide.",
+      "Your 14-day trial includes full Growth plan access, no credit card required. When it ends, pick whichever plan fits. If you need longer to decide, your data sits safely for 30 days. We don't hold it hostage.",
   },
   {
     question: "Can I switch plans or cancel anytime?",
     answer:
-      "Yes to both. Upgrade, downgrade, or cancel from your billing settings with one click. No long-term contracts, no cancellation fees. Changes take effect at the start of your next billing cycle, prorated automatically.",
+      "Yes to both. Upgrade, downgrade, or cancel from billing settings in one click. No contracts, no cancellation fees, no retention specialist calling you at dinner. Changes take effect at the start of your next billing cycle, prorated automatically.",
   },
   {
     question: "What integrations do you support?",
     answer:
-      "Connect Stripe for automatic financial tracking and Slack for real-time business alerts — no manual data entry. HubSpot, Salesforce, and Jira connectors are rolling out to beta customers now, and Growth plans and above include an open API.",
+      "Stripe (financials) and Slack (alerts) connect today. HubSpot, Salesforce, and Jira connectors are rolling out to beta customers now. Growth plans and above also get an open API, if you'd rather build your own.",
   },
   {
     question: "How long does setup take?",
     answer:
-      "Most owners are up and running in under 10 minutes. Answer a few questions about your business, and SaaSy builds your personalized action plan immediately.",
+      "Under 10 minutes for most owners. Answer a few questions about your business and SaaSy drafts your action plan on the spot.",
   },
 ];
 

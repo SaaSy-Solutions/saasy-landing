@@ -15,7 +15,7 @@ export function WhoItsFor(): React.ReactElement {
     {
       title: "Agencies & service firms",
       description:
-        "You bill for your time, so admin is pure loss. Built-in CRM, invoicing, and customer health scores that flag the client who's about to walk — before they do.",
+        "You bill for your time, so admin is pure loss. Built-in CRM, invoicing, and customer health scores that flag the client who's about to walk while there's still time to save them.",
       benefit: "Know which client is drifting before they ghost you",
     },
   ];
@@ -25,13 +25,13 @@ export function WhoItsFor(): React.ReactElement {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto mb-16 max-w-2xl text-center">
           <h2 className="text-3xl font-bold text-white sm:text-4xl">
-            For businesses that{" "}
-            <span className="gradient-text">mean business</span>
+            Built for the people who{" "}
+            <span className="gradient-text">keep the lights on</span>
           </h2>
           <p className="mt-4 text-lg text-saasy-muted">
-            Not another dashboard for startups pitching startups.
-            SaaSy is built for the people who keep payroll running
-            and the lights on.
+            Startup dashboards pitch startups. SaaSy backs the
+            contractors bidding public jobs, the unions remitting
+            dues, and the agencies keeping clients happy.
           </p>
         </div>
 

@@ -18,7 +18,7 @@ export function Hero(): React.ReactElement {
             className="h-2 w-2 rounded-full bg-saasy-pink"
           />
           <span className="text-sm text-saasy-pink-soft">
-            In open beta — anyone can sign up
+            Open beta: anyone can sign up
           </span>
         </div>
 
@@ -35,11 +35,10 @@ export function Hero(): React.ReactElement {
           className="mx-auto mt-6 max-w-2xl text-lg
             leading-relaxed text-saasy-muted sm:text-xl"
         >
-          CRM, invoicing, compliance, and customer intelligence —
-          run by AI agents that flag problems before they cost you
-          money. Built for contractors, unions, agencies, and
-          every owner who&rsquo;d rather run the business than
-          the busywork.
+          AI agents run your CRM, invoicing, and compliance, and
+          flag trouble while it&rsquo;s still cheap to fix. Built
+          for contractors, unions, and agencies who&rsquo;d rather
+          run the business than the busywork.
         </p>
 
         {/* CTAs */}

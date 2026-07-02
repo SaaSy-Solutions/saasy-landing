@@ -22,7 +22,7 @@ const CAPABILITIES = [
     icon: <IconAI />,
     title: "Customer health scoring",
     description:
-      "Every account scored 0-100 on usage, payments, and support signals — so you see who's drifting toward the exit while there's still time to call.",
+      "Every account scored 0-100 on usage, payments, and support signals. You see who's drifting toward the exit while there's still time to call.",
   },
   {
     icon: <IconCRM />,
@@ -101,13 +101,13 @@ export default function Home(): React.ReactElement {
           <div className="mx-auto mb-16 max-w-2xl text-center">
             <h2 className="text-3xl font-bold text-white sm:text-4xl">
               Software that{" "}
-              <span className="gradient-text">does the work</span>,
-              not just the reporting
+              <span className="gradient-text">does the work</span>
             </h2>
             <p className="mt-4 text-lg text-saasy-muted">
-              Most tools show you charts of the problem. SaaSy&rsquo;s
-              agents chase the deadline, score the customer, and draft
-              the follow-up — then tell you what they did.
+              Most tools hand you a chart of the problem and wish
+              you luck. SaaSy&rsquo;s agents chase the deadline,
+              score the customer, and draft the follow-up. Then
+              they tell you what they did.
             </p>
           </div>
 
@@ -162,7 +162,7 @@ export default function Home(): React.ReactElement {
             </h2>
             <p className="mt-4 text-lg text-saasy-muted">
               Every trial starts with full Growth access, free for
-              14 days. Pick your plan when you&rsquo;re ready — no
+              14 days. Pick your plan when you&rsquo;re ready. No
               credit card up front.
             </p>
           </div>
@@ -196,9 +196,9 @@ export default function Home(): React.ReactElement {
               popular
               billingLabel={billingLabel}
               features={[
+                "Everything in Starter",
                 "Up to 5 businesses",
-                "All modules",
-                "Smart guidance",
+                "Ask SaaSy AI guidance",
                 "Slack alerts",
                 "API access",
                 "Advanced analytics",
@@ -209,12 +209,12 @@ export default function Home(): React.ReactElement {
               price={prices.scale}
               billingLabel={billingLabel}
               features={[
+                "Everything in Growth",
                 "Unlimited businesses",
                 "Unlimited integrations",
                 "Priority support",
                 "Custom automations",
                 "Dedicated onboarding",
-                "Advanced analytics",
               ]}
             />
           </div>
@@ -262,8 +262,8 @@ export default function Home(): React.ReactElement {
               text-saasy-muted"
           >
             We&rsquo;re in open beta, building alongside our first
-            customers — which means your feedback ships in days,
-            and your first two weeks are free.
+            customers. Your feedback ships in days, and your first
+            two weeks are free.
           </p>
           <Link
             href="https://app.hellosaasy.ai/signup"

@@ -30,8 +30,8 @@ const OUTCOMES: Outcome[] = [
   {
     title: "Never miss a deadline",
     body:
-      "Track licenses, permits, and filings with reminders ahead " +
-      "of each due date — not a scramble after one passes.",
+      "Track licenses, permits, and filings. Reminders arrive " +
+      "ahead of each due date, with time to act built in.",
   },
   {
     title: "Get hours back",
@@ -72,7 +72,7 @@ export default function CustomersPage() {
           >
             SaaSy is brand new and we&rsquo;re building alongside
             our first founders. Real, named stories will live here
-            as our early customers hit their milestones — no stock
+            as our early customers hit their milestones. No stock
             photos, no invented quotes.
           </p>
         </div>

@@ -95,8 +95,8 @@ const CAPABILITIES: Capability[] = [
     icon: <IconCompliance />,
     title: "Compliance tracking",
     body:
-      "Licenses, permits, and filings tracked with reminders ahead of " +
-      "each deadline, not a scramble after one passes.",
+      "Licenses, permits, and filings tracked with reminders that " +
+      "arrive while you can still do something about them.",
   },
 ];
 
@@ -186,19 +186,14 @@ export default function FeaturesPage(): React.ReactElement {
 
             <div
               className="mt-12 grid gap-5
-                lg:grid-cols-3 lg:[grid-auto-rows:1fr]"
+                lg:grid-cols-3"
             >
-              {CAPABILITIES.map((cap, i) => (
+              {CAPABILITIES.map((cap) => (
                 <div
                   key={cap.title}
-                  className={`flex flex-col rounded-2xl border
+                  className="flex flex-col rounded-2xl border
                     border-saasy-border bg-saasy-card p-8
-                    transition-colors hover:border-saasy-pink/30 ${
-                      i === 0
-                        ? "lg:row-span-2 lg:bg-gradient-to-b" +
-                          " lg:from-saasy-card lg:to-saasy-card-hover"
-                        : ""
-                    }`}
+                    transition-colors hover:border-saasy-pink/30"
                 >
                   <div className="mb-5">{cap.icon}</div>
                   <h3
@@ -266,9 +261,10 @@ export default function FeaturesPage(): React.ReactElement {
 
                   text-lg leading-relaxed text-saasy-muted"
               >
-                Connect Stripe, HubSpot, Salesforce, and your help desk
-                once. SaaSy pulls the signals into a single health score
-                per customer. OAuth in about a minute, no CSV uploads.
+                Connect Stripe and Slack today; HubSpot and Salesforce
+                are rolling out to beta customers now. Every connected
+                source feeds the same per-customer health score. OAuth
+                in about a minute, no CSV uploads.
               </p>
               <ul className="mt-6 space-y-3">
                 {[
@@ -289,10 +285,7 @@ export default function FeaturesPage(): React.ReactElement {
               </ul>
             </div>
 
-            <div
-              className="glow-border rounded-2xl bg-saasy-card/80 p-8
-                backdrop-blur-sm"
-            >
+            <div className="rounded-2xl bg-saasy-card/40 p-8">
               <p
                 className="
                   text-xs font-semibold text-saasy-muted"

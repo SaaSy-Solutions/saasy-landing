@@ -35,8 +35,8 @@ export function SocialProof(): React.ReactElement {
         >
           We&rsquo;re in the early days and building alongside our
           first customers. You get hands-on access, your feedback
-          ships in days not quarters, and your story could be on
-          this page as we grow.
+          ships in days, and your story could be on this page as
+          we grow.
         </p>
 
         <Link
