@@ -143,6 +143,17 @@ export default function Home(): React.ReactElement {
             >
               See every feature in real screenshots &rarr;
             </Link>
+            <p className="mx-auto mt-3 max-w-md text-xs text-saasy-muted">
+              The numbers in the demo aren&rsquo;t set dressing.{" "}
+              <a
+                href="/downloads/sample-customer-health.json"
+                download
+                className="underline transition-colors hover:text-white"
+              >
+                Download the raw health data behind these screens
+              </a>{" "}
+              and check them yourself.
+            </p>
           </div>
         </div>
       </section>

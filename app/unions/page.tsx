@@ -380,6 +380,56 @@ export default function UnionsPage(): React.ReactElement {
           </div>
         </section>
 
+        {/* ─────────── Jargon, translated ─────────── */}
+        <section className="border-t border-saasy-border py-24 sm:py-32">
+          <div className="mx-auto max-w-3xl px-6">
+            <h2 className="text-3xl font-bold text-white">
+              New to this world? The jargon, translated
+            </h2>
+            <p className="mt-3 text-saasy-muted">
+              If you just won your first public-works bid, here&rsquo;s
+              what everyone on this page has been talking about.
+            </p>
+            <dl className="mt-10 space-y-6">
+              {[
+                {
+                  term: "Prevailing wage / Davis-Bacon",
+                  def: "On government-funded construction, you must pay at least the wage the government publishes for each trade in that county. Davis-Bacon is the federal law; most states have their own version. The published rates arrive as a \u201cwage determination\u201d attached to the bid.",
+                },
+                {
+                  term: "WH-347",
+                  def: "The federal certified-payroll form. Every week, for every worker on the job: hours per day, classification, rate, gross, deductions, net \u2014 signed under penalty of perjury. Miss one and the payments on the whole job can be withheld.",
+                },
+                {
+                  term: "Dues checkoff",
+                  def: "Deducting union dues from a member's paycheck and sending them to the local \u2014 but only for members with a signed authorization card on file. Flat amounts, a percent of wages, or cents per hour, depending on the CBA.",
+                },
+                {
+                  term: "Taft-Hartley fringe funds",
+                  def: "Health & welfare, pension, and apprenticeship money that doesn't go to the worker directly \u2014 it goes to jointly-managed trust funds, per hour worked, each fund with its own remittance report and deadline.",
+                },
+                {
+                  term: "LCPtracker",
+                  def: "The compliance portal many public agencies require contractors to upload certified payroll into. If your payroll system can't export to it, someone retypes every line.",
+                },
+                {
+                  term: "NACHA file",
+                  def: "The standard file format banks accept for batch ACH payments. It's how dues and fringe remittances actually move \u2014 you upload it to your own bank and approve the run.",
+                },
+              ].map((item) => (
+                <div key={item.term}>
+                  <dt className="text-base font-semibold text-white">
+                    {item.term}
+                  </dt>
+                  <dd className="mt-1 max-w-[65ch] text-sm leading-relaxed text-saasy-muted">
+                    {item.def}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </section>
+
         {/* ─────────── FAQ ─────────── */}
         <section className="border-t border-saasy-border py-24 sm:py-32">
           <div className="mx-auto max-w-3xl px-6">

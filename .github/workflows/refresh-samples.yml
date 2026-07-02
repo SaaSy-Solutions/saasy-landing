@@ -1,0 +1,94 @@
+name: Refresh sample evidence artifacts
+
+# The site publishes product-generated evidence (the WH-347 CSV and the
+# customer-health JSON on /unions and the homepage) with copy that
+# invites visitors to "check the math." The 2026-07-02 design critique
+# caught a hand-seeded 4-cent hole in exactly that file — so the
+# artifacts are now re-fetched FROM THE PRODUCT, audited in CI, and
+# committed when they change. Evidence can't drift from the engine.
+#
+# Requires repo secrets: DEMO_ACCOUNT_EMAIL, DEMO_ACCOUNT_PASSWORD
+# (the persistent production demo tenant).
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Weekly, Monday 09:10 ET — after any weekend demo-data churn.
+    - cron: "10 13 * * 1"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch artifacts from the product
+        env:
+          DEMO_EMAIL: ${{ secrets.DEMO_ACCOUNT_EMAIL }}
+          DEMO_PASSWORD: ${{ secrets.DEMO_ACCOUNT_PASSWORD }}
+          TENANT_ID: df3e8a70-013b-4528-ae34-6fb088a9dc52
+          CP_RUN_ID: 11111111-2026-0702-bbbb-000000000001
+        run: |
+          set -euo pipefail
+          TOKEN=$(curl -sf -X POST https://api.hellosaasy.ai/api/v1/auth/login \
+            -H 'Content-Type: application/json' \
+            -d "{\"email\":\"$DEMO_EMAIL\",\"password\":\"$DEMO_PASSWORD\"}" \
+            | python3 -c "import json,sys; d=json.load(sys.stdin); print(d.get('access_token') or d.get('data',{}).get('access_token',''))")
+          test -n "$TOKEN"
+
+          curl -sf "https://api.hellosaasy.ai/api/v1/tenants/$TENANT_ID/union/certified-payroll/$CP_RUN_ID/wh347?format=csv" \
+            -H "Authorization: Bearer $TOKEN" -o public/downloads/sample-wh347.csv
+
+          curl -sf "https://api.hellosaasy.ai/api/v1/tenants/$TENANT_ID/customer-health" \
+            -H "Authorization: Bearer $TOKEN" \
+            | python3 -c "import json,sys; d=json.load(sys.stdin); items=d if isinstance(d,list) else d.get('data') or d.get('customers'); json.dump(items, open('public/downloads/sample-customer-health.json','w'), indent=2)"
+
+      - name: Audit the math (fail the run before publishing bad evidence)
+        run: |
+          python3 - <<'EOF'
+          import csv, json, re, sys
+
+          errors = []
+
+          rows = list(csv.DictReader(open("public/downloads/sample-wh347.csv")))
+          if len(rows) < 3:
+              errors.append(f"WH-347 CSV suspiciously small ({len(rows)} rows)")
+          for r in rows:
+              name = r["Worker Name"]
+              if float(r["Gross (All Jobs)"]) < float(r["Gross (This Project)"]) - 0.005:
+                  errors.append(f"{name}: all-jobs gross < project gross")
+              ded = sum(float(m) for m in re.findall(r":([0-9.]+)", r["Deductions"]))
+              if abs(ded - float(r["Total Deductions"])) > 0.005:
+                  errors.append(f"{name}: deductions don't sum")
+              net = float(r["Gross (This Project)"]) - float(r["Total Deductions"])
+              if abs(net - float(r["Net Pay"])) > 0.005:
+                  errors.append(f"{name}: net doesn't reconcile")
+
+          health = json.load(open("public/downloads/sample-customer-health.json"))
+          if len(health) < 5:
+              errors.append(f"health JSON suspiciously small ({len(health)} rows)")
+          if any(float(c["mrr"]) <= 0 for c in health):
+              errors.append("health JSON contains zero-MRR rows (empty-state regression)")
+
+          if errors:
+              print("EVIDENCE AUDIT FAILED:")
+              print("\n".join(f"  - {e}" for e in errors))
+              sys.exit(1)
+          print(f"audit clean: {len(rows)} payroll rows, {len(health)} health rows")
+          EOF
+
+      - name: Commit when changed
+        run: |
+          if git diff --quiet public/downloads/; then
+            echo "artifacts unchanged"
+            exit 0
+          fi
+          git config user.name "saasy-evidence-bot"
+          git config user.email "engineering@saasysolutionsllc.com"
+          git add public/downloads/
+          git commit -m "chore: refresh product-generated sample artifacts (audited in CI)"
+          git push
