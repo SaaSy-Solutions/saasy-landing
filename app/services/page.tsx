@@ -144,7 +144,7 @@ export default function ServicesPage() {
               text-3xl font-bold sm:text-5xl"
           >
             Custom AI Systems,{" "}
-            <span className="gradient-text">
+            <span className="accent-word">
               Built for You
             </span>
           </h1>

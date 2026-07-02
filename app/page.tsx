@@ -101,7 +101,7 @@ export default function Home(): React.ReactElement {
           <div className="mx-auto mb-16 max-w-2xl text-center">
             <h2 className="text-3xl font-bold text-white sm:text-4xl">
               Software that{" "}
-              <span className="gradient-text">does the work</span>
+              <span className="accent-word">does the work</span>
             </h2>
             <p className="mt-4 text-lg text-saasy-muted">
               Most tools hand you a chart of the problem and wish

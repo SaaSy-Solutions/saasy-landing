@@ -28,7 +28,7 @@ export function Hero(): React.ReactElement {
         >
           Your entire back office,
           <br />
-          <span className="gradient-text">handled</span>
+          <span className="accent-word">handled</span>
         </h1>
 
         <p

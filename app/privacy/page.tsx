@@ -17,7 +17,7 @@ export default function PrivacyPolicyPage() {
             href="/"
             className=" text-xl font-bold"
           >
-            <span className="gradient-text">SaaSy</span>
+            <span className="accent-word">SaaSy</span>
           </Link>
           <Link
             href="/"

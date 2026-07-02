@@ -122,7 +122,7 @@ export default function FeaturesPage(): React.ReactElement {
               text-4xl leading-[1.1] font-extrabold tracking-tight
               text-white sm:text-6xl"
           >
-            What you actually <span className="gradient-text">get</span>
+            What you actually <span className="accent-word">get</span>
           </h1>
           <p
             className="mx-auto mt-6 max-w-2xl

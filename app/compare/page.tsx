@@ -117,7 +117,7 @@ export default function ComparePage() {
               text-3xl font-bold sm:text-5xl"
           >
             How SaaSy{" "}
-            <span className="gradient-text">compares</span>
+            <span className="accent-word">compares</span>
           </h1>
           <p
             className="mx-auto mt-4 max-w-2xl

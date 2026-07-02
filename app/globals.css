@@ -46,7 +46,7 @@ p {
    background-clip gradient; now a solid brand accent — emphasis via
    color, not decoration. Headings are large text, so pink on the navy
    body bg (≈4.2:1) clears the WCAG AA large-text bar. */
-.gradient-text {
+.accent-word {
   color: var(--color-saasy-pink);
 }
 

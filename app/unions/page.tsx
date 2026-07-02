@@ -126,7 +126,7 @@ export default function UnionsPage(): React.ReactElement {
               tracking-tight text-white sm:text-6xl"
           >
             Certified payroll without the{" "}
-            <span className="gradient-text">Sunday spreadsheet</span>
+            <span className="accent-word">Sunday spreadsheet</span>
           </h1>
           <p
             className="mx-auto mt-6 max-w-2xl text-lg
@@ -272,9 +272,11 @@ export default function UnionsPage(): React.ReactElement {
                   Download this run&rsquo;s WH-347 export (CSV) &rarr;
                 </a>
               </div>
-              <p className="mt-2 text-xs text-saasy-muted">
+              <p className="mt-2 max-w-md text-xs text-saasy-muted">
                 The CSV is the exact file the Download button produces
                 in the app &mdash; open it in Excel and check the math.
+                SSNs are masked in this sample; real runs carry the
+                last four digits the WH-347 requires.
               </p>
             </div>
             <a
@@ -315,8 +317,8 @@ export default function UnionsPage(): React.ReactElement {
               <p className="mt-4 text-lg text-saasy-muted">
                 The add-on attaches to a Growth ($149/mo) or Scale
                 ($399/mo) plan, so a 50-member shop runs $248/mo all
-                in. No per-seat games: you pay for the members you
-                actually remit for.
+                in — or $198/mo on annual billing. No per-seat games:
+                you pay for the members you actually remit for.
               </p>
             </div>
 

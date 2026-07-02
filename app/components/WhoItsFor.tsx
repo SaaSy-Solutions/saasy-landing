@@ -39,7 +39,7 @@ export function WhoItsFor(): React.ReactElement {
         <div className="mx-auto mb-16 max-w-2xl text-center">
           <h2 className="text-3xl font-bold text-white sm:text-4xl">
             Built for the people who{" "}
-            <span className="gradient-text">keep the lights on</span>
+            <span className="accent-word">keep the lights on</span>
           </h2>
           <p className="mt-4 text-lg text-saasy-muted">
             Startup dashboards pitch startups. SaaSy backs the
