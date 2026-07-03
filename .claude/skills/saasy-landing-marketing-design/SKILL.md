@@ -26,7 +26,7 @@ The site is a **single dark theme** (`body` is `saasy-dark` `#1A2435`, text `saa
 
 ## 2. Brand tokens & type (`app/globals.css` `@theme`)
 
-- **Single accent gradient: pink → orange.** `saasy-pink` `#E45074` → `saasy-orange` `#DB6E36` (deep `saasy-rose` `#A4293F` for pressed/hover). Use `.gradient-text` for accented words. **Never introduce a second accent family.**
+- **Accent palette: pink → orange.** `saasy-pink` `#E45074` → `saasy-orange` `#DB6E36` (deep `saasy-rose` `#A4293F` for pressed/hover). **Never introduce a second accent family.** Accent words render solid (see next bullet), not as a gradient.
 - Surfaces: `saasy-dark` (page), `saasy-darker` `#111827`, `saasy-card` / `saasy-card-hover` (elevated).
 - Accent words use the solid `.accent-word` class (the old pink→orange
   `.gradient-text` and glow utilities were **neutralized** in `globals.css` —
