@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { IconCompliance, IconCRM, IconAI, IconAlerts } from "./components/Icons";
+import { Reveal } from "./components/Reveal";
 import { WhoItsFor } from "./components/WhoItsFor";
 import { PricingCard, PricingToggle } from "./components/Pricing";
 import { SocialProof } from "./components/SocialProof";
@@ -109,18 +110,20 @@ export default function Home(): React.ReactElement {
       {/* ─────────────── Features ─────────────────── */}
       <section id="features" className="py-24 sm:py-32">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="mx-auto mb-16 max-w-2xl text-center">
-            <h2 className="text-3xl font-bold text-white sm:text-4xl">
-              Software that{" "}
-              <span className="accent-word">does the work</span>
-            </h2>
-            <p className="mt-4 text-lg text-saasy-muted">
-              Most tools hand you a chart of the problem and wish
-              you luck. SaaSy&rsquo;s agents chase the deadline,
-              score the customer, and draft the follow-up. Then
-              they tell you what they did.
-            </p>
-          </div>
+          <Reveal>
+            <div className="mx-auto mb-16 max-w-2xl text-center">
+              <h2 className="text-3xl font-bold text-white sm:text-4xl">
+                Software that{" "}
+                <span className="accent-word">does the work</span>
+              </h2>
+              <p className="mt-4 text-lg text-saasy-muted">
+                Most tools hand you a chart of the problem and wish
+                you luck. SaaSy&rsquo;s agents chase the deadline,
+                score the customer, and draft the follow-up. Then
+                they tell you what they did.
+              </p>
+            </div>
+          </Reveal>
 
           {/* Product walkthrough video — the destination for the hero's
               "See how it works" CTA. */}
@@ -170,7 +173,9 @@ export default function Home(): React.ReactElement {
       </section>
 
       {/* ─────────────── Who It's For ─────────────── */}
-      <WhoItsFor />
+      <Reveal>
+        <WhoItsFor />
+      </Reveal>
 
       {/* ─────────────── Pricing ─────────────────── */}
       <section
@@ -178,16 +183,18 @@ export default function Home(): React.ReactElement {
         className="border-t border-saasy-border py-24 sm:py-32"
       >
         <div className="mx-auto max-w-6xl px-6">
-          <div className="mx-auto mb-10 max-w-2xl text-center">
-            <h2 className="text-3xl font-bold text-white sm:text-4xl">
-              Simple, transparent pricing
-            </h2>
-            <p className="mt-4 text-lg text-saasy-muted">
-              Every trial starts with full Growth access, free for
-              14 days. Pick your plan when you&rsquo;re ready. No
-              credit card up front.
-            </p>
-          </div>
+          <Reveal>
+            <div className="mx-auto mb-10 max-w-2xl text-center">
+              <h2 className="text-3xl font-bold text-white sm:text-4xl">
+                Simple, transparent pricing
+              </h2>
+              <p className="mt-4 text-lg text-saasy-muted">
+                Every trial starts with full Growth access, free for
+                14 days. Pick your plan when you&rsquo;re ready. No
+                credit card up front.
+              </p>
+            </div>
+          </Reveal>
 
           <div className="mb-10 flex justify-center">
             <PricingToggle
@@ -272,41 +279,43 @@ export default function Home(): React.ReactElement {
 
       {/* ───────────── Final CTA ──────────────────── */}
       <section className="border-t border-saasy-border">
-        <div
-          className="hero-gradient mx-auto max-w-4xl px-6
-            py-24 text-center sm:py-32"
-        >
-          <h2 className="text-3xl font-bold text-white sm:text-5xl">
-            Ready to run your business smarter?
-          </h2>
-          <p
-            className="mx-auto mt-4 max-w-xl text-lg
-              text-saasy-muted"
+        <Reveal>
+          <div
+            className="hero-gradient mx-auto max-w-4xl px-6
+              py-24 text-center sm:py-32"
           >
-            We&rsquo;re in open beta, building alongside our first
-            customers. Your feedback ships in days, and your first
-            two weeks are free.
-          </p>
-          <Link
-            href="https://app.hellosaasy.ai/signup"
-            className="mt-8 inline-flex rounded-full
-              bg-saasy-rose px-8 py-4 text-base
-              font-semibold text-white
-              transition-colors hover:bg-saasy-rose-bright"
-          >
-            Start your free trial
-          </Link>
-          <p className="mt-4 text-sm text-saasy-muted">
-            Want a walkthrough first?{" "}
-            <a
-              href="https://app.hellosaasy.ai/contact-sales"
-              className="font-medium text-saasy-pink-soft
-                transition-colors hover:text-white"
+            <h2 className="text-3xl font-bold text-white sm:text-5xl">
+              Ready to run your business smarter?
+            </h2>
+            <p
+              className="mx-auto mt-4 max-w-xl text-lg
+                text-saasy-muted"
             >
-              Talk to sales
-            </a>
-          </p>
-        </div>
+              We&rsquo;re in open beta, building alongside our first
+              customers. Your feedback ships in days, and your first
+              two weeks are free.
+            </p>
+            <Link
+              href="https://app.hellosaasy.ai/signup"
+              className="mt-8 inline-flex rounded-full
+                bg-saasy-rose px-8 py-4 text-base
+                font-semibold text-white
+                transition-colors hover:bg-saasy-rose-bright"
+            >
+              Start your free trial
+            </Link>
+            <p className="mt-4 text-sm text-saasy-muted">
+              Want a walkthrough first?{" "}
+              <a
+                href="https://app.hellosaasy.ai/contact-sales"
+                className="font-medium text-saasy-pink-soft
+                  transition-colors hover:text-white"
+              >
+                Talk to sales
+              </a>
+            </p>
+          </div>
+        </Reveal>
       </section>
 
       {/* ─────────────── Footer ─────────────────── */}
