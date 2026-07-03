@@ -25,7 +25,19 @@ export function BreathingPanel(): React.ReactElement {
     const reduce =
       typeof window !== 'undefined' &&
       window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
-    if (barRef.current) barRef.current.style.width = '82%';
+
+    // Animate the bar fill only when motion is allowed; otherwise it stays at
+    // its SSR width (82%), so JS-off / reduced-motion renders complete.
+    const bar = barRef.current;
+    if (bar && !reduce) {
+      bar.style.width = '0%';
+      requestAnimationFrame(() =>
+        requestAnimationFrame(() => {
+          if (barRef.current) barRef.current.style.width = '82%';
+        })
+      );
+    }
+
     if (reduce) return;
     let i = 0;
     const id = setInterval(() => {
@@ -56,7 +68,7 @@ export function BreathingPanel(): React.ReactElement {
               ref={barRef}
               className="breathe-bar h-full rounded-full"
               style={{
-                width: '0%',
+                width: '82%',
                 background:
                   'linear-gradient(90deg, var(--color-saasy-rose), var(--color-saasy-pink), var(--color-saasy-orange))',
               }}

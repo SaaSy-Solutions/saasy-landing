@@ -58,9 +58,7 @@ export function useCountUp<T extends HTMLElement = HTMLElement>(
     }) +
     suffix;
 
-  const [display, setDisplay] = useState<string>(() =>
-    prefersReducedMotion() ? format(target) : format(0)
-  );
+  const [display, setDisplay] = useState<string>(() => format(target));
 
   useEffect(() => {
     if (prefersReducedMotion()) {
@@ -72,6 +70,7 @@ export function useCountUp<T extends HTMLElement = HTMLElement>(
     let cancelled = false;
 
     const run = (): void => {
+      setDisplay(format(0));
       const start = performance.now();
       const step = (now: number): void => {
         if (cancelled) return;
