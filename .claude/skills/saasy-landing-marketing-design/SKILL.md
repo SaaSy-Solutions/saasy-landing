@@ -26,9 +26,12 @@ The site is a **single dark theme** (`body` is `saasy-dark` `#1A2435`, text `saa
 
 ## 2. Brand tokens & type (`app/globals.css` `@theme`)
 
-- **Single accent gradient: pink → orange.** `saasy-pink` `#E45074` → `saasy-orange` `#DB6E36` (deep `saasy-rose` `#A4293F` for pressed/hover). Use `.gradient-text` for accented words. **Never introduce a second accent family.**
+- **Accent palette: pink → orange.** `saasy-pink` `#E45074` → `saasy-orange` `#DB6E36` (deep `saasy-rose` `#A4293F` for pressed/hover). **Never introduce a second accent family.** Accent words render solid (see next bullet), not as a gradient.
 - Surfaces: `saasy-dark` (page), `saasy-darker` `#111827`, `saasy-card` / `saasy-card-hover` (elevated).
-- Reuse the existing custom utilities — don't reinvent: `gradient-text`, `glow-border`, `hero-gradient`, `grid-pattern`, `popular-glow`, `cta-pulse`, `health-bar`, `fade-up`.
+- Accent words use the solid `.accent-word` class (the old pink→orange
+  `.gradient-text` and glow utilities were **neutralized** in `globals.css` —
+  don't reintroduce them). Sanctioned motion/atmosphere utilities: `LivingGeometry`,
+  `Reveal`, `useCountUp`, `.breathe-bar`, `.feed-enter`, `.live-dot` (see §6).
 - Font: **Poppins** (`next/font/google`, `--font-poppins`), already wired in `app/layout.tsx`.
 
 ## 3. Shared components — edit these for site-wide changes
@@ -54,9 +57,24 @@ We are in **public beta with no real customers or published metrics yet**. The p
 - ✅ True/defensible claims OK: encryption in transit & at rest (AES-256 / TLS via Neon/Fly), per-tenant isolation, GDPR-ready (backed by the privacy-policy rights section), real product capabilities (health scoring, churn prediction, proactive alerts, compliance tracking).
 - Any number must be true and non-fake-precise, or cut it.
 
-## 6. Motion
+## 6. Motion — the "Living Surface" system
 
-CSS/utility animation only (`fade-up`, `cta-pulse` keyframes; `IntersectionObserver` for reveals). **No Motion/GSAP libraries.** Respect `prefers-reduced-motion`. Keep it restrained — the audience is technical buyers.
+On-brand motion is **CSS-first, zero-dependency**. Two primitives (mirrored
+from `@saas-platform/ui-core`; keep them in lockstep):
+
+- **`LivingGeometry`** (`app/components/LivingGeometry.tsx`) — ambient drifting
+  geometric shapes + dot-grid at ≤8% opacity. Use `variant="hero"` behind heroes,
+  `variant="section"` faintly behind alternating sections. **Geometry whispers:**
+  never place it behind dense data.
+- **Breathing** — `useCountUp` (`lib/useCountUp.ts`) for numbers, `.breathe-bar`
+  for bars, `.feed-enter`/`.live-dot` for live feeds, `<Reveal>` for staggered
+  scroll reveals (replaces the old single `fade-up`).
+
+Rules: **no Motion/GSAP or any animation library**; every effect respects
+`prefers-reduced-motion` and renders complete without JS. **"Geometric shapes,
+not glows" — aurora/glow/mesh-gradient backgrounds stay banned.** Keep it
+restrained (technical-buyer audience). Canonical spec:
+`saas-platform/docs/brand/MOTION_AND_ATMOSPHERE.md`.
 
 ## 7. Per-page checklist
 

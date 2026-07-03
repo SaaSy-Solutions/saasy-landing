@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { HeroVideo } from "./HeroVideo";
+import { LivingGeometry } from "./LivingGeometry";
+import { BreathingPanel } from "./BreathingPanel";
 
 export function Hero(): React.ReactElement {
   return (
@@ -7,7 +9,8 @@ export function Hero(): React.ReactElement {
       className="hero-gradient relative
         overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-32"
     >
-      <div className="mx-auto max-w-4xl px-6 text-center">
+      <LivingGeometry variant="hero" />
+      <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
         {/* Badge */}
         <div
           className="mb-8 inline-flex items-center gap-2
@@ -86,6 +89,7 @@ export function Hero(): React.ReactElement {
 
         {/* Product demo video (Remotion-rendered loop), PNG poster fallback */}
         <HeroVideo />
+        <BreathingPanel />
       </div>
     </section>
   );

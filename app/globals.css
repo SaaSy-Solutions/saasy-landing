@@ -123,3 +123,39 @@ p {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ---- Living Surface (mirror of @saas-platform/ui-core motion) ---- */
+.lg-root { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; --lg-intensity: 1; --lg-base: 1; opacity: calc(var(--lg-base) * var(--lg-intensity)); }
+.lg-grid {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(148,163,184,0.09) 1px, transparent 1.4px);
+  background-size: 28px 28px;
+  -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 30%, #000 55%, transparent 100%);
+          mask-image: radial-gradient(ellipse 90% 80% at 50% 30%, #000 55%, transparent 100%);
+  opacity: 0.6;
+}
+.lg-shape { position: absolute; border: 1.5px solid rgba(228,80,116,0.26); }
+.lg-shape-1 { width: 240px; height: 240px; border-radius: 42px; top: 8%; left: -60px; animation: lg-drift-a 34s ease-in-out infinite; }
+.lg-shape-2 { width: 150px; height: 150px; top: 54%; right: 6%; transform: rotate(45deg); animation: lg-drift-b 28s ease-in-out infinite; border-color: rgba(219,110,54,0.28); }
+.lg-shape-3 { width: 120px; height: 120px; border-radius: 50%; top: 18%; right: 16%; animation: lg-drift-c 40s ease-in-out infinite; border-color: rgba(164,41,63,0.5); }
+.lg-shape-4 { width: 60px; height: 60px; border: 0; background: rgba(228,80,116,0.10); border-radius: 14px; bottom: 12%; left: 12%; animation: lg-drift-b 24s ease-in-out infinite reverse; }
+.lg-hero { --lg-base: 1; } .lg-section { --lg-base: 0.7; } .lg-chrome { --lg-base: 0.5; } .lg-auth { --lg-base: 0.85; }
+@keyframes lg-drift-a { 0%,100% { transform: translate(0,0) rotate(0); } 50% { transform: translate(40px,26px) rotate(8deg); } }
+@keyframes lg-drift-b { 0%,100% { transform: translate(0,0) rotate(45deg); } 50% { transform: translate(-30px,24px) rotate(52deg); } }
+@keyframes lg-drift-c { 0%,100% { transform: translate(0,0); } 50% { transform: translate(22px,-30px); } }
+
+.reveal { }
+.reveal-play { animation: reveal-rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+@keyframes reveal-rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+.breathe-bar { transition: width 1.4s cubic-bezier(0.2,0.7,0.2,1); }
+.feed-enter { animation: feed-in 0.5s ease-out both; }
+@keyframes feed-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.live-dot { animation: live-pulse 1.6s ease-in-out infinite; }
+@keyframes live-pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(228,80,116,0.5); } 50% { box-shadow: 0 0 0 5px rgba(228,80,116,0); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .lg-shape, .live-dot { animation: none !important; }
+  .reveal-play { animation: none !important; }
+  .breathe-bar { transition: none !important; }
+  .feed-enter { animation: none !important; }
+}
