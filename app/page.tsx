@@ -27,9 +27,9 @@ const CAPABILITIES = [
   },
   {
     icon: <IconCRM />,
-    title: "Built-in CRM & invoicing",
+    title: "Built-in CRM & projects",
     description:
-      "Contacts, deals, projects, and billing in one place, with nothing duct-taped between them.",
+      "Contacts, deals, projects, and revenue in one place, with nothing duct-taped between them.",
   },
   {
     icon: <IconCompliance />,
@@ -41,7 +41,7 @@ const CAPABILITIES = [
     icon: <IconAlerts />,
     title: "Proactive alerts",
     description:
-      "Email or Slack pings when something needs you: a churn risk, a deadline, an invoice going stale. The system watches so you don't have to.",
+      "Email or Slack pings when something needs you: a churn risk, a deadline, a missed payment. The system watches so you don't have to.",
   },
 ];
 

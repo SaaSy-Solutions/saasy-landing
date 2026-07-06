@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useCountUp } from '@/lib/useCountUp';
 
 const FEED = [
-  'Drafted invoice #2041 — Rivera Roofing',
+  'Drafted client follow-up — Rivera Roofing',
   'Flagged churn risk — Delgado HVAC',
   'Filed WH-347 certified payroll — Local 412',
   'Scheduled license renewal — permit #88-C',

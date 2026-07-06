@@ -28,7 +28,7 @@ export function WhoItsFor(): React.ReactElement {
     {
       title: "Agencies & service firms",
       description:
-        "You bill for your time, so admin is pure loss. Built-in CRM, invoicing, and customer health scores that flag the client who's about to walk while there's still time to save them.",
+        "You bill for your time, so admin is pure loss. Built-in CRM, project tracking, and customer health scores that flag the client who's about to walk while there's still time to save them.",
       benefit: "Know which client is drifting before they ghost you",
     },
   ];

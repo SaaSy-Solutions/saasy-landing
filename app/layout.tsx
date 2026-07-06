@@ -19,7 +19,7 @@ const poppins = Poppins({
 });
 
 const DESCRIPTION =
-  "The AI-powered back office for small business: CRM, invoicing, " +
+  "The AI-powered back office for small business: CRM, payroll, " +
   "compliance, and customer intelligence that flags problems before " +
   "they cost you. Built for contractors, unions, and service firms.";
 
