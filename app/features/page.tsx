@@ -15,16 +15,17 @@ import {
 export const metadata: Metadata = {
   title: "Features — SaaSy",
   description:
-    "See SaaSy's customer health scoring, churn alerts, AI co-founder, " +
-    "and integrations in real product screenshots from a working account.",
+    "See SaaSy's customer health scoring, churn alerts, AI answers " +
+    "grounded in your data, and integrations in real product " +
+    "screenshots from a working account.",
   alternates: {
     canonical: "https://hellosaasy.ai/features",
   },
   openGraph: {
     title: "Features — SaaSy",
     description:
-      "Customer health scoring, churn alerts, an AI co-founder, and " +
-      "one-click integrations, shown in real product screenshots.",
+      "Customer health scoring, churn alerts, Ask SaaSy AI answers, " +
+      "and integrations, shown in real product screenshots.",
     url: "https://hellosaasy.ai/features",
     siteName: "SaaSy",
     type: "website",
@@ -35,8 +36,8 @@ export const metadata: Metadata = {
     images: [ogImage("features").url],
     title: "Features — SaaSy",
     description:
-      "Customer health scoring, churn alerts, an AI co-founder, and " +
-      "one-click integrations, shown in real product screenshots.",
+      "Customer health scoring, churn alerts, Ask SaaSy AI answers, " +
+      "and integrations, shown in real product screenshots.",
   },
 };
 
@@ -63,11 +64,28 @@ const structuredData = {
     featureList: [
       "Customer health scoring",
       "Churn risk alerts",
-      "AI co-founder grounded in your data",
+      "Ask SaaSy AI answers grounded in your data",
       "Stripe and Slack integrations",
     ],
   },
 };
+
+/**
+ * Connector logo wall. Only entries without `comingSoon` ship today;
+ * the rest are labeled so the grid never reads as live.
+ */
+interface Connector {
+  slug: string;
+  name: string;
+  comingSoon?: boolean;
+}
+
+const CONNECTORS: Connector[] = [
+  { slug: "stripe", name: "Stripe" },
+  { slug: "slack", name: "Slack" },
+  { slug: "hubspot", name: "HubSpot", comingSoon: true },
+  { slug: "salesforce", name: "Salesforce", comingSoon: true },
+];
 
 /** A capability shown in the "under the hood" grid. */
 interface Capability {
@@ -261,10 +279,11 @@ export default function FeaturesPage(): React.ReactElement {
 
                   text-lg leading-relaxed text-saasy-muted"
               >
-                Connect Stripe and Slack today; HubSpot, Salesforce,
-                and Jira are rolling out to beta customers now. Every
-                connected source feeds the same per-customer health
-                score. OAuth in about a minute, no CSV uploads.
+                Connect Stripe, Slack, Gmail or Microsoft 365 email,
+                payroll providers, and your bank via Plaid today.
+                HubSpot, Salesforce, and Jira are on the roadmap.
+                Every connected source feeds the same per-customer
+                health score. OAuth in about a minute, no CSV uploads.
               </p>
               <ul className="mt-6 space-y-3">
                 {[
@@ -293,23 +312,31 @@ export default function FeaturesPage(): React.ReactElement {
                 Works with
               </p>
               <div className="mt-4 grid grid-cols-2 gap-4">
-                {[
-                  { slug: "stripe", name: "Stripe" },
-                  { slug: "hubspot", name: "HubSpot" },
-                  { slug: "salesforce", name: "Salesforce" },
-                  { slug: "slack", name: "Slack" },
-                ].map((brand) => (
+                {CONNECTORS.map((brand) => (
                   <div
                     key={brand.slug}
-                    className="flex items-center justify-center
+                    className="relative flex items-center justify-center
                       rounded-xl bg-white px-5 py-5 ring-1 ring-black/5"
                   >
                     <img
                       src={`/connectors/${brand.slug}.svg`}
                       alt={brand.name}
-                      className="h-6 w-auto"
+                      className={
+                        brand.comingSoon
+                          ? "h-6 w-auto opacity-40"
+                          : "h-6 w-auto"
+                      }
                       loading="lazy"
                     />
+                    {brand.comingSoon && (
+                      <span
+                        className="absolute right-2 top-2 rounded-full
+                          bg-saasy-dark/80 px-2 py-0.5 text-[10px]
+                          font-semibold text-white"
+                      >
+                        Coming soon
+                      </span>
+                    )}
                   </div>
                 ))}
               </div>

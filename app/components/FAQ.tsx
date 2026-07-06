@@ -36,7 +36,7 @@ const FAQ_ITEMS = [
   {
     question: "What integrations do you support?",
     answer:
-      "Stripe (financials) and Slack (alerts) connect today. HubSpot, Salesforce, and Jira connectors are rolling out to beta customers now. Growth plans and above also get an open API, if you'd rather build your own.",
+      "Stripe (financials), Slack (alerts), Gmail and Microsoft 365 email, Twilio SMS, Google and Outlook calendar sync, bank feeds through Plaid, and payroll providers (ADP, Gusto, BambooHR, Rippling) all connect today. HubSpot, Salesforce, and Jira are on the roadmap. Growth plans and above also get an open API, if you'd rather build your own.",
   },
   {
     question: "How long does setup take?",
