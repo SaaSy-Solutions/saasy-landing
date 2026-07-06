@@ -8,7 +8,8 @@ import { revVideoUrl } from '../components/videoAssets';
 export const metadata: Metadata = {
   title: 'Integrations | SaaSy',
   description:
-    'Connect SaaSy with the tools you already use. Stripe, HubSpot, Intercom, and more.',
+    'Connect SaaSy with the tools you already use. Stripe, Slack, Gmail, ' +
+    'Microsoft 365, Twilio, Plaid, ADP, Gusto, BambooHR, Rippling, and more.',
   openGraph: {
     siteName: 'SaaSy',
     type: 'website',
@@ -33,6 +34,83 @@ const integrations: Integration[] = [
     category: 'Revenue & Payments',
     description:
       'See your revenue, subscriptions, and payment status in real-time without logging into Stripe. SaaSy pulls it all in automatically.',
+    status: 'Available',
+  },
+  {
+    name: 'Slack',
+    category: 'Real-time Alerts',
+    description:
+      'Get daily business briefings and instant alerts — missed payments, compliance deadlines, key metrics — right in Slack where you already are.',
+    status: 'Available',
+  },
+  {
+    name: 'Google Workspace (Gmail)',
+    category: 'Email',
+    description:
+      'Connect your Google account and SaaSy sends and reads email on your behalf — follow-ups, briefings, and customer threads without leaving the app.',
+    status: 'Available',
+  },
+  {
+    name: 'Microsoft 365 (Outlook)',
+    category: 'Email',
+    description:
+      'Outlook shop? Connect Microsoft 365 and SaaSy handles email the same way — sending, reading, and keeping customer conversations in view.',
+    status: 'Available',
+  },
+  {
+    name: 'Calendar sync',
+    category: 'Scheduling',
+    description:
+      'Google and Outlook calendar events sync straight into your CRM, so meetings show up on the customer record without copy-paste.',
+    status: 'Available',
+  },
+  {
+    name: 'Twilio',
+    category: 'SMS & Voice',
+    description:
+      'Reach customers and your crew by text or phone. Outbound SMS and voice alerts, with inbound messages verified before they touch your data.',
+    status: 'Available',
+  },
+  {
+    name: 'ADP',
+    category: 'Payroll & HRIS',
+    description:
+      'Sync payroll and employee data from ADP so certified payroll, dues, and labor compliance run on real numbers — not re-keyed spreadsheets.',
+    status: 'Available',
+  },
+  {
+    name: 'Gusto',
+    category: 'Payroll & HRIS',
+    description:
+      'Connect Gusto and your payroll data flows into SaaSy automatically, keeping compliance and reporting grounded in what you actually paid.',
+    status: 'Available',
+  },
+  {
+    name: 'BambooHR',
+    category: 'Payroll & HRIS',
+    description:
+      'Pull employee and HR data from BambooHR so your people records, onboarding, and compliance tracking stay in step with your HRIS.',
+    status: 'Available',
+  },
+  {
+    name: 'Rippling',
+    category: 'Payroll & HRIS',
+    description:
+      'Sync payroll and workforce data from Rippling into SaaSy, so labor costs and compliance reporting reflect the source of truth.',
+    status: 'Available',
+  },
+  {
+    name: 'Plaid',
+    category: 'Banking',
+    description:
+      'Link your bank accounts and SaaSy keeps balances and transactions synced daily — real cash-flow visibility without CSV exports.',
+    status: 'Available',
+  },
+  {
+    name: 'Webhooks & API',
+    category: 'Developer Tools',
+    description:
+      'Signed inbound and outbound webhooks with retries, plus an open API on Growth plans and above — connect anything we haven’t built yet.',
     status: 'Available',
   },
   {
@@ -62,13 +140,6 @@ const integrations: Integration[] = [
     description:
       'Connect your dev work to business goals. See project status and blockers without asking your team for updates.',
     status: 'Coming Soon',
-  },
-  {
-    name: 'Slack',
-    category: 'Real-time Alerts',
-    description:
-      'Get daily business briefings and instant alerts — missed payments, compliance deadlines, key metrics — right in Slack where you already are.',
-    status: 'Available',
   },
 ];
 
