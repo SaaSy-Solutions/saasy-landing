@@ -10,6 +10,11 @@ import {
   IconAlerts,
   IconAI,
   IconCheck,
+  IconFinance,
+  IconPeople,
+  IconDocument,
+  IconLedger,
+  IconAgency,
 } from "../components/Icons";
 
 export const metadata: Metadata = {
@@ -65,6 +70,12 @@ const structuredData = {
       "Customer health scoring",
       "Churn risk alerts",
       "Ask SaaSy AI answers grounded in your data",
+      "AI CFO weekly executive brief",
+      "Hiring and people management",
+      "AI contract and document drafting",
+      "Continuous close and internal controls",
+      "Value-delivered outcome ledger",
+      "Agency mode for multi-client management",
       "Stripe and Slack integrations",
     ],
   },
@@ -115,6 +126,62 @@ const CAPABILITIES: Capability[] = [
     body:
       "Licenses, permits, and filings tracked with reminders that " +
       "arrive while you can still do something about them.",
+  },
+];
+
+/**
+ * The broader back-office capabilities that ship today beyond the
+ * health-score core. Each maps to a GA area of the product.
+ */
+const BACK_OFFICE: Capability[] = [
+  {
+    icon: <IconFinance />,
+    title: "An AI CFO in your inbox",
+    body:
+      "A weekly executive brief that reads your finances for you. " +
+      "SaaSy pulls real numbers, delivered outcomes, industry " +
+      "benchmarks, and upcoming tax deadlines, then ranks what to " +
+      "do about them, in plain English.",
+  },
+  {
+    icon: <IconPeople />,
+    title: "Hiring and people, in one place",
+    body:
+      "Post a role, track candidates, send offers, and run " +
+      "onboarding, benefits, reviews, and offboarding, without " +
+      "bolting on a separate HR tool.",
+  },
+  {
+    icon: <IconDocument />,
+    title: "Draft contracts with an assistant",
+    body:
+      "Turn a project checklist into contracts and documents with " +
+      "an AI assistant, export to PDF, and keep every version, so " +
+      "you're never rewriting the same agreement from scratch.",
+  },
+  {
+    icon: <IconCompliance />,
+    title: "Close your books a little every day",
+    body:
+      "Continuous close scores how close-ready you are, queues the " +
+      "exceptions, and posts routine entries only after you approve " +
+      "them, with internal-controls checks running behind the scenes.",
+  },
+  {
+    icon: <IconLedger />,
+    title: "See the value delivered",
+    body:
+      "Every outcome SaaSy's agents drive is attributed in real " +
+      "dollars and totaled, so the return on the platform is a " +
+      "number you can point to, not a guess.",
+  },
+  {
+    icon: <IconAgency />,
+    title: "Run a book of clients",
+    body:
+      "Managing SaaSy for multiple clients? Agency mode nests every " +
+      "client under one org, rolls results up across all of them, " +
+      "and lets you put your own brand on it.",
   },
 ];
 
@@ -260,6 +327,57 @@ export default function FeaturesPage(): React.ReactElement {
           imageWidth={1195}
           imageHeight={500}
         />
+
+        {/* ── The rest of the back office (GA capability grid) ── */}
+        <section className="border-t border-saasy-border py-24 sm:py-32">
+          <div className="mx-auto max-w-6xl px-6">
+            <div className="max-w-2xl">
+              <h2
+                className="
+                  text-3xl font-bold text-white sm:text-4xl"
+              >
+                The rest of your back office, handled
+              </h2>
+              <p
+                className="mt-4
+                  text-lg leading-relaxed text-saasy-muted"
+              >
+                Health scoring is where most teams start. It sits on top
+                of a full back office that ships today, so finance,
+                hiring, contracts, and clients all live in one account
+                instead of six subscriptions.
+              </p>
+            </div>
+
+            <div
+              className="mt-12 grid gap-5
+                sm:grid-cols-2 lg:grid-cols-3"
+            >
+              {BACK_OFFICE.map((cap) => (
+                <div
+                  key={cap.title}
+                  className="flex flex-col rounded-2xl border
+                    border-saasy-border bg-saasy-card p-8
+                    transition-colors hover:border-saasy-pink/30"
+                >
+                  <div className="mb-5">{cap.icon}</div>
+                  <h3
+                    className="
+                      text-xl font-semibold text-white"
+                  >
+                    {cap.title}
+                  </h3>
+                  <p
+                    className="mt-3
+                      leading-relaxed text-saasy-muted"
+                  >
+                    {cap.body}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* ── Integrations: split statement + connector wall ── */}
         <section className="border-t border-saasy-border py-24 sm:py-32">
