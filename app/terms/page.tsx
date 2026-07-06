@@ -132,7 +132,7 @@ export default function TermsOfServicePage() {
                 </p>
                 <p className="mt-1  text-sm text-saasy-muted">
                   Up to 5 businesses, all modules, smart guidance, Slack alerts,
-                  API access, advanced analytics
+                  API access
                 </p>
               </div>
               <div className="p-5">
@@ -140,7 +140,7 @@ export default function TermsOfServicePage() {
                   Scale &mdash; $399/month
                 </p>
                 <p className="mt-1  text-sm text-saasy-muted">
-                  Unlimited businesses, unlimited integrations, priority
+                  Unlimited businesses, advanced analytics, priority
                   support, custom automations, dedicated onboarding
                 </p>
               </div>

@@ -230,7 +230,6 @@ export default function Home(): React.ReactElement {
                 "Ask SaaSy AI guidance",
                 "Slack alerts",
                 "API access",
-                "Advanced analytics",
               ]}
             />
             <PricingCard
@@ -240,7 +239,7 @@ export default function Home(): React.ReactElement {
               features={[
                 "Everything in Growth",
                 "Unlimited businesses",
-                "Unlimited integrations",
+                "Advanced analytics",
                 "Priority support",
                 "Custom automations",
                 "Dedicated onboarding",
