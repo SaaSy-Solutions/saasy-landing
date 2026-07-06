@@ -3,6 +3,7 @@
     "id": "ec6ea267-91f4-4a34-a9e4-dcca573c527b",
     "tenant_id": "df3e8a70-013b-4528-ae34-6fb088a9dc52",
     "business_id": "d1beb912-498d-4136-82e1-f4ae93732e4d",
+    "company_id": "ec6ea267-91f4-4a34-a9e4-dcca573c527b",
     "customer_name": "Sundial Bakery",
     "health_score": 5,
     "churn_risk": "critical",
@@ -11,15 +12,21 @@
     "trend": "declining",
     "days_until_renewal": 9,
     "last_activity": "2026-06-21T11:35:55.523493Z",
-    "dimensions": null,
+    "dimensions": {
+      "adoption": 9,
+      "engagement": 2,
+      "financial": 1,
+      "support": 13
+    },
     "metadata": null,
     "created_at": "2026-05-18T04:20:02.235821Z",
-    "updated_at": "2026-07-02T11:35:55.523493Z"
+    "updated_at": "2026-07-06T11:52:32.705382Z"
   },
   {
     "id": "47c0c367-2c7a-4bdb-bc3c-693d2272e951",
     "tenant_id": "df3e8a70-013b-4528-ae34-6fb088a9dc52",
     "business_id": "d1beb912-498d-4136-82e1-f4ae93732e4d",
+    "company_id": "47c0c367-2c7a-4bdb-bc3c-693d2272e951",
     "customer_name": "Hearth & Hand Cafe",
     "health_score": 5,
     "churn_risk": "critical",
@@ -28,15 +35,21 @@
     "trend": "declining",
     "days_until_renewal": 30,
     "last_activity": "2026-06-16T11:35:55.523493Z",
-    "dimensions": null,
+    "dimensions": {
+      "adoption": 9,
+      "engagement": 2,
+      "financial": 1,
+      "support": 13
+    },
     "metadata": null,
     "created_at": "2026-05-18T04:20:02.235821Z",
-    "updated_at": "2026-07-02T11:35:55.523493Z"
+    "updated_at": "2026-07-06T11:52:32.705382Z"
   },
   {
     "id": "2131c406-34ae-40aa-bd86-b81ab7495363",
     "tenant_id": "df3e8a70-013b-4528-ae34-6fb088a9dc52",
     "business_id": "d1beb912-498d-4136-82e1-f4ae93732e4d",
+    "company_id": "2131c406-34ae-40aa-bd86-b81ab7495363",
     "customer_name": "Brightline Studios",
     "health_score": 8,
     "churn_risk": "critical",
@@ -45,15 +58,21 @@
     "trend": "declining",
     "days_until_renewal": 14,
     "last_activity": "2026-06-20T11:35:55.523493Z",
-    "dimensions": null,
+    "dimensions": {
+      "adoption": 12,
+      "engagement": 5,
+      "financial": 4,
+      "support": 15
+    },
     "metadata": null,
     "created_at": "2026-05-18T04:20:02.235821Z",
-    "updated_at": "2026-07-02T11:35:55.523493Z"
+    "updated_at": "2026-07-06T11:52:32.705382Z"
   },
   {
     "id": "ed96b27e-52e2-4dd2-a046-37610978399c",
     "tenant_id": "df3e8a70-013b-4528-ae34-6fb088a9dc52",
     "business_id": "d1beb912-498d-4136-82e1-f4ae93732e4d",
+    "company_id": "ed96b27e-52e2-4dd2-a046-37610978399c",
     "customer_name": "Folio Architects",
     "health_score": 30,
     "churn_risk": "high",
@@ -62,15 +81,21 @@
     "trend": "declining",
     "days_until_renewal": 45,
     "last_activity": "2026-06-24T11:35:55.523493Z",
-    "dimensions": null,
+    "dimensions": {
+      "adoption": 33,
+      "engagement": 29,
+      "financial": 28,
+      "support": 35
+    },
     "metadata": null,
     "created_at": "2026-05-18T04:20:02.235821Z",
-    "updated_at": "2026-07-02T11:35:55.523493Z"
+    "updated_at": "2026-07-06T11:52:32.705382Z"
   },
   {
     "id": "f9e5c3f8-21bf-4c23-8606-4865593fcf63",
     "tenant_id": "df3e8a70-013b-4528-ae34-6fb088a9dc52",
     "business_id": "d1beb912-498d-4136-82e1-f4ae93732e4d",
+    "company_id": "f9e5c3f8-21bf-4c23-8606-4865593fcf63",
     "customer_name": "Mossland Florists",
     "health_score": 34,
     "churn_risk": "high",
@@ -79,15 +104,21 @@
     "trend": "declining",
     "days_until_renewal": 60,
     "last_activity": "2026-06-23T11:35:55.523493Z",
-    "dimensions": null,
+    "dimensions": {
+      "adoption": 36,
+      "engagement": 33,
+      "financial": 32,
+      "support": 39
+    },
     "metadata": null,
     "created_at": "2026-05-18T04:20:02.235821Z",
-    "updated_at": "2026-07-02T11:35:55.523493Z"
+    "updated_at": "2026-07-06T11:52:32.705382Z"
   },
   {
     "id": "a9dfe3d0-bdaa-4543-84ea-aad565e45ea2",
     "tenant_id": "df3e8a70-013b-4528-ae34-6fb088a9dc52",
     "business_id": "d1beb912-498d-4136-82e1-f4ae93732e4d",
+    "company_id": "a9dfe3d0-bdaa-4543-84ea-aad565e45ea2",
     "customer_name": "Ridgepoint Logistics",
     "health_score": 48,
     "churn_risk": "high",
@@ -96,15 +127,21 @@
     "trend": "stable",
     "days_until_renewal": 21,
     "last_activity": "2026-06-26T11:35:55.523493Z",
-    "dimensions": null,
+    "dimensions": {
+      "adoption": 50,
+      "engagement": 47,
+      "financial": 48,
+      "support": 51
+    },
     "metadata": null,
     "created_at": "2026-05-18T04:20:02.235821Z",
-    "updated_at": "2026-07-02T11:35:55.523493Z"
+    "updated_at": "2026-07-06T11:52:32.705382Z"
   },
   {
     "id": "16c9da8f-e1b9-4abf-a8f7-168f138557a6",
     "tenant_id": "df3e8a70-013b-4528-ae34-6fb088a9dc52",
     "business_id": "d1beb912-498d-4136-82e1-f4ae93732e4d",
+    "company_id": "16c9da8f-e1b9-4abf-a8f7-168f138557a6",
     "customer_name": "Tideline Marine",
     "health_score": 58,
     "churn_risk": "medium",
@@ -113,15 +150,21 @@
     "trend": "stable",
     "days_until_renewal": 64,
     "last_activity": "2026-06-27T11:35:55.523493Z",
-    "dimensions": null,
+    "dimensions": {
+      "adoption": 59,
+      "engagement": 58,
+      "financial": 59,
+      "support": 60
+    },
     "metadata": null,
     "created_at": "2026-05-18T04:20:02.235821Z",
-    "updated_at": "2026-07-02T11:35:55.523493Z"
+    "updated_at": "2026-07-06T11:52:32.705382Z"
   },
   {
     "id": "e1e7f492-3d5c-4e39-af8b-c26d6839150a",
     "tenant_id": "df3e8a70-013b-4528-ae34-6fb088a9dc52",
     "business_id": "d1beb912-498d-4136-82e1-f4ae93732e4d",
+    "company_id": "e1e7f492-3d5c-4e39-af8b-c26d6839150a",
     "customer_name": "Clearwater Analytics",
     "health_score": 68,
     "churn_risk": "medium",
@@ -130,15 +173,21 @@
     "trend": "stable",
     "days_until_renewal": 76,
     "last_activity": "2026-07-01T11:35:55.523493Z",
-    "dimensions": null,
+    "dimensions": {
+      "adoption": 69,
+      "engagement": 68,
+      "financial": 70,
+      "support": 69
+    },
     "metadata": null,
     "created_at": "2026-05-18T04:20:02.235821Z",
-    "updated_at": "2026-07-02T11:35:55.523493Z"
+    "updated_at": "2026-07-06T11:52:32.705382Z"
   },
   {
     "id": "694d5fc9-8f00-4d52-a640-7416195557c4",
     "tenant_id": "df3e8a70-013b-4528-ae34-6fb088a9dc52",
     "business_id": "d1beb912-498d-4136-82e1-f4ae93732e4d",
+    "company_id": "694d5fc9-8f00-4d52-a640-7416195557c4",
     "customer_name": "Ironforge Metalworks",
     "health_score": 78,
     "churn_risk": "low",
@@ -147,15 +196,21 @@
     "trend": "stable",
     "days_until_renewal": 98,
     "last_activity": "2026-06-29T11:35:55.523493Z",
-    "dimensions": null,
+    "dimensions": {
+      "adoption": 78,
+      "engagement": 79,
+      "financial": 81,
+      "support": 78
+    },
     "metadata": null,
     "created_at": "2026-05-18T04:20:02.235821Z",
-    "updated_at": "2026-07-02T11:35:55.523493Z"
+    "updated_at": "2026-07-06T11:52:32.705382Z"
   },
   {
     "id": "1e8109d9-4770-4000-ae9c-c1edb5d91a01",
     "tenant_id": "df3e8a70-013b-4528-ae34-6fb088a9dc52",
     "business_id": "d1beb912-498d-4136-82e1-f4ae93732e4d",
+    "company_id": "1e8109d9-4770-4000-ae9c-c1edb5d91a01",
     "customer_name": "Beacon Veterinary",
     "health_score": 85,
     "churn_risk": "low",
@@ -164,15 +219,21 @@
     "trend": "improving",
     "days_until_renewal": 302,
     "last_activity": "2026-06-30T11:35:55.523493Z",
-    "dimensions": null,
+    "dimensions": {
+      "adoption": 85,
+      "engagement": 86,
+      "financial": 89,
+      "support": 85
+    },
     "metadata": null,
     "created_at": "2026-05-18T04:20:02.235821Z",
-    "updated_at": "2026-07-02T11:35:55.523493Z"
+    "updated_at": "2026-07-06T11:52:32.705382Z"
   },
   {
     "id": "9e7efbb7-858b-4508-9131-4b2eb83320cf",
     "tenant_id": "df3e8a70-013b-4528-ae34-6fb088a9dc52",
     "business_id": "d1beb912-498d-4136-82e1-f4ae93732e4d",
+    "company_id": "9e7efbb7-858b-4508-9131-4b2eb83320cf",
     "customer_name": "Cascade Outfitters",
     "health_score": 95,
     "churn_risk": "low",
@@ -181,15 +242,21 @@
     "trend": "improving",
     "days_until_renewal": 154,
     "last_activity": "2026-07-02T11:35:55.523493Z",
-    "dimensions": null,
+    "dimensions": {
+      "adoption": 94,
+      "engagement": 97,
+      "financial": 100,
+      "support": 94
+    },
     "metadata": null,
     "created_at": "2026-05-18T04:20:02.235821Z",
-    "updated_at": "2026-07-02T11:35:55.523493Z"
+    "updated_at": "2026-07-06T11:52:32.705382Z"
   },
   {
     "id": "225bea15-2bd1-48bd-b07e-77245077e079",
     "tenant_id": "df3e8a70-013b-4528-ae34-6fb088a9dc52",
     "business_id": "d1beb912-498d-4136-82e1-f4ae93732e4d",
+    "company_id": "225bea15-2bd1-48bd-b07e-77245077e079",
     "customer_name": "Northwind Trading Co",
     "health_score": 95,
     "churn_risk": "low",
@@ -198,9 +265,14 @@
     "trend": "improving",
     "days_until_renewal": 210,
     "last_activity": "2026-07-01T11:35:55.523493Z",
-    "dimensions": null,
+    "dimensions": {
+      "adoption": 94,
+      "engagement": 97,
+      "financial": 100,
+      "support": 94
+    },
     "metadata": null,
     "created_at": "2026-05-18T04:20:02.235821Z",
-    "updated_at": "2026-07-02T11:35:55.523493Z"
+    "updated_at": "2026-07-06T11:52:32.705382Z"
   }
 ]
