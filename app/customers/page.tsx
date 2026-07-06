@@ -129,6 +129,7 @@ export default function CustomersPage() {
             </Link>
             <Link
               href="https://app.hellosaasy.ai/contact-sales"
+              data-cta="customers"
               className="rounded-full border border-saasy-border px-6
                 py-2.5  text-sm
                 font-semibold text-saasy-text transition-colors

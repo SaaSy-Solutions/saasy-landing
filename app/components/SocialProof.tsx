@@ -41,6 +41,7 @@ export function SocialProof(): React.ReactElement {
 
         <Link
           href="https://app.hellosaasy.ai/signup?source=beta"
+          data-cta="social_proof"
           className="mt-8 inline-flex rounded-full bg-saasy-rose
             px-8 py-4 text-base font-semibold
             text-white transition-colors hover:bg-saasy-rose-bright"

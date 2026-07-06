@@ -51,6 +51,7 @@ export function Hero(): React.ReactElement {
         >
           <Link
             href="https://app.hellosaasy.ai/signup"
+            data-cta="hero"
             className="inline-flex rounded-full
               bg-saasy-rose px-8 py-4 text-base
               font-semibold text-white

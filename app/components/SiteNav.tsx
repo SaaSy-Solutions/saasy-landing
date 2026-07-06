@@ -97,6 +97,7 @@ export function SiteNav(): React.ReactElement {
             </Link>
             <Link
               href="https://app.hellosaasy.ai/signup"
+              data-cta="nav"
               className="hidden rounded-full bg-saasy-rose px-4
                 py-2 text-sm font-semibold text-white
                 transition-colors hover:bg-saasy-rose-bright
@@ -251,6 +252,7 @@ export function SiteNav(): React.ReactElement {
           </Link>
           <Link
             href="https://app.hellosaasy.ai/signup"
+            data-cta="nav_mobile"
             onClick={close}
             className="w-full rounded-full bg-saasy-rose px-4
               py-3 text-center text-sm

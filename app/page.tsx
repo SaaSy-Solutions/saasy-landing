@@ -308,6 +308,7 @@ export default function Home(): React.ReactElement {
               Want a walkthrough first?{" "}
               <a
                 href="https://app.hellosaasy.ai/contact-sales"
+                data-cta="home"
                 className="font-medium text-saasy-pink-soft
                   transition-colors hover:text-white"
               >

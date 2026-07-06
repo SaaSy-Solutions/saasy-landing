@@ -62,6 +62,7 @@ export function PricingCard({
 
       <Link
         href={`https://app.hellosaasy.ai/signup?plan=${name.toLowerCase()}`}
+        data-cta="pricing"
         className={`block rounded-full py-3.5 text-center text-sm
           font-semibold transition-all duration-200
           ${
