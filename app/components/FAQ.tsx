@@ -31,7 +31,7 @@ const FAQ_ITEMS = [
   {
     question: "Can I switch plans or cancel anytime?",
     answer:
-      "Yes to both. Upgrade, downgrade, or cancel from billing settings in one click. No contracts, no cancellation fees, no retention specialist calling you at dinner. Changes take effect at the start of your next billing cycle, prorated automatically.",
+      "Yes to both. Switch or cancel whenever you like — no contracts, no cancellation fees, no retention specialist calling you at dinner. Tell us the change and our team makes it, effective at the start of your next billing cycle.",
   },
   {
     question: "What integrations do you support?",

@@ -40,8 +40,9 @@ export function PricingPageClient(): React.ReactElement {
                 text-lg text-saasy-muted"
             >
               Every trial starts with full Growth access, free for 14
-              days. Pick your plan when you're ready. No credit card
-              up front, and you can switch or cancel anytime.
+              days. Pick your plan when you're ready and our team gets
+              you set up. No credit card up front, and you can switch
+              or cancel anytime.
             </p>
           </div>
 

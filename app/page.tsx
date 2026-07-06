@@ -190,8 +190,8 @@ export default function Home(): React.ReactElement {
               </h2>
               <p className="mt-4 text-lg text-saasy-muted">
                 Every trial starts with full Growth access, free for
-                14 days. Pick your plan when you&rsquo;re ready. No
-                credit card up front.
+                14 days. Pick your plan when you&rsquo;re ready and
+                our team gets you set up. No credit card up front.
               </p>
             </div>
           </Reveal>
