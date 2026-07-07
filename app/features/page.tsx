@@ -53,7 +53,7 @@ const structuredData = {
   name: "Features — SaaSy",
   url: "https://hellosaasy.ai/features",
   description:
-    "Customer health scoring, churn alerts, an AI co-founder, and " +
+    "Customer health scoring, churn alerts, Ask SaaSy AI, and " +
     "one-click integrations, shown in real product screenshots.",
   isPartOf: {
     "@type": "WebSite",

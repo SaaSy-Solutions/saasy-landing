@@ -6,7 +6,7 @@
 const OG_BASE = "https://assets.hellosaasy.ai/og";
 
 /** Metadata image descriptor for a named card (e.g. "home", "features"). */
-export function ogImage(name: string, alt = "SaaSy — your intelligent business co-founder") {
+export function ogImage(name: string, alt = "SaaSy — the AI-powered back office for small business") {
   return { url: `${OG_BASE}/${name}.png`, width: 1200, height: 630, alt };
 }
 

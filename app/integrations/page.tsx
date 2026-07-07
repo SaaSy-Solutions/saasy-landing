@@ -177,7 +177,7 @@ export default function IntegrationsPage() {
               loop
               playsInline
               preload="metadata"
-              aria-label="Connect Stripe, HubSpot, Salesforce, and Slack in about a minute"
+              aria-label="Connect Stripe, Slack, Gmail, and Microsoft 365 in about a minute"
             >
               <source src={revVideoUrl("connect.mp4")} type="video/mp4" />
             </video>

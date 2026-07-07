@@ -13,7 +13,7 @@ import { BrandBackground, Callout, Caption, COLORS, EASE_OUT, FONT } from "./bra
  * Shows the integrations screen with connector chips flipping to "Connected",
  * for the /integrations page. Reuses the real integrations.png.
  */
-const CONNECTORS = ["Stripe", "HubSpot", "Salesforce", "Slack"];
+const CONNECTORS = ["Stripe", "Slack", "Gmail", "Microsoft 365"];
 
 export const ConnectLoop: React.FC = () => {
   const frame = useCurrentFrame();
