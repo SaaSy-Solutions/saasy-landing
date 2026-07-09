@@ -1,33 +1,112 @@
 {
   "entries": [
     {
+      "version": "1.10.0",
+      "date": "2026-07-09",
+      "title": "Payroll End-to-End: Direct Deposit & W-2s, Financial Statements, and Connect Your AI Assistant",
+      "items": [
+        {
+          "type": "feature",
+          "text": "Payroll, end-to-end — run payroll in-house and get direct-deposit (NACHA) bank files, printable paystubs, W-2 and Form 941 preparation, and automatic general-ledger posting."
+        },
+        {
+          "type": "feature",
+          "text": "Union payroll deductions — dues, fringe, and benefit deductions calculated and applied automatically on every payroll run."
+        },
+        {
+          "type": "feature",
+          "text": "Financial statements — Profit & Loss, Balance Sheet, and Cash Flow reports straight from your books, plus GAAP chart-of-accounts templates matched to your entity type."
+        },
+        {
+          "type": "feature",
+          "text": "Connect your AI assistant — SaaSy is now an MCP server, so Claude or any MCP-compatible assistant can work with your CRM, projects, notes, and tasks over a secure OAuth or API-key connection."
+        },
+        {
+          "type": "feature",
+          "text": "Run multiple businesses under one login — switch between the companies you belong to without signing out."
+        },
+        {
+          "type": "feature",
+          "text": "A sidebar that fits your business — navigation modules adapt to your industry with sensible presets, and you can customize which modules appear."
+        },
+        {
+          "type": "feature",
+          "text": "New connections — Google Ads, Meta Ads, and Gusto, each with guided setup."
+        },
+        {
+          "type": "feature",
+          "text": "Ready-to-use document templates — MSA, NDA, invoice, estimate, and common tax forms available in every workspace."
+        },
+        {
+          "type": "feature",
+          "text": "Scheduling links now let invitees cancel or reschedule their own bookings."
+        },
+        {
+          "type": "feature",
+          "text": "Meeting attendees become CRM contacts automatically — created and de-duplicated from your calendar activity."
+        },
+        {
+          "type": "improvement",
+          "text": "Email templates — send a test to yourself before a campaign, and see per-template send analytics on the templates list."
+        },
+        {
+          "type": "improvement",
+          "text": "Honest numbers everywhere — customer health, churn risk, and billing show only real data now; anything we can't compute yet is labeled \"not scored\" instead of a placeholder value."
+        },
+        {
+          "type": "improvement",
+          "text": "Ask SaaSy renders tables, streams responses faster, and reliably keeps context across long conversations."
+        },
+        {
+          "type": "improvement",
+          "text": "A more polished, living interface — subtle motion and atmosphere across the portal, with WCAG AA contrast in both light and dark themes."
+        },
+        {
+          "type": "improvement",
+          "text": "2026 tax accuracy — updated federal W-4 Step 2 withholding, Social Security wage-cap handling, and state unemployment rates."
+        },
+        {
+          "type": "fix",
+          "text": "Password-reset emails now open a working reset page, and a failed sign-in shows an inline error instead of redirecting you away."
+        },
+        {
+          "type": "fix",
+          "text": "Signing in with a Microsoft or Google account now completes reliably end-to-end."
+        },
+        {
+          "type": "fix",
+          "text": "Security hardening across every service — tighter tenant isolation, expanded audit logging for MFA and password changes, and rate limits on public endpoints."
+        }
+      ]
+    },
+    {
       "version": "1.9.0",
       "date": "2026-06-29",
       "title": "Built for Contractors: Construction Billing, Payroll & Government Contracting",
       "items": [
         {
           "type": "feature",
-          "text": "Construction billing & job costing \u2014 AIA-style pay applications, job-level P&L, vendor bills, and general ledger for contractors running project work."
+          "text": "Construction billing & job costing — AIA-style pay applications, job-level P&L, vendor bills, and general ledger for contractors running project work."
         },
         {
           "type": "feature",
-          "text": "Native payroll engine \u2014 run payroll in-house with W-4 handling, per-employee calculations, and certified-payroll support for prevailing-wage jobs."
+          "text": "Native payroll engine — run payroll in-house with W-4 handling, per-employee calculations, and certified-payroll support for prevailing-wage jobs."
         },
         {
           "type": "feature",
-          "text": "Union & labor compliance \u2014 certified payroll with per-fund Taft-Hartley fringe remittance and an OLMS LM-2 financial-reports connector."
+          "text": "Union & labor compliance — certified payroll with per-fund Taft-Hartley fringe remittance and an OLMS LM-2 financial-reports connector."
         },
         {
           "type": "feature",
-          "text": "Government contracting \u2014 a SAM.gov bid board for federal opportunities, plus automatic screening of vendors and AP against the federal debarment (exclusions) list."
+          "text": "Government contracting — a SAM.gov bid board for federal opportunities, plus automatic screening of vendors and AP against the federal debarment (exclusions) list."
         },
         {
           "type": "feature",
-          "text": "People & Talent \u2014 a full HR lifecycle module that connects to payroll: hiring, onboarding, records, and reviews in one place."
+          "text": "People & Talent — a full HR lifecycle module that connects to payroll: hiring, onboarding, records, and reviews in one place."
         },
         {
           "type": "feature",
-          "text": "Proactive Actions \u2014 SaaSy now surfaces a live feed of recommended actions and acts on the ones you approve, instead of waiting to be asked."
+          "text": "Proactive Actions — SaaSy now surfaces a live feed of recommended actions and acts on the ones you approve, instead of waiting to be asked."
         },
         {
           "type": "feature",
@@ -35,7 +114,7 @@
         },
         {
           "type": "feature",
-          "text": "Multi-account connections \u2014 link more than one account per provider and set per-user ownership, so teammates only see what they connected."
+          "text": "Multi-account connections — link more than one account per provider and set per-user ownership, so teammates only see what they connected."
         },
         {
           "type": "improvement",
@@ -43,7 +122,7 @@
         },
         {
           "type": "improvement",
-          "text": "Broader out-of-the-box coverage \u2014 sales-tax rates and nexus thresholds for all 50 states + DC, NAICS 2022 industry data, HIPAA and PCI DSS control libraries, and a public-holiday calendar."
+          "text": "Broader out-of-the-box coverage — sales-tax rates and nexus thresholds for all 50 states + DC, NAICS 2022 industry data, HIPAA and PCI DSS control libraries, and a public-holiday calendar."
         },
         {
           "type": "improvement",
@@ -51,7 +130,7 @@
         },
         {
           "type": "fix",
-          "text": "Dashboards and workflow stats now show real counts from your data \u2014 the last fabricated placeholder metrics are gone."
+          "text": "Dashboards and workflow stats now show real counts from your data — the last fabricated placeholder metrics are gone."
         },
         {
           "type": "fix",
@@ -66,23 +145,23 @@
       "items": [
         {
           "type": "feature",
-          "text": "Guided journey across your whole business \u2014 next-best-step recommendations from formation through launch, operations, and scale"
+          "text": "Guided journey across your whole business — next-best-step recommendations from formation through launch, operations, and scale"
         },
         {
           "type": "feature",
-          "text": "Ask SaaSy in context \u2014 get advice on any step or screen, now with cited sources and a clear professional-advice boundary"
+          "text": "Ask SaaSy in context — get advice on any step or screen, now with cited sources and a clear professional-advice boundary"
         },
         {
           "type": "feature",
-          "text": "My Work \u2014 one unified task list across all your businesses and connected tools"
+          "text": "My Work — one unified task list across all your businesses and connected tools"
         },
         {
           "type": "feature",
-          "text": "SOP library \u2014 author standard operating procedures with AI and collect employee sign-off"
+          "text": "SOP library — author standard operating procedures with AI and collect employee sign-off"
         },
         {
           "type": "feature",
-          "text": "AI document drafting \u2014 proposals and business docs rendered on branded, letterhead PDFs"
+          "text": "AI document drafting — proposals and business docs rendered on branded, letterhead PDFs"
         },
         {
           "type": "feature",
@@ -117,23 +196,23 @@
       "items": [
         {
           "type": "feature",
-          "text": "AI CFO \u2014 a weekly executive brief, with a short branded video, that reads your numbers and tells you what to do next"
+          "text": "AI CFO — a weekly executive brief, with a short branded video, that reads your numbers and tells you what to do next"
         },
         {
           "type": "feature",
-          "text": "Anonymous peer benchmarking \u2014 see how your key metrics compare against similar businesses"
+          "text": "Anonymous peer benchmarking — see how your key metrics compare against similar businesses"
         },
         {
           "type": "feature",
-          "text": "CRM Projects \u2014 manage delivery with tasks, notes, files, and an AI project health score"
+          "text": "CRM Projects — manage delivery with tasks, notes, files, and an AI project health score"
         },
         {
           "type": "feature",
-          "text": "Research Agent \u2014 live company, market, and competitor intelligence grounded in real-time web data"
+          "text": "Research Agent — live company, market, and competitor intelligence grounded in real-time web data"
         },
         {
           "type": "improvement",
-          "text": "Outcome Ledger \u2014 every recommendation now tracks its measured dollar impact in a Value Delivered report"
+          "text": "Outcome Ledger — every recommendation now tracks its measured dollar impact in a Value Delivered report"
         },
         {
           "type": "improvement",
@@ -156,7 +235,7 @@
         },
         {
           "type": "feature",
-          "text": "New connectors \u2014 Slack, Square, DocuSign, Calendly, QuickBooks, FreshBooks, and Gusto"
+          "text": "New connectors — Slack, Square, DocuSign, Calendly, QuickBooks, FreshBooks, and Gusto"
         },
         {
           "type": "feature",
