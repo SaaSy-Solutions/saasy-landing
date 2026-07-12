@@ -42,6 +42,7 @@ const ogPages = [
   { name: "services", props: { eyebrow: "Services", title: "Custom automations &", highlight: "consulting" } },
   { name: "blog", props: { eyebrow: "Blog", title: "Ideas for", highlight: "building smarter" } },
   { name: "unions", props: { eyebrow: "Union & Labor Compliance", title: "Certified payroll without the", highlight: "Sunday spreadsheet" } },
+  { name: "contact", props: { eyebrow: "Contact", title: "Talk to a", highlight: "human" } },
 ];
 
 // ── Blog posts (mirror src/data/posts.ts) ──────────────────────────────────
