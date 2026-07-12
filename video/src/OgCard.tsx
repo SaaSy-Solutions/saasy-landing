@@ -101,4 +101,5 @@ export const ogCards: { name: string; props: OgCardProps }[] = [
   { name: "compare", props: { eyebrow: "Compare", title: "SaaSy vs the", highlight: "alternatives" } },
   { name: "services", props: { eyebrow: "Services", title: "Custom automations &", highlight: "consulting" } },
   { name: "blog", props: { eyebrow: "Blog", title: "Ideas for", highlight: "building smarter" } },
+  { name: "contact", props: { eyebrow: "Contact", title: "Talk to a", highlight: "human" } },
 ];

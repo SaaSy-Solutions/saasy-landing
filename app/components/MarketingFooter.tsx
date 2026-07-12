@@ -32,6 +32,7 @@ const COLUMNS: FooterColumn[] = [
       { href: "/customers", label: "Customers" },
       { href: "/services", label: "Services" },
       { href: "/blog", label: "Blog" },
+      { href: "/contact", label: "Contact" },
       {
         href: "https://saasysolutionsllc.com",
         label: "About",
