@@ -78,7 +78,7 @@ export function PricingPageClient(): React.ReactElement {
                 "Up to 5 businesses",
                 "10 team seats",
                 "CRM (10,000 contacts)",
-                "Native payroll, 50 states + DC (beta perk)",
+                "Payroll add-on: 50 states + DC",
                 "Ask SaaSy AI guidance",
                 "Slack alerts",
                 "API access",
@@ -324,8 +324,8 @@ export function PricingPageClient(): React.ReactElement {
                 text-lg text-saasy-muted"
             >
               Run payroll natively in all 50 states plus DC — direct deposit,
-              W-2s, and withholding computed to the cent. Free on Growth
-              and Scale plans during beta.
+              W-2s, and withholding computed to the cent. Attaches to any
+              paid plan.
             </p>
           </div>
 
@@ -377,20 +377,14 @@ export function PricingPageClient(): React.ReactElement {
                   text-sm text-saasy-muted"
               >
                 <li className="flex items-center justify-between gap-4">
-                  <span>During beta (Growth &amp; Scale)</span>
-                  <span className="font-semibold text-white">
-                    Included
-                  </span>
-                </li>
-                <li className="flex items-center justify-between gap-4">
-                  <span>After beta &mdash; base</span>
+                  <span>Base</span>
                   <span className="font-semibold text-white">
                     $29
                     <span className="text-saasy-muted">/mo</span>
                   </span>
                 </li>
                 <li className="flex items-center justify-between gap-4">
-                  <span>After beta &mdash; per employee</span>
+                  <span>Per employee</span>
                   <span className="font-semibold text-white">
                     $4
                     <span className="text-saasy-muted">/mo</span>
