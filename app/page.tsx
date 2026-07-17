@@ -42,7 +42,7 @@ const CAPABILITIES = [
   },
   {
     icon: <IconLedger />,
-    title: "Native payroll, all 50 states",
+    title: "Native payroll, 50 states + DC",
     description:
       "Direct deposit, W-2s, and WH-347 certified payroll for government work — built in, not bolted on.",
   },
@@ -263,7 +263,7 @@ export default function Home(): React.ReactElement {
                 "Up to 5 businesses",
                 "10 team seats",
                 "CRM (10,000 contacts)",
-                "Native payroll, all 50 states (beta perk)",
+                "Native payroll, 50 states + DC (beta perk)",
                 "Ask SaaSy AI guidance",
                 "Slack alerts",
                 "API access",

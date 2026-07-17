@@ -1,4 +1,4 @@
 {
-  "rev": "v6",
+  "rev": "v7",
   "_comment": "Bump on every media reshoot. Video URLs are cached immutably (max-age=1y) at the Tigris edge, so overwriting the same filename never propagates \u2014 the rev is baked into the uploaded filenames (render-all.mjs, render-videos.yml) and the site's requests (app/components/videoAssets.ts imports this file)."
 }
