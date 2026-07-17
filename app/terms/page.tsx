@@ -128,7 +128,7 @@ export default function TermsOfServicePage() {
               </div>
               <div className="p-5">
                 <p className=" font-semibold text-white">
-                  Growth &mdash; $149/month
+                  Growth &mdash; $199/month
                 </p>
                 <p className="mt-1  text-sm text-saasy-muted">
                   Up to 5 businesses, all modules, smart guidance, Slack alerts,

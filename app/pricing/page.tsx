@@ -3,7 +3,7 @@ import { ogImage } from "../components/ogAssets";
 import { PricingPageClient } from "./PricingClient";
 
 const DESCRIPTION =
-  "Starter $49, Growth $149, Scale $399 per month. Every trial starts " +
+  "Starter $49, Growth $199, Scale $399 per month. Every trial starts " +
   "with full Growth access, free for 14 days. No credit card up front.";
 
 export const metadata: Metadata = {

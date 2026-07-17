@@ -315,7 +315,7 @@ export default function UnionsPage(): React.ReactElement {
                 Priced by active members
               </h2>
               <p className="mt-4 text-lg text-saasy-muted">
-                The add-on attaches to a Growth ($149/mo) or Scale
+                The add-on attaches to a Growth ($199/mo) or Scale
                 ($399/mo) plan, so a 50-member shop runs $248/mo all
                 in — or $198/mo on annual billing. No per-seat games:
                 you pay for the members you actually remit for.

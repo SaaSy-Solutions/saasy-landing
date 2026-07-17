@@ -50,8 +50,8 @@ export default function Home(): React.ReactElement {
     "monthly" | "annual"
   >("monthly");
 
-  const monthlyPrices = { starter: 49, growth: 149, scale: 399 };
-  const annualPrices = { starter: 39, growth: 119, scale: 319 };
+  const monthlyPrices = { starter: 49, growth: 199, scale: 399 };
+  const annualPrices = { starter: 39, growth: 159, scale: 319 };
   const prices =
     pricingInterval === "annual" ? annualPrices : monthlyPrices;
   const billingLabel =
@@ -213,8 +213,9 @@ export default function Home(): React.ReactElement {
               billingLabel={billingLabel}
               features={[
                 "1 business",
+                "3 team seats",
                 "Compliance tracker",
-                "CRM (50 contacts)",
+                "CRM (1,000 contacts)",
                 "Daily briefing",
                 "Email alerts",
               ]}
@@ -227,6 +228,9 @@ export default function Home(): React.ReactElement {
               features={[
                 "Everything in Starter",
                 "Up to 5 businesses",
+                "10 team seats",
+                "CRM (10,000 contacts)",
+                "Native payroll, 41 states (beta perk)",
                 "Ask SaaSy AI guidance",
                 "Slack alerts",
                 "API access",
