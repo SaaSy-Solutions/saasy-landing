@@ -25,8 +25,8 @@ import {
 
 /**
  * "How it works" explainer (~75s, 1920×1080). Four steps —
- * Connect → Watch → Act → Grow — each a screenshot + animated caption, framed
- * by a title intro and a CTA outro. Ships silent + captions; an optional
+ * Connect → Run → Delegate → Comply — each a screenshot + animated caption,
+ * framed by a title intro and a CTA outro. Ships silent + captions; an optional
  * voiceover/music track can be layered in later (see header note).
  */
 
@@ -43,34 +43,34 @@ const steps: {
   {
     index: "01",
     title: "Connect your",
-    highlight: "tools",
-    body: "Stripe, HubSpot, Salesforce, Slack — SaaSy pulls your business into one place in minutes.",
+    highlight: "business",
+    body: "Email, calendar, Stripe, Slack — SaaSy pulls your whole back office into one place in minutes.",
     screenshot: "screenshots/integrations.png",
     callout: { label: "Connected in minutes", top: "16%", left: "30%", arrow: "up" },
   },
   {
     index: "02",
-    title: "SaaSy watches",
-    highlight: "customer health",
-    body: "Health scores update automatically as customer behavior changes — no spreadsheets to maintain.",
+    title: "Run it all in",
+    highlight: "one place",
+    body: "CRM, projects, books, and payroll on one dashboard — instead of six subscriptions that don't talk.",
     screenshot: "screenshots/dashboard-hero.png",
-    callout: { label: "6 at risk this week", top: "40%", left: "28%", arrow: "down" },
+    callout: { label: "One login, whole business", top: "40%", left: "28%", arrow: "down" },
   },
   {
     index: "03",
-    title: "Act before customers",
-    highlight: "leave",
-    body: "Proactive churn alerts tell you exactly who to save this week — and why they're slipping.",
-    screenshot: "screenshots/churn-alerts.png",
-    callout: { label: "Save them in time", top: "18%", left: "32%", arrow: "up" },
+    title: "Agents do the",
+    highlight: "busywork",
+    body: "Ask SaaSy watches deadlines, scores customers, and drafts the follow-up — then tells you what it did.",
+    screenshot: "screenshots/ask-saasy.png",
+    callout: { label: "Work done, not just charted", top: "18%", left: "32%", arrow: "up" },
   },
   {
     index: "04",
-    title: "Grow with",
-    highlight: "confidence",
-    body: "Expansion opportunities and next best actions, surfaced on every account automatically.",
-    screenshot: "screenshots/customer-detail.png",
-    callout: { label: "Next best action", top: "30%", left: "8%", arrow: "left" },
+    title: "Stay compliant,",
+    highlight: "get paid",
+    body: "Native payroll in all 50 states, certified payroll for government work, and filings tracked before they bite.",
+    screenshot: "screenshots/wh347-certified-payroll.png",
+    callout: { label: "Payroll built in", top: "36%", left: "30%", arrow: "up" },
   },
 ];
 
@@ -118,7 +118,7 @@ const Intro: React.FC = () => {
           How <GradientText style={{ fontSize: 84 }}>SaaSy</GradientText> works
         </div>
         <Caption enterAt={24} hold style={{ marginTop: 24, fontSize: 38, color: COLORS.muted }}>
-          From connected tools to confident growth — in four steps
+          Your whole back office, run by one platform — in four steps
         </Caption>
       </div>
     </AbsoluteFill>

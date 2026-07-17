@@ -78,7 +78,7 @@ export function PricingPageClient(): React.ReactElement {
                 "Up to 5 businesses",
                 "10 team seats",
                 "CRM (10,000 contacts)",
-                "Native payroll, 41 states (beta perk)",
+                "Native payroll, all 50 states (beta perk)",
                 "Ask SaaSy AI guidance",
                 "Slack alerts",
                 "API access",
@@ -125,6 +125,58 @@ export function PricingPageClient(): React.ReactElement {
               Talk to our consulting team &rarr;
             </a>
           </p>
+        </div>
+      </section>
+
+      <section className="border-b border-saasy-border py-16 sm:py-20">
+        <div className="mx-auto max-w-5xl px-6">
+          <h2
+            className="mb-3 text-center text-3xl font-bold text-white"
+          >
+            Included with every plan
+          </h2>
+          <p
+            className="mx-auto mb-10 max-w-2xl text-center
+              text-saasy-muted"
+          >
+            These ship as standalone products elsewhere. In SaaSy they
+            come with every paid plan, at no extra charge.
+          </p>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                name: "SaaSy eSign",
+                blurb:
+                  "Send documents for legally binding e-signature, with every version kept.",
+              },
+              {
+                name: "SaaSPass",
+                blurb:
+                  "A password and secrets manager for your team, with breach alerts.",
+              },
+              {
+                name: "Grant discovery",
+                blurb:
+                  "Find grants your business fits, scored by fit, with AI-drafted proposals.",
+              },
+              {
+                name: "Certified payroll",
+                blurb:
+                  "WH-347 reports for government and prevailing-wage work, generated from your runs.",
+              },
+            ].map((item) => (
+              <div
+                key={item.name}
+                className="rounded-2xl border border-saasy-border
+                  bg-saasy-card p-6"
+              >
+                <h3 className="mb-2 font-semibold text-white">
+                  {item.name}
+                </h3>
+                <p className="text-sm text-saasy-muted">{item.blurb}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -246,6 +298,121 @@ export function PricingPageClient(): React.ReactElement {
                   hover:bg-saasy-rose-bright"
               >
                 Talk to sales
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-saasy-border py-20 sm:py-24">
+        <div className="mx-auto max-w-5xl px-6">
+          <div className="mx-auto mb-10 max-w-2xl text-center">
+            <p
+              className="mb-3
+                text-sm font-semibold text-saasy-pink-soft"
+            >
+              Add-on
+            </p>
+            <h2
+              className="
+                text-3xl font-bold text-white sm:text-4xl"
+            >
+              Payroll processing
+            </h2>
+            <p
+              className="mt-4
+                text-lg text-saasy-muted"
+            >
+              Run payroll natively in all 50 states — direct deposit,
+              W-2s, and withholding computed to the cent. Free on Growth
+              and Scale plans during beta.
+            </p>
+          </div>
+
+          <div
+            className="mx-auto grid max-w-3xl gap-8 rounded-2xl border
+              border-saasy-border bg-saasy-card p-8 sm:p-10
+              lg:grid-cols-2"
+          >
+            <div>
+              <h3
+                className="mb-5
+                  text-lg font-semibold text-white"
+              >
+                What it does
+              </h3>
+              <ul className="space-y-3">
+                {[
+                  "Gross-to-net with accurate state withholding in every state",
+                  "Direct deposit and pay stubs for your whole team",
+                  "W-2s at year end, filings tracked on your compliance calendar",
+                  "Anomaly scans and overtime audits before you approve a run",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-3
+
+                      text-sm text-saasy-muted"
+                  >
+                    <IconCheck />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div
+              className="flex flex-col rounded-xl
+                bg-saasy-dark/60 p-6 sm:p-8"
+            >
+              <h3
+                className="mb-5
+                  text-lg font-semibold text-white"
+              >
+                Simple per-person pricing
+              </h3>
+              <ul
+                className="mb-6 flex-1 space-y-3
+
+                  text-sm text-saasy-muted"
+              >
+                <li className="flex items-center justify-between gap-4">
+                  <span>During beta (Growth &amp; Scale)</span>
+                  <span className="font-semibold text-white">
+                    Included
+                  </span>
+                </li>
+                <li className="flex items-center justify-between gap-4">
+                  <span>After beta &mdash; base</span>
+                  <span className="font-semibold text-white">
+                    $29
+                    <span className="text-saasy-muted">/mo</span>
+                  </span>
+                </li>
+                <li className="flex items-center justify-between gap-4">
+                  <span>After beta &mdash; per employee</span>
+                  <span className="font-semibold text-white">
+                    $4
+                    <span className="text-saasy-muted">/mo</span>
+                  </span>
+                </li>
+              </ul>
+              <p
+                className="mb-6
+                  text-sm text-saasy-muted"
+              >
+                For comparison: leading standalone payroll starts at
+                $49/mo plus $6 per person &mdash; and it doesn&rsquo;t
+                talk to your books, CRM, or compliance calendar.
+              </p>
+              <a
+                href="https://app.hellosaasy.ai/signup"
+                className="block rounded-full bg-saasy-rose py-3.5
+                  text-center
+                  text-sm font-semibold text-white transition-all duration-200
+                  hover:bg-saasy-rose-bright"
+              >
+                Start free trial
               </a>
             </div>
           </div>
