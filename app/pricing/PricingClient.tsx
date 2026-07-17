@@ -11,8 +11,8 @@ import { FAQ } from "../components/FAQ";
 export function PricingPageClient(): React.ReactElement {
   const [interval, setInterval] = useState<"monthly" | "annual">("monthly");
 
-  const monthly = { starter: 49, growth: 149, scale: 399 };
-  const annual = { starter: 39, growth: 119, scale: 319 };
+  const monthly = { starter: 49, growth: 199, scale: 399 };
+  const annual = { starter: 39, growth: 159, scale: 319 };
   const prices = interval === "annual" ? annual : monthly;
   const billingLabel =
     interval === "annual" ? "/mo billed annually" : "/mo";
@@ -61,8 +61,9 @@ export function PricingPageClient(): React.ReactElement {
               billingLabel={billingLabel}
               features={[
                 "1 business",
+                "3 team seats",
                 "Compliance tracker",
-                "CRM (50 contacts)",
+                "CRM (1,000 contacts)",
                 "Daily briefing",
                 "Email alerts",
               ]}
@@ -75,6 +76,9 @@ export function PricingPageClient(): React.ReactElement {
               features={[
                 "Everything in Starter",
                 "Up to 5 businesses",
+                "10 team seats",
+                "CRM (10,000 contacts)",
+                "Native payroll, 41 states (beta perk)",
                 "Ask SaaSy AI guidance",
                 "Slack alerts",
                 "API access",
@@ -87,6 +91,7 @@ export function PricingPageClient(): React.ReactElement {
               features={[
                 "Everything in Growth",
                 "Unlimited businesses",
+                "Unlimited contacts & team seats",
                 "Advanced analytics",
                 "Priority support",
                 "Custom automations",
@@ -96,7 +101,18 @@ export function PricingPageClient(): React.ReactElement {
           </div>
 
           <p
-            className="mx-auto mt-10 max-w-xl text-center text-sm
+            className="mx-auto mt-10 max-w-2xl text-center text-sm
+              text-saasy-muted"
+          >
+            For scale: a typical 5-person business pays $320&ndash;500
+            a month stitching together CRM, accounting, projects, email
+            marketing, payroll, and automation tools. SaaSy replaces
+            that stack at one flat price &mdash; and hiring never
+            raises your software bill.
+          </p>
+
+          <p
+            className="mx-auto mt-6 max-w-xl text-center text-sm
               text-saasy-muted"
           >
             Need custom automations, integrations, or a dedicated
