@@ -2,7 +2,16 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { IconCompliance, IconCRM, IconAI, IconAlerts } from "./components/Icons";
+import {
+  IconCompliance,
+  IconCRM,
+  IconAI,
+  IconAlerts,
+  IconFinance,
+  IconPeople,
+  IconDocument,
+  IconLedger,
+} from "./components/Icons";
 import { Reveal } from "./components/Reveal";
 import { WhoItsFor } from "./components/WhoItsFor";
 import { PricingCard, PricingToggle } from "./components/Pricing";
@@ -20,22 +29,46 @@ import { ProductDemo } from "./components/ProductDemo";
 /** Core capabilities — everything listed here is live in the product. */
 const CAPABILITIES = [
   {
+    icon: <IconCRM />,
+    title: "Built-in CRM & projects",
+    description:
+      "Contacts, deals, pipeline, quotes, and projects in one place, with nothing duct-taped between them.",
+  },
+  {
+    icon: <IconFinance />,
+    title: "Books that close themselves",
+    description:
+      "Financial statements, continuous close, and an AI CFO brief that reads your numbers weekly and ranks what to do about them.",
+  },
+  {
+    icon: <IconLedger />,
+    title: "Native payroll, all 50 states",
+    description:
+      "Direct deposit, W-2s, and WH-347 certified payroll for government work — built in, not bolted on.",
+  },
+  {
+    icon: <IconCompliance />,
+    title: "Compliance tracker",
+    description:
+      "Licenses, permits, filings, and payroll deadlines tracked automatically. Reminders land before the due date, not after the fine.",
+  },
+  {
     icon: <IconAI />,
     title: "Customer health scoring",
     description:
       "Every account scored 0-100 on usage, payments, and support signals. You see who's drifting toward the exit while there's still time to call.",
   },
   {
-    icon: <IconCRM />,
-    title: "Built-in CRM & projects",
+    icon: <IconPeople />,
+    title: "Hiring & people",
     description:
-      "Contacts, deals, projects, and revenue in one place, with nothing duct-taped between them.",
+      "Post a role, track candidates, send offers, run onboarding, benefits, and reviews — without a separate HR tool.",
   },
   {
-    icon: <IconCompliance />,
-    title: "Compliance tracker",
+    icon: <IconDocument />,
+    title: "Documents & e-signature",
     description:
-      "Licenses, permits, filings, and certified-payroll deadlines tracked automatically. Reminders land before the due date, not after the fine.",
+      "Draft contracts with an AI assistant, send for signature, and keep every version — plus grant discovery with AI-written proposals.",
   },
   {
     icon: <IconAlerts />,
@@ -230,7 +263,7 @@ export default function Home(): React.ReactElement {
                 "Up to 5 businesses",
                 "10 team seats",
                 "CRM (10,000 contacts)",
-                "Native payroll, 41 states (beta perk)",
+                "Native payroll, all 50 states (beta perk)",
                 "Ask SaaSy AI guidance",
                 "Slack alerts",
                 "API access",
