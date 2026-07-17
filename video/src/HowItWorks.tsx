@@ -68,7 +68,7 @@ const steps: {
     index: "04",
     title: "Stay compliant,",
     highlight: "get paid",
-    body: "Native payroll in all 50 states, certified payroll for government work, and filings tracked before they bite.",
+    body: "Native payroll in all 50 states plus DC, certified payroll for government work, and filings tracked before they bite.",
     screenshot: "screenshots/wh347-certified-payroll.png",
     callout: { label: "Payroll built in", top: "36%", left: "30%", arrow: "up" },
   },

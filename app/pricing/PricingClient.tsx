@@ -78,7 +78,7 @@ export function PricingPageClient(): React.ReactElement {
                 "Up to 5 businesses",
                 "10 team seats",
                 "CRM (10,000 contacts)",
-                "Native payroll, all 50 states (beta perk)",
+                "Native payroll, 50 states + DC (beta perk)",
                 "Ask SaaSy AI guidance",
                 "Slack alerts",
                 "API access",
@@ -323,7 +323,7 @@ export function PricingPageClient(): React.ReactElement {
               className="mt-4
                 text-lg text-saasy-muted"
             >
-              Run payroll natively in all 50 states — direct deposit,
+              Run payroll natively in all 50 states plus DC — direct deposit,
               W-2s, and withholding computed to the cent. Free on Growth
               and Scale plans during beta.
             </p>
