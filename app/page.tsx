@@ -263,7 +263,7 @@ export default function Home(): React.ReactElement {
                 "Up to 5 businesses",
                 "10 team seats",
                 "CRM (10,000 contacts)",
-                "Native payroll, 50 states + DC (beta perk)",
+                "Payroll add-on: 50 states + DC",
                 "Ask SaaSy AI guidance",
                 "Slack alerts",
                 "API access",
