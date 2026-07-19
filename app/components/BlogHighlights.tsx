@@ -1,93 +1,114 @@
 import Link from "next/link";
+import { POSTS } from "../blog/content";
 
-const BLOG_POSTS = [
-  {
-    title: "How Health Scoring Reduced Our Churn by 30%",
-    description:
-      "Learn how proactive health monitoring helps " +
-      "you catch at-risk accounts before they leave.",
-    href: "/blog/reduce-churn-with-health-scoring",
-  },
-  {
-    title:
-      "The Ultimate Onboarding Checklist for SMB SaaS",
-    description:
-      "A step-by-step guide to getting new customers " +
-      "to their first aha moment faster.",
-    href: "/blog/onboarding-checklist-for-smb-saas",
-  },
-  {
-    title:
-      "Intelligent Customer Success: " +
-      "What Actually Works",
-    description:
-      "Cutting through the hype to find AI " +
-      "applications that genuinely move the needle.",
-    href: "/blog/ai-powered-customer-success",
-  },
-];
+/**
+ * Magazine layout: the newest post gets the feature slot, the next two
+ * read as editorial rows. Sourced from the same POSTS data as /blog, so
+ * titles can never drift from the real articles again.
+ */
+export function BlogHighlights(): React.ReactElement | null {
+  const latest = [...POSTS]
+    .sort((a, b) => b.date.localeCompare(a.date))
+    .slice(0, 3);
+  if (latest.length === 0) return null;
 
-export function BlogHighlights(): React.ReactElement {
+  const [featured, ...rest] = latest;
+
+  const formatDate = (iso: string): string =>
+    new Date(`${iso}T00:00:00`).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+
   return (
     <section className="border-t border-saasy-border py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="mx-auto mb-12 max-w-2xl text-center">
+        <div className="mb-12 flex items-baseline justify-between gap-6">
           <h2
-            className="
-              text-3xl font-bold text-white sm:text-4xl"
+            className="text-3xl font-bold tracking-tight text-white
+              sm:text-4xl"
           >
             From our blog
           </h2>
-          <p
-            className="mt-4
-              text-lg text-saasy-muted"
-          >
-            Insights on customer success, churn
-            reduction, and growing your SaaS business.
-          </p>
-        </div>
-
-        <div className="grid gap-6 md:grid-cols-3">
-          {BLOG_POSTS.map((post) => (
-            <Link
-              key={post.title}
-              href={post.href}
-              className="rounded-2xl border border-saasy-border
-                bg-saasy-card/50 p-6 hover:border-saasy-pink/30
-                transition-all duration-300 group block"
-            >
-              <h3
-                className="text-white
-                  text-lg font-semibold group-hover:text-saasy-pink-soft
-                  transition-colors"
-              >
-                {post.title}
-              </h3>
-              <p
-                className="text-saasy-muted
-                  text-sm mt-2"
-              >
-                {post.description}
-              </p>
-              <span
-                className="text-saasy-pink-soft text-sm font-medium
-                  mt-4 inline-block"
-              >
-                Read more &rarr;
-              </span>
-            </Link>
-          ))}
-        </div>
-
-        <div className="mt-10 text-center">
           <Link
             href="/blog"
-            className="
-              text-saasy-pink-soft text-sm font-medium
-              hover:underline transition-colors"
+            className="shrink-0 text-sm font-medium
+              text-saasy-pink-soft transition-colors hover:text-white"
           >
             View all posts &rarr;
           </Link>
+        </div>
+
+        <div
+          className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr]
+            lg:gap-16"
+        >
+          {/* Feature slot */}
+          <Link
+            href={`/blog/${featured.slug}`}
+            className="group block"
+          >
+            <article>
+              <p
+                className="text-sm text-saasy-muted"
+              >
+                <time dateTime={featured.date}>
+                  {formatDate(featured.date)}
+                </time>{" "}
+                · {featured.readTime}
+              </p>
+              <h3
+                className="mt-3 text-2xl font-bold tracking-tight
+                  text-white transition-colors
+                  group-hover:text-saasy-pink-soft sm:text-3xl"
+              >
+                {featured.title}
+              </h3>
+              <p
+                className="mt-4 max-w-xl leading-relaxed
+                  text-saasy-muted"
+              >
+                {featured.excerpt}
+              </p>
+              <span
+                className="mt-5 inline-block text-sm font-medium
+                  text-saasy-pink-soft"
+              >
+                Read the post &rarr;
+              </span>
+            </article>
+          </Link>
+
+          {/* Secondary rows */}
+          <div>
+            {rest.map((post) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="group block border-t border-saasy-border
+                  py-7 first:border-t-0 first:pt-0
+                  first:max-lg:border-t first:max-lg:pt-7"
+              >
+                <p className="text-sm text-saasy-muted">
+                  <time dateTime={post.date}>{formatDate(post.date)}</time>
+                  {" "}· {post.readTime}
+                </p>
+                <h3
+                  className="mt-2 text-lg font-semibold text-white
+                    transition-colors group-hover:text-saasy-pink-soft"
+                >
+                  {post.title}
+                </h3>
+                <span
+                  className="mt-3 inline-block text-sm font-medium
+                    text-saasy-pink-soft"
+                >
+                  Read more &rarr;
+                </span>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -48,7 +48,7 @@ export function BreathingPanel(): React.ReactElement {
   }, []);
 
   return (
-    <div className="relative mx-auto mt-16 max-w-3xl rounded-2xl border border-saasy-border bg-saasy-card/70 p-4 text-left">
+    <div className="relative rounded-2xl border border-saasy-border bg-saasy-card/70 p-4 text-left shadow-[0_24px_64px_-24px_rgba(0,0,0,0.5)]">
       <div className="grid gap-4 sm:grid-cols-2">
         <div className="rounded-xl border border-saasy-border bg-saasy-darker/60 p-4">
           <div className="text-xs font-semibold uppercase tracking-wide text-saasy-muted">
@@ -61,7 +61,7 @@ export function BreathingPanel(): React.ReactElement {
             >
               {score.value}
             </span>
-            <span className="text-sm font-semibold text-green-400">▲ up 6</span>
+            <span className="text-sm font-semibold text-white">▲ up 6</span>
           </div>
           <div className="h-2 overflow-hidden rounded-full bg-saasy-border">
             <div
@@ -77,7 +77,7 @@ export function BreathingPanel(): React.ReactElement {
         </div>
         <div className="rounded-xl border border-saasy-border bg-saasy-darker/60 p-4">
           <div className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-saasy-muted">
-            <span className="live-dot inline-block h-2 w-2 rounded-full bg-green-400" />
+            <span className="live-dot inline-block h-2 w-2 rounded-full bg-saasy-pink" />
             Agent activity · live
           </div>
           <ul className="flex flex-col gap-2 font-mono text-xs text-saasy-text">

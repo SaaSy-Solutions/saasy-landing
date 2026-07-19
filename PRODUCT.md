@@ -10,7 +10,7 @@ Owners and operators of small-to-mid businesses (5–200 employees) — construc
 
 ## Product Purpose
 
-hellosaasy.ai is the marketing site for SaaSy, a unified multi-agent Business OS: AI agents (virtual C-suite) that handle customer health scoring, churn prediction, proactive alerts, CRM, billing, payroll, grants, and vertical workflows. The site exists to convert SMB visitors into trials ($49/$149/$399 monthly tiers, 14-day trial, no free tier) and to make an ambitious AI product feel trustworthy rather than vaporous. Success = trial signups and demo bookings from qualified SMBs.
+hellosaasy.ai is the marketing site for SaaSy, a unified multi-agent Business OS: AI agents (virtual C-suite) that handle customer health scoring, churn prediction, proactive alerts, CRM, billing, payroll, grants, and vertical workflows. The site exists to convert SMB visitors into trials ($49/$199/$399 monthly tiers, 14-day trial, no free tier) and to make an ambitious AI product feel trustworthy rather than vaporous. Success = trial signups and demo bookings from qualified SMBs.
 
 ## Brand Personality
 
