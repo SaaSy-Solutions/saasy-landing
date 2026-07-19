@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { AbsoluteFill } from "remotion";
-import { BrandBackground, COLORS, FONT, GradientText, Logo } from "./brand";
+import { BrandBackground, COLORS, FONT, AccentText, Logo } from "./brand";
 
 /**
  * Open Graph / social share card (1200×630, rendered as a still). One
@@ -21,7 +21,7 @@ export type OgCardProps = z.infer<typeof ogCardSchema>;
 export const OgCard: React.FC<OgCardProps> = ({ eyebrow, title, highlight }) => {
   return (
     <AbsoluteFill style={{ backgroundColor: COLORS.dark }}>
-      <BrandBackground gridOpacity={0.05} />
+      <BrandBackground intensity={0.85} />
       <AbsoluteFill
         style={{ padding: 80, justifyContent: "space-between" }}
       >
@@ -59,7 +59,7 @@ export const OgCard: React.FC<OgCardProps> = ({ eyebrow, title, highlight }) => 
           {highlight ? (
             <>
               {" "}
-              <GradientText style={{ fontSize: "inherit" }}>{highlight}</GradientText>
+              <AccentText style={{ fontSize: "inherit" }}>{highlight}</AccentText>
             </>
           ) : null}
         </div>

@@ -5,7 +5,7 @@ import {
   Series,
   useCurrentFrame,
 } from "remotion";
-import { BrandBackground, COLORS, EASE_OUT, FONT, GradientText, Logo } from "./brand";
+import { BrandBackground, COLORS, EASE_OUT, FONT, AccentText, Logo } from "./brand";
 import changelog from "../../app/changelog/changelog.json";
 
 /**
@@ -105,7 +105,7 @@ const Scene: React.FC<WhatsNewScene> = ({ version, title, items }) => {
             </span>
           </div>
           <div style={{ fontFamily: FONT, fontWeight: 800, fontSize: 52, color: COLORS.white }}>
-            What&rsquo;s <GradientText style={{ fontSize: 52 }}>new</GradientText> — {title}
+            What&rsquo;s <AccentText style={{ fontSize: 52 }}>new</AccentText> — {title}
           </div>
         </div>
 

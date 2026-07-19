@@ -49,10 +49,14 @@ export const FeatureClip: React.FC<FeatureClipProps> = ({ screenshot, callout, s
 
   return (
     <AbsoluteFill style={{ backgroundColor: COLORS.card }}>
-      {/* Soft brand glow behind the shot */}
+      {/* Living-Geometry dot grid behind the shot (no glow — the brand
+          guide's sanctioned accents are geometric shapes) */}
       <AbsoluteFill
         style={{
-          background: `radial-gradient(60% 60% at 50% 40%, ${COLORS.pink}14, transparent 70%)`,
+          backgroundImage: `radial-gradient(circle, ${COLORS.muted}14 1px, transparent 1.4px)`,
+          backgroundSize: "28px 28px",
+          maskImage:
+            "radial-gradient(ellipse 85% 75% at 50% 40%, black 50%, transparent 100%)",
         }}
       />
       <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", opacity: fade }}>
