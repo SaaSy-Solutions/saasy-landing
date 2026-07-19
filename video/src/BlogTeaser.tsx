@@ -11,7 +11,7 @@ import {
   COLORS,
   EASE_OUT,
   FONT,
-  GradientText,
+  AccentText,
   Logo,
   Pill,
 } from "./brand";
@@ -80,7 +80,7 @@ const Body: React.FC<BlogTeaserProps> = ({ title, readTime, kicker }) => {
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         <span style={{ fontFamily: FONT, fontSize: 28, color: COLORS.muted }}>{readTime}</span>
         <Caption enterAt={70} hold style={{ fontSize: 30, fontWeight: 600 }}>
-          Read it at <GradientText style={{ fontSize: 30 }}>hellosaasy.ai/blog</GradientText>
+          Read it at <AccentText style={{ fontSize: 30 }}>hellosaasy.ai/blog</AccentText>
         </Caption>
       </div>
     </AbsoluteFill>

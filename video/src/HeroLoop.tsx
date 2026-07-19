@@ -10,7 +10,7 @@ import {
   Caption,
   COLORS,
   FONT,
-  GradientText,
+  AccentText,
   Logo,
   Pill,
   ScreenshotCard,
@@ -106,7 +106,7 @@ const SceneHeadline: React.FC = () => {
           Your intelligent business
         </div>
         <div style={{ opacity: line2, translate: `0px ${(1 - line2) * 24}px` }}>
-          <GradientText style={{ fontSize: 104 }}>co-founder</GradientText>
+          <AccentText style={{ fontSize: 104 }}>co-founder</AccentText>
         </div>
       </div>
     </Center>
@@ -138,10 +138,9 @@ const SceneJourney: React.FC = () => {
                     width: 32,
                     height: 32,
                     borderRadius: 999,
-                    background: `linear-gradient(120deg, ${COLORS.pink}, ${COLORS.orange})`,
+                    background: COLORS.pink,
                     opacity: interpolate(lit, [0, 1], [0.2, 1]),
                     scale: interpolate(lit, [0, 1], [0.6, 1]),
-                    boxShadow: `0 0 ${lit * 30}px ${COLORS.pink}aa`,
                   }}
                 />
                 <span
@@ -176,7 +175,7 @@ const SceneJourney: React.FC = () => {
                         { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
                       )}%`,
                       height: "100%",
-                      background: `linear-gradient(90deg, ${COLORS.pink}, ${COLORS.orange})`,
+                      background: COLORS.pink,
                     }}
                   />
                 </div>
@@ -327,7 +326,7 @@ const SceneCta: React.FC = () => {
             marginBottom: 44,
           }}
         >
-          Meet your <GradientText style={{ fontSize: 76 }}>co-founder</GradientText>
+          Meet your <AccentText style={{ fontSize: 76 }}>co-founder</AccentText>
         </div>
         <div style={{ display: "inline-block", scale: String(pulse) }}>
           <Pill variant="cta">Start your free trial</Pill>

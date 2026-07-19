@@ -11,9 +11,13 @@ import { useEffect, useRef, useState } from 'react';
 export function Reveal({
   children,
   index = 0,
+  className = "",
 }: {
   children: React.ReactNode;
   index?: number;
+  /** Extra classes on the wrapper — required when the wrapper is a
+      grid/flex item carrying span or sizing classes. */
+  className?: string;
 }): React.ReactElement {
   const ref = useRef<HTMLDivElement | null>(null);
   const [shown, setShown] = useState<boolean>(false);
@@ -43,7 +47,7 @@ export function Reveal({
   return (
     <div
       ref={ref}
-      className={`reveal${shown ? ' reveal-play' : ''}`}
+      className={`reveal${shown ? ' reveal-play' : ''} ${className}`.trimEnd()}
       style={{ animationDelay: `${index * 90}ms` }}
     >
       {children}
