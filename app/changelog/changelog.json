@@ -1,6 +1,1697 @@
 {
   "entries": [
     {
+      "version": "DRAFT-2026-07-20",
+      "date": "2026-07-20",
+      "title": "Draft — edit version, title & wording before publishing",
+      "items": [
+        {
+          "type": "feature",
+          "text": "Register the six E8 workforce agents as agents-as-data templates (refs #2223)"
+        },
+        {
+          "type": "feature",
+          "text": "Grounded health + MRR roll-ups for business groups (#3199 slices 1-2)"
+        },
+        {
+          "type": "feature",
+          "text": "Startup/Vendor Credit Tracker Slice 1 — credits + applications"
+        },
+        {
+          "type": "feature",
+          "text": "Correct inbound/outbound direction + label sent mail (contact-automation foundation)"
+        },
+        {
+          "type": "feature",
+          "text": "Add contact_automation rule column (migration 227) — contact-automation setting"
+        },
+        {
+          "type": "feature",
+          "text": "Contact-automation rules engine (auto-create CRM contacts)"
+        },
+        {
+          "type": "feature",
+          "text": "Infer + link CRM companies from email domains (contact-automation Tier 1)"
+        },
+        {
+          "type": "feature",
+          "text": "Vendor-credit expiry + low-balance alert sweep"
+        },
+        {
+          "type": "feature",
+          "text": "Real business-scoped counts for /people/summary (#3199 slice 3)"
+        },
+        {
+          "type": "feature",
+          "text": "Localize Union + Compliance (6 languages)"
+        },
+        {
+          "type": "feature",
+          "text": "Include-subsidiaries scope toggle for group dashboards (#3199 slice 4, closes the epic)"
+        },
+        {
+          "type": "feature",
+          "text": "Localize the long-tail modules (6 languages) — completes i18n sweep"
+        },
+        {
+          "type": "feature",
+          "text": "Self-hosted OCR microservice — completes document text extraction (refs #3143)"
+        },
+        {
+          "type": "feature",
+          "text": "Meeting_summarization capability + fix /meetings/* tenant trust (Closes #3256)"
+        },
+        {
+          "type": "feature",
+          "text": "Company relationship_type (vendor/prospect/customer/partner), decoupled from lifecycle_stage"
+        },
+        {
+          "type": "feature",
+          "text": "Meeting transcripts — submit endpoint + AI meeting-summary notes (refs #2224, #2012)"
+        },
+        {
+          "type": "feature",
+          "text": "Submit meeting transcripts + show AI meeting-summary notes (refs #2224)"
+        },
+        {
+          "type": "feature",
+          "text": "Exa company enrichment — resolve real names + industry, auto + manual triggers"
+        },
+        {
+          "type": "feature",
+          "text": "Microsoft Graph meeting-transcript auto-fetch — E2 slice 2 (refs #2224)"
+        },
+        {
+          "type": "feature",
+          "text": "SaaSPass password manager / secrets vault — Slice 1 (vault core)"
+        },
+        {
+          "type": "feature",
+          "text": "Enrich companies from Exa alone; LLM only enhances"
+        },
+        {
+          "type": "feature",
+          "text": "Persist rule sets + mount /api/v1/rule-sets (closes #3068)"
+        },
+        {
+          "type": "feature",
+          "text": "Slice 2 — expiry tracking + agent alerts"
+        },
+        {
+          "type": "feature",
+          "text": "Build calendar-brain list + commitment/notification/action routes (Part of #3330)"
+        },
+        {
+          "type": "feature",
+          "text": "Teams meeting-transcript setup guide (refs #2224)"
+        },
+        {
+          "type": "feature",
+          "text": "Port compliance governance/policies handlers + gateway routing"
+        },
+        {
+          "type": "feature",
+          "text": "Add GET /api/v1/workflows list handler + fix FE detail/execute routes"
+        },
+        {
+          "type": "feature",
+          "text": "Auto-apply vendor bills to credits — Vendor Credit Tracker Slice 3"
+        },
+        {
+          "type": "feature",
+          "text": "Slice 3 — leaked-password checking (HaveIBeenPwned)"
+        },
+        {
+          "type": "feature",
+          "text": "Document semantic-search endpoint — Knowledge Agent retrieval (refs #2230)"
+        },
+        {
+          "type": "feature",
+          "text": "Knowledge_qa capability + Knowledge Agent registration (refs #2230)"
+        },
+        {
+          "type": "feature",
+          "text": "Free certified payroll + spin-off entitlement kit"
+        },
+        {
+          "type": "feature",
+          "text": "Email_reply_draft capability (E8.2, refs #2225)"
+        },
+        {
+          "type": "feature",
+          "text": "Slice 4 — external share links (opaque tokens, public reveal, burn-after-reading)"
+        },
+        {
+          "type": "feature",
+          "text": "Standalone product purchase + entitlement surface (Spin-off Kit Phase 2)"
+        },
+        {
+          "type": "feature",
+          "text": "Live start/stop timer + cross-project time report"
+        },
+        {
+          "type": "feature",
+          "text": "Email-scan integration suggestions"
+        },
+        {
+          "type": "feature",
+          "text": "Email Agent LLM draft-reply consumer — Closes #2225"
+        },
+        {
+          "type": "feature",
+          "text": "Sales_nba_draft capability (E8.5, refs #2228)"
+        },
+        {
+          "type": "feature",
+          "text": "GitHub issues/PRs <-> CRM tasks linking + status sync"
+        },
+        {
+          "type": "feature",
+          "text": "Jobs & work-orders foundation (F1)"
+        },
+        {
+          "type": "feature",
+          "text": "Paid-module upsell — page prompts + onboarding offer"
+        },
+        {
+          "type": "feature",
+          "text": "Gate field-service pages + nav behind the field_service paid add-on; add upsell"
+        },
+        {
+          "type": "feature",
+          "text": "Embed documents at upload — activate semantic search (Closes #3143)"
+        },
+        {
+          "type": "feature",
+          "text": "Sales Agent LLM next-best-action consumer — Closes #2228"
+        },
+        {
+          "type": "feature",
+          "text": "Quick-capture inbox + idea parking"
+        },
+        {
+          "type": "feature",
+          "text": "Meeting_brief capability (E8, refs #2226)"
+        },
+        {
+          "type": "feature",
+          "text": "Calendar Agent LLM pre-meeting brief — Closes #2226"
+        },
+        {
+          "type": "feature",
+          "text": "Public read-only share links for projects"
+        },
+        {
+          "type": "feature",
+          "text": "Startup-program recommendations + same-vendor nudge — Vendor Credit Tracker Slice 4"
+        },
+        {
+          "type": "feature",
+          "text": "Habit & routine tracking with streaks"
+        },
+        {
+          "type": "feature",
+          "text": "CORS + rate limit on public contact-sales route for the marketing site"
+        },
+        {
+          "type": "feature",
+          "text": "Complete calendar-brain create/mutate/query routes (Closes #3370)"
+        },
+        {
+          "type": "feature",
+          "text": "Port compliance brain risk-appetite + findings into ops-service"
+        },
+        {
+          "type": "feature",
+          "text": "Seed default pipeline stages + exclude deleted businesses from revenue rollups — Closes #3458"
+        },
+        {
+          "type": "feature",
+          "text": "Build GET /api/v1/ml/predictions + wire /ml-serving predictions page"
+        },
+        {
+          "type": "feature",
+          "text": "Event-drive the meeting-notes sweep (E8, refs #2223)"
+        },
+        {
+          "type": "feature",
+          "text": "Make it a paid module (#2695) — register, gate, attach + upsell"
+        },
+        {
+          "type": "feature",
+          "text": "Build the orphaned /reports backend + wire the UI"
+        },
+        {
+          "type": "feature",
+          "text": "Approval gating on destructive first-party MCP tools — #2875 slice 1"
+        },
+        {
+          "type": "feature",
+          "text": "Onboarding interest signal → nav + upsell"
+        },
+        {
+          "type": "feature",
+          "text": "Benefit/dues remittance due-date reminders"
+        },
+        {
+          "type": "feature",
+          "text": "API-call usage meter (Phase 1 of Unified Usage & Limits)"
+        },
+        {
+          "type": "feature",
+          "text": "Complete reporting backend — templates + async generate + delete, wire /reports page"
+        },
+        {
+          "type": "feature",
+          "text": "AP Bill Pay — vendor payment methods + ACH/check bill payments"
+        },
+        {
+          "type": "feature",
+          "text": "Native field clock-in/out + hours summary"
+        },
+        {
+          "type": "feature",
+          "text": "Scoped MCP credentials — read-only/domain-scoped API keys — #2875 slice 2"
+        },
+        {
+          "type": "feature",
+          "text": "Native bid management / estimating"
+        },
+        {
+          "type": "feature",
+          "text": "State income tax batch 1 — PA, IL, MI, NC"
+        },
+        {
+          "type": "feature",
+          "text": "Agent action approval gate + outcome ledger spine"
+        },
+        {
+          "type": "feature",
+          "text": "Standalone storefront — entitle standalone buyers, plan-less signup, product surface"
+        },
+        {
+          "type": "feature",
+          "text": "Tenant-facing Grants dashboard + SaaSPass-style entitlement"
+        },
+        {
+          "type": "feature",
+          "text": "Port compliance-brain documents/check into ops-service"
+        },
+        {
+          "type": "feature",
+          "text": "API-usage plan limits + threshold notifications (Phase 2)"
+        },
+        {
+          "type": "feature",
+          "text": "Real stock ledger + reorder points behind list_inventory"
+        },
+        {
+          "type": "feature",
+          "text": "State income tax batch 2 — VA, NY (graduated)"
+        },
+        {
+          "type": "feature",
+          "text": "Dispatch board + multi-view calendars (F2)"
+        },
+        {
+          "type": "feature",
+          "text": "Client status page over share links (slice 1 — read-only composition)"
+        },
+        {
+          "type": "feature",
+          "text": "Deliver API-usage threshold emails to tenants"
+        },
+        {
+          "type": "feature",
+          "text": "Event-sourced auto-verification from CRM/billing activity (slice 1)"
+        },
+        {
+          "type": "feature",
+          "text": "Expose the Report Builder under /dashboard (was unreachable)"
+        },
+        {
+          "type": "feature",
+          "text": "Vendor cost \"switch & save\" — recurring costs + savings"
+        },
+        {
+          "type": "feature",
+          "text": "Canonical DB role+permission catalog (consolidation PR 1)"
+        },
+        {
+          "type": "feature",
+          "text": "State income tax batch 3 — CO, MO, MN"
+        },
+        {
+          "type": "feature",
+          "text": "API-call quota enforcement (Phase 3 core, ships OFF)"
+        },
+        {
+          "type": "feature",
+          "text": "Self-serve cancel + renewal date for standalone purchases (Closes #3580)"
+        },
+        {
+          "type": "feature",
+          "text": "Post-tax exemption credit + DE, AR"
+        },
+        {
+          "type": "feature",
+          "text": "Central claims-based require_* enforcement + first migration (consolidation PR 3)"
+        },
+        {
+          "type": "feature",
+          "text": "Sweep services onto the central require helpers (consolidation PR 4a)"
+        },
+        {
+          "type": "feature",
+          "text": "Click-to-call + call logging (Twilio Voice)"
+        },
+        {
+          "type": "feature",
+          "text": "First-party HiveMinded vertical-integration read surface (pilot slice 1)"
+        },
+        {
+          "type": "feature",
+          "text": "Usage relief — admin credit grant + self-serve Stripe top-up"
+        },
+        {
+          "type": "feature",
+          "text": "Single-source scoped-role surfaces + role permissions in UI (consolidation PR 4b)"
+        },
+        {
+          "type": "feature",
+          "text": "State income tax batch 5 — HI, IA, ID, KS, MS, ND"
+        },
+        {
+          "type": "feature",
+          "text": "Manual employee create/edit + real offer-send delivery record (Closes #3067)"
+        },
+        {
+          "type": "feature",
+          "text": "State income tax batch 6 — NE, NM, OK, VT, WV, RI"
+        },
+        {
+          "type": "feature",
+          "text": "Link converted ideas to their project"
+        },
+        {
+          "type": "feature",
+          "text": "Serve resolved feature set on /billing/subscription (Phase 1c)"
+        },
+        {
+          "type": "feature",
+          "text": "HiveMinded connection linking ceremony + lifecycle (pilot slice 2)"
+        },
+        {
+          "type": "feature",
+          "text": "Harden standalone-billing reconciliation — cron, notify, one Stripe customer (Closes #3612 #3614 #3613)"
+        },
+        {
+          "type": "feature",
+          "text": "Agent tool_use proposal → approval gate (Slice B of #2069)"
+        },
+        {
+          "type": "feature",
+          "text": "Phase 4 — AI-usage unification (view + credit-inclusive ceiling + AI top-up)"
+        },
+        {
+          "type": "feature",
+          "text": "Usage & Limits summary on the usage page"
+        },
+        {
+          "type": "feature",
+          "text": "State income tax — LA, MT (post-reform)"
+        },
+        {
+          "type": "feature",
+          "text": "Port brain query/evaluate/documents into ops-service, metered — Closes #3552"
+        },
+        {
+          "type": "feature",
+          "text": "Email-send action tool behind approval (Slice C of #2069)"
+        },
+        {
+          "type": "feature",
+          "text": "Cost-switch \"Switch & Save\" recommendations — Vendor Credit Slice 5"
+        },
+        {
+          "type": "feature",
+          "text": "Income-dependent SD + SC, WI, ME"
+        },
+        {
+          "type": "feature",
+          "text": "Agent-action approval surface — role-gated API + review UI"
+        },
+        {
+          "type": "feature",
+          "text": "Mint typed roles[]/permissions[] JWT claims from the catalog (consolidation PR 2)"
+        },
+        {
+          "type": "feature",
+          "text": "Activate agent tool-proposal path + seed outbound-comms agent"
+        },
+        {
+          "type": "feature",
+          "text": "Federal-tax deduction + OR, AL state withholding (33 states)"
+        },
+        {
+          "type": "feature",
+          "text": "Massachusetts + Utah state withholding (35 states)"
+        },
+        {
+          "type": "feature",
+          "text": "State W-4 params scaffolding + Georgia + Arizona (37 states)"
+        },
+        {
+          "type": "feature",
+          "text": "State-specific W-4 inputs + fix missing state filing status/allowances"
+        },
+        {
+          "type": "feature",
+          "text": "Recommend_startup_programs first-party tool — Vendor Credit epic"
+        },
+        {
+          "type": "feature",
+          "text": "Grey out a converted idea's link when its project is deleted"
+        },
+        {
+          "type": "feature",
+          "text": "Maryland + New Jersey state withholding (39 states)"
+        },
+        {
+          "type": "feature",
+          "text": "Per-capability scopes + incremental consent — Closes #2019"
+        },
+        {
+          "type": "feature",
+          "text": "Outreach power-dialer over the Twilio Voice adapter"
+        },
+        {
+          "type": "feature",
+          "text": "Offer email transport (people.offer.extended + ops consumer) — part of #3632"
+        },
+        {
+          "type": "feature",
+          "text": "Archive old ideas off the board (+ Archived view)"
+        },
+        {
+          "type": "feature",
+          "text": "California + Connecticut withholding — all 41 wage states (+ fix main-breaking dialer dup)"
+        },
+        {
+          "type": "feature",
+          "text": "Industry-aware navigation auto-hide"
+        },
+        {
+          "type": "feature",
+          "text": "Service-principal read authz for employee endpoints (#3717 slice 1)"
+        },
+        {
+          "type": "feature",
+          "text": "Tier-2 Slice 1 — Neon usage → grounded savings"
+        },
+        {
+          "type": "feature",
+          "text": "Mint service-principal tokens (#3717 slice 2)"
+        },
+        {
+          "type": "feature",
+          "text": "Generalize grounded engine to a multi-vendor set"
+        },
+        {
+          "type": "feature",
+          "text": "Engine accuracy — additional-Medicare breakout + per-state SUTA"
+        },
+        {
+          "type": "feature",
+          "text": "Employer tax-registration layer + filing/disbursement entitlements (Slice 1)"
+        },
+        {
+          "type": "feature",
+          "text": "Self-serve browser linking for vertical connections"
+        },
+        {
+          "type": "feature",
+          "text": "Link-consent page + connected-products management"
+        },
+        {
+          "type": "feature",
+          "text": "Drop salary from the event, enrich comp from the endpoint (Closes #3697)"
+        },
+        {
+          "type": "feature",
+          "text": "Ephemeral GitHub Actions runners on Cloudflare Containers"
+        },
+        {
+          "type": "feature",
+          "text": "Audit comp/PII mutations on employee create/edit (Closes #3632 audit slice)"
+        },
+        {
+          "type": "feature",
+          "text": "TenantEnvelopeCipher::blind_index for searchable encrypted fields"
+        },
+        {
+          "type": "feature",
+          "text": "Personal/team/shared vaults — enforcement, CRUD + UI (Phase 2)"
+        },
+        {
+          "type": "feature",
+          "text": "Field-encryption-at-rest for employee salary/phone/email (Closes #3632)"
+        },
+        {
+          "type": "feature",
+          "text": "Nightly saasy_app-grants coverage gate + regression test"
+        },
+        {
+          "type": "feature",
+          "text": "Tier-2 Slice 2 — AWS RDS grounded cost-switch savings (Closes #3728)"
+        },
+        {
+          "type": "feature",
+          "text": "Collaborator + Viewer scoped roles (Phase 1 — least-privilege invites)"
+        },
+        {
+          "type": "feature",
+          "text": "Mascot v2 — every-page peek, settings kill switch, 404 robot, easter egg"
+        },
+        {
+          "type": "feature",
+          "text": "Phase 2 follow-ups — folder visibility, move-item, member picker, private-by-default"
+        },
+        {
+          "type": "feature",
+          "text": "Custom-role CRUD + grants vocab (Phase 2 Slice 1)"
+        },
+        {
+          "type": "feature",
+          "text": "Per-entity document auto-foldering (default on, tenant toggle)"
+        },
+        {
+          "type": "feature",
+          "text": "Document categories/tags, invoice+job panels, auto-folder settings, cross-links"
+        },
+        {
+          "type": "feature",
+          "text": "Custom-role permission enforcement (Phase 2 Slice 2)"
+        },
+        {
+          "type": "feature",
+          "text": "Mascot v3 — agent-activity peek, milestone moments, empty-state robot poses"
+        },
+        {
+          "type": "feature",
+          "text": "Recommend the cheapest-grounded cost-switch alternative (Closes #3758)"
+        },
+        {
+          "type": "feature",
+          "text": "Launch tier sheet — Growth $199, real caps enforced, union band hard gate (Closes #3808)"
+        },
+        {
+          "type": "feature",
+          "text": "Custom-role admin UI + nav trimming (Phase 2 Slice 3)"
+        },
+        {
+          "type": "feature",
+          "text": "Payroll-processing PEPM SKU + AI allowance arming (#3810, #1913)"
+        },
+        {
+          "type": "feature",
+          "text": "Document value-adds — auto-foldering, categories/tags, invoice+job docs"
+        },
+        {
+          "type": "feature",
+          "text": "DC income-tax withholding — completes US jurisdiction coverage"
+        },
+        {
+          "type": "feature",
+          "text": "Document inbox — email attachment auto-ingest + triage UI"
+        },
+        {
+          "type": "feature",
+          "text": "Api-key-scoped CRM customer-sync intake for vertical connections"
+        },
+        {
+          "type": "feature",
+          "text": "Tier-2 Slice 3 — GCP Cloud SQL grounded cost-switch savings (Closes #3828)"
+        },
+        {
+          "type": "feature",
+          "text": "Internal CRM customer-sync upsert endpoint"
+        },
+        {
+          "type": "feature",
+          "text": "Promote a SAM.gov bid-board opportunity into a CRM deal"
+        },
+        {
+          "type": "feature",
+          "text": "Form a business entity from a CRM deal"
+        },
+        {
+          "type": "feature",
+          "text": "Wage-determination import → union classification rates"
+        },
+        {
+          "type": "feature",
+          "text": "Payroll Processing add-on card — PEPM pricing surface"
+        },
+        {
+          "type": "feature",
+          "text": "Idea-stage front door — enter with just an idea (Closes #3871)"
+        },
+        {
+          "type": "feature",
+          "text": "Name & Brand Studio — AI naming, collision, availability, brand kit (Closes #3872)"
+        },
+        {
+          "type": "feature",
+          "text": "Native filing forms — Form 940 + W-3 + PDF rendering (NF-1)"
+        },
+        {
+          "type": "feature",
+          "text": "Sell/register domains via Porkbun + Cloudflare (part of #3877)"
+        },
+        {
+          "type": "feature",
+          "text": "SaaSPass links, subscription savings, bank auto-detect, zombie alert (slices 2-5)"
+        },
+        {
+          "type": "feature",
+          "text": "Native run approve step — activates the dead 'approved' vocabulary"
+        },
+        {
+          "type": "feature",
+          "text": "Native file-based disbursement + EFTPS deposit instructions (NF-3)"
+        },
+        {
+          "type": "feature",
+          "text": "Payroll GA flip — FE build-arg plumbing + runbook executed"
+        },
+        {
+          "type": "feature",
+          "text": "Subcontractor COI compliance tracking"
+        },
+        {
+          "type": "feature",
+          "text": "Employer EIN capture UI + per-state SUTA experience rate (DF-2)"
+        },
+        {
+          "type": "feature",
+          "text": "Pre-tax benefits (401k/§125/HSA) + W-2 Box 12/13 (DF-1)"
+        },
+        {
+          "type": "feature",
+          "text": "Tier-2 Slice 4 — Azure Postgres grounded cost-switch savings (Closes #3896)"
+        },
+        {
+          "type": "feature",
+          "text": "Bid board pursuit flow — opportunity → contract project + AI bid docs (Slice 1)"
+        },
+        {
+          "type": "feature",
+          "text": "Per-business dashboards with all-businesses roll-up"
+        },
+        {
+          "type": "feature",
+          "text": "Suggested-for-you on load + deadline-soonest sort"
+        },
+        {
+          "type": "feature",
+          "text": "Employee direct-deposit bank-account capture UI (DF-3)"
+        },
+        {
+          "type": "feature",
+          "text": "AI marketing content generation + SEO helper (Closes #3875)"
+        },
+        {
+          "type": "feature",
+          "text": "Branded-email v1 — Cloudflare Email Routing forwarding (part of #3877)"
+        },
+        {
+          "type": "feature",
+          "text": "Native business formation + pluggable filing rail (ZenBusiness) (Closes #3873)"
+        },
+        {
+          "type": "feature",
+          "text": "Federal e-file artifacts — SSA EFW2 + 94x MeF XML + filing tracking (NF-2)"
+        },
+        {
+          "type": "feature",
+          "text": "Bid board Slice 2 — SAM.gov SOW fetch + compliance/technical bid docs"
+        },
+        {
+          "type": "feature",
+          "text": "Stripe Billing grounded savings — metered-SaaS pattern (Closes #3897)"
+        },
+        {
+          "type": "feature",
+          "text": "Saasy-sync scaffold + filename/file-id de-risk spikes (Closes #4003)"
+        },
+        {
+          "type": "feature",
+          "text": "Documents updated_at column + trigger (Closes #4000)"
+        },
+        {
+          "type": "feature",
+          "text": "Sync_journal table for desktop-sync change feed (Closes #4002)"
+        },
+        {
+          "type": "feature",
+          "text": "AI document classification + document copy translations"
+        },
+        {
+          "type": "feature",
+          "text": "PWA installability — icons, install prompt, SW update toast (Mobile Slice 1)"
+        },
+        {
+          "type": "feature",
+          "text": "BYO AI credential store + validate-then-activate + byo_ai entitlement (BYO Slice 1)"
+        },
+        {
+          "type": "feature",
+          "text": "Polished web-push opt-in — priming, test-send, denied recovery (Mobile Slice 2)"
+        },
+        {
+          "type": "feature",
+          "text": "Updates.hellosaasy.ai update-feed worker (epic #3999)"
+        },
+        {
+          "type": "feature",
+          "text": "Smart model routing — per-call model + tier→model router at the LLM chokepoint (Routing Slices 1+2)"
+        },
+        {
+          "type": "feature",
+          "text": "Beta Partner (Growth) comped-beta tier — 6-month native trial + grant script"
+        },
+        {
+          "type": "feature",
+          "text": "Invoice send-to-customer — real email via outbox + operations consumer"
+        },
+        {
+          "type": "feature",
+          "text": "FUTA/SUTA exclude §125 + 940 exempt/credit-reduction + 941 line 7 (FU-2)"
+        },
+        {
+          "type": "feature",
+          "text": "Bring-Your-Own-AI settings panel (BYO Slice 2)"
+        },
+        {
+          "type": "feature",
+          "text": "NBA → executable one-click 'Approve & run' (Closes #3876)"
+        },
+        {
+          "type": "feature",
+          "text": "BYO AI consumption — per-tenant client resolution, non-billable metering, hard-cap bypass, SSRF-pinned runtime calls (BYO Slice 3)"
+        },
+        {
+          "type": "feature",
+          "text": "State tax remittance instructions (FU-3)"
+        },
+        {
+          "type": "feature",
+          "text": "Per-tier storage quotas — catalog + internal quota endpoint + upload enforcement (refs #4024)"
+        },
+        {
+          "type": "feature",
+          "text": "Storage usage meter + Extra Storage add-on purchase path (refs #4024)"
+        },
+        {
+          "type": "feature",
+          "text": "Document_classification capability — makes CRM AI classify live"
+        },
+        {
+          "type": "feature",
+          "text": "Refresh shell, command center, and auth chrome"
+        },
+        {
+          "type": "feature",
+          "text": "Require approval before GL posting (#1754 follow-through)"
+        },
+        {
+          "type": "feature",
+          "text": "Mark-paid run transition (approved -> paid)"
+        },
+        {
+          "type": "feature",
+          "text": "Mobile responsiveness sweep + offline/safe-area polish (Mobile Slices 3+4)"
+        },
+        {
+          "type": "feature",
+          "text": "Website builder + public hosting API (Closes #3874)"
+        },
+        {
+          "type": "feature",
+          "text": "Per-tenant smart-routing toggle + floor tier (Routing Slice 3)"
+        },
+        {
+          "type": "feature",
+          "text": "Guaranteed USDA-NIFA + NSF Grants.gov coverage + env-configurable page cap"
+        },
+        {
+          "type": "feature",
+          "text": "Telegram lead alerts for trial signup + demo booking"
+        },
+        {
+          "type": "feature",
+          "text": "Tenant-portal website builder UI (part of #3874)"
+        },
+        {
+          "type": "feature",
+          "text": "Extend mobile card-stack to CRM/financials tables (responsive rollout)"
+        },
+        {
+          "type": "improvement",
+          "text": "Shared BrainExecuteClient + fix payroll tenant misattribution (Closes #3274)"
+        },
+        {
+          "type": "improvement",
+          "text": "Consume server-resolved feature set (Phase 1c)"
+        },
+        {
+          "type": "fix",
+          "text": "Calendar-agent status filter excludes all Microsoft/Outlook meetings (closes #3181)"
+        },
+        {
+          "type": "fix",
+          "text": "Ship email/slack/redis-dedup + fail loudly instead of faking delivery (Closes #3121)"
+        },
+        {
+          "type": "fix",
+          "text": "Callback ON CONFLICT doesn't match unique constraints (3rd connect bug)"
+        },
+        {
+          "type": "fix",
+          "text": "CSP-report 500, synced-emails table scroll + 500-row display cap"
+        },
+        {
+          "type": "fix",
+          "text": "Calendar (+8 more) tenant CRM routes 404 at the edge — add to allowlist"
+        },
+        {
+          "type": "fix",
+          "text": "Reliable last_sync_at + raise cap to pull full mailbox"
+        },
+        {
+          "type": "fix",
+          "text": "Video worker retry ceiling + AMQP_URL handling (closes #3070)"
+        },
+        {
+          "type": "fix",
+          "text": "Notification bell count/list/mark-read contract (closes #3064)"
+        },
+        {
+          "type": "fix",
+          "text": "Normalize contact/company names, filter role mailboxes, seed website"
+        },
+        {
+          "type": "fix",
+          "text": "Exclude tenant's verified owned domains from company inference"
+        },
+        {
+          "type": "fix",
+          "text": "Wire AMQP channel into workflow rules execution context (closes #3062)"
+        },
+        {
+          "type": "fix",
+          "text": "Enable RLS on retention_notice_log stray tenant table"
+        },
+        {
+          "type": "fix",
+          "text": "Enable RLS on stray tenant tables (closes #3175)"
+        },
+        {
+          "type": "fix",
+          "text": "Outreach + settings i18n-sweep follow-ups"
+        },
+        {
+          "type": "fix",
+          "text": "Keep vendor companies from role-only domains; filter transactional person-contacts"
+        },
+        {
+          "type": "fix",
+          "text": "In-app notification lookups never matched the tenant-bucketed store (follow-up to #3121/#3222)"
+        },
+        {
+          "type": "fix",
+          "text": "Campaign KPI cards reflect global aggregates, not the current page"
+        },
+        {
+          "type": "fix",
+          "text": "Scope in-app notification reads/mutations by tenant + user (closes #3121 IDOR follow-up)"
+        },
+        {
+          "type": "fix",
+          "text": "Pluralize CRM audit-trail count (Closes #3265)"
+        },
+        {
+          "type": "fix",
+          "text": "Profile/settings controls persist and are honored, or are removed (closes #3069)"
+        },
+        {
+          "type": "fix",
+          "text": "Knowledge /transfer/* endpoints trust body tenant_id — LLM hard-cap bypass (Closes #3278)"
+        },
+        {
+          "type": "fix",
+          "text": "Supervise AMQP consumers so broker drops self-heal (part of #3065)"
+        },
+        {
+          "type": "fix",
+          "text": "Unbreak integration test target + hermeticize env-dependent lib tests (Closes #3262)"
+        },
+        {
+          "type": "fix",
+          "text": "Emit JSON error bodies with application/json content-type (#3036 partial)"
+        },
+        {
+          "type": "fix",
+          "text": "Make all data tables horizontally scrollable"
+        },
+        {
+          "type": "fix",
+          "text": "Bound AMQP requeue so poison messages can't loop forever (part of #3065)"
+        },
+        {
+          "type": "fix",
+          "text": "Idempotent outbound-webhook enqueue (part of #3065)"
+        },
+        {
+          "type": "fix",
+          "text": "Retry Gmail rate-limits and stop mapping them to 502"
+        },
+        {
+          "type": "fix",
+          "text": "Pin Anthropic client to HTTP/1.1 — reqwest h2 was hanging every LLM call"
+        },
+        {
+          "type": "fix",
+          "text": "Render real React Flow canvas in /workflows/builder (unstub wrappers)"
+        },
+        {
+          "type": "fix",
+          "text": "Return 501 for unimplemented analytics query/insights endpoints (closes #3060)"
+        },
+        {
+          "type": "fix",
+          "text": "Add missing settings.audit.* keys + common.retry (Audit Logs showed raw keys)"
+        },
+        {
+          "type": "fix",
+          "text": "Guard getStoredTokens() to stop React #418 hydration mismatch"
+        },
+        {
+          "type": "fix",
+          "text": "Route explainable-ai/user-management/agent-monitoring through /api/proxy (401 fix)"
+        },
+        {
+          "type": "fix",
+          "text": "Bind IPv6 (::) so .internal:8080 calls resolve"
+        },
+        {
+          "type": "fix",
+          "text": "Scope tenant_llm_spend metering INSERTs so RLS accepts them"
+        },
+        {
+          "type": "fix",
+          "text": "Correct broken in-app links (billing hrefs + monitoring indexes)"
+        },
+        {
+          "type": "fix",
+          "text": "Route ~30 built tenant-scoped endpoints to their macroservices (404 fix)"
+        },
+        {
+          "type": "fix",
+          "text": "Own-tenant self-service read/rename — settings/general 403"
+        },
+        {
+          "type": "fix",
+          "text": "Stop /monitoring/bundle SSR crash (#419) + wss:// CSP"
+        },
+        {
+          "type": "fix",
+          "text": "Unbreak main — discard check_gates actor in MCP status handler"
+        },
+        {
+          "type": "fix",
+          "text": "Green the 15 pre-existing lib-test failures (Closes #3169)"
+        },
+        {
+          "type": "fix",
+          "text": "Drive what-if scenarios from real inputs (closes #3061)"
+        },
+        {
+          "type": "fix",
+          "text": "Correct ml-serving + workflows/definitions API paths (404/400)"
+        },
+        {
+          "type": "fix",
+          "text": "Don't clear session cookies on transient refresh failures (concurrent-load logout)"
+        },
+        {
+          "type": "fix",
+          "text": "Return 200 defaults for intel-monitoring settings + union addon (404-on-empty)"
+        },
+        {
+          "type": "fix",
+          "text": "Add cnp.retention_policies.tenant_id column (retention-policies 500)"
+        },
+        {
+          "type": "fix",
+          "text": "Proactive deploy workflow — flyctl install + migrations env (follow-up to #3293)"
+        },
+        {
+          "type": "fix",
+          "text": "Unblock the unified-business-service lib-test binary (Closes #3315)"
+        },
+        {
+          "type": "fix",
+          "text": "Install curl in builder for utoipa-swagger-ui asset download"
+        },
+        {
+          "type": "fix",
+          "text": "Document plan planner is Deterministic, not LLM (Closes #3145)"
+        },
+        {
+          "type": "fix",
+          "text": "Pin builder to rust:1.91-bookworm (glibc match with runtime)"
+        },
+        {
+          "type": "fix",
+          "text": "Bust poisoned /app/target build cache on base change (Closes #3378)"
+        },
+        {
+          "type": "fix",
+          "text": "Get_pending_for_user leaks approvals across tenants (Closes #3348)"
+        },
+        {
+          "type": "fix",
+          "text": "Enable RLS on 4 cnp.* tables (cross-tenant holes)"
+        },
+        {
+          "type": "fix",
+          "text": "Vendor utoipa-swagger-ui bundle — no builder needs curl (Closes #3368)"
+        },
+        {
+          "type": "fix",
+          "text": "Green the 9 pre-existing integration-test failures (Closes #3337)"
+        },
+        {
+          "type": "fix",
+          "text": "Rename duplicate mod tests in addon_handlers to green the business-service test build"
+        },
+        {
+          "type": "fix",
+          "text": "Unmatched /api/v1/* returns 404, not a phantom 503 (Closes #3333)"
+        },
+        {
+          "type": "fix",
+          "text": "Transactional outbox for money events + Stripe PM sync + real usage + audit (closes #3058, closes #3059)"
+        },
+        {
+          "type": "fix",
+          "text": "Wire MFA step-up dialog into OAuth disconnect"
+        },
+        {
+          "type": "fix",
+          "text": "Allow disabling MFA via step-up instead of dead-ending"
+        },
+        {
+          "type": "fix",
+          "text": "HTML-escape credential-alert email preheader (follow-up to #3359)"
+        },
+        {
+          "type": "fix",
+          "text": "Rename Account \"Company Name\" to \"Workspace Name\""
+        },
+        {
+          "type": "fix",
+          "text": "Allow PostHog toolbar assets in CSP style/font directives"
+        },
+        {
+          "type": "fix",
+          "text": "Scope MFA step-up state to SecurityTab (fix ReferenceError)"
+        },
+        {
+          "type": "fix",
+          "text": "Repair pre-existing test/bench compile failures (Closes #3420)"
+        },
+        {
+          "type": "fix",
+          "text": "Unblock deploy — disable release LTO to fit builder RAM"
+        },
+        {
+          "type": "fix",
+          "text": "Active non-standard (comped/enterprise) plans get full scale access"
+        },
+        {
+          "type": "fix",
+          "text": "Reliable backup-code copy + add download option"
+        },
+        {
+          "type": "fix",
+          "text": "Comped super-admin unlock, CRM credentials panel, readable share-modal controls"
+        },
+        {
+          "type": "fix",
+          "text": "ESM lucide-react import in IconWrapper — fixes /workflows/builder require crash"
+        },
+        {
+          "type": "fix",
+          "text": "Move decline-alert Slack dedup table to a migration (SAAS-PLATFORM-2X/2Q)"
+        },
+        {
+          "type": "fix",
+          "text": "Install rustls CryptoProvider at startup in user/content/event (SAAS-PLATFORM-11)"
+        },
+        {
+          "type": "fix",
+          "text": "Stabilize useToast identity (infinite fetch loops, self-DoS) — Closes #3449"
+        },
+        {
+          "type": "fix",
+          "text": "Stop polluting prod demo tenant — Closes #3455"
+        },
+        {
+          "type": "fix",
+          "text": "List response-shape mismatches — Closes #3450, Closes #3456"
+        },
+        {
+          "type": "fix",
+          "text": "Enforce tenant RLS on 3 stray business-service tenant tables — Closes #3383"
+        },
+        {
+          "type": "fix",
+          "text": "Hydration regression + UX/a11y batch — Closes #3457"
+        },
+        {
+          "type": "fix",
+          "text": "Forecast 500 — ambiguous GROUP BY (42803) — Closes #3452"
+        },
+        {
+          "type": "fix",
+          "text": "Funding + vendor-credits + businesses/{id}/financials routing, honest retry_after — Closes #3451"
+        },
+        {
+          "type": "fix",
+          "text": "Reject token refresh when its session no longer exists"
+        },
+        {
+          "type": "fix",
+          "text": "RLS-audit the two cross-tenant sweeps — admin discovery + per-tenant scope_tenant (Closes #3415)"
+        },
+        {
+          "type": "fix",
+          "text": "Calendar-brain BFF returns upstream response instead of 500"
+        },
+        {
+          "type": "fix",
+          "text": "Grant saasy_app access to compliance schema (compliance 500)"
+        },
+        {
+          "type": "fix",
+          "text": "Return 200 defaults for morning-brief, sops, and billing entitlements (404-on-empty)"
+        },
+        {
+          "type": "fix",
+          "text": "Stray-tenant-RLS gate catches fail-open + unenforced policies"
+        },
+        {
+          "type": "fix",
+          "text": "Route bare /api/v1/workflows collection path (list 404)"
+        },
+        {
+          "type": "fix",
+          "text": "Prompt for TOTP instead of skipping 2FA (and breaking MFA step-up)"
+        },
+        {
+          "type": "fix",
+          "text": "Email Agent scans crm_synced_emails, not crm_activities — Closes #3486"
+        },
+        {
+          "type": "fix",
+          "text": "Resolve /dashboard/union/certified-payroll 404 via legacy redirect"
+        },
+        {
+          "type": "fix",
+          "text": "Enable RLS on portal_login_tokens — close the last stray tenant table"
+        },
+        {
+          "type": "fix",
+          "text": "Bound research prompt tokens + serialize sweep to survive per-minute LLM limits"
+        },
+        {
+          "type": "fix",
+          "text": "Build tenant-scoped roles/permissions lists + route them"
+        },
+        {
+          "type": "fix",
+          "text": "Cast pgvector params through text to fix String bind — Closes #3469"
+        },
+        {
+          "type": "fix",
+          "text": "Gate Card hover-lift behind interactive to stop hover flicker"
+        },
+        {
+          "type": "fix",
+          "text": "Make tsc a real CI gate and fix 24 pre-existing type errors"
+        },
+        {
+          "type": "fix",
+          "text": "Rewrite nightly tenant-isolation gate for the macroservice schema"
+        },
+        {
+          "type": "fix",
+          "text": "Extract VerdictPanel from validator page.tsx (Next 16 forbids non-Page named exports)"
+        },
+        {
+          "type": "fix",
+          "text": "Complete Next 16 page migration (extract named export + useParams for [token] pages)"
+        },
+        {
+          "type": "fix",
+          "text": "Un-collide businesses plan cap (CRM companies) + subscription-derived tenant tier — Closes #3453, Closes #3454"
+        },
+        {
+          "type": "fix",
+          "text": "Clear dead_code/unused_imports in slo.rs (unblocks CI)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop app build scripts from re-cleaning ui-core under turbo (fixes #3567)"
+        },
+        {
+          "type": "fix",
+          "text": "Show marketing plan names for tier badge on General settings"
+        },
+        {
+          "type": "fix",
+          "text": "Unify standalone-product list + guard checkout against double-purchase"
+        },
+        {
+          "type": "fix",
+          "text": "Subscription-usage report reads billing.subscriptions (Closes #3113)"
+        },
+        {
+          "type": "fix",
+          "text": "Use a ToSchema payload type in tests (1.91 HRTB)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop pretending — RLS policy setup and tenant quotas were no-op stubs"
+        },
+        {
+          "type": "fix",
+          "text": "Validate JWTs — auth middleware was a stub minting random identities"
+        },
+        {
+          "type": "fix",
+          "text": "Stop double-billing when a standalone buyer later gets a plan"
+        },
+        {
+          "type": "fix",
+          "text": "Grant saasy_app access to the journey schema (part of #3495)"
+        },
+        {
+          "type": "fix",
+          "text": "Scope tenant RLS GUC on monitoring queries"
+        },
+        {
+          "type": "fix",
+          "text": "Grant saasy_app access to brain_analytics + business_calendar schemas (part of #3495)"
+        },
+        {
+          "type": "fix",
+          "text": "Grant saasy_app access to the security schema (part of #3495)"
+        },
+        {
+          "type": "fix",
+          "text": "Honor standalone product_entitlements grant in SaaSPass gate"
+        },
+        {
+          "type": "fix",
+          "text": "Wire real authentication into the dashboard HTTP surface"
+        },
+        {
+          "type": "fix",
+          "text": "Honor standalone entitlement in frontend nav + page gates"
+        },
+        {
+          "type": "fix",
+          "text": "Route /feature-acknowledgments to business-service"
+        },
+        {
+          "type": "fix",
+          "text": "Poll call log while a call is in flight"
+        },
+        {
+          "type": "fix",
+          "text": "Allowlist first-party integration read + redeem routes"
+        },
+        {
+          "type": "fix",
+          "text": "CSRF-exempt the integration link-redeem POST"
+        },
+        {
+          "type": "fix",
+          "text": "Internal access-token endpoint must read connections on admin pool (RLS)"
+        },
+        {
+          "type": "fix",
+          "text": "Optional-auth the whole /api/v1/integration/v1/ surface"
+        },
+        {
+          "type": "fix",
+          "text": "Friendly not-found state for a deleted project"
+        },
+        {
+          "type": "fix",
+          "text": "Guard prod-targeting test suites + harden business-creation gate — Closes #3455"
+        },
+        {
+          "type": "fix",
+          "text": "Scope sync_tenant_ai_budget to the tenant RLS context"
+        },
+        {
+          "type": "fix",
+          "text": "Issue vertical-connection credentials via security-service (closes #3646)"
+        },
+        {
+          "type": "fix",
+          "text": "Verify JWTs with the platform verifier — drop raw jsonwebtoken"
+        },
+        {
+          "type": "fix",
+          "text": "Compile under --all-features (refs #3571)"
+        },
+        {
+          "type": "fix",
+          "text": "Route DB access through platform-database — drop raw sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Entitlement audit safe fixes — denial codes, stale comment, dedupe filter"
+        },
+        {
+          "type": "fix",
+          "text": "Gate internal api-key mint on token before body parse (#3646 follow-up)"
+        },
+        {
+          "type": "fix",
+          "text": "Real file upload/download for project & CRM attachments"
+        },
+        {
+          "type": "fix",
+          "text": "Route tenant vertical-connections lifecycle to integration service"
+        },
+        {
+          "type": "fix",
+          "text": "Attachment upload parent-entity check + content-service cleanup on delete"
+        },
+        {
+          "type": "fix",
+          "text": "Resolve tenant user names instead of raw UUIDs"
+        },
+        {
+          "type": "fix",
+          "text": "Bind :: (dual-stack) for Fly .internal reachability"
+        },
+        {
+          "type": "fix",
+          "text": "Tenant_path_guard lets service principals through"
+        },
+        {
+          "type": "fix",
+          "text": "Neon tables in public schema (migration 040 hotfix)"
+        },
+        {
+          "type": "fix",
+          "text": "Make platform-security compile under --all-features (Closes #3600, supersedes #3660)"
+        },
+        {
+          "type": "fix",
+          "text": "Rework mascot page transition into a subtle sidebar peek"
+        },
+        {
+          "type": "fix",
+          "text": "Comped/internal tenants get unlimited seats (unblocks 'Add team member')"
+        },
+        {
+          "type": "fix",
+          "text": "Keep CF runner container alive for the full deploy"
+        },
+        {
+          "type": "fix",
+          "text": "Relax invitations.role CHECK — unblocks Collaborator/Viewer invites"
+        },
+        {
+          "type": "fix",
+          "text": "Bump ethnum 1.5.2→1.5.3 to fix E0512 under --all-features (Closes #3771)"
+        },
+        {
+          "type": "fix",
+          "text": "Renumber duplicate 260 crm_inventory -> 272"
+        },
+        {
+          "type": "fix",
+          "text": "Route 30 missing tenant paths to BusinessService (edge 404s)"
+        },
+        {
+          "type": "fix",
+          "text": "Multiplex AMQP channels over shared connections (CloudAMQP cap exhaustion)"
+        },
+        {
+          "type": "fix",
+          "text": "Make security-service compile (Debug DTOs + &sql)"
+        },
+        {
+          "type": "fix",
+          "text": "Vertical-link review follow-ups + repair app typecheck"
+        },
+        {
+          "type": "fix",
+          "text": "Share one AMQP connection per service (epic #3793 sweep, wave 1)"
+        },
+        {
+          "type": "fix",
+          "text": "Background email/calendar sync so first sync can't time out"
+        },
+        {
+          "type": "fix",
+          "text": "Auto-recover saasy-tenant-portal deploys from poisoned build cache"
+        },
+        {
+          "type": "fix",
+          "text": "Move last 3 jobs off GitHub-hosted runners onto the Hetzner pool"
+        },
+        {
+          "type": "fix",
+          "text": "Custom-role assignment + invite/delete-workspace gates + Sales Guide flags"
+        },
+        {
+          "type": "fix",
+          "text": "Comp plan gets all flag-gated features + gate maintenance page"
+        },
+        {
+          "type": "fix",
+          "text": "Tenant-admin role gate on operations-service settings writes"
+        },
+        {
+          "type": "fix",
+          "text": "Share one AMQP connection per service — wave 2 (epic #3793)"
+        },
+        {
+          "type": "fix",
+          "text": "Gate ungated user-service mutations + read IDORs"
+        },
+        {
+          "type": "fix",
+          "text": "Tenant-admin gate on security-service api-key handlers"
+        },
+        {
+          "type": "fix",
+          "text": "Tenant-admin gate on ops-service config writes"
+        },
+        {
+          "type": "fix",
+          "text": "Gate integration disconnect/connect + CRM field/role definitions"
+        },
+        {
+          "type": "fix",
+          "text": "Public-path entry for the CRM customer-sync intake"
+        },
+        {
+          "type": "fix",
+          "text": "Grant comped/internal tenants full product access"
+        },
+        {
+          "type": "fix",
+          "text": "Show Grants module in industry pack presets"
+        },
+        {
+          "type": "fix",
+          "text": "Exclude past-deadline notices from active-only bid board filter"
+        },
+        {
+          "type": "fix",
+          "text": "CRM config admin-gates + MCP write-scope + wire calendly disconnect"
+        },
+        {
+          "type": "fix",
+          "text": "Replace dead Clearbit Logo API with apple-touch-icon + DuckDuckGo chain"
+        },
+        {
+          "type": "fix",
+          "text": "Growth price $199 across in-app surfaces + resolve migration 278 collision"
+        },
+        {
+          "type": "fix",
+          "text": "AMQP sweep cleanup — brain orchestrator conn + control-plane test compile"
+        },
+        {
+          "type": "fix",
+          "text": "Revive server-side Sentry + kill frontend illusions (Closes #3937, #3938)"
+        },
+        {
+          "type": "fix",
+          "text": "Close cross-tenant IDOR in sequence-step & enrollment handlers (Closes #3943)"
+        },
+        {
+          "type": "fix",
+          "text": "Require tenant-config-admin to write feature flags (Refs #3837)"
+        },
+        {
+          "type": "fix",
+          "text": "Tenant-scope CRM child-resource handlers — cross-tenant IDOR (Closes #3917, #3943)"
+        },
+        {
+          "type": "fix",
+          "text": "Durable S3 blob storage in prod + fail-loud ephemeral guard"
+        },
+        {
+          "type": "fix",
+          "text": "Tenant-scope onboarding mutations (#3931) + enforce seat caps from subscription tier"
+        },
+        {
+          "type": "fix",
+          "text": "Gate /api/v1/internal/* on token + tenant scope (Closes #3918)"
+        },
+        {
+          "type": "fix",
+          "text": "Cut business-svc release compile peak RAM to stop intermittent deploy OOM"
+        },
+        {
+          "type": "fix",
+          "text": "Tier-gate native payroll runs + enforce AI hard cap at all metered sites (Closes #3925, #3926)"
+        },
+        {
+          "type": "fix",
+          "text": "Route Name & Brand Studio /naming + /branding to BusinessService"
+        },
+        {
+          "type": "fix",
+          "text": "Correct marketplace/rules RLS policies to platform-standard GUC (Closes #3945)"
+        },
+        {
+          "type": "fix",
+          "text": "Enable portal server-side Sentry on Fly Node runtime (Closes #3928)"
+        },
+        {
+          "type": "fix",
+          "text": "EventBusConfig::default() must not panic on missing RABBITMQ_URL"
+        },
+        {
+          "type": "fix",
+          "text": "Invoice PDF/checkout read public.invoices + stamp real customer_id on quote conversion"
+        },
+        {
+          "type": "fix",
+          "text": "Supervise proactive/event consumers + init Sentry in people/proactive (partial #3930)"
+        },
+        {
+          "type": "fix",
+          "text": "Sanitize client-facing 5xx error bodies across 6 surfaces (Closes #3927)"
+        },
+        {
+          "type": "fix",
+          "text": "Correct sentry.server.config env-validation import path (unbreaks frontend build)"
+        },
+        {
+          "type": "fix",
+          "text": "Resolve triple-284 collision in business-service"
+        },
+        {
+          "type": "fix",
+          "text": "Durable document versions + head re-point on edit (Closes #4001)"
+        },
+        {
+          "type": "fix",
+          "text": "Saasy-business deploy → Hetzner + 90min"
+        },
+        {
+          "type": "fix",
+          "text": "Repair main lint/format drift breaking frontend-gate (Closes #4008)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop pager push + DSAR audit from fabricating success (#3929 ops pager + DSAR fabricated-success)"
+        },
+        {
+          "type": "fix",
+          "text": "Remove hollow pre-MCP connectors surface + orphaned webhook error module (Closes #3993)"
+        },
+        {
+          "type": "fix",
+          "text": "Sanitize API-key 401 + work-item result error leaks (Closes #3987, Closes #3988)"
+        },
+        {
+          "type": "fix",
+          "text": "Stripe↔DB durability cluster — tx outbox, per-subscription webhooks, claim rollback, reconciliation cron (Closes #3923, Closes #3980)"
+        },
+        {
+          "type": "fix",
+          "text": "Retire dead CQRS/dashboard + platform-gateway routes; scope OAuth sync spawns (Closes #3932, #3934)"
+        },
+        {
+          "type": "fix",
+          "text": "Supervise AMQP consumers + safe LLM defaults + default build (Closes #3930, Closes #3935, Closes #3994)"
+        },
+        {
+          "type": "fix",
+          "text": "Bid-board follow-ups — atomic pursue, markdown docs, i18n"
+        },
+        {
+          "type": "fix",
+          "text": "Migrate status text-on-tint pairings to AA-safe recipes"
+        },
+        {
+          "type": "fix",
+          "text": "RLS-audit sweep_habit_nudges"
+        },
+        {
+          "type": "fix",
+          "text": "Deliver Send Quote email via ops-service transactional relay"
+        },
+        {
+          "type": "fix",
+          "text": "Destructive/5 error-block family + NavigationSidebar active state"
+        },
+        {
+          "type": "fix",
+          "text": "BYO hard-cap bypass must require the BYO client was actually used, not just is_byo_active (closes #4048)"
+        },
+        {
+          "type": "fix",
+          "text": "Forward auth in all checklist proxies (browser 500 → gateway 401)"
+        },
+        {
+          "type": "fix",
+          "text": "Sanitize efile 500 body + drop unused BrainClient import (main-red repair)"
+        },
+        {
+          "type": "fix",
+          "text": "Sanitize efile 500 error bodies (Closes #4055)"
+        }
+      ]
+    },
+    {
       "version": "1.10.0",
       "date": "2026-07-09",
       "title": "Payroll End-to-End: Direct Deposit & W-2s, Financial Statements, and Connect Your AI Assistant",
