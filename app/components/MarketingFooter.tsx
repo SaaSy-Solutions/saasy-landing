@@ -23,6 +23,7 @@ const COLUMNS: FooterColumn[] = [
       { href: "/compare", label: "Compare" },
       { href: "/unions", label: "For unions" },
       { href: "/integrations", label: "Integrations" },
+      { href: "/download", label: "Desktop app" },
       { href: "/changelog", label: "Changelog" },
     ],
   },
