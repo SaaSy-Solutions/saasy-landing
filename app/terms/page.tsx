@@ -116,14 +116,30 @@ export default function TermsOfServicePage() {
             <p className="text-saasy-muted  leading-relaxed mb-5">
               SaaSy offers three subscription plans, billed monthly:
             </p>
+            {/*
+              These limits are contractual, so they must match what the product
+              actually grants. Source of truth is TIER_FEATURE_CLAIMS in
+              packages/utils/pricing-constants/src/claims.ts in the
+              saas-platform repo, where every label is pinned to a live
+              entitlement code or a plan quota.
+
+              Corrected 2026-08-10 (SaaSy-Solutions/saas-platform#1471):
+                - Starter said "CRM (50 contacts)"; the product grants 1,000.
+                - Growth said "all modules", which is the claim saas-platform
+                  #5906 removed everywhere else — union and field service are
+                  paid add-ons that no plan includes.
+                - Scale said "dedicated onboarding", which maps to no
+                  entitlement the platform grants.
+            */}
             <div className="rounded-xl border border-saasy-border bg-saasy-card/50 divide-y divide-saasy-border">
               <div className="p-5">
                 <p className=" font-semibold text-white">
                   Starter &mdash; $49/month
                 </p>
                 <p className="mt-1  text-sm text-saasy-muted">
-                  1 business, compliance tracker, CRM (50 contacts), daily
-                  briefing, email alerts
+                  1 business, compliance tracker, CRM (1,000 contacts), daily
+                  briefing, email alerts, all 10 bundled apps (union &amp; field
+                  service sold separately)
                 </p>
               </div>
               <div className="p-5">
@@ -131,8 +147,9 @@ export default function TermsOfServicePage() {
                   Growth &mdash; $199/month
                 </p>
                 <p className="mt-1  text-sm text-saasy-muted">
-                  Up to 5 businesses, all modules, smart guidance, Slack alerts,
-                  API access
+                  Up to 5 businesses, CRM (10,000 contacts), AI guidance, Slack
+                  alerts, API access, all 10 bundled apps (union &amp; field
+                  service sold separately)
                 </p>
               </div>
               <div className="p-5">
@@ -140,8 +157,9 @@ export default function TermsOfServicePage() {
                   Scale &mdash; $399/month
                 </p>
                 <p className="mt-1  text-sm text-saasy-muted">
-                  Unlimited businesses, advanced analytics, priority
-                  support, custom automations, dedicated onboarding
+                  Unlimited businesses, unlimited CRM contacts, advanced
+                  analytics, priority support, custom automations, all 10
+                  bundled apps (union &amp; field service sold separately)
                 </p>
               </div>
             </div>
