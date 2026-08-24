@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   description:
     "See how SaaSy compares to spreadsheets, hiring, and other " +
     "tools for running your business.",
+  alternates: {
+    canonical: "https://hellosaasy.ai/compare",
+  },
   openGraph: {
     siteName: "SaaSy",
     type: "website",

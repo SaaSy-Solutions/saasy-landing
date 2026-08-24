@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Terms of Service | SaaSy",
   description:
     "Terms of Service for SaaSy, an intelligent business operating system by SaaSy Solutions LLC.",
+  alternates: {
+    canonical: "https://hellosaasy.ai/terms",
+  },
 };
 
 export default function TermsOfServicePage() {

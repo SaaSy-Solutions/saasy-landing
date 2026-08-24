@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   description:
     "See what\u2019s new in SaaSy \u2014 features, " +
     "improvements, and fixes.",
+  alternates: {
+    canonical: "https://hellosaasy.ai/changelog",
+  },
 };
 
 interface ChangelogEntry {

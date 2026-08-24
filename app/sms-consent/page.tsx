@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "SMS Consent | SaaSy",
   description:
     "Opt in to receive SMS messages from SaaSy. Review what messages we send, how often, and how to opt out at any time.",
+  alternates: {
+    canonical: "https://hellosaasy.ai/sms-consent",
+  },
 };
 
 export default function SmsConsentPage() {

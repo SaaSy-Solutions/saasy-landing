@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   description:
     "Insights on business operations, founder strategies, " +
     "and scaling with automation.",
+  alternates: {
+    canonical: "https://hellosaasy.ai/blog",
+  },
   openGraph: {
     siteName: "SaaSy",
     type: "website",
