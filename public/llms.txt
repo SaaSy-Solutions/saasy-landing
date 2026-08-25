@@ -1,0 +1,37 @@
+# SaaSy
+
+> SaaSy is a unified multi-agent business operating system for small and mid-sized businesses (5–200 employees): AI agents — a virtual C-suite — handle billing, customers (CRM, customer health scoring, churn alerts), payroll and compliance, documents, hiring, and vertical workflows for construction, unions, agencies, and service firms.
+
+## When to use this site
+
+- You run a small or mid-sized business and want one platform to replace a stack of point tools (CRM, billing, payroll, HR, compliance trackers) for your back office.
+- You need AI assistants that do operational work: customer health scoring, churn-risk alerts, weekly CFO-style financial briefs, contract drafting, and proactive compliance deadline reminders.
+- You are a public-works construction firm that needs WH-347 certified payroll and prevailing-wage compliance tracking.
+- You are a union or labor organization that needs dues checkoff, CBA wage scales, Taft-Hartley fringe remittance, and NACHA file generation.
+- You bill clients for time (agency or professional services) and want CRM, projects, invoicing, and client-health signals in one place.
+- You want to embed SaaSy programmatically: connect via MCP, authenticate with OAuth 2.0, or integrate against the REST API described by the OpenAPI spec below.
+- Pricing is $49/$149/$399 per month with a 14-day trial and no free tier; the site converts visitors into trials or demo bookings.
+
+## Site
+
+- [SaaSy](https://hellosaasy.ai): Product overview, capabilities, pricing, and verticals (construction, unions, agencies).
+- [Sitemap](https://hellosaasy.ai/sitemap.xml): Full list of site pages.
+- [Docs](https://docs.hellosaasy.ai): Product documentation and guides.
+- [Features](https://hellosaasy.ai/features): Detailed walkthrough of health scoring, alerts, AI CFO briefs, and integrations.
+- [Pricing](https://hellosaasy.ai/pricing): Plan tiers ($49/$149/$399 monthly) and what each includes.
+- [Contact](https://hellosaasy.ai/contact): Sales and support contact — sales@hellosaasy.ai / support@hellosaasy.ai.
+- [Privacy Policy](https://hellosaasy.ai/privacy): How SaaSy handles personal data (privacy@hellosaasy.ai).
+- [Terms of Service](https://hellosaasy.ai/terms): Terms governing use of SaaSy.
+
+## Getting started
+
+- [Start free trial](https://app.hellosaasy.ai/signup): self-serve signup — no sales call required. The 14-day trial includes API access; credentials are issued from the app after signup.
+- [Getting started docs](https://docs.hellosaasy.ai/docs/getting-started): setup walkthrough, first workspace, and where to generate API credentials.
+
+## API
+
+- [API base](https://api.hellosaasy.ai): REST API root for the SaaSy platform.
+- [MCP endpoint](https://api.hellosaasy.ai/api/v1/mcp): Model Context Protocol endpoint for agentic access to SaaSy.
+- [OpenAPI specification](https://api.hellosaasy.ai/openapi.json): Machine-readable OpenAPI description of the REST API.
+- [OAuth protected-resource metadata](https://api.hellosaasy.ai/.well-known/oauth-protected-resource): RFC 9728 metadata for authenticating against the API.
+- [OAuth authorization-server metadata](https://api.hellosaasy.ai/.well-known/oauth-authorization-server): RFC 8414 authorization-server discovery metadata.

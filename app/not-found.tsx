@@ -46,6 +46,27 @@ export default function NotFound(): React.ReactElement {
             See what SaaSy does
           </Link>
         </div>
+        <p className="mt-6 text-sm text-saasy-muted">
+          Or go straight somewhere useful:{" "}
+          <a href="/" className="underline hover:text-white">
+            home
+          </a>
+          {" · "}
+          <a href="/sitemap.xml" className="underline hover:text-white">
+            sitemap
+          </a>
+          {" · "}
+          <a href="/llms.txt" className="underline hover:text-white">
+            llms.txt
+          </a>
+          {" · "}
+          <a
+            href="https://docs.hellosaasy.ai"
+            className="underline hover:text-white"
+          >
+            docs
+          </a>
+        </p>
       </main>
       <MarketingFooter />
     </div>

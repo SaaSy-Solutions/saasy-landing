@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Privacy Policy | SaaSy",
   description:
     "Privacy Policy for SaaSy, an intelligent business operating system by SaaSy Solutions LLC.",
+  alternates: {
+    canonical: "https://hellosaasy.ai/privacy",
+  },
 };
 
 export default function PrivacyPolicyPage() {

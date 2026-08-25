@@ -26,6 +26,12 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   metadataBase: new URL("https://hellosaasy.ai"),
   title: "SaaSy — Your entire back office, handled",
+  alternates: {
+    // Homepage canonical. The homepage is a client component and cannot
+    // export metadata itself; every other page overrides this via its own
+    // alternates.canonical so it never leaks beyond "/".
+    canonical: "https://hellosaasy.ai",
+  },
   description: DESCRIPTION,
   keywords: [
     "small business software",
@@ -69,6 +75,18 @@ const structuredData = {
   creator: {
     "@type": "Organization",
     name: "SaaSy Solutions LLC",
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "sales",
+        email: "sales@hellosaasy.ai",
+      },
+      {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        email: "support@hellosaasy.ai",
+      },
+    ],
     url: "https://saasysolutionsllc.com",
   },
 };
