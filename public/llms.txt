@@ -23,6 +23,11 @@
 - [Privacy Policy](https://hellosaasy.ai/privacy): How SaaSy handles personal data (privacy@hellosaasy.ai).
 - [Terms of Service](https://hellosaasy.ai/terms): Terms governing use of SaaSy.
 
+## Getting started
+
+- [Start free trial](https://app.hellosaasy.ai/signup): self-serve signup — no sales call required. The 14-day trial includes API access; credentials are issued from the app after signup.
+- [Getting started docs](https://docs.hellosaasy.ai/docs/getting-started): setup walkthrough, first workspace, and where to generate API credentials.
+
 ## API
 
 - [API base](https://api.hellosaasy.ai): REST API root for the SaaSy platform.
