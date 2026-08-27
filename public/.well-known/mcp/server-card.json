@@ -1,0 +1,10 @@
+{
+  "authorization": {
+    "resource_metadata": "https://api.hellosaasy.ai/.well-known/oauth-protected-resource",
+    "type": "oauth2"
+  },
+  "endpoint": "https://api.hellosaasy.ai/api/v1/mcp",
+  "protocol_version": "2025-06-18",
+  "server": "saasy-mcp",
+  "transport": "http"
+}
