@@ -32,6 +32,7 @@
 
 - [API base](https://api.hellosaasy.ai): REST API root for the SaaSy platform.
 - [MCP endpoint](https://api.hellosaasy.ai/api/v1/mcp): Model Context Protocol endpoint for agentic access to SaaSy.
+- [MCP server card](https://hellosaasy.ai/.well-known/mcp/server-card.json): Well-known MCP server manifest with endpoint, transport, and OAuth discovery links.
 - [OpenAPI specification](https://api.hellosaasy.ai/openapi.json): Machine-readable OpenAPI description of the REST API.
 - [OAuth protected-resource metadata](https://api.hellosaasy.ai/.well-known/oauth-protected-resource): RFC 9728 metadata for authenticating against the API.
 - [OAuth authorization-server metadata](https://api.hellosaasy.ai/.well-known/oauth-authorization-server): RFC 8414 authorization-server discovery metadata.
