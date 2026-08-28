@@ -38,7 +38,7 @@ export default function TermsOfServicePage() {
             Terms of Service
           </h1>
           <p className="mt-3  text-saasy-muted text-sm">
-            Last updated: March 2026
+            Last updated: August 28, 2026
           </p>
         </header>
 
@@ -208,7 +208,15 @@ export default function TermsOfServicePage() {
             <p className="mt-3 text-saasy-muted  leading-relaxed">
               We do not offer partial refunds for unused time within a billing
               period. If you believe you are entitled to a refund due to
-              service issues, please contact our support team.
+              service issues, please contact our support team. The standalone
+              copy is at{" "}
+              <Link
+                href="/refund-policy"
+                className="text-saasy-pink-soft underline"
+              >
+                /refund-policy
+              </Link>
+              .
             </p>
           </section>
 
@@ -270,7 +278,14 @@ export default function TermsOfServicePage() {
             </ul>
             <p className="mt-3 text-saasy-muted  leading-relaxed">
               Violation of these terms may result in immediate suspension or
-              termination of your account.
+              termination of your account. The standalone copy is at{" "}
+              <Link
+                href="/acceptable-use"
+                className="text-saasy-pink-soft underline"
+              >
+                /acceptable-use
+              </Link>
+              . We do not process PHI.
             </p>
           </section>
 
@@ -352,6 +367,36 @@ export default function TermsOfServicePage() {
             </p>
           </section>
 
+          <section>
+            <h2 className="text-white  text-xl font-semibold mt-10 mb-4">
+              AI outputs and training
+            </h2>
+            <p className="text-saasy-muted  leading-relaxed">
+              Advisory text, scores, and drafts the Service generates are
+              suggestions, not legal, tax, or financial advice. You remain
+              responsible for filings and decisions. We do not use Customer
+              Data to train foundation models. Email{" "}
+              <a
+                href="mailto:privacy@hellosaasy.ai"
+                className="text-saasy-pink-soft underline"
+              >
+                privacy@hellosaasy.ai
+              </a>{" "}
+              to opt out of any future optional training program. The{" "}
+              <Link href="/dpa" className="text-saasy-pink-soft underline">
+                DPA
+              </Link>{" "}
+              and{" "}
+              <Link
+                href="/subprocessors"
+                className="text-saasy-pink-soft underline"
+              >
+                subprocessor list
+              </Link>{" "}
+              are part of these Terms.
+            </p>
+          </section>
+
           {/* 13. Contact */}
           <section>
             <h2 className="text-white  text-xl font-semibold mt-10 mb-4">
@@ -377,12 +422,24 @@ export default function TermsOfServicePage() {
           <p className=" text-sm text-saasy-muted">
             &copy; 2023–2026 SaaSy Solutions LLC. All rights reserved.
           </p>
-          <div className="mt-3 flex gap-6">
+          <div className="mt-3 flex flex-wrap gap-6">
             <Link
               href="/privacy"
               className=" text-sm text-saasy-pink-soft hover:text-saasy-rose underline"
             >
               Privacy Policy
+            </Link>
+            <Link
+              href="/dpa"
+              className=" text-sm text-saasy-pink-soft hover:text-saasy-rose underline"
+            >
+              DPA
+            </Link>
+            <Link
+              href="/subprocessors"
+              className=" text-sm text-saasy-pink-soft hover:text-saasy-rose underline"
+            >
+              Subprocessors
             </Link>
           </div>
         </footer>

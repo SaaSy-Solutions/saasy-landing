@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ogImage } from "./components/ogAssets";
 import { AnalyticsProvider } from "./components/AnalyticsProvider";
+import { CookieBanner } from "./components/CookieBanner";
 
 /**
  * Poppins is the brand's designated web font (the style guide's primary,
@@ -102,6 +103,7 @@ export default function RootLayout({
         className={`${poppins.variable} antialiased`}
       >
         <AnalyticsProvider />
+        <CookieBanner />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

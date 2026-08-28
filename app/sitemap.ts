@@ -31,6 +31,11 @@ const STATIC_ROUTES: {
   { path: "/contact", changeFrequency: "monthly", priority: 0.5 },
   { path: "/terms", changeFrequency: "monthly", priority: 0.3 },
   { path: "/privacy", changeFrequency: "monthly", priority: 0.3 },
+  { path: "/dpa", changeFrequency: "monthly", priority: 0.3 },
+  { path: "/subprocessors", changeFrequency: "monthly", priority: 0.3 },
+  { path: "/refund-policy", changeFrequency: "monthly", priority: 0.3 },
+  { path: "/acceptable-use", changeFrequency: "monthly", priority: 0.3 },
+  { path: "/cookies", changeFrequency: "monthly", priority: 0.3 },
   { path: "/sms-consent", changeFrequency: "monthly", priority: 0.3 },
 ];
 

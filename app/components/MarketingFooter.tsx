@@ -46,12 +46,22 @@ const COLUMNS: FooterColumn[] = [
     links: [
       { href: "/terms", label: "Terms of Service" },
       { href: "/privacy", label: "Privacy Policy" },
+      { href: "/dpa", label: "DPA" },
+      { href: "/subprocessors", label: "Subprocessors" },
+      { href: "/refund-policy", label: "Refunds" },
+      { href: "/acceptable-use", label: "Acceptable Use" },
+      { href: "/cookies", label: "Cookies" },
       { href: "/sms-consent", label: "SMS Terms" },
     ],
   },
   {
     heading: "Support",
     links: [
+      {
+        href: "https://status.hellosaasy.ai",
+        label: "Service status",
+        external: true,
+      },
       {
         href: "https://docs.hellosaasy.ai",
         label: "Documentation",
