@@ -21,7 +21,8 @@ import {
 /**
  * Hero demo loop (~30s, 1920×1080, silent + captions).
  *
- * Tells the site's "idea → thriving enterprise co-founder" story using the
+ * Opens on the site's hero headline verbatim ("Your entire back office,
+ * handled"), then earns the co-founder payoff at the CTA. Uses the
  * real demo-tenant screenshots. Designed to autoplay muted and loop in the
  * hero. Scene timings (30fps):
  *   S1  0–120   logo + headline reveal
@@ -103,10 +104,10 @@ const SceneHeadline: React.FC = () => {
         }}
       >
         <div style={{ opacity: line1, translate: `0px ${(1 - line1) * 24}px` }}>
-          Your intelligent business
+          Your entire back office,
         </div>
         <div style={{ opacity: line2, translate: `0px ${(1 - line2) * 24}px` }}>
-          <AccentText style={{ fontSize: 104 }}>co-founder</AccentText>
+          <AccentText style={{ fontSize: 104 }}>handled</AccentText>
         </div>
       </div>
     </Center>

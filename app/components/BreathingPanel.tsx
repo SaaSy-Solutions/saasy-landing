@@ -3,6 +3,10 @@
 import { useEffect, useRef, useState } from 'react';
 import { useCountUp } from '@/lib/useCountUp';
 
+/** Point-change on the health score. Sign drives the glyph AND the colour,
+    so a decline can never render as a rise. */
+const SCORE_DELTA = 6;
+
 const FEED = [
   'Drafted client follow-up — Rivera Roofing',
   'Flagged churn risk — Delgado HVAC',
@@ -61,7 +65,14 @@ export function BreathingPanel(): React.ReactElement {
             >
               {score.value}
             </span>
-            <span className="text-sm font-semibold text-white">▲ up 6</span>
+            <span
+              className={`text-sm font-semibold ${
+                SCORE_DELTA < 0 ? 'text-saasy-orange' : 'text-white'
+              }`}
+            >
+              {SCORE_DELTA < 0 ? '▼' : '▲'}{' '}
+              {SCORE_DELTA < 0 ? 'down' : 'up'} {Math.abs(SCORE_DELTA)}
+            </span>
           </div>
           <div className="h-2 overflow-hidden rounded-full bg-saasy-border">
             <div
