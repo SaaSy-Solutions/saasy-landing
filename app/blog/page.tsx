@@ -6,7 +6,7 @@ import { POSTS } from "./content";
 import { ogImage } from "../components/ogAssets";
 
 export const metadata: Metadata = {
-  title: "Blog — SaaSy",
+  title: "Blog | SaaSy",
   description:
     "Insights on business operations, founder strategies, " +
     "and scaling with automation.",

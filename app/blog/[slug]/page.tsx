@@ -20,11 +20,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = POSTS.find(p => p.slug === slug);
   if (!post) {
-    return { title: "Post Not Found — SaaSy" };
+    return { title: "Post Not Found | SaaSy" };
   }
   const image = ogImageForPost(post.slug, post.title);
   return {
-    title: `${post.title} — SaaSy Blog`,
+    title: `${post.title} | SaaSy Blog`,
     description: post.excerpt,
     alternates: {
       canonical: `/blog/${post.slug}`,
