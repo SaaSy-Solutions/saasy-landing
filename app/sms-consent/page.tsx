@@ -68,24 +68,24 @@ export default function SmsConsentPage() {
               <li>
                 <span className="text-white font-medium">
                   Account notifications
-                </span>{" "}
-                &mdash; important updates about your account and activity
+                </span>:{" "}
+                important updates about your account and activity
               </li>
               <li>
                 <span className="text-white font-medium">
                   Appointment reminders
-                </span>{" "}
-                &mdash; reminders for scheduled meetings and bookings
+                </span>:{" "}
+                reminders for scheduled meetings and bookings
               </li>
               <li>
-                <span className="text-white font-medium">Billing updates</span>{" "}
-                &mdash; payment receipts, renewals, and billing alerts
+                <span className="text-white font-medium">Billing updates</span>:{" "}
+                payment receipts, renewals, and billing alerts
               </li>
               <li>
                 <span className="text-white font-medium">
                   Customer support communications
-                </span>{" "}
-                &mdash; responses and follow-ups related to your support
+                </span>:{" "}
+                responses and follow-ups related to your support
                 requests
               </li>
             </ul>
@@ -100,23 +100,23 @@ export default function SmsConsentPage() {
               <li>
                 <span className="text-white font-medium">
                   Message frequency varies
-                </span>{" "}
-                &mdash; based on your account activity and the notifications you
+                </span>:{" "}
+                based on your account activity and the notifications you
                 enable.
               </li>
               <li>
                 <span className="text-white font-medium">
                   Message and data rates may apply
-                </span>{" "}
-                &mdash; charges depend on your mobile carrier and plan.
+                </span>:{" "}
+                charges depend on your mobile carrier and plan.
               </li>
               <li>
-                <span className="text-white font-medium">Opt out anytime</span>{" "}
-                &mdash; reply <span className="text-white font-medium">STOP</span>{" "}
+                <span className="text-white font-medium">Opt out anytime</span>:{" "}
+                reply <span className="text-white font-medium">STOP</span>{" "}
                 to any message to unsubscribe from SMS messages.
               </li>
               <li>
-                <span className="text-white font-medium">Get help</span> &mdash;
+                <span className="text-white font-medium">Get help</span>:
                 reply <span className="text-white font-medium">HELP</span> for
                 assistance, or contact us at{" "}
                 <a
@@ -130,8 +130,8 @@ export default function SmsConsentPage() {
               <li>
                 <span className="text-white font-medium">
                   Consent is not a condition of purchase
-                </span>{" "}
-                &mdash; you can use SaaSy without opting in to SMS messages.
+                </span>:{" "}
+                you can use SaaSy without opting in to SMS messages.
               </li>
             </ul>
           </section>

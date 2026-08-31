@@ -248,7 +248,7 @@ function MobileInstall(): React.ReactElement {
         </h3>
       </div>
       <p className="mb-6 max-w-2xl text-saasy-muted">
-        Capture receipts and documents on the go &mdash; install SaaSy as a web
+        Capture receipts and documents on the go. Install SaaSy as a web
         app straight from your phone&rsquo;s browser. No app store needed.
       </p>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
