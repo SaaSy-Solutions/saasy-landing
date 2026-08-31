@@ -58,13 +58,25 @@ function parseTitle(title) {
   return { type, text };
 }
 
-async function fetchMergedPrs(sinceDate) {
-  const items = [];
-  for (let page = 1; page <= 10; page++) {
-    const q = `repo:${REPO} is:pr is:merged merged:>${sinceDate}`;
-    const url =
-      `https://api.github.com/search/issues?q=${encodeURIComponent(q)}` +
-      `&sort=created&order=asc&per_page=100&page=${page}`;
+// GitHub's Search API refuses to page past 1000 results: page 11 returns
+// `422 Only the first 1000 search results are available`. The old code looped
+// `page <= 10`, which sat exactly on that ceiling, so a window with more than
+// 1000 merged PRs was silently truncated to its oldest 1000 and the run still
+// reported success. That shipped a draft that looked complete and was missing
+// six weeks of the most recent work.
+//
+// So: query in date windows and split any window that reaches the cap, rather
+// than trusting a single unbounded query.
+const SEARCH_RESULT_CAP = 1000;
+const DAY_MS = 86400000;
+const toISO = (ms) => new Date(ms).toISOString().slice(0, 10);
+const fromISO = (s) => Date.parse(`${s}T00:00:00Z`);
+
+async function searchPage(q, page) {
+  const url =
+    `https://api.github.com/search/issues?q=${encodeURIComponent(q)}` +
+    `&sort=created&order=asc&per_page=100&page=${page}`;
+  for (let attempt = 1; ; attempt++) {
     const res = await fetch(url, {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -72,14 +84,82 @@ async function fetchMergedPrs(sinceDate) {
         "User-Agent": "saasy-changelog-bot",
       },
     });
-    if (!res.ok) {
-      throw new Error(`GitHub API ${res.status}: ${await res.text()}`);
+    if (res.ok) return res.json();
+    // Search is capped near 30 requests/minute; windowing spends more of them.
+    if ((res.status === 403 || res.status === 429) && attempt <= 5) {
+      const wait = Number(res.headers.get("retry-after")) || attempt * 15;
+      console.error(`  rate-limited (${res.status}); retrying in ${wait}s`);
+      await new Promise((r) => setTimeout(r, wait * 1000));
+      continue;
     }
-    const body = await res.json();
-    items.push(...body.items);
-    if (body.items.length < 100) break;
+    throw new Error(`GitHub API ${res.status}: ${await res.text()}`);
   }
-  return items;
+}
+
+// Collect one inclusive [from, to] window, halving it whenever it saturates.
+async function fetchWindow(from, to, out, windows) {
+  const q = `repo:${REPO} is:pr is:merged merged:${from}..${to}`;
+  const first = await searchPage(q, 1);
+  const total = first.total_count;
+
+  if (total >= SEARCH_RESULT_CAP) {
+    if (from === to) {
+      // Nothing left to split. Fail loudly rather than truncate in silence.
+      throw new Error(
+        `${total} PRs merged on ${from} alone, at or beyond the Search API's ` +
+          `${SEARCH_RESULT_CAP}-result cap. A single day cannot be split ` +
+          `further, so this window cannot be read completely.`,
+      );
+    }
+    const mid = toISO(
+      fromISO(from) + Math.floor((fromISO(to) - fromISO(from)) / 2 / DAY_MS) * DAY_MS,
+    );
+    console.error(`  ${from}..${to}: ${total} PRs, at the cap. Splitting.`);
+    await fetchWindow(from, mid, out, windows);
+    await fetchWindow(toISO(fromISO(mid) + DAY_MS), to, out, windows);
+    return;
+  }
+
+  out.push(...first.items);
+  const pages = Math.ceil(total / 100);
+  for (let page = 2; page <= pages; page++) {
+    out.push(...(await searchPage(q, page)).items);
+  }
+  windows.push({ from, to, total });
+}
+
+async function fetchMergedPrs(sinceDate) {
+  // The original query was `merged:>sinceDate`, i.e. strictly after that day.
+  // Windows are inclusive, so start the day after to preserve the semantics.
+  const from = toISO(fromISO(sinceDate) + DAY_MS);
+  const to = toISO(Date.now());
+  if (fromISO(from) > fromISO(to)) return [];
+
+  const raw = [];
+  const windows = [];
+  await fetchWindow(from, to, raw, windows);
+
+  // Split boundaries are inclusive on both sides, so de-duplicate by number.
+  const byNumber = new Map();
+  for (const pr of raw) byNumber.set(pr.number, pr);
+  const prs = [...byNumber.values()].sort(
+    (a, b) => Date.parse(a.created_at) - Date.parse(b.created_at),
+  );
+
+  const claimed = windows.reduce((n, w) => n + w.total, 0);
+  console.error(
+    `  ${windows.length} window(s) read; ${claimed} PRs reported, ` +
+      `${prs.length} unique after de-duplication`,
+  );
+  // Each window pushes every page it reports, so a shortfall means a page was
+  // lost. Fail rather than draft a changelog from a partial read.
+  if (raw.length < claimed) {
+    throw new Error(
+      `Fetched ${raw.length} PRs but windows reported ${claimed}. ` +
+        `Refusing to draft a changelog from an incomplete read.`,
+    );
+  }
+  return prs;
 }
 
 const data = JSON.parse(readFileSync(dataPath, "utf8"));
