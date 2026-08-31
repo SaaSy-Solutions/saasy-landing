@@ -96,6 +96,14 @@ export function Hero(): React.ReactElement {
               </svg>
             </Link>
           </div>
+
+          {/* Trial terms belong with the CTA, not 3 sections down in
+              pricing: this is the objection the button raises. */}
+          <p className="fade-up mt-5 text-sm text-saasy-muted"
+             style={{ animationDelay: "330ms" }}>
+            Free for 14 days with full Growth access. No credit card
+            required.
+          </p>
         </div>
 
         {/* Live product panel — the product breathing, right in the
