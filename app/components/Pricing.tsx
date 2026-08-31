@@ -21,7 +21,7 @@ export function PricingCard({
       className={`relative flex flex-col rounded-2xl border p-8
         ${
           popular
-            ? "border-saasy-pink bg-saasy-card"
+            ? "border-saasy-pink bg-saasy-card shadow-[0_24px_64px_-24px_rgba(0,0,0,0.6)] lg:-translate-y-3"
             : "border-saasy-border bg-saasy-card/50"
         }`}
     >

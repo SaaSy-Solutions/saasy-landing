@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Privacy Policy | SaaSy",
   description:
     "Privacy Policy for SaaSy, an intelligent business operating system by SaaSy Solutions LLC.",
+  alternates: {
+    canonical: "https://hellosaasy.ai/privacy",
+  },
 };
 
 export default function PrivacyPolicyPage() {
@@ -35,7 +38,7 @@ export default function PrivacyPolicyPage() {
             Privacy Policy
           </h1>
           <p className="mt-3  text-saasy-muted text-sm">
-            Last updated: March 2026
+            Last updated: August 28, 2026
           </p>
         </header>
 
@@ -100,6 +103,18 @@ export default function PrivacyPolicyPage() {
                   store credit card numbers, CVVs, or other sensitive payment
                   details on our servers. We retain only a reference to your
                   Stripe customer ID, plan type, and billing status.
+                </p>
+              </div>
+              <div>
+                <h3 className=" font-semibold text-white">
+                  Bank transaction history
+                </h3>
+                <p className="mt-1 text-saasy-muted  leading-relaxed">
+                  If you connect a bank account, Plaid collects account-holder
+                  identity, balances, merchant detail, and transaction history
+                  and syncs a copy to us for bookkeeping features. Plaid holds
+                  its own copy under its policy. Disconnecting a bank starts
+                  deletion of our copy. We do not see your bank password.
                 </p>
               </div>
             </div>
@@ -195,44 +210,17 @@ export default function PrivacyPolicyPage() {
               5. Third-Party Processors
             </h2>
             <p className="text-saasy-muted  leading-relaxed mb-5">
-              We use the following third-party service providers to operate the
-              Service. Each processor is contractually obligated to protect
-              your data:
+              We use third-party processors to operate the Service. The
+              current list, including Plaid when you connect a bank, lives at{" "}
+              <Link
+                href="/subprocessors"
+                className="text-saasy-pink-soft underline"
+              >
+                hellosaasy.ai/subprocessors
+              </Link>
+              . Vercel is not a processor. The marketing site is on GitHub
+              Pages. The product app is on Cloudflare and Fly.io.
             </p>
-            <div className="rounded-xl border border-saasy-border bg-saasy-card/50 divide-y divide-saasy-border">
-              <div className="p-5">
-                <p className=" font-semibold text-white">
-                  Stripe
-                </p>
-                <p className="mt-1  text-sm text-saasy-muted">
-                  Payment processing
-                </p>
-              </div>
-              <div className="p-5">
-                <p className=" font-semibold text-white">
-                  Neon
-                </p>
-                <p className="mt-1  text-sm text-saasy-muted">
-                  PostgreSQL database hosting
-                </p>
-              </div>
-              <div className="p-5">
-                <p className=" font-semibold text-white">
-                  Fly.io
-                </p>
-                <p className="mt-1  text-sm text-saasy-muted">
-                  Application hosting and compute
-                </p>
-              </div>
-              <div className="p-5">
-                <p className=" font-semibold text-white">
-                  Vercel
-                </p>
-                <p className="mt-1  text-sm text-saasy-muted">
-                  Frontend hosting and CDN
-                </p>
-              </div>
-            </div>
           </section>
 
           {/* 6. GDPR/CCPA Rights */}
@@ -410,12 +398,30 @@ export default function PrivacyPolicyPage() {
           <p className=" text-sm text-saasy-muted">
             &copy; 2023–2026 SaaSy Solutions LLC. All rights reserved.
           </p>
-          <div className="mt-3 flex gap-6">
+          <div className="mt-3 flex flex-wrap gap-6">
             <Link
               href="/terms"
               className=" text-sm text-saasy-pink-soft hover:text-saasy-rose underline"
             >
               Terms of Service
+            </Link>
+            <Link
+              href="/dpa"
+              className=" text-sm text-saasy-pink-soft hover:text-saasy-rose underline"
+            >
+              DPA
+            </Link>
+            <Link
+              href="/subprocessors"
+              className=" text-sm text-saasy-pink-soft hover:text-saasy-rose underline"
+            >
+              Subprocessors
+            </Link>
+            <Link
+              href="/cookies"
+              className=" text-sm text-saasy-pink-soft hover:text-saasy-rose underline"
+            >
+              Cookies
             </Link>
           </div>
         </footer>

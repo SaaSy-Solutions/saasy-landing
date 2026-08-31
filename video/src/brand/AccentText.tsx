@@ -1,11 +1,13 @@
 import React from "react";
-import { BRAND_GRADIENT, FONT } from "./theme";
+import { COLORS, FONT } from "./theme";
 
 /**
- * Pink→orange gradient headline text, the brand's `.gradient-text` utility.
+ * Solid pink accent for emphasis words inside headlines — the motion version
+ * of the site's `.accent-word`. The brand guide retired gradient text;
+ * emphasis is a solid brand color, not decoration.
  * `style` overrides win so callers can set size / weight per scene.
  */
-export const GradientText: React.FC<{
+export const AccentText: React.FC<{
   children: React.ReactNode;
   style?: React.CSSProperties;
 }> = ({ children, style }) => {
@@ -14,11 +16,7 @@ export const GradientText: React.FC<{
       style={{
         fontFamily: FONT,
         fontWeight: 800,
-        backgroundImage: BRAND_GRADIENT,
-        WebkitBackgroundClip: "text",
-        backgroundClip: "text",
-        color: "transparent",
-        WebkitTextFillColor: "transparent",
+        color: COLORS.pink,
         ...style,
       }}
     >

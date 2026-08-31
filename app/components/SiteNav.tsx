@@ -78,10 +78,11 @@ export function SiteNav(): React.ReactElement {
               <Link
                 key={link.href}
                 href={resolveHref(link.href)}
-                className={`hidden text-sm transition-colors
+                aria-current={isActive(link.href) ? "page" : undefined}
+                className={`relative hidden text-sm transition-colors
                   hover:text-white md:block ${
                     isActive(link.href)
-                      ? "text-white"
+                      ? "text-white after:absolute after:-bottom-1.5 after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-saasy-pink"
                       : "text-saasy-muted"
                   }`}
               >

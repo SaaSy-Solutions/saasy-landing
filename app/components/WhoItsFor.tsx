@@ -9,6 +9,10 @@ interface Persona {
   linkLabel?: string;
 }
 
+/**
+ * Editorial split: the section story stays pinned on the left while the
+ * three audiences read as rows, not a wall of identical cards.
+ */
 export function WhoItsFor(): React.ReactElement {
   const personas: Persona[] = [
     {
@@ -35,11 +39,16 @@ export function WhoItsFor(): React.ReactElement {
 
   return (
     <section className="border-t border-saasy-border py-24 sm:py-32">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="mx-auto mb-16 max-w-2xl text-center">
-          <h2 className="text-3xl font-bold text-white sm:text-4xl">
-            Built for the people who{" "}
-            <span className="accent-word">keep the lights on</span>
+      <div
+        className="mx-auto grid max-w-6xl gap-12 px-6
+          lg:grid-cols-[0.85fr_1.15fr] lg:gap-20"
+      >
+        <div className="lg:sticky lg:top-28 lg:self-start">
+          <h2
+            className="text-3xl font-bold tracking-tight text-white
+              sm:text-4xl"
+          >
+            Built for the people who keep the lights on
           </h2>
           <p className="mt-4 text-lg text-saasy-muted">
             Startup dashboards pitch startups. SaaSy backs the
@@ -48,17 +57,19 @@ export function WhoItsFor(): React.ReactElement {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div>
           {personas.map((persona) => (
             <div
               key={persona.title}
-              className="rounded-2xl border border-saasy-border
-                bg-saasy-card/50 p-8"
+              className="border-t border-saasy-border py-9
+                first:border-t-0 first:pt-0 last:pb-0"
             >
-              <h3 className="mb-3 text-xl font-semibold text-white">
+              <h3 className="text-xl font-semibold text-white">
                 {persona.title}
               </h3>
-              <p className="leading-relaxed text-saasy-muted">
+              <p
+                className="mt-3 leading-relaxed text-saasy-muted"
+              >
                 {persona.description}
               </p>
               <p

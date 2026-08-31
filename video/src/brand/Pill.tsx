@@ -14,15 +14,13 @@ export const Pill: React.FC<{
       <div
         style={{
           fontFamily: FONT,
-          fontWeight: 700,
-          fontSize: 28,
-          letterSpacing: 1.5,
-          textTransform: "uppercase",
+          fontWeight: 600,
+          fontSize: 30,
           color: COLORS.white,
-          background: COLORS.pink,
+          background: COLORS.rose,
           padding: "20px 44px",
           borderRadius: 999,
-          boxShadow: `0 18px 50px ${COLORS.pink}66`,
+          boxShadow: "0 18px 44px #00000059",
           ...style,
         }}
       >
@@ -35,7 +33,7 @@ export const Pill: React.FC<{
       style={{
         fontFamily: FONT,
         fontSize: 24,
-        color: COLORS.pink,
+        color: COLORS.pinkSoft,
         background: `${COLORS.pink}0d`,
         border: `1px solid ${COLORS.pink}33`,
         padding: "10px 22px",

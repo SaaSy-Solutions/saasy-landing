@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   description:
     "Custom automation, integrations, and systems consulting from " +
     "the team behind SaaSy. 25+ years of senior engineering experience.",
+  alternates: {
+    canonical: "https://hellosaasy.ai/services",
+  },
   openGraph: {
     siteName: "SaaSy",
     type: "website",

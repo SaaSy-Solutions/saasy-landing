@@ -11,7 +11,7 @@ import {
   Callout,
   COLORS,
   FONT,
-  GradientText,
+  AccentText,
   ScreenshotCard,
   StatCounter,
   EASE_OUT,
@@ -95,7 +95,7 @@ export const FeatureLoop: React.FC<FeatureLoopProps> = ({
               maxWidth: 880,
             }}
           >
-            {headline} <GradientText style={{ fontSize: 60 }}>{highlight}</GradientText>
+            {headline} <AccentText style={{ fontSize: 60 }}>{highlight}</AccentText>
           </div>
         </div>
 

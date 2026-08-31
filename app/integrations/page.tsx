@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   description:
     'Connect SaaSy with the tools you already use. Stripe, Slack, Gmail, ' +
     'Microsoft 365, Twilio, Plaid, ADP, Gusto, BambooHR, Rippling, and more.',
+  alternates: {
+    canonical: "https://hellosaasy.ai/integrations",
+  },
   openGraph: {
     siteName: 'SaaSy',
     type: 'website',
