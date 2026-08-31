@@ -16,7 +16,7 @@ import {
   Caption,
   COLORS,
   FONT,
-  GradientText,
+  AccentText,
   Logo,
   Pill,
   ScreenshotCard,
@@ -107,7 +107,7 @@ const Hook: React.FC = () => {
           Running a business is a lot.
         </div>
         <div style={{ opacity: b, translate: `0px ${(1 - b) * 20}px`, marginTop: 18 }}>
-          Meet your <GradientText style={{ fontSize: 64 }}>AI co-founder.</GradientText>
+          Meet your <AccentText style={{ fontSize: 64 }}>AI co-founder.</AccentText>
         </div>
       </div>
     </Frame>

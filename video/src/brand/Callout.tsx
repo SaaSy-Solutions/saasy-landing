@@ -44,11 +44,11 @@ export const Callout: React.FC<{
           fontWeight: 600,
           fontSize: 22,
           color: COLORS.white,
-          background: `linear-gradient(120deg, ${COLORS.pink}, ${COLORS.rose})`,
+          background: COLORS.rose,
           padding: "10px 18px",
           borderRadius: 999,
           whiteSpace: "nowrap",
-          boxShadow: `0 12px 30px ${COLORS.pink}55`,
+          boxShadow: "0 12px 30px #00000066",
         }}
       >
         {label}

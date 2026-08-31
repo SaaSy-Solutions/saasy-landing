@@ -16,7 +16,7 @@ import {
   Caption,
   COLORS,
   FONT,
-  GradientText,
+  AccentText,
   Logo,
   Pill,
   ScreenshotCard,
@@ -115,7 +115,7 @@ const Intro: React.FC = () => {
       <div style={{ opacity: p, translate: `0px ${(1 - p) * 24}px` }}>
         <Logo height={64} style={{ margin: "0 auto 36px" }} />
         <div style={{ fontFamily: FONT, fontWeight: 800, fontSize: 84, color: COLORS.white }}>
-          How <GradientText style={{ fontSize: 84 }}>SaaSy</GradientText> works
+          How <AccentText style={{ fontSize: 84 }}>SaaSy</AccentText> works
         </div>
         <Caption enterAt={24} hold style={{ marginTop: 24, fontSize: 38, color: COLORS.muted }}>
           Your whole back office, run by one platform — in four steps
@@ -156,7 +156,7 @@ const Step: React.FC<(typeof steps)[number]> = ({
       }}
     >
       <div style={{ flex: "0 0 38%", opacity: headerP, translate: `${(1 - headerP) * -24}px 0px` }}>
-        <GradientText style={{ fontSize: 110, fontWeight: 800 }}>{index}</GradientText>
+        <AccentText style={{ fontSize: 110, fontWeight: 800 }}>{index}</AccentText>
         <div
           style={{
             fontFamily: FONT,
@@ -167,7 +167,7 @@ const Step: React.FC<(typeof steps)[number]> = ({
             marginTop: 8,
           }}
         >
-          {title} <GradientText style={{ fontSize: 60 }}>{highlight}</GradientText>
+          {title} <AccentText style={{ fontSize: 60 }}>{highlight}</AccentText>
         </div>
         <div
           style={{
@@ -203,7 +203,7 @@ const Outro: React.FC = () => {
     <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", textAlign: "center" }}>
       <div style={{ opacity: p, translate: `0px ${(1 - p) * 24}px` }}>
         <div style={{ fontFamily: FONT, fontWeight: 800, fontSize: 80, color: COLORS.white, marginBottom: 40 }}>
-          Ready to meet your <GradientText style={{ fontSize: 80 }}>co-founder?</GradientText>
+          Ready to meet your <AccentText style={{ fontSize: 80 }}>co-founder?</AccentText>
         </div>
         <div style={{ display: "inline-block", scale: String(pulse) }}>
           <Pill variant="cta">Start your free trial</Pill>

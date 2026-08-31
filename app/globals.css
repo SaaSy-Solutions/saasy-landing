@@ -104,7 +104,7 @@ p {
 }
 
 .fade-up {
-  animation: fade-up 0.6s ease-out forwards;
+  animation: fade-up 0.6s ease-out both;
 }
 
 /* Reduced motion: kill animations/transitions and smooth scrolling.

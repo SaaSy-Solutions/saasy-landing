@@ -2,10 +2,10 @@ import { Img, interpolate, staticFile, useCurrentFrame } from "remotion";
 import { COLORS, EASE_OUT } from "./theme";
 
 /**
- * Glow-bordered rounded card wrapping a product screenshot, matching the
- * site's `.glow-border` screenshot frames. Animates in with a soft rise +
- * scale. `enterAt` is the local frame (within the parent Sequence) at which
- * the entrance begins.
+ * Rounded card frame wrapping a product screenshot, matching the site's
+ * screenshot frames (card surface + hairline border + dark elevation shadow —
+ * no glow). Animates in with a soft rise + scale. `enterAt` is the local
+ * frame (within the parent Sequence) at which the entrance begins.
  */
 export const ScreenshotCard: React.FC<{
   src: string;
@@ -32,16 +32,6 @@ export const ScreenshotCard: React.FC<{
         ...style,
       }}
     >
-      {/* Outer glow */}
-      <div
-        style={{
-          position: "absolute",
-          inset: -16,
-          borderRadius: 28,
-          background: `linear-gradient(135deg, ${COLORS.pink}14, ${COLORS.orange}14)`,
-          filter: "blur(28px)",
-        }}
-      />
       {/* Card frame */}
       <div
         style={{
@@ -50,7 +40,7 @@ export const ScreenshotCard: React.FC<{
           padding: 10,
           background: `${COLORS.card}cc`,
           border: `1px solid ${COLORS.border}`,
-          boxShadow: `0 0 0 1px ${COLORS.pink}22, 0 30px 80px #00000066`,
+          boxShadow: "0 24px 64px -24px #00000080",
           overflow: "hidden",
         }}
       >
