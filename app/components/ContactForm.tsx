@@ -18,7 +18,7 @@ const GENERIC_ERROR_MSG =
   "minute, or email us directly at support@hellosaasy.ai.";
 
 const RATE_LIMIT_ERROR_MSG =
-  "Whoa — that's a few messages in a row. Give it a minute, then " +
+  "Whoa. That's a few messages in a row. Give it a minute, then " +
   "try again.";
 
 /**
@@ -51,7 +51,7 @@ export function ContactForm(): React.ReactElement {
       return;
     }
     if (!message.trim()) {
-      setErrorMsg("Please write a message — that's the good part.");
+      setErrorMsg("Please write a message (that's the good part).");
       return;
     }
 
@@ -122,7 +122,7 @@ export function ContactForm(): React.ReactElement {
           </svg>
         </div>
         <h3 className="text-2xl font-bold text-white">
-          Got it — talk soon.
+          Got it. Talk soon.
         </h3>
         <p className="mx-auto mt-2 max-w-md text-saasy-muted">
           Your message is in. A real person will get back to you within

@@ -132,29 +132,29 @@ export default function PrivacyPolicyPage() {
               <li>
                 <span className="text-white font-medium">
                   Provide and maintain the Service
-                </span>{" "}
-                &mdash; delivering compliance tracking, CRM, intelligent guidance,
+                </span>:{" "}
+                delivering compliance tracking, CRM, intelligent guidance,
                 proactive alerts, and business operations management
               </li>
               <li>
                 <span className="text-white font-medium">
                   Send transactional emails
-                </span>{" "}
-                &mdash; account confirmations, billing receipts, security
+                </span>:{" "}
+                account confirmations, billing receipts, security
                 alerts, and service notifications
               </li>
               <li>
                 <span className="text-white font-medium">
                   Analyze usage patterns
-                </span>{" "}
-                &mdash; to improve the Service, identify bugs, and optimize
+                </span>:{" "}
+                to improve the Service, identify bugs, and optimize
                 performance
               </li>
               <li>
                 <span className="text-white font-medium">
                   Prevent fraud and abuse
-                </span>{" "}
-                &mdash; to protect the security of your account and the
+                </span>:{" "}
+                to protect the security of your account and the
                 integrity of the Service
               </li>
             </ul>
@@ -178,27 +178,27 @@ export default function PrivacyPolicyPage() {
               <li>
                 <span className="text-white font-medium">
                   Encryption at rest
-                </span>{" "}
-                &mdash; all data stored in our databases is encrypted using
+                </span>:{" "}
+                all data stored in our databases is encrypted using
                 AES-256
               </li>
               <li>
                 <span className="text-white font-medium">
                   Encryption in transit
-                </span>{" "}
-                &mdash; all data transmitted between your browser and our
+                </span>:{" "}
+                all data transmitted between your browser and our
                 servers is encrypted using TLS 1.2 or higher
               </li>
               <li>
                 <span className="text-white font-medium">
                   Per-tenant isolation
-                </span>{" "}
-                &mdash; each account&rsquo;s data is logically isolated, enforced
+                </span>:{" "}
+                each account&rsquo;s data is logically isolated, enforced
                 at the database level so data is never shared across accounts
               </li>
               <li>
-                <span className="text-white font-medium">Access controls</span>{" "}
-                &mdash; internal access to production systems is restricted to
+                <span className="text-white font-medium">Access controls</span>:{" "}
+                internal access to production systems is restricted to
                 authorized personnel with multi-factor authentication
               </li>
             </ul>
@@ -234,30 +234,30 @@ export default function PrivacyPolicyPage() {
             </p>
             <ul className="list-disc pl-6 space-y-2 text-saasy-muted  leading-relaxed">
               <li>
-                <span className="text-white font-medium">Right to Access</span>{" "}
-                &mdash; request a copy of the personal data we hold about you
+                <span className="text-white font-medium">Right to Access</span>:{" "}
+                request a copy of the personal data we hold about you
               </li>
               <li>
                 <span className="text-white font-medium">
                   Right to Correction
-                </span>{" "}
-                &mdash; request that we correct any inaccurate personal data
+                </span>:{" "}
+                request that we correct any inaccurate personal data
               </li>
               <li>
                 <span className="text-white font-medium">
                   Right to Deletion
-                </span>{" "}
-                &mdash; request that we delete your personal data, subject to
+                </span>:{" "}
+                request that we delete your personal data, subject to
                 legal retention obligations
               </li>
               <li>
-                <span className="text-white font-medium">Right to Export</span>{" "}
-                &mdash; receive your data in a structured, machine-readable
+                <span className="text-white font-medium">Right to Export</span>:{" "}
+                receive your data in a structured, machine-readable
                 format (CSV, JSON)
               </li>
               <li>
-                <span className="text-white font-medium">Right to Opt Out</span>{" "}
-                &mdash; opt out of non-essential data processing and analytics
+                <span className="text-white font-medium">Right to Opt Out</span>:{" "}
+                opt out of non-essential data processing and analytics
                 cookies
               </li>
             </ul>
@@ -283,16 +283,16 @@ export default function PrivacyPolicyPage() {
             </p>
             <ul className="mt-3 list-disc pl-6 space-y-2 text-saasy-muted  leading-relaxed">
               <li>
-                <span className="text-white font-medium">Session cookies</span>{" "}
-                &mdash; required for authentication and maintaining your
+                <span className="text-white font-medium">Session cookies</span>:{" "}
+                required for authentication and maintaining your
                 logged-in state. These are essential cookies and cannot be
                 disabled.
               </li>
               <li>
                 <span className="text-white font-medium">
                   Analytics cookies
-                </span>{" "}
-                &mdash; optional cookies that help us understand how the
+                </span>:{" "}
+                optional cookies that help us understand how the
                 Service is used. You can opt out of analytics cookies at any
                 time through your account settings.
               </li>

@@ -5,7 +5,7 @@ import { MarketingFooter } from "../components/MarketingFooter";
 import { ogImage } from "../components/ogAssets";
 
 export const metadata: Metadata = {
-  title: "Customers — SaaSy",
+  title: "Customers | SaaSy",
   description:
     "SaaSy is in beta. Real, named customer stories will live " +
     "here as our first founders hit their milestones.",

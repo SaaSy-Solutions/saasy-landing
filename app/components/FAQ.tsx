@@ -31,7 +31,7 @@ const FAQ_ITEMS = [
   {
     question: "Can I switch plans or cancel anytime?",
     answer:
-      "Yes to both. Switch or cancel whenever you like — no contracts, no cancellation fees, no retention specialist calling you at dinner. Tell us the change and our team makes it, effective at the start of your next billing cycle.",
+      "Yes to both. Switch or cancel whenever you like: no contracts, no cancellation fees, no retention specialist calling you at dinner. Tell us the change and our team makes it, effective at the start of your next billing cycle.",
   },
   {
     question: "What integrations do you support?",

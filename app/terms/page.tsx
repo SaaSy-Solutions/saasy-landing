@@ -137,7 +137,7 @@ export default function TermsOfServicePage() {
             <div className="rounded-xl border border-saasy-border bg-saasy-card/50 divide-y divide-saasy-border">
               <div className="p-5">
                 <p className=" font-semibold text-white">
-                  Starter &mdash; $49/month
+                  Starter: $49/month
                 </p>
                 <p className="mt-1  text-sm text-saasy-muted">
                   1 business, compliance tracker, CRM (1,000 contacts), daily
@@ -147,7 +147,7 @@ export default function TermsOfServicePage() {
               </div>
               <div className="p-5">
                 <p className=" font-semibold text-white">
-                  Growth &mdash; $199/month
+                  Growth: $199/month
                 </p>
                 <p className="mt-1  text-sm text-saasy-muted">
                   Up to 5 businesses, CRM (10,000 contacts), AI guidance, Slack
@@ -157,7 +157,7 @@ export default function TermsOfServicePage() {
               </div>
               <div className="p-5">
                 <p className=" font-semibold text-white">
-                  Scale &mdash; $399/month
+                  Scale: $399/month
                 </p>
                 <p className="mt-1  text-sm text-saasy-muted">
                   Unlimited businesses, unlimited CRM contacts, advanced

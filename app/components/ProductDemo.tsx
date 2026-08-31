@@ -22,7 +22,7 @@ export function ProductDemo(): React.ReactElement {
           controls
           playsInline
           preload="metadata"
-          aria-label="How SaaSy works — a 75-second product walkthrough"
+          aria-label="How SaaSy works, a 75-second product walkthrough"
         >
           <source src={revVideoUrl("how-it-works.mp4")} type="video/mp4" />
         </video>

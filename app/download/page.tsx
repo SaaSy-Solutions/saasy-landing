@@ -12,7 +12,7 @@ import { IconCheck } from "../components/Icons";
 const OG = ogImage("home");
 
 export const metadata: Metadata = {
-  title: "Download the SaaSy desktop app — SaaSy",
+  title: "Download the SaaSy desktop app | SaaSy",
   description:
     "Install the SaaSy desktop app to keep your documents in sync with a " +
     "folder on your computer, on Windows, macOS, and Linux. Or add the " +
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: "Download the SaaSy desktop app",
     description:
       "Keep your documents in sync with a folder on your computer. " +
-      "Windows, macOS, and Linux — plus a mobile web app.",
+      "Windows, macOS, and Linux, plus a mobile web app.",
     url: "https://hellosaasy.ai/download",
     siteName: "SaaSy",
     type: "website",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "Download the SaaSy desktop app",
     description:
       "Keep your documents in sync with a folder on your computer. " +
-      "Windows, macOS, and Linux — plus a mobile web app.",
+      "Windows, macOS, and Linux, plus a mobile web app.",
   },
 };
 
@@ -60,7 +60,7 @@ const structuredData = {
 
 /** What the desktop app adds on top of the web app. */
 const BENEFITS: string[] = [
-  "Two-way folder sync — drop a file on your desktop, it's in SaaSy",
+  "Two-way folder sync: drop a file on your desktop, it's in SaaSy",
   "Works while you're offline; changes reconcile when you reconnect",
   "Stays current on its own with signed, automatic updates",
 ];
@@ -115,8 +115,8 @@ export default function DownloadPage(): React.ReactElement {
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-saasy-muted">
                 The desktop app mirrors a folder on your machine to SaaSy and
-                back. No manual uploads, no &ldquo;which version is current&rdquo;
-                — the same document, in both places, always up to date.
+                back. No manual uploads, no &ldquo;which version is current&rdquo;:
+                the same document, in both places, always up to date.
               </p>
               <ul className="mt-6 space-y-3">
                 {BENEFITS.map((point) => (
@@ -160,7 +160,7 @@ export default function DownloadPage(): React.ReactElement {
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-saasy-muted">
               Start free for 14 days with full Growth access. No credit card
-              required — the desktop app is included on every plan.
+              required. The desktop app is included on every plan.
             </p>
             <Link
               href="https://app.hellosaasy.ai/signup"

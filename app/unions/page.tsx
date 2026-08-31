@@ -10,13 +10,13 @@ const DESCRIPTION =
   "employers and prevailing-wage contractors.";
 
 export const metadata: Metadata = {
-  title: "Union & Labor Compliance — SaaSy",
+  title: "Union & Labor Compliance | SaaSy",
   description: DESCRIPTION,
   alternates: {
     canonical: "https://hellosaasy.ai/unions",
   },
   openGraph: {
-    title: "Union & Labor Compliance — SaaSy",
+    title: "Union & Labor Compliance | SaaSy",
     description: DESCRIPTION,
     url: "https://hellosaasy.ai/unions",
     siteName: "SaaSy",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Union & Labor Compliance — SaaSy",
+    title: "Union & Labor Compliance | SaaSy",
     description: DESCRIPTION,
     images: [ogImage("unions").url],
   },
@@ -42,7 +42,7 @@ const CAPABILITIES: UnionCapability[] = [
   {
     title: "Dues checkoff, calculated and remitted",
     body:
-      "Flat amount, percent of wages, or cents-per-hour — computed per " +
+      "Flat amount, percent of wages, or cents-per-hour: computed per " +
       "member per pay period, with signed-authorization tracking so every " +
       "deduction is backed by a card on file.",
     detail: "Authorization records retained for audit",
@@ -59,7 +59,7 @@ const CAPABILITIES: UnionCapability[] = [
     title: "Taft-Hartley fringe, remitted per fund",
     body:
       "Health & welfare, pension, and apprenticeship contributions " +
-      "calculated per hour worked and reported per trust fund — each fund " +
+      "calculated per hour worked and reported per trust fund. Each fund " +
       "gets its own remittance, not a lump you have to split by hand.",
     detail: "Per-fund remittance reports, every period",
   },
@@ -67,7 +67,7 @@ const CAPABILITIES: UnionCapability[] = [
     title: "WH-347 certified payroll, ready to file",
     body:
       "Federal-aid public works paperwork generated from the same payroll " +
-      "run — WH-347 forms plus LCPtracker export, with prevailing-wage and " +
+      "run: WH-347 forms plus LCPtracker export, with prevailing-wage and " +
       "Davis-Bacon classifications applied.",
     detail: "LCPtracker export included",
   },
@@ -75,7 +75,7 @@ const CAPABILITIES: UnionCapability[] = [
     title: "NACHA files from your own bank",
     body:
       "Dues and fund contributions move as ACH payment files you upload to " +
-      "your own bank. SaaSy never touches the money — you keep control of " +
+      "your own bank. SaaSy never touches the money. You keep control of " +
       "every disbursement.",
     detail: "Your bank, your accounts, your sign-off",
   },
@@ -246,7 +246,7 @@ export default function UnionsPage(): React.ReactElement {
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-saasy-muted">
                 Not a mockup: a WH-347 certified payroll run inside
-                SaaSy — six workers across four classifications on a
+                SaaSy. Six workers across four classifications on a
                 Caltrans corridor job, with Saturday overtime and dues
                 checkoff in the deductions. And look closely at the
                 bottom panel: SaaSy caught an apprentice-ratio
@@ -274,7 +274,7 @@ export default function UnionsPage(): React.ReactElement {
               </div>
               <p className="mt-2 max-w-md text-xs text-saasy-muted">
                 The CSV is the exact file the Download button produces
-                in the app &mdash; open it in Excel and check the math.
+                in the app. Open it in Excel and check the math.
                 SSNs are masked in this sample; real runs carry the
                 last four digits the WH-347 requires.
               </p>
@@ -317,7 +317,7 @@ export default function UnionsPage(): React.ReactElement {
               <p className="mt-4 text-lg text-saasy-muted">
                 The add-on attaches to a Growth ($199/mo) or Scale
                 ($399/mo) plan, so a 50-member shop runs $248/mo all
-                in — or $198/mo on annual billing. No per-seat games:
+                in, or $198/mo on annual billing. No per-seat games:
                 you pay for the members you actually remit for.
               </p>
             </div>
@@ -398,15 +398,15 @@ export default function UnionsPage(): React.ReactElement {
                 },
                 {
                   term: "WH-347",
-                  def: "The federal certified-payroll form. Every week, for every worker on the job: hours per day, classification, rate, gross, deductions, net \u2014 signed under penalty of perjury. Miss one and the payments on the whole job can be withheld.",
+                  def: "The federal certified-payroll form. Every week, for every worker on the job: hours per day, classification, rate, gross, deductions, net, signed under penalty of perjury. Miss one and the payments on the whole job can be withheld.",
                 },
                 {
                   term: "Dues checkoff",
-                  def: "Deducting union dues from a member's paycheck and sending them to the local \u2014 but only for members with a signed authorization card on file. Flat amounts, a percent of wages, or cents per hour, depending on the CBA.",
+                  def: "Deducting union dues from a member's paycheck and sending them to the local, but only for members with a signed authorization card on file. Flat amounts, a percent of wages, or cents per hour, depending on the CBA.",
                 },
                 {
                   term: "Taft-Hartley fringe funds",
-                  def: "Health & welfare, pension, and apprenticeship money that doesn't go to the worker directly \u2014 it goes to jointly-managed trust funds, per hour worked, each fund with its own remittance report and deadline.",
+                  def: "Health & welfare, pension, and apprenticeship money that doesn't go to the worker directly. It goes to jointly-managed trust funds, per hour worked, each fund with its own remittance report and deadline.",
                 },
                 {
                   term: "LCPtracker",
@@ -414,7 +414,7 @@ export default function UnionsPage(): React.ReactElement {
                 },
                 {
                   term: "NACHA file",
-                  def: "The standard file format banks accept for batch ACH payments. It's how dues and fringe remittances actually move \u2014 you upload it to your own bank and approve the run.",
+                  def: "The standard file format banks accept for batch ACH payments. It's how dues and fringe remittances actually move. You upload it to your own bank and approve the run.",
                 },
               ].map((item) => (
                 <div key={item.term}>
@@ -460,7 +460,7 @@ export default function UnionsPage(): React.ReactElement {
             <p className="mt-4 text-lg leading-relaxed text-saasy-muted">
               SaaSy is in open beta and we&rsquo;re onboarding union
               employers one at a time, founder-led. You won&rsquo;t
-              find a logo wall here yet &mdash; you&rsquo;ll find the
+              find a logo wall here yet. You&rsquo;ll find the
               engineers who built the dues engine on your onboarding
               calls, and a payroll run you can inspect line by line
               above. If that trade works for you, we&rsquo;ll earn the
