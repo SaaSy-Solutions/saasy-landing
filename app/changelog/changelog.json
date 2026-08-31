@@ -1,6 +1,97 @@
 {
   "entries": [
     {
+      "version": "1.11.0",
+      "date": "2026-07-20",
+      "title": "Payroll in All 41 Wage States, Start a Business From an Idea, and Agents That Ask Before They Act",
+      "items": [
+        {
+          "type": "feature",
+          "text": "Payroll is now generally available in every US wage-withholding state plus DC, with federal e-filing (W-2/EFW2 and the 941/940 series), Form 940 and W-3 preparation, printable filing packets, and EFTPS deposit instructions."
+        },
+        {
+          "type": "feature",
+          "text": "Pre-tax benefits on payroll: 401(k), Section 125, and HSA deductions calculated correctly, carried into W-2 boxes 12 and 13, and excluded from FUTA and SUTA where the law says they should be."
+        },
+        {
+          "type": "feature",
+          "text": "Payroll approvals: a run now moves through approve, pay, and mark-paid, so nobody posts to the general ledger by accident. Employees can enter their own direct-deposit details, and you can record your EIN and state unemployment experience rate."
+        },
+        {
+          "type": "feature",
+          "text": "Start a business from nothing but an idea. Name and Brand Studio generates names, checks collisions and availability, and produces a brand kit. From there you can form the entity, register a domain, turn on branded email, and publish a website, all inside SaaSy."
+        },
+        {
+          "type": "feature",
+          "text": "Field service and contracting: jobs and work orders, a dispatch board with multi-view calendars, native clock-in and clock-out with hours summaries, bid management and estimating, and subcontractor certificate-of-insurance tracking."
+        },
+        {
+          "type": "feature",
+          "text": "Government contracting pipeline: pull an opportunity from the SAM.gov bid board, promote it into a CRM deal and a contract project, and have SaaSy draft the compliance and technical bid documents. Union wage determinations import straight into classification rates."
+        },
+        {
+          "type": "feature",
+          "text": "SaaSPass, a built-in password manager and secrets vault, with personal, team, and shared vaults, leaked-password checking, and expiring share links for handing a credential to someone outside the workspace."
+        },
+        {
+          "type": "feature",
+          "text": "Vendor credit tracking and cost savings: log startup and vendor credits, get alerts before they expire or run low, apply them to bills automatically, and see grounded Switch and Save recommendations across your database, cloud, and billing vendors based on your real usage."
+        },
+        {
+          "type": "feature",
+          "text": "Agents now propose before they act. Email replies, sales next-best-actions, meeting briefs, and knowledge answers arrive as proposals you approve, with every outcome recorded in an audit ledger. A recommended action can be run with one click."
+        },
+        {
+          "type": "feature",
+          "text": "Bring your own AI. Add your own Anthropic, OpenAI, or other provider key, validate it, and SaaSy will use it for your workspace instead of billing you for AI usage."
+        },
+        {
+          "type": "feature",
+          "text": "Documents got much smarter: attachments are read with OCR and indexed for semantic search the moment you upload them, classified and auto-filed by entity, tagged and categorized, and email attachments can flow straight into a document inbox for triage."
+        },
+        {
+          "type": "feature",
+          "text": "Meetings and calendar: transcripts fetch automatically from Microsoft Teams, AI writes the meeting summary into your notes, and you get a pre-meeting brief on what matters before you walk in."
+        },
+        {
+          "type": "feature",
+          "text": "CRM automation: contacts are created from real email activity, companies are inferred and linked from email domains and enriched with real names and industry, and you can call from the browser with logging, plus an outreach dialer."
+        },
+        {
+          "type": "feature",
+          "text": "SaaSy on your phone. Install it as an app, get push notifications you actually opted into, and work through a mobile layout that turns dense CRM and financial tables into readable cards."
+        },
+        {
+          "type": "feature",
+          "text": "Custom roles and least-privilege invites: build your own roles with a real permission vocabulary, invite people as Collaborator or Viewer, and scope API keys and connected AI assistants to read-only or a single domain."
+        },
+        {
+          "type": "improvement",
+          "text": "Usage and limits are now visible and honest. See your API, AI, and storage usage against your plan, get warned before you hit a ceiling, and top up or buy extra storage yourself instead of contacting support."
+        },
+        {
+          "type": "improvement",
+          "text": "Union, compliance, and the remaining modules are fully localized in six languages, completing the translation sweep across the product."
+        },
+        {
+          "type": "improvement",
+          "text": "Reports, dashboards, and the app shell were rebuilt: a working report builder with templates and scheduled generation, per-business dashboards with an all-businesses roll-up, and a refreshed command center and sign-in experience."
+        },
+        {
+          "type": "fix",
+          "text": "Salary, phone, and email for employee records are now encrypted at rest, and every change to compensation or personal data is written to the audit log."
+        },
+        {
+          "type": "fix",
+          "text": "Email and calendar sync now runs in the background, so a large first sync can no longer time out, and file uploads and downloads on projects and CRM records work reliably."
+        },
+        {
+          "type": "fix",
+          "text": "Billing correctness: standalone product buyers who later start a plan are no longer double-billed, invoice PDFs and checkout read the right customer record, and quotes and invoices send through the real email pipeline instead of failing quietly."
+        }
+      ]
+    },
+    {
       "version": "1.10.0",
       "date": "2026-07-09",
       "title": "Payroll End-to-End: Direct Deposit & W-2s, Financial Statements, and Connect Your AI Assistant",
