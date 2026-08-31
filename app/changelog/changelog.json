@@ -1,6 +1,129 @@
 {
   "entries": [
     {
+      "version": "1.12.0",
+      "date": "2026-08-31",
+      "title": "SaaSy Class, Budgeting, and AI Agents You Can Actually Govern",
+      "items": [
+        {
+          "type": "feature",
+          "text": "SaaSy Class, a learning platform built into your workspace. Build courses and learning paths, publish a catalog, enroll people, run graded quizzes, and issue verifiable PDF certificates. Courses can be sold with Stripe checkout and discount codes, reviewed and rated, or run as instructor-led cohorts with rosters, and enrollments flow into your CRM as contacts."
+        },
+        {
+          "type": "feature",
+          "text": "Budgeting, connected to your bank. Link an account and transactions arrive categorized, with rules you write yourself and a review inbox for anything the system is unsure about. A monthly plan tracks real actuals across four buckets with variance, and owners can keep a personal budget alongside the business."
+        },
+        {
+          "type": "feature",
+          "text": "Agent Studio, and agents you can govern. Create named AI agents, set how much autonomy each one has, give it a budget that pauses it automatically when it overspends, and review what it proposed in an approval queue. A single \"What your AI did\" feed shows every action your agents took."
+        },
+        {
+          "type": "feature",
+          "text": "Ask SaaSy became an executive advisor. It answers in one executive voice drawing on CFO, COO and chief-of-staff perspectives, grounded in your brand voice and your north-star goal, and cites the decisions behind its answers. It produces board-prep packets, investor updates and crisis communications, with a committee review over high-stakes drafts."
+        },
+        {
+          "type": "feature",
+          "text": "A home screen that leads with what needs you. Stalled approvals, watchlist hits and recommended next actions land in one queue instead of a wall of widgets, with morning and end-of-day cadences and a daily inbox digest. Any row opens straight into a conversation, and every recommendation records what actually happened so the next one is weighted by your goals."
+        },
+        {
+          "type": "feature",
+          "text": "Build your own agent tools. Author a custom HTTP tool from the tool picker, store its credentials encrypted, declare the parameters it accepts, and test-invoke it yourself before any agent is allowed to call it, behind an outbound-request guard."
+        },
+        {
+          "type": "feature",
+          "text": "Form a company, then keep it in good standing. A guided paid formation wizard generates six document types, shows real filing fees for all 50 states and DC, and checks your proposed name against the state registry before you pay. Registered agent, trademark, DBA and S-corp election are available as follow-on services, official mail is routed to you, and a compliance calendar plus entity standing is derived from your real filings, including for companies SaaSy did not form."
+        },
+        {
+          "type": "feature",
+          "text": "A 50-state compliance calendar that actually reminds you, with tailored recommendations for the insurance, credentials, licenses, permits, bonds and workers' compensation your business needs, and status tracking on each one."
+        },
+        {
+          "type": "feature",
+          "text": "Put your site on your own domain. Buy hosting and a mailbox, connect a custom domain with automatic TLS, follow in-app DNS instructions with live status, and publish. Domains bill once, mailboxes bill monthly."
+        },
+        {
+          "type": "feature",
+          "text": "Public-works and construction compliance. A per-project compliance rollup with an auditor-facing view, apprentice-ratio tracking and funding sources resolved automatically. Crews capture photos from a phone with an offline queue that uploads when signal returns, and a won bid pre-links to its project and can start prevailing-wage payroll."
+        },
+        {
+          "type": "feature",
+          "text": "Shift scheduling with compliance built in. Build a week at a time with worker profiles, availability and time off, catch conflicts before you publish, and have publishing blocked when a schedule would break a rule such as an expired certification, unless you deliberately override it."
+        },
+        {
+          "type": "feature",
+          "text": "A CRM that tells you the truth about a deal. Pipeline stages enforce entry gates, stalled deals surface on the board, deals score against weighted criteria with the evidence cited, and a won deal hands off to a delivery project in one click. Calls and SMS write to the contact record, with one timeline across every channel."
+        },
+        {
+          "type": "feature",
+          "text": "Outreach that looks like you and lands where it should. Per-user and per-business email signatures with a rich editor, unsubscribe with a suppression list, an embeddable self-serve quote widget with a price matrix, trackable campaign links, and on-demand AI proposal videos. Before a domain's first send SaaSy checks SPF, DKIM and DMARC, then spreads sending across a mailbox pool with warmup ramps and pauses a sender automatically when complaints climb."
+        },
+        {
+          "type": "feature",
+          "text": "Get paid more ways. ACH direct debit alongside cards, a card kept on file for your own customers with a recorded mandate, bulk charging across due invoices, customer statements of account in the portal or as a PDF, invoices auto-drafted from confirmed time entries, and purchased credits that carry forward on an expiry-aware ledger."
+        },
+        {
+          "type": "feature",
+          "text": "Live connections to Google, Microsoft and Slack. Mail, calendar and Drive or OneDrive files sync in and feed your knowledge base, meeting transcripts are ingested automatically, and a preparation brief arrives about thirty minutes before each meeting."
+        },
+        {
+          "type": "feature",
+          "text": "Documents grew up. Rename and move files, upload large ones with resumable transfer, share a collection with standing guest access, and search the full text of everything you have stored. A desktop app that mirrors and two-way syncs your files is now in beta."
+        },
+        {
+          "type": "feature",
+          "text": "Funding opportunities that find you. Save a search and get alerted the moment a matching opportunity is ingested, plus a weekly digest, with matching that accounts for diversity and set-aside ownership certifications."
+        },
+        {
+          "type": "improvement",
+          "text": "One place to choose your AI. Settings is now the single source of which model powers Ask SaaSy, you can bring your own provider keys, and the system fails over automatically when a provider hits a billing or quota wall."
+        },
+        {
+          "type": "improvement",
+          "text": "Your branding finally reaches your customers. Upload a logo and fill in your company profile, and it renders in the customer portal and on outbound email. The dashboard sidebar was regrouped, six screens that were unreachable are now wired up, and modules tell you plainly when they need an add-on you do not have."
+        },
+        {
+          "type": "improvement",
+          "text": "Reports export properly, as PDF or XLSX, with summary charts embedded in the PDF and schedules for recurring delivery. Pricing intelligence watches for margin drift across your products and proposes corrected prices."
+        },
+        {
+          "type": "fix",
+          "text": "Billing correctness. Customers who had already paid could still be chased by dunning. Payments now reconcile from Stripe checkout, settle to your own connected account rather than ours, round to exact cents instead of truncating, and invoices converted from a project bill the project's contact."
+        },
+        {
+          "type": "fix",
+          "text": "Sign-in and multi-factor authentication. A crypto regression that was failing authenticated requests is fixed, admin sign-in works end to end, and enrolling a second factor now verifies your device before activating it, with lockout after repeated failures."
+        },
+        {
+          "type": "fix",
+          "text": "Honest numbers, again. System health no longer reports \"healthy\" when it has no data to judge, a failed load no longer renders as zero, and usage and revenue roll-ups that were silently scoped wrong now count what they claim to count."
+        },
+        {
+          "type": "fix",
+          "text": "Automations that quietly did nothing. Workflow branches follow their true and false paths instead of ignoring them, steps run in dependency order, scheduled jobs keep their timers across a deploy, and an event that cannot be routed is no longer acknowledged as if it had been."
+        },
+        {
+          "type": "fix",
+          "text": "Email that actually sends. Password reset no longer claims a message was sent when it was not, alerts stop going to deactivated accounts, and a reply asking to stop being contacted is recognized as the opt-out it is."
+        },
+        {
+          "type": "fix",
+          "text": "Ask SaaSy reliability. The assistant fails over to a second provider when the first refuses, no longer cites documents that do not exist, and labels guidance it cannot ground in your data as unverified."
+        },
+        {
+          "type": "fix",
+          "text": "Tenant isolation and access control. A platform-wide sweep closed paths that could read or write outside your workspace, including database policies that failed open when workspace context was missing. Permissive stubs were removed, approval decisions and workspace identity are derived from your verified session rather than from the request, and a failed credential revocation is no longer treated as a success."
+        },
+        {
+          "type": "fix",
+          "text": "Closing a workspace now really deletes it. Personal data, payroll and billing records, connected-account credentials and stored files are purged from every system that held them. Audit events are written by every path that changes your data and chained so they cannot be altered after the fact."
+        },
+        {
+          "type": "fix",
+          "text": "We removed a claim we could not back. The site advertised SAML single sign-on that is not built. Every plan feature we list is now tied to something the product actually grants, and the published terms match the plans we sell."
+        }
+      ]
+    },
+    {
       "version": "1.11.0",
       "date": "2026-07-20",
       "title": "Payroll in All 41 Wage States, Start a Business From an Idea, and Agents That Ask Before They Act",
