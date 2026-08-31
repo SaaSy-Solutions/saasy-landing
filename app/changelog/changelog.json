@@ -1,6 +1,5141 @@
 {
   "entries": [
     {
+      "version": "DRAFT-2026-08-31",
+      "date": "2026-08-31",
+      "title": "Draft — edit version, title & wording before publishing",
+      "items": [
+        {
+          "type": "feature",
+          "text": "Unified public-works compliance rollup per project"
+        },
+        {
+          "type": "feature",
+          "text": "Mobile photo capture → project + offline queue (refs #4112)"
+        },
+        {
+          "type": "feature",
+          "text": "Hosting addon + Zoho paid mailbox + domain renewal cron + cron-auth hardening (part of #3877)"
+        },
+        {
+          "type": "feature",
+          "text": "Login-time MFA (TOTP) challenge in platform-admin"
+        },
+        {
+          "type": "feature",
+          "text": "Mirror-down + upload-new sync engine (slice 1) (Closes #4153)"
+        },
+        {
+          "type": "feature",
+          "text": "Funding Pipeline D1 — saved watches + match-on-ingest alerts (Closes #4119)"
+        },
+        {
+          "type": "feature",
+          "text": "Business scoping + document/folder rename + folder move (Closes #4149)"
+        },
+        {
+          "type": "feature",
+          "text": "Content.document/folder.* platform events + webhook catalog (Closes #4151)"
+        },
+        {
+          "type": "feature",
+          "text": "Funding Pipeline D2 — weekly digest (drains the watch-hit queue) (Closes #4120)"
+        },
+        {
+          "type": "feature",
+          "text": "Vertical-adapter framework — dehardcode CRM sync source/industry/scopes"
+        },
+        {
+          "type": "feature",
+          "text": "Resumable chunked upload for large files (Closes #4150)"
+        },
+        {
+          "type": "feature",
+          "text": "Metering provider/billable fan-out + BYO completion for content/people/security (+ ops budget filter)"
+        },
+        {
+          "type": "feature",
+          "text": "Custom-domain TLS via Cloudflare for SaaS (part of #3874)"
+        },
+        {
+          "type": "feature",
+          "text": "Per-business dashboard scoping + all-businesses breakdown endpoint"
+        },
+        {
+          "type": "feature",
+          "text": "Business-scoped report generation and listing"
+        },
+        {
+          "type": "feature",
+          "text": "Project-folder → crm_attachments linkage + event consumer (Closes #4152)"
+        },
+        {
+          "type": "feature",
+          "text": "Public site-render origin — serve published sites as HTML by host"
+        },
+        {
+          "type": "feature",
+          "text": "NF-4 slice 1 — state (+federal) deposit due-date engine (CA/NY/IN)"
+        },
+        {
+          "type": "feature",
+          "text": "G2 slice 1 — pgvector schema + auto org-profile builder"
+        },
+        {
+          "type": "feature",
+          "text": "Settings → AI is the single source of model choice for Ask SaaSy (closes #4210)"
+        },
+        {
+          "type": "feature",
+          "text": "Wire BYO into formation llm_service (closes the last #4137 deferral, #1953)"
+        },
+        {
+          "type": "feature",
+          "text": "Optional per-product client secret on vertical-link redeem"
+        },
+        {
+          "type": "feature",
+          "text": "Diversity / set-aside matching — ownership certifications (Closes #4224)"
+        },
+        {
+          "type": "feature",
+          "text": "Sentry → GlitchTip grounded savings — first dogfood slice (Closes #3901)"
+        },
+        {
+          "type": "feature",
+          "text": "Governed agent autopilot — ignition + discoverable approval queue (Closes #4240)"
+        },
+        {
+          "type": "feature",
+          "text": "Desktop-sync download surfaces (Closes #4021)"
+        },
+        {
+          "type": "feature",
+          "text": "Attachments real upload + PWA share target — Closes #4005, Refs #4112"
+        },
+        {
+          "type": "feature",
+          "text": "Full bi-directional sync (reconciler + local propagation + conflicts) — Closes #4266"
+        },
+        {
+          "type": "feature",
+          "text": "Idempotency-key dedup on document/folder create (Closes #4157)"
+        },
+        {
+          "type": "feature",
+          "text": "On-demand CRM proposal video (ProposalVideo) — Closes #2180"
+        },
+        {
+          "type": "feature",
+          "text": "Per-business scoping (closes the dashboards gap)"
+        },
+        {
+          "type": "feature",
+          "text": "Wire vertical_entity_links inbound identity map (#4223 slice A)"
+        },
+        {
+          "type": "feature",
+          "text": "Inject CRM follow-up queue so nightly runs draft real emails (Closes #4267)"
+        },
+        {
+          "type": "feature",
+          "text": "MeF A2A slice 1 — submission/transmission packaging"
+        },
+        {
+          "type": "feature",
+          "text": "Wire DocuSign void end-to-end"
+        },
+        {
+          "type": "feature",
+          "text": "SaaSy LMS Slice 1 — catalog + authoring (+ design spec)"
+        },
+        {
+          "type": "feature",
+          "text": "MeF A2A slice 2 — SOAP envelope + operation bodies + MTOM"
+        },
+        {
+          "type": "feature",
+          "text": "SaaSy LMS Slice 2 — enrollment, progress rollup + verifiable certificates"
+        },
+        {
+          "type": "feature",
+          "text": "Apply remote folder rename/move locally (partial #4279)"
+        },
+        {
+          "type": "feature",
+          "text": "SaaSy Social — Slice 1 (foundation: entitlement + data model + gated API + portal shell)"
+        },
+        {
+          "type": "feature",
+          "text": "SaaSy LMS Slice 3 — assessments + server-side grading (pass→complete)"
+        },
+        {
+          "type": "feature",
+          "text": "Unsigned beta release plumbing + portal beta channel (stacked on #4273)"
+        },
+        {
+          "type": "feature",
+          "text": "Headless CLI driver / nightly real-backend E2E harness (Closes #3999-slice)"
+        },
+        {
+          "type": "feature",
+          "text": "SaaSy Class (LMS) learner catalog + enroll (Slice 9a)"
+        },
+        {
+          "type": "feature",
+          "text": "B2 — host the sync engine + auth in the Tauri app (Closes #4312)"
+        },
+        {
+          "type": "feature",
+          "text": "Paid formation funnel — SKU, quote, one-time checkout, wizard UI"
+        },
+        {
+          "type": "feature",
+          "text": "MeF A2A slice 3 — WS-Security XML-DSig (exc-c14n + RSA-SHA256)"
+        },
+        {
+          "type": "feature",
+          "text": "MeF A2A session client + ack state machine (slice 4)"
+        },
+        {
+          "type": "feature",
+          "text": "Activate tailored coverage & credentials recommendations"
+        },
+        {
+          "type": "feature",
+          "text": "Port monitoring dashboard to unified-ops + activate coverage recommendations"
+        },
+        {
+          "type": "feature",
+          "text": "SaaSy Class (LMS) lesson player / path detail (Slice 9c)"
+        },
+        {
+          "type": "feature",
+          "text": "Learner path outline endpoint (per-lesson progress read model)"
+        },
+        {
+          "type": "feature",
+          "text": "SaaSy Class (LMS) instructor authoring (Slice 9d)"
+        },
+        {
+          "type": "feature",
+          "text": "OpenAI tool-calling so the agent tool-proposal path is vendor-agnostic (#4267 follow-up)"
+        },
+        {
+          "type": "feature",
+          "text": "State licenses/permits/bonds + employee workers-comp recommendations (S2+S3)"
+        },
+        {
+          "type": "feature",
+          "text": "MeF A2A transmit + poll-acks routes — wiring (slice 5)"
+        },
+        {
+          "type": "feature",
+          "text": "Surface DNS guidance notes + copy buttons in custom-domain panel"
+        },
+        {
+          "type": "feature",
+          "text": "Editable public slug with live availability check"
+        },
+        {
+          "type": "feature",
+          "text": "Seed real per-state formation fees — all 50 states + DC"
+        },
+        {
+          "type": "feature",
+          "text": "First-party media hosting — upload/list/signed-download (Slice 4)"
+        },
+        {
+          "type": "feature",
+          "text": "Auto-poll custom-domain TLS status while pending"
+        },
+        {
+          "type": "feature",
+          "text": "Project compliance rollup — funding auto-resolution + auditor UI"
+        },
+        {
+          "type": "feature",
+          "text": "Auto-fail-over on provider billing/quota exhaustion (#4267 follow-up)"
+        },
+        {
+          "type": "feature",
+          "text": "Instructor-led cohorts + roster (Slice 10)"
+        },
+        {
+          "type": "feature",
+          "text": "Reseller margin engine — retail pricing + margin capture"
+        },
+        {
+          "type": "feature",
+          "text": "Course reviews + star ratings (parity slice)"
+        },
+        {
+          "type": "feature",
+          "text": "Paid-mailbox recurring billing add-on (#3877 slice 4)"
+        },
+        {
+          "type": "feature",
+          "text": "Verifiable-action engine — real-action-to-complete-a-lesson (Slice 6)"
+        },
+        {
+          "type": "feature",
+          "text": "Gate custom-domain connect on the website_hosting add-on (#3877 slice 3)"
+        },
+        {
+          "type": "feature",
+          "text": "Hosting + mailbox purchase UIs (#3877 slice 5)"
+        },
+        {
+          "type": "feature",
+          "text": "Apprentice-ratio project rollup silo"
+        },
+        {
+          "type": "feature",
+          "text": "Document-generation engine — LLC + corp templates (6 doc types)"
+        },
+        {
+          "type": "feature",
+          "text": "Paid courses — price/purchases/payment-gated enroll (Slice 5, content-service half)"
+        },
+        {
+          "type": "feature",
+          "text": "Dogfood slices — Twilio→Telnyx, Resend→SES, Gusto→SaaSy Payroll (Closes #3902 #3903 #3904)"
+        },
+        {
+          "type": "feature",
+          "text": "LMS→CRM enrollment ingest — learners/instructors as contacts (Slice 8)"
+        },
+        {
+          "type": "feature",
+          "text": "SaaSy Class (LMS) course reviews + ratings UI"
+        },
+        {
+          "type": "feature",
+          "text": "Labor→project-COGS reclass preview — the safe first step for #3848"
+        },
+        {
+          "type": "feature",
+          "text": "SaaSy Class (LMS) quiz-taking UI (Slice 9e)"
+        },
+        {
+          "type": "feature",
+          "text": "'Start prevailing-wage payroll' CTA on won deals"
+        },
+        {
+          "type": "feature",
+          "text": "Native appoint/renew rail + SKU"
+        },
+        {
+          "type": "feature",
+          "text": "Zoho token-refresh + mailbox provider split"
+        },
+        {
+          "type": "feature",
+          "text": "Native order/renew rail + SKU"
+        },
+        {
+          "type": "feature",
+          "text": "Enable RLS on integration_oauth_tokens (#4339, phase 2)"
+        },
+        {
+          "type": "feature",
+          "text": "Charge-first Stripe collection for domain purchases (#3877 slice 2)"
+        },
+        {
+          "type": "feature",
+          "text": "Native number-provisioning rail + SKU"
+        },
+        {
+          "type": "feature",
+          "text": "Agent Studio authoring UI (Slice 2) — Closes #4241"
+        },
+        {
+          "type": "feature",
+          "text": "Native research + partner-filing rail + SKU"
+        },
+        {
+          "type": "feature",
+          "text": "Guided trademark/DBA/S-corp rail + SKU (Closes #4330)"
+        },
+        {
+          "type": "feature",
+          "text": "Per-agent budget caps + cost attribution + auto-pause (Slice 4) — Closes #4243"
+        },
+        {
+          "type": "feature",
+          "text": "Mastodon adapter (per-instance OAuth) — Closes #4403"
+        },
+        {
+          "type": "feature",
+          "text": "Graduated autonomy dial / PolicyGate (Slice 3) — Closes #4242"
+        },
+        {
+          "type": "feature",
+          "text": "50-state compliance calendar + reminder firing (#4323, #1376)"
+        },
+        {
+          "type": "feature",
+          "text": "Agent memory threads + write-back (Slice 7) — Closes #4246"
+        },
+        {
+          "type": "feature",
+          "text": "Config-plane export with secret scrubbing (Slice 10) — Closes #4249"
+        },
+        {
+          "type": "feature",
+          "text": "Unified agent activity feed — 'What your AI did' (Slice 5) — Closes #4244"
+        },
+        {
+          "type": "feature",
+          "text": "Agent-to-agent delegation & handoff (Slice 8) — Closes #4247"
+        },
+        {
+          "type": "feature",
+          "text": "Agent evaluation / regression harness (Slice 9) — Closes #4248"
+        },
+        {
+          "type": "feature",
+          "text": "Mount the formation surface + compliance-calendar UI"
+        },
+        {
+          "type": "feature",
+          "text": "Track recommendation status (Slice 4 — persistence)"
+        },
+        {
+          "type": "feature",
+          "text": "FE surfaces for the five launch rails + document downloads"
+        },
+        {
+          "type": "feature",
+          "text": "Pre-link a won deal to a public-works project (Closes #4416)"
+        },
+        {
+          "type": "feature",
+          "text": "Paid courses (Stripe checkout) + fix gateway routing that made the LMS UI unreachable"
+        },
+        {
+          "type": "feature",
+          "text": "Certificate templates + downloadable PDF (task #21)"
+        },
+        {
+          "type": "feature",
+          "text": "Make per-state compliance cadence data, not code (Closes #4485)"
+        },
+        {
+          "type": "feature",
+          "text": "Emit canonical events from OAuth sync — Closes #2016"
+        },
+        {
+          "type": "feature",
+          "text": "AI-aided course builder — topic in, draft path out (task #22)"
+        },
+        {
+          "type": "feature",
+          "text": "Port knowledge-graph parity ops before retiring the crate (Refs #4468)"
+        },
+        {
+          "type": "feature",
+          "text": "Activate the 9 proactive agents — real tenant sweep + honest cron check-in (Closes #4549, Closes #4252)"
+        },
+        {
+          "type": "feature",
+          "text": "Tier-based default per-agent budget caps at provision time — follow-up to #4243"
+        },
+        {
+          "type": "feature",
+          "text": "Arm the tenant-level AI spend ceiling for $0-revenue tenants (Slice 0) — Closes #4548"
+        },
+        {
+          "type": "feature",
+          "text": "Expand the agent action-tool catalog (Slice 5) — Closes #4555"
+        },
+        {
+          "type": "feature",
+          "text": "Allow multiple autonomous agents per tenant (Slice 2) — Closes #4551"
+        },
+        {
+          "type": "feature",
+          "text": "Bridge agents to the first-party MCP tool catalog (Slice 12) — Closes #4638"
+        },
+        {
+          "type": "feature",
+          "text": "Auto-fire the repo skills instead of relying on memory"
+        },
+        {
+          "type": "feature",
+          "text": "Discount codes for paid courses (coupons)"
+        },
+        {
+          "type": "feature",
+          "text": "Replace the dead Tantivy read path with Postgres FTS (Closes #2244, Refs #4649)"
+        },
+        {
+          "type": "feature",
+          "text": "Port monitoring-dashboard to unified-ops + close endpoint gaps + test bit-rot fixes"
+        },
+        {
+          "type": "feature",
+          "text": "Incremental Microsoft calendar sync via Graph delta (Closes #2242)"
+        },
+        {
+          "type": "feature",
+          "text": "Offload the light guard jobs to the cloudflare pool"
+        },
+        {
+          "type": "feature",
+          "text": "Wire the prompt-injection guard into the LLM chokepoint, observe-first (Closes #4579)"
+        },
+        {
+          "type": "feature",
+          "text": "Apply discount codes at course checkout"
+        },
+        {
+          "type": "feature",
+          "text": "Author UI for discount codes (Closes #4747)"
+        },
+        {
+          "type": "feature",
+          "text": "Company Profile slice 1 — persist and edit the company facts"
+        },
+        {
+          "type": "feature",
+          "text": "Course-sync ingest — receiving side (epic #4835)"
+        },
+        {
+          "type": "feature",
+          "text": "Company Profile slice 2 — JSONB collection editors"
+        },
+        {
+          "type": "feature",
+          "text": "Company Profile slice 3 — i18n across all six locales"
+        },
+        {
+          "type": "feature",
+          "text": "Choose which mailbox outbound CRM email is sent from (E0.1/E0.4)"
+        },
+        {
+          "type": "feature",
+          "text": "Vertical portfolio control plane foundation"
+        },
+        {
+          "type": "feature",
+          "text": "Shared collections + guest standing-access grants"
+        },
+        {
+          "type": "feature",
+          "text": "Built-in crons must report a work count, not just success"
+        },
+        {
+          "type": "feature",
+          "text": "Record provenance on every stored memory"
+        },
+        {
+          "type": "feature",
+          "text": "Thread provenance through the agent write path"
+        },
+        {
+          "type": "feature",
+          "text": "Run enrolled agent evals on a daily sweep (Closes #5070)"
+        },
+        {
+          "type": "feature",
+          "text": "Let an agent-eval enrollment expire on its own"
+        },
+        {
+          "type": "feature",
+          "text": "Distinguish scheduled runs from manual ones"
+        },
+        {
+          "type": "feature",
+          "text": "Add negative tool assertions (Closes #5148)"
+        },
+        {
+          "type": "feature",
+          "text": "Prompt enrichment + close skill-router coverage gaps"
+        },
+        {
+          "type": "feature",
+          "text": "Project tenant branding into tenant_branding and publish it (#3511 slice 1)"
+        },
+        {
+          "type": "feature",
+          "text": "Bindable tool catalog + picker for Bound tools"
+        },
+        {
+          "type": "feature",
+          "text": "Consume tenant.branding.updated — fixes the customer-portal branding 5xx (#3511 slice 2)"
+        },
+        {
+          "type": "feature",
+          "text": "Register and probe product deployments"
+        },
+        {
+          "type": "feature",
+          "text": "Prove requests came through the gateway — closes the origin-exposure half of #5206"
+        },
+        {
+          "type": "feature",
+          "text": "Collect and propagate the remaining branding fields — emails finally render tenant branding (#3511 slice 3)"
+        },
+        {
+          "type": "feature",
+          "text": "Tenant logo upload end to end (#3511 slice 4)"
+        },
+        {
+          "type": "feature",
+          "text": "Add proposed_tool_arg, the first assertion that reads a proposal"
+        },
+        {
+          "type": "feature",
+          "text": "Vertical portfolio read model (slice 2)"
+        },
+        {
+          "type": "feature",
+          "text": "Read model slice 2 + manifest handshake test + schema-drift apt resilience (relands #5295)"
+        },
+        {
+          "type": "feature",
+          "text": "Per-user email signatures, end to end"
+        },
+        {
+          "type": "feature",
+          "text": "Vertical portfolio control plane UI (slice 4)"
+        },
+        {
+          "type": "feature",
+          "text": "Unsubscribe + suppression list for CRM outbound email (Closes #4894)"
+        },
+        {
+          "type": "feature",
+          "text": "Rich/HTML toggle for the email signature editor"
+        },
+        {
+          "type": "feature",
+          "text": "Add a Runtime Invariants gate that actually executes code"
+        },
+        {
+          "type": "feature",
+          "text": "Guarded portfolio controls — grants, command ledger, dispatch, support reveal (slice 5+6)"
+        },
+        {
+          "type": "feature",
+          "text": "Detect and optionally fix AI writing tells in generated text"
+        },
+        {
+          "type": "feature",
+          "text": "Invoices UX cohesion — server-side search/filter/pagination, ConfirmDialog, retry-on-failure"
+        },
+        {
+          "type": "feature",
+          "text": "Render sanitized HTML in the signature preview (Closes #5444)"
+        },
+        {
+          "type": "feature",
+          "text": "Per-business email signatures with a generic fallback (Closes #5445)"
+        },
+        {
+          "type": "feature",
+          "text": "Generate a signature draft from company profile + brand kit (Closes #5446)"
+        },
+        {
+          "type": "feature",
+          "text": "Reap orphaned cargo target dirs + prune stale deps"
+        },
+        {
+          "type": "feature",
+          "text": "Repeat-sample cases so noise is distinguishable from regression"
+        },
+        {
+          "type": "feature",
+          "text": "Self-serve embeddable quote widget + price matrix (Closes #5473)"
+        },
+        {
+          "type": "feature",
+          "text": "Card on file for a tenant's customers — Connect card_payments, SetupIntent, recorded mandate (Closes #5486)"
+        },
+        {
+          "type": "feature",
+          "text": "Bids UI wired to the shipped crm-bids backend (Closes #4911)"
+        },
+        {
+          "type": "feature",
+          "text": "Regroup the dashboard sidebar and wire 6 unreachable surfaces"
+        },
+        {
+          "type": "feature",
+          "text": "Owner revenue goal + pacing (Closes #5475)"
+        },
+        {
+          "type": "feature",
+          "text": "AI step as a first-class workflow node"
+        },
+        {
+          "type": "feature",
+          "text": "Standalone tracked campaign links (Closes #5477)"
+        },
+        {
+          "type": "feature",
+          "text": "Map-based property measurement (Closes #5474)"
+        },
+        {
+          "type": "feature",
+          "text": "Say when a nav module needs an add-on the tenant lacks (reland of #5563)"
+        },
+        {
+          "type": "feature",
+          "text": "GDPR consent capture, withdrawal and state (Part of #5066)"
+        },
+        {
+          "type": "feature",
+          "text": "Charge orders as Stripe Connect destination charges (Closes #5518)"
+        },
+        {
+          "type": "feature",
+          "text": "Requirements corpus + verify-before-trust fill pipeline"
+        },
+        {
+          "type": "feature",
+          "text": "Native invoicing P2-P5 — collections, Stripe rail, deal link, AI money loop"
+        },
+        {
+          "type": "feature",
+          "text": "Compile and route the timeseries module that shipped dead (#5656 Group A)"
+        },
+        {
+          "type": "feature",
+          "text": "Bulk card charging across due invoices (Closes #5476)"
+        },
+        {
+          "type": "feature",
+          "text": "Tenant-scoped SSE live push, end to end"
+        },
+        {
+          "type": "feature",
+          "text": "Evaluation, governance and prompt routes for the admin console"
+        },
+        {
+          "type": "feature",
+          "text": "Add the agent tooling layer the transcripts show is missing"
+        },
+        {
+          "type": "feature",
+          "text": "Agent observability and client telemetry routes"
+        },
+        {
+          "type": "feature",
+          "text": "Payment read routes for the admin console"
+        },
+        {
+          "type": "feature",
+          "text": "Tenant membership management and tenant detail reads"
+        },
+        {
+          "type": "feature",
+          "text": "Make payroll_admin_grants writable — the delegation path was unreachable (Closes #5681)"
+        },
+        {
+          "type": "feature",
+          "text": "Reconcile seller net against Stripe's transfer and set monthly Connect payouts (Closes #5607)"
+        },
+        {
+          "type": "feature",
+          "text": "Resolve the payout destination from the listing's business"
+        },
+        {
+          "type": "feature",
+          "text": "Persist workflow definitions and make the builder save (Closes #5490)"
+        },
+        {
+          "type": "feature",
+          "text": "Register the budget product, gate it, and put it on sale"
+        },
+        {
+          "type": "feature",
+          "text": "Decrypt-and-forward normalised bank transactions to a per-tenant store"
+        },
+        {
+          "type": "feature",
+          "text": "Re-land the budget product onto main — #5930 merged into a dead branch"
+        },
+        {
+          "type": "feature",
+          "text": "Implement real ACH Direct Debit, backend half"
+        },
+        {
+          "type": "feature",
+          "text": "Wire the ACH bank-account flow in platform-admin (Closes #5750)"
+        },
+        {
+          "type": "feature",
+          "text": "Re-land the bank-transaction store onto main — #5946 merged into a dead branch"
+        },
+        {
+          "type": "feature",
+          "text": "Pricing intelligence - margin drift detection and corrected prices"
+        },
+        {
+          "type": "feature",
+          "text": "Full entity sync, reports, on-demand push + portal page"
+        },
+        {
+          "type": "feature",
+          "text": "Shifts, availability, time-off, worker profiles + conflict detector"
+        },
+        {
+          "type": "feature",
+          "text": "Deal-won-to-cash process templates + runner"
+        },
+        {
+          "type": "feature",
+          "text": "Employee certifications + deterministic scheduling compliance rules"
+        },
+        {
+          "type": "feature",
+          "text": "Deterministic categorisation, tenant rules engine, and review inbox"
+        },
+        {
+          "type": "feature",
+          "text": "Publish vulnerability disclosure path"
+        },
+        {
+          "type": "feature",
+          "text": "Give tenant-authored HTTP tools a real schema and an SSRF guard"
+        },
+        {
+          "type": "feature",
+          "text": "Generalize the per-product quantity-cap ladder"
+        },
+        {
+          "type": "feature",
+          "text": "Monthly four-bucket plan with real actuals, money moves and variance"
+        },
+        {
+          "type": "feature",
+          "text": "Hosted-redirect KBA identity verification"
+        },
+        {
+          "type": "feature",
+          "text": "Author custom HTTP tools from the tool picker"
+        },
+        {
+          "type": "feature",
+          "text": "Allocation-rule engine with measurable bases, statutory rates and an…"
+        },
+        {
+          "type": "feature",
+          "text": "Carry W3C trace context across the RabbitMQ consumer boundary"
+        },
+        {
+          "type": "feature",
+          "text": "Provision and list grants, contracts and lms for standalone purchase"
+        },
+        {
+          "type": "feature",
+          "text": "Close the NBA learning loop with a recommendation-outcome ledger"
+        },
+        {
+          "type": "feature",
+          "text": "Founder goals that weight the NBA planner"
+        },
+        {
+          "type": "feature",
+          "text": "Make the Rust dependency-boundary check a runnable PR gate (baseline ratchet)"
+        },
+        {
+          "type": "feature",
+          "text": "Carry purchased credits forward on an expiry-aware ledger"
+        },
+        {
+          "type": "feature",
+          "text": "Record the inference actor and publish AI audit events"
+        },
+        {
+          "type": "feature",
+          "text": "Home-office profiles, entity-type routing, and worksheet + substantiation export"
+        },
+        {
+          "type": "feature",
+          "text": "Outbound vertical integration events — outbox, contract, emit, relay, entitlements (#3391 steps 1-5)"
+        },
+        {
+          "type": "feature",
+          "text": "Land the outbox relay and entitlement translator #6229 left behind (#3391 steps 4-5)"
+        },
+        {
+          "type": "feature",
+          "text": "Back the /api/v1/ml-serving console with real data (Refs #5656)"
+        },
+        {
+          "type": "feature",
+          "text": "Run pipeline executions instead of leaving them pending forever"
+        },
+        {
+          "type": "feature",
+          "text": "Per-mailbox caps, throttling and warmup for CRM outbound (Part of #4896)"
+        },
+        {
+          "type": "feature",
+          "text": "Warn on the AI axis, and auto top-up inside a required spend cap"
+        },
+        {
+          "type": "feature",
+          "text": "Personal tenant kind, privacy exclusion sweep, and tenant-aware export"
+        },
+        {
+          "type": "feature",
+          "text": "Standardize the document-chunk ANN index on HNSW"
+        },
+        {
+          "type": "feature",
+          "text": "Standardize the memory ANN indexes on HNSW"
+        },
+        {
+          "type": "feature",
+          "text": "Let raw-lapin consumers continue the producer's trace"
+        },
+        {
+          "type": "feature",
+          "text": "The last two #3391 outbound events — restoration and vendors (Closes #6256)"
+        },
+        {
+          "type": "feature",
+          "text": "Test-invoke a tenant HTTP tool before an agent calls it"
+        },
+        {
+          "type": "feature",
+          "text": "Deploy an OTLP trace collector and record it as code"
+        },
+        {
+          "type": "feature",
+          "text": "The owner-context bridge and the personal budget surface"
+        },
+        {
+          "type": "feature",
+          "text": "Export OTel spans from the six remaining macroservices"
+        },
+        {
+          "type": "feature",
+          "text": "Enrol tenants into monitoring, so the sweep has someone to sweep (Closes #6341)"
+        },
+        {
+          "type": "feature",
+          "text": "Emit connection.status_changed on activation"
+        },
+        {
+          "type": "feature",
+          "text": "Enforce a tenant tool's declared parameters_schema server-side"
+        },
+        {
+          "type": "feature",
+          "text": "Gated autonomous voice collections on overdue invoices"
+        },
+        {
+          "type": "feature",
+          "text": "Ambient auto-draft invoices from confirmed time + review panel"
+        },
+        {
+          "type": "feature",
+          "text": "Shift CRUD, publish gate with outbox, week grid UI"
+        },
+        {
+          "type": "feature",
+          "text": "Compliance-gated publish with overrides + week grid UI"
+        },
+        {
+          "type": "feature",
+          "text": "Official-mail intake so a summons can reach the tenant"
+        },
+        {
+          "type": "feature",
+          "text": "Derive the compliance calendar for entities we did not form"
+        },
+        {
+          "type": "feature",
+          "text": "Customer statements of account (portal + PDF + email)"
+        },
+        {
+          "type": "feature",
+          "text": "Standardize the working-memory ANN index on HNSW"
+        },
+        {
+          "type": "feature",
+          "text": "Inject W3C trace context on the alert publish path"
+        },
+        {
+          "type": "feature",
+          "text": "Persist formation artifacts into the document vault"
+        },
+        {
+          "type": "feature",
+          "text": "Instrument and propagate the comms.email.received publish"
+        },
+        {
+          "type": "feature",
+          "text": "Standardize the threat_knowledge ANN index on HNSW"
+        },
+        {
+          "type": "feature",
+          "text": "Encrypted endpoint credentials and an edit path for tenant HTTP tools"
+        },
+        {
+          "type": "feature",
+          "text": "Check a proposed company name against the state registry before payment"
+        },
+        {
+          "type": "feature",
+          "text": "Back /api/v1/compliance/violations with a real table and gateway route (Refs #5656)"
+        },
+        {
+          "type": "feature",
+          "text": "Persist tasks and bids, and scope them to the verified tenant (Refs #5656, #6543)"
+        },
+        {
+          "type": "feature",
+          "text": "Inject W3C trace context on boss orchestration events"
+        },
+        {
+          "type": "feature",
+          "text": "Partner-managed customer relationships — commercial terms + esign agreement"
+        },
+        {
+          "type": "feature",
+          "text": "Agent-proposed campaign pause and budget shift through the approval gate"
+        },
+        {
+          "type": "feature",
+          "text": "Attach producer trace on boss event consumers"
+        },
+        {
+          "type": "feature",
+          "text": "Instrument + inject trace context on the branding and ticket publishers"
+        },
+        {
+          "type": "feature",
+          "text": "Inject trace context on real event publishers"
+        },
+        {
+          "type": "feature",
+          "text": "Dead-letter inspection, replay, and an outbox self-audit"
+        },
+        {
+          "type": "feature",
+          "text": "Inject trace context on the billing + rules publishers #6708 missed"
+        },
+        {
+          "type": "feature",
+          "text": "Inject trace context on the brain/validator executors that feed the boss consumers"
+        },
+        {
+          "type": "feature",
+          "text": "Record compliance filings and derive entity standing"
+        },
+        {
+          "type": "feature",
+          "text": "Sell expedited state filing (ships dark until a partner rail is configured)"
+        },
+        {
+          "type": "feature",
+          "text": "Inject trace context on the last 4 brain publishers"
+        },
+        {
+          "type": "feature",
+          "text": "Distribute sends across the mailbox pool, not just cap each row"
+        },
+        {
+          "type": "feature",
+          "text": "Wire a spam-complaint feed so the breaker's other half can fire"
+        },
+        {
+          "type": "feature",
+          "text": "Check SPF/DKIM/DMARC before a domain's first send"
+        },
+        {
+          "type": "feature",
+          "text": "Pin HiveMinded applied-snapshot reciprocal reads"
+        },
+        {
+          "type": "feature",
+          "text": "Dual-pool DatabaseManager beside sqlx PgPool"
+        },
+        {
+          "type": "feature",
+          "text": "List executions from durable tenant-scoped store"
+        },
+        {
+          "type": "feature",
+          "text": "Compile previously undeclared health module"
+        },
+        {
+          "type": "feature",
+          "text": "Fail-terminal sweeper for stranded pipeline executions"
+        },
+        {
+          "type": "feature",
+          "text": "Compile previously undeclared telemetry module"
+        },
+        {
+          "type": "feature",
+          "text": "DSAR search and erase crm_contacts and crm_companies"
+        },
+        {
+          "type": "feature",
+          "text": "Switch the trace collector to durable storage"
+        },
+        {
+          "type": "feature",
+          "text": "Cover every nav module and queue writes for approval"
+        },
+        {
+          "type": "feature",
+          "text": "Retrieve SOPs, create tickets, raise research caps"
+        },
+        {
+          "type": "feature",
+          "text": "People research + Ask SaaSy web_search on Exa"
+        },
+        {
+          "type": "feature",
+          "text": "Connected-systems capability registry"
+        },
+        {
+          "type": "feature",
+          "text": "HiveMinded inventory projection"
+        },
+        {
+          "type": "feature",
+          "text": "Capability routing resolver"
+        },
+        {
+          "type": "feature",
+          "text": "Deliver meeting-prep brief ~30m before start"
+        },
+        {
+          "type": "feature",
+          "text": "Detect and repair outbound drift against HiveMinded"
+        },
+        {
+          "type": "feature",
+          "text": "Pass through entitlement period_end/status"
+        },
+        {
+          "type": "feature",
+          "text": "Retention purge for archived datasets"
+        },
+        {
+          "type": "feature",
+          "text": "CalendarProvider trait over live oauth sync"
+        },
+        {
+          "type": "feature",
+          "text": "Connected_systems sync run records"
+        },
+        {
+          "type": "feature",
+          "text": "CollaborationChannel trait + Slack adapter"
+        },
+        {
+          "type": "feature",
+          "text": "HiveMinded vertical health metrics"
+        },
+        {
+          "type": "feature",
+          "text": "Report oauth sweeps to connected_systems sync-runs"
+        },
+        {
+          "type": "feature",
+          "text": "MeetingProvider trait over live Graph transcripts"
+        },
+        {
+          "type": "feature",
+          "text": "Render report exports as PDF"
+        },
+        {
+          "type": "feature",
+          "text": "Back the drift-detection console with real tables and a real PSI computation (Refs #5656)"
+        },
+        {
+          "type": "feature",
+          "text": "Inbound mailbox adapters over live Gmail/Graph sync"
+        },
+        {
+          "type": "feature",
+          "text": "ConnectedFilesProvider + Graph OneDrive list"
+        },
+        {
+          "type": "feature",
+          "text": "Write entity_standing on state change, read it in the compliance health scorer"
+        },
+        {
+          "type": "feature",
+          "text": "Global communication timeline"
+        },
+        {
+          "type": "feature",
+          "text": "Render report exports as XLSX"
+        },
+        {
+          "type": "feature",
+          "text": "Ingest meeting transcripts into knowledge store"
+        },
+        {
+          "type": "feature",
+          "text": "HTTP trace propagation pilot — brain->business hop"
+        },
+        {
+          "type": "feature",
+          "text": "Download + ingest connected Drive files"
+        },
+        {
+          "type": "feature",
+          "text": "Teams inbound activity → agent"
+        },
+        {
+          "type": "feature",
+          "text": "Enable Files purpose and Drive ingest sweep"
+        },
+        {
+          "type": "feature",
+          "text": "Install inbound HTTP continue_trace on deployed routers"
+        },
+        {
+          "type": "feature",
+          "text": "Repair drifted aggregates, and wire the reconciler up"
+        },
+        {
+          "type": "feature",
+          "text": "Persist originating trace context on vertical outbox"
+        },
+        {
+          "type": "feature",
+          "text": "Persist originating trace context on billing outbox"
+        },
+        {
+          "type": "feature",
+          "text": "Wire workflow-nlp engine into NL workflow creation"
+        },
+        {
+          "type": "feature",
+          "text": "Publish machine-readable API surface + structured edge errors"
+        },
+        {
+          "type": "feature",
+          "text": "Agentic readiness — trust layer, event contracts, bootstrap wedge, security ratchets"
+        },
+        {
+          "type": "feature",
+          "text": "Google Drive list/download for Files ingest"
+        },
+        {
+          "type": "feature",
+          "text": "Daily AI inbox triage digest"
+        },
+        {
+          "type": "feature",
+          "text": "Serve remaining ML console GETs from recorded predictions"
+        },
+        {
+          "type": "feature",
+          "text": "Inject W3C traceparent on brain outbound HTTP"
+        },
+        {
+          "type": "feature",
+          "text": "Watch Stripe, Salesforce, and QBO API pins"
+        },
+        {
+          "type": "feature",
+          "text": "AI crawler purpose split on public site render"
+        },
+        {
+          "type": "feature",
+          "text": "Run Isolation Forest and IQR on the ops heartbeat"
+        },
+        {
+          "type": "feature",
+          "text": "First-party status.hellosaasy.ai worker"
+        },
+        {
+          "type": "feature",
+          "text": "Persist cited FitEvidence criteria on scores"
+        },
+        {
+          "type": "feature",
+          "text": "Port weighted deal scoring into negotiation tools"
+        },
+        {
+          "type": "feature",
+          "text": "Community demand inbox from Reddit and HN"
+        },
+        {
+          "type": "feature",
+          "text": "Persist quote-gated Ask SaaSy decisions"
+        },
+        {
+          "type": "feature",
+          "text": "Inject brand voice and north-star into Ask SaaSy"
+        },
+        {
+          "type": "feature",
+          "text": "Put Needs you on home before the widget pile"
+        },
+        {
+          "type": "feature",
+          "text": "Consult cfo, coo, and cos in one Executive voice"
+        },
+        {
+          "type": "feature",
+          "text": "Persist Calendly accounts on OAuth callback"
+        },
+        {
+          "type": "feature",
+          "text": "Run morning and eod cadence onto home"
+        },
+        {
+          "type": "feature",
+          "text": "Generate a brand-kit logo in Name & Brand Studio"
+        },
+        {
+          "type": "feature",
+          "text": "Route exec DMs and mentions to Ask SaaSy"
+        },
+        {
+          "type": "feature",
+          "text": "Chase stalled approvals onto Needs you"
+        },
+        {
+          "type": "feature",
+          "text": "Sync filing status into business facts"
+        },
+        {
+          "type": "feature",
+          "text": "Persist Canva accounts on OAuth callback"
+        },
+        {
+          "type": "feature",
+          "text": "Persist DocuSign accounts on OAuth callback"
+        },
+        {
+          "type": "feature",
+          "text": "Seed Ask SaaSy from a Needs you row"
+        },
+        {
+          "type": "feature",
+          "text": "Propose form values on company-profile"
+        },
+        {
+          "type": "feature",
+          "text": "Gate cadence and nudge through autonomy policies"
+        },
+        {
+          "type": "feature",
+          "text": "Ship board_prep investor_update crisis_comms"
+        },
+        {
+          "type": "feature",
+          "text": "Judge Ask SaaSy persona and routing"
+        },
+        {
+          "type": "feature",
+          "text": "Salvage PayPal HTTP client from billing-core"
+        },
+        {
+          "type": "feature",
+          "text": "Committee review on high-stakes drafts"
+        },
+        {
+          "type": "feature",
+          "text": "RSS and page watchlist into Needs you"
+        },
+        {
+          "type": "feature",
+          "text": "Seed MBA and failure RAG for Ask SaaSy"
+        },
+        {
+          "type": "feature",
+          "text": "Switch the live client on briefing and Ask SaaSy"
+        },
+        {
+          "type": "feature",
+          "text": "Cap tenant-supplied tool egress"
+        },
+        {
+          "type": "feature",
+          "text": "Embed report summary charts in PDF downloads"
+        },
+        {
+          "type": "feature",
+          "text": "One-click deal to delivery-project handoff"
+        },
+        {
+          "type": "feature",
+          "text": "Emit next-best-actions into the proactive store"
+        },
+        {
+          "type": "feature",
+          "text": "Enforce action policy on inbound MCP tools/call"
+        },
+        {
+          "type": "feature",
+          "text": "Show rotting deals on the pipeline"
+        },
+        {
+          "type": "feature",
+          "text": "Scan service config for secrets, weak TLS, and debug logs"
+        },
+        {
+          "type": "feature",
+          "text": "Port connector negotiation into UIS"
+        },
+        {
+          "type": "feature",
+          "text": "Salvage report schedules into Report Builder"
+        },
+        {
+          "type": "feature",
+          "text": "Skip FICA for contract workers"
+        },
+        {
+          "type": "feature",
+          "text": "Enforce pipeline stage gates"
+        },
+        {
+          "type": "feature",
+          "text": "Put calling and SMS on the record"
+        },
+        {
+          "type": "feature",
+          "text": "Rightsizing and scale-out advice from posted metrics"
+        },
+        {
+          "type": "feature",
+          "text": "Share model lifecycle event catalog and emit on register"
+        },
+        {
+          "type": "feature",
+          "text": "Salvage hierarchical settings cascade"
+        },
+        {
+          "type": "feature",
+          "text": "Assess rollback readiness from posted deploy health"
+        },
+        {
+          "type": "feature",
+          "text": "Salvage Skeptical Analyst metric validation into the validator"
+        },
+        {
+          "type": "improvement",
+          "text": "Shared spend-metering seam for non-streaming LLM calls (fixes a hard-cap bypass, refs #3926)"
+        },
+        {
+          "type": "improvement",
+          "text": "One shared plan-name→tier mapping, and fix suffixed plan names (Closes #4629)"
+        },
+        {
+          "type": "improvement",
+          "text": "One ConnectedMailboxProvider trait behind the email cron's five provider branches (E0.2)"
+        },
+        {
+          "type": "improvement",
+          "text": "Collapse the two alert-preset modules to one definition (Closes #5172)"
+        },
+        {
+          "type": "improvement",
+          "text": "Promote consumer_supervisor to a shared crate (Closes #5396)"
+        },
+        {
+          "type": "improvement",
+          "text": "Remove the dead marketplace.transactions CRUD path (Closes #5485)"
+        },
+        {
+          "type": "improvement",
+          "text": "Remove the dead product CRUD and event-sourced aggregate (Closes #5594)"
+        },
+        {
+          "type": "improvement",
+          "text": "Remove the third dead marketplace product/transaction model copy (Closes #5605)"
+        },
+        {
+          "type": "improvement",
+          "text": "Remove eight unreferenced pub types from models.rs (Closes #5616)"
+        },
+        {
+          "type": "improvement",
+          "text": "Delete the Rust schema path, leaving migrations as the only definition"
+        },
+        {
+          "type": "improvement",
+          "text": "Retire the duplicate plan-claim catalogue"
+        },
+        {
+          "type": "improvement",
+          "text": "Unify OAuth provider maps into one catalog"
+        },
+        {
+          "type": "fix",
+          "text": "Link business_profiles to dashboard businesses id — per-business journeys resolve (Closes #3886)"
+        },
+        {
+          "type": "fix",
+          "text": "Wire transactions product + item webhook + auth bypass for bank-feed sync"
+        },
+        {
+          "type": "fix",
+          "text": "Self-heal Grants nav hidden by stale industry auto-hide baseline"
+        },
+        {
+          "type": "fix",
+          "text": "Enrich ingest with descriptions/eligibility/award amounts — fixes search + suggested + awards (Closes #4160)"
+        },
+        {
+          "type": "fix",
+          "text": "Skip in-build typecheck in Docker deploys (OOM at 'Running TypeScript')"
+        },
+        {
+          "type": "fix",
+          "text": "Unblock frontend-gate — stale AI-tab test + funding-pipeline lint errors"
+        },
+        {
+          "type": "fix",
+          "text": "Rename pipeline table to avoid collision with legacy funding_opportunities (unblocks migration chain)"
+        },
+        {
+          "type": "fix",
+          "text": "Restore cron_scheduler closers dropped by the #4129 merge (main is unbuildable)"
+        },
+        {
+          "type": "fix",
+          "text": "Real formation nexus + lifecycle; delete dead CQRS billing stack (addresses #3929, #3936)"
+        },
+        {
+          "type": "fix",
+          "text": "Unbreak main — close reconcile_stripe cron JobSpec delimiters"
+        },
+        {
+          "type": "fix",
+          "text": "Pass session.business_id in chunked-upload finalize (main-red repair)"
+        },
+        {
+          "type": "fix",
+          "text": "Wire NIFA/NSF priority pass + D1 watch-eval into the daily ingest cron"
+        },
+        {
+          "type": "fix",
+          "text": "Comped/unlimited plan no longer blocked by message limit (-1 sentinel)"
+        },
+        {
+          "type": "fix",
+          "text": "Create billing.usage_records — usage summary + video-brief metering write real rows"
+        },
+        {
+          "type": "fix",
+          "text": "Cap next build workers to stop remote-builder OOM"
+        },
+        {
+          "type": "fix",
+          "text": "Make a registered 2nd vertical reachable — auth by credential, link+list on registry"
+        },
+        {
+          "type": "fix",
+          "text": "Surface ingest_email_attachments per-item errors (dead-but-green ingest)"
+        },
+        {
+          "type": "fix",
+          "text": "Enable RLS + tenant-isolation policy on document_inbox"
+        },
+        {
+          "type": "fix",
+          "text": "Set RLS tenant context in content-document project-link consumer (Closes #4216)"
+        },
+        {
+          "type": "fix",
+          "text": "Reduce webpack compile-phase build memory (remote-builder OOM follow-up)"
+        },
+        {
+          "type": "fix",
+          "text": "CA deposit cadence from stored schedule, not single-run PIT (Closes #4189)"
+        },
+        {
+          "type": "fix",
+          "text": "Update ai_routing_repo_test for upsert's 4th shared_model arg"
+        },
+        {
+          "type": "fix",
+          "text": "Backend-compile-gate always reports on PRs — docs-only PRs were unmergeable"
+        },
+        {
+          "type": "fix",
+          "text": "Dashboard review findings — usage-report scoping was a silent no-op, MRR coherence, revenue_mtd wire type"
+        },
+        {
+          "type": "fix",
+          "text": "Grandfather pre-existing migration-version collisions in baseline (green the migrations-validation gate)"
+        },
+        {
+          "type": "fix",
+          "text": "Single-use interactive refresh + revocable MCP session anchor (Closes #4100, Closes #4099)"
+        },
+        {
+          "type": "fix",
+          "text": "Clear 5 no-console warnings blocking frontend-gate on all frontend PRs"
+        },
+        {
+          "type": "fix",
+          "text": "Make invoice numbers collision-proof within a second"
+        },
+        {
+          "type": "fix",
+          "text": "--all-features compile (#4232) + deploy: --image freshness gate"
+        },
+        {
+          "type": "fix",
+          "text": "Default ApiKeyConfig to in-memory store — stop guaranteed boot error on default config"
+        },
+        {
+          "type": "fix",
+          "text": "Internal token-authed upload route — attachment ingest can store documents"
+        },
+        {
+          "type": "fix",
+          "text": "Restore autopilot-cron to workflow-service manual BUILD_ARGS"
+        },
+        {
+          "type": "fix",
+          "text": "Enforce storage quota on chunked upload path (Closes #4311)"
+        },
+        {
+          "type": "fix",
+          "text": "Advertise real param schemas for builtin action tools so drafts have bodies (#4267 follow-up)"
+        },
+        {
+          "type": "fix",
+          "text": "Scope device-sync tokens to `sync`, never mcp:write (Closes #4336)"
+        },
+        {
+          "type": "fix",
+          "text": "OAuth scope + WSL dev fixes stranded from B2 (refs #4312)"
+        },
+        {
+          "type": "fix",
+          "text": "Draft the follow-up queue in small batches to stay under the LLM timeout (#4267 follow-up)"
+        },
+        {
+          "type": "fix",
+          "text": "Sync-appropriate consent copy for the desktop sync client (Closes #4336)"
+        },
+        {
+          "type": "fix",
+          "text": "Persistent per-EFIN daily MeF SubmissionId counter (Closes #4360)"
+        },
+        {
+          "type": "fix",
+          "text": "Verify-then-activate MFA enrollment — Closes #4380"
+        },
+        {
+          "type": "fix",
+          "text": "Scope RLS to path tenant for service-to-service callers"
+        },
+        {
+          "type": "fix",
+          "text": "Correct failover cost attribution + provider-specific model precedence (Closes #4377 follow-ups)"
+        },
+        {
+          "type": "fix",
+          "text": "Throttle MFA verification with the shared account lockout — Closes #4401"
+        },
+        {
+          "type": "fix",
+          "text": "Repair unified-operations-service compilation broken by #4348"
+        },
+        {
+          "type": "fix",
+          "text": "Grant saasy_app default privileges on ai_experiments (Closes #3823)"
+        },
+        {
+          "type": "fix",
+          "text": "Tenant can write into the GLOBAL LMS catalog — add WITH CHECK to the 4 catalog policies (Closes #4456)"
+        },
+        {
+          "type": "fix",
+          "text": "Enable RLS on crm_document_settings + crm_document_categories (Closes #4227)"
+        },
+        {
+          "type": "fix",
+          "text": "Reclaim per-run cargo dirs by build liveness, not age (Closes #4462)"
+        },
+        {
+          "type": "fix",
+          "text": "Remove no-op tenant-GUC call that masked the real isolation predicate (Refs #1579)"
+        },
+        {
+          "type": "fix",
+          "text": "Reserve a runner for deploys (saasy-business deploys starving 0/30)"
+        },
+        {
+          "type": "fix",
+          "text": "Repair four real defects in the formation wizard"
+        },
+        {
+          "type": "fix",
+          "text": "Repair brain-service test build broken by S7+S8 semantic merge conflict"
+        },
+        {
+          "type": "fix",
+          "text": "Type StructuredLogger data as unknown, drop all any (Closes #4421)"
+        },
+        {
+          "type": "fix",
+          "text": "Renumber duplicate migration versions 311 and 317 (Closes #4490)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop routing /admin, /internal, /platform, /metrics, /debug to the retired platform-gateway (Closes #4471)"
+        },
+        {
+          "type": "fix",
+          "text": "Bind :: not 0.0.0.0 in fly.toml so .internal/6PN works (Closes #4262)"
+        },
+        {
+          "type": "fix",
+          "text": "Gate the LMS authoring surface behind an instructor/admin role (Closes #4443)"
+        },
+        {
+          "type": "fix",
+          "text": "Send folder_id on document upload (Closes #4004)"
+        },
+        {
+          "type": "fix",
+          "text": "Run funding_digest per-tenant writes under scope_tenant (Closes #4447)"
+        },
+        {
+          "type": "fix",
+          "text": "Use clamp() in admin-pool sizing to unblock -D warnings (Closes #4012)"
+        },
+        {
+          "type": "fix",
+          "text": "Route non-tenant playbook CRUD to operations-service (Closes #4040)"
+        },
+        {
+          "type": "fix",
+          "text": "Gate optional brain-common + drain scheduler before closing pools (Closes #4458, Closes #4472)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop TenantSettings silently dropping unknown settings keys (Closes #3702)"
+        },
+        {
+          "type": "fix",
+          "text": "Scope RLS to the path tenant for service-to-service callers in brain/integration/workflow (Closes #4367)"
+        },
+        {
+          "type": "fix",
+          "text": "Gate scheduler tests on the feature their import needs (Closes #4518)"
+        },
+        {
+          "type": "fix",
+          "text": "Bound fail-closed billing usage lookups with a shared timeout client (Closes #4052)"
+        },
+        {
+          "type": "fix",
+          "text": "Enable RLS on business_certifications + grant_org_profiles (Refs #4436)"
+        },
+        {
+          "type": "fix",
+          "text": "Enable RLS on tenant_autopilot (Closes #4436)"
+        },
+        {
+          "type": "fix",
+          "text": "Point four test fixtures at the real 015 migration filename (Closes #4168)"
+        },
+        {
+          "type": "fix",
+          "text": "Pin Rust builder images to exact rust-toolchain.toml version (Closes #4257)"
+        },
+        {
+          "type": "fix",
+          "text": "Pin the Rust builder the cargo-chef generator emits (Refs #4257)"
+        },
+        {
+          "type": "fix",
+          "text": "Bill project-converted invoices to the project's contact (Closes #4382)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop reclaim-buildbox deleting live CARGO_HOME and worktree targets"
+        },
+        {
+          "type": "fix",
+          "text": "Point built-in scheduled jobs at reachable peer services (Closes #4469)"
+        },
+        {
+          "type": "fix",
+          "text": "Persist cron last-run state so redeploys stop resetting timers (Closes #4470)"
+        },
+        {
+          "type": "fix",
+          "text": "Write integration_sync_history + per-connection Sync now (E0.5/E0.7)"
+        },
+        {
+          "type": "fix",
+          "text": "Route deploys at a live runner label + unassigned-deploy watchdog (Closes #3514)"
+        },
+        {
+          "type": "fix",
+          "text": "Back-fill tenant_intel_monitoring RLS into the migration chain (Closes #4524)"
+        },
+        {
+          "type": "fix",
+          "text": "Correct the event-store RLS blueprint — GUC name, fail-closed, WITH CHECK (Closes #1579)"
+        },
+        {
+          "type": "fix",
+          "text": "Drop the dead-end \"set a password from Profile\" copy (Closes #4154)"
+        },
+        {
+          "type": "fix",
+          "text": "Fail Ask SaaSy chat over to a second vendor on billing/auth failure (Closes #4515)"
+        },
+        {
+          "type": "fix",
+          "text": "Remove the never-emitting usage.storage delta publisher (Closes #4172)"
+        },
+        {
+          "type": "fix",
+          "text": "Notify the account email when a password is set on an SSO-only account (Closes #4313)"
+        },
+        {
+          "type": "fix",
+          "text": "Meter retained document-version bytes in storage usage (Closes #4601)"
+        },
+        {
+          "type": "fix",
+          "text": "Put every business-service AI feature on the vendor-agnostic provider chain"
+        },
+        {
+          "type": "fix",
+          "text": "Publish content.document.created on chunked upload completion (Closes #4600)"
+        },
+        {
+          "type": "fix",
+          "text": "Route checklist reminders through the authenticated internal notification path (Closes #4611)"
+        },
+        {
+          "type": "fix",
+          "text": "Map three bundled products plan assembly silently dropped (Closes #4072)"
+        },
+        {
+          "type": "fix",
+          "text": "Reject credential-free svc_* service tokens on every macroservice (Closes #4623)"
+        },
+        {
+          "type": "fix",
+          "text": "Constant-time internal-service secret compare + drop 4 dead AuthConfig security toggles (refs #4566, #4623)"
+        },
+        {
+          "type": "fix",
+          "text": "Route business /recommendations to business-service"
+        },
+        {
+          "type": "fix",
+          "text": "Durable tenant-scoped agent state so findings survive restart (Closes #4588)"
+        },
+        {
+          "type": "fix",
+          "text": "Wire the LLM metering guard and fix its two false-result bugs"
+        },
+        {
+          "type": "fix",
+          "text": "Declare the DLX as topic so the lifecycle consumer can start"
+        },
+        {
+          "type": "fix",
+          "text": "Run the RLS self-test that never ran, and gate tenant isolation on PRs"
+        },
+        {
+          "type": "fix",
+          "text": "Reconcile customer invoice payments from Stripe checkout — stop dunning paid customers and fabricating subscriptions (Closes #4651)"
+        },
+        {
+          "type": "fix",
+          "text": "Require auth + principal-scoped tenant in unified-proactive-service (Closes #4569)"
+        },
+        {
+          "type": "fix",
+          "text": "Route /social to IntegrationService + audit every tenant prefix against the allowlist (Closes #4652)"
+        },
+        {
+          "type": "fix",
+          "text": "Alert when a vendor fails over instead of degrading silently (refs #4515)"
+        },
+        {
+          "type": "fix",
+          "text": "Make the runner broker prove a container booted before claiming success"
+        },
+        {
+          "type": "fix",
+          "text": "Builtin HTTP crons can authenticate, and a failed dispatch no longer reports healthy (Closes #4653)"
+        },
+        {
+          "type": "fix",
+          "text": "Surface in-stream provider error frames so failover can see them"
+        },
+        {
+          "type": "fix",
+          "text": "Stop leaking raw error detail in 500 bodies — turns the error-sanitization gate green"
+        },
+        {
+          "type": "fix",
+          "text": "Drain the PENDING_RLS_AUDIT quarantine — all six sweeps onto tenant-scoped connections (Closes #4506)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop fabricating RAG chunk document_ids that produce unresolvable citations (Closes #4661)"
+        },
+        {
+          "type": "fix",
+          "text": "Close six gaps that stop provider failover from actually firing"
+        },
+        {
+          "type": "fix",
+          "text": "Tenant-scope mark_paid, post checkout payments to the ledger, stop fabricating plan_ids (Closes #4678, #4679, #4660)"
+        },
+        {
+          "type": "fix",
+          "text": "Three services can't build images — Dockerfiles still list deleted crates"
+        },
+        {
+          "type": "fix",
+          "text": "Dispatch advisory playbooks by key instead of dropping every non-friday_brief trigger"
+        },
+        {
+          "type": "fix",
+          "text": "Fail closed on unconfigured web-to-lead secret (Closes #4567)"
+        },
+        {
+          "type": "fix",
+          "text": "Bind tenant to the authenticated principal on /run and boss (Closes #4568)"
+        },
+        {
+          "type": "fix",
+          "text": "Bind customer.health.declined so the at-risk retention flow actually fires"
+        },
+        {
+          "type": "fix",
+          "text": "Exclude api/leads from auth middleware (public lead-alert ingest)"
+        },
+        {
+          "type": "fix",
+          "text": "Sanitize agent send_email body_html at ingest so reviewed == sent (Closes #4577)"
+        },
+        {
+          "type": "fix",
+          "text": "Fly-deploy.sh must build tenant-portal locally, like its workflow does (#4365 follow-up)"
+        },
+        {
+          "type": "fix",
+          "text": "Widen the error-sanitization guard so variable-status leaks cannot pass (Closes #4694)"
+        },
+        {
+          "type": "fix",
+          "text": "Close certificate_pdf handler — main does not compile (#4537 merged red)"
+        },
+        {
+          "type": "fix",
+          "text": "Publish and consume customer.health.recovered so at-risk facts clear (Closes #4704)"
+        },
+        {
+          "type": "fix",
+          "text": "Require a positively-identified service principal on x-service-token (Closes #4625)"
+        },
+        {
+          "type": "fix",
+          "text": "Put compliance + funding AI on the vendor-agnostic chain (Closes #4726)"
+        },
+        {
+          "type": "fix",
+          "text": "Resolve three tenant prefix collisions and detect them in CI (Closes #4671, #4672)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop a failed validation reporting as PartiallyMet, and unblock -D warnings"
+        },
+        {
+          "type": "fix",
+          "text": "Make payment recording atomic and tenant-scope the subscription lifecycle (Closes #4693, #4695)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop the worktree guard firing on prose, and self-test the hooks"
+        },
+        {
+          "type": "fix",
+          "text": "Let the podman shim build off the 9p mount, and document the push limit"
+        },
+        {
+          "type": "fix",
+          "text": "Write NULL, not a nil uuid, when a sequence step has no template (Closes #4711)"
+        },
+        {
+          "type": "fix",
+          "text": "Keep the deploy-runner reservation from silently reverting (Closes #4748)"
+        },
+        {
+          "type": "fix",
+          "text": "Reformat-cargo-fmt — restore GitHub-hosted runner + stop shell-interpolating the dispatch input (Closes #4716)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop model output beaconing out via markdown images (Closes #4578)"
+        },
+        {
+          "type": "fix",
+          "text": "Bind agent email to tenant records, sanitize body HTML, scope marketplace listings (Closes #4574 #4576 #4577 #4571)"
+        },
+        {
+          "type": "fix",
+          "text": "Teach the metering guard the shared spend seam, and anchor it"
+        },
+        {
+          "type": "fix",
+          "text": "Baseline the unified-workflow-service 20260725 migration collision"
+        },
+        {
+          "type": "fix",
+          "text": "Billing class + CSRF exemption must come from an authenticated service principal (Closes #4731)"
+        },
+        {
+          "type": "fix",
+          "text": "Strip x-service-token from inbound client requests (refs #4582)"
+        },
+        {
+          "type": "fix",
+          "text": "Outcome-ledger publisher fails closed when its token cannot be minted (Closes #4733)"
+        },
+        {
+          "type": "fix",
+          "text": "Cron dispatcher mints a signed service JWT instead of the legacy `svc_*` literal (Closes #4762)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop the runner swap script destroying per-runner labels"
+        },
+        {
+          "type": "fix",
+          "text": "Green the LLM-metering gate — two SpendMeter-seam call sites are metered, not missing"
+        },
+        {
+          "type": "fix",
+          "text": "Admin-gate the tenant AI-configuration writes (refs #4575)"
+        },
+        {
+          "type": "fix",
+          "text": "Repair 3 unit tests that had not run in months (Closes #4816)"
+        },
+        {
+          "type": "fix",
+          "text": "Accept the platform's signed service JWT on x-service-token (Closes #4806)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop handing an unverified phone caller the owner's tool set (Closes #4572)"
+        },
+        {
+          "type": "fix",
+          "text": "Gate internal_purchase_request behind content+lms like its call sites (main-red repair)"
+        },
+        {
+          "type": "fix",
+          "text": "SecurityEventProcessor deadlocks on its first event (Closes #4831)"
+        },
+        {
+          "type": "fix",
+          "text": "One active claim per inbound voice number, resolver fails closed (Closes #4573)"
+        },
+        {
+          "type": "fix",
+          "text": "Tenant-scope both endpoints of a task dependency (Closes #4560)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop the webhook rate limiter capping low budgets at 1/sec (Closes #4839)"
+        },
+        {
+          "type": "fix",
+          "text": "Restore the frontend-gate — 7 curly errors block every FE PR"
+        },
+        {
+          "type": "fix",
+          "text": "Make Dependabot and the audit gate actually run (Closes #5032 blocker)"
+        },
+        {
+          "type": "fix",
+          "text": "Preserve Failed AI state, wire MigrationPriority, remove lock/regex unwraps (Closes #5047, Closes #5049, Closes #5051)"
+        },
+        {
+          "type": "fix",
+          "text": "Correlate retry events, activate alert evaluation, replace vacuous tests (Closes #5054, Closes #5055, Closes #5056)"
+        },
+        {
+          "type": "fix",
+          "text": "Make Selective invalidation real, close the hit-ratio feedback loop (Closes #5034, Closes #5057)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop four constructors accepting an event_type they discard (Closes #5053)"
+        },
+        {
+          "type": "fix",
+          "text": "Scope the budget variance report to the path tenant (Closes #5060)"
+        },
+        {
+          "type": "fix",
+          "text": "Split dependabot groups by risk so majors do not land all-or-nothing"
+        },
+        {
+          "type": "fix",
+          "text": "Stop showing customers a Marketplace entry that cannot load"
+        },
+        {
+          "type": "fix",
+          "text": "Retire the un-tenanted budget variance route (Closes #5096)"
+        },
+        {
+          "type": "fix",
+          "text": "Make the error-sanitization guard fail loudly when it cannot run (Closes #4818)"
+        },
+        {
+          "type": "fix",
+          "text": "Gate the NBA facts tests on `formation` so default/crm test builds compile (Closes #5103)"
+        },
+        {
+          "type": "fix",
+          "text": "Grant id-token to the AI review job so it can actually run"
+        },
+        {
+          "type": "fix",
+          "text": "The AI reviewer had no tool to post its review"
+        },
+        {
+          "type": "fix",
+          "text": "Create the tenant_branding table (Closes #3511)"
+        },
+        {
+          "type": "fix",
+          "text": "Remove the now-orphaned un-tenanted variance method (follow-on to #5111)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop lint-staged reaching the shared stash, and detect it if anything else does (Closes #5151)"
+        },
+        {
+          "type": "fix",
+          "text": "Decay selective-invalidation access counts so Selective stays selective (Closes #5087)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop the event registry dying permanently on a poisoned lock"
+        },
+        {
+          "type": "fix",
+          "text": "Actually parse RabbitMQ x-death headers in the dead-letter processor (Closes #5164)"
+        },
+        {
+          "type": "fix",
+          "text": "Apply role filtering in CommandPalette and test the real navigation (Closes #5100)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop RetryResult::into_result panicking on a cancelled retry (Closes #5086)"
+        },
+        {
+          "type": "fix",
+          "text": "Typecheck main after merge, and unbreak dot-path worktree lint (Closes #5174)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop the RabbitMQ publisher tests aborting the whole test binary (Closes #5167)"
+        },
+        {
+          "type": "fix",
+          "text": "Remove mem::zeroed UB from MockQueryHandler's shipped library API (Closes #5168)"
+        },
+        {
+          "type": "fix",
+          "text": "Refresh the collision baseline, unbreaking main (Closes #5187)"
+        },
+        {
+          "type": "fix",
+          "text": "Enforce unused = \"deny\" and fix the three stubs it was hiding (Closes #5090)"
+        },
+        {
+          "type": "fix",
+          "text": "Ref-key the tenant-portal deploy concurrency group"
+        },
+        {
+          "type": "fix",
+          "text": "Ref-key every fly-deploy concurrency group"
+        },
+        {
+          "type": "fix",
+          "text": "Make deploy-watchdog detect the failure it exists for (Closes #5217)"
+        },
+        {
+          "type": "fix",
+          "text": "Resolve the next free version against open PRs, not just main (Closes #5192)"
+        },
+        {
+          "type": "fix",
+          "text": "Close the two auth gaps found in the bypass_path audit"
+        },
+        {
+          "type": "fix",
+          "text": "Run deploy-watchdog on a GitHub-hosted runner, not the cloudflare pool"
+        },
+        {
+          "type": "fix",
+          "text": "Stop deploy-watchdog cancelling its own runs"
+        },
+        {
+          "type": "fix",
+          "text": "Apply CONCURRENTLY migrations outside a transaction (Closes #5227)"
+        },
+        {
+          "type": "fix",
+          "text": "Actually request publisher confirms before relying on them (Closes #5225)"
+        },
+        {
+          "type": "fix",
+          "text": "Let a migration that owns its transaction keep it (Closes #5216)"
+        },
+        {
+          "type": "fix",
+          "text": "Close 5 Critical pre-GA findings — unauthenticated roster dump, cross-tenant audit reads, session authz, x-tenant-id spoofing, plan self-grant"
+        },
+        {
+          "type": "fix",
+          "text": "Refuse an unbalanced BEGIN rather than trusting psql's EOF"
+        },
+        {
+          "type": "fix",
+          "text": "Stop deploy-watchdog failing on cancelled deploys of up-to-date apps"
+        },
+        {
+          "type": "fix",
+          "text": "Derive Clone on the tenant factory, unbreak one example, de-await sync accessors (refs #5037)"
+        },
+        {
+          "type": "fix",
+          "text": "Admin-gate tenant-tool entitlement + agent-API token mint (Closes #4575)"
+        },
+        {
+          "type": "fix",
+          "text": "Close the get_session oracle left by #5234; land min_machines_running=2 and the third applier branch"
+        },
+        {
+          "type": "fix",
+          "text": "Make the branding read deterministic and visible to schema-drift (#3511 slice 5)"
+        },
+        {
+          "type": "fix",
+          "text": "Mark tenants.tier as NOT MAINTAINED (Closes #5243)"
+        },
+        {
+          "type": "fix",
+          "text": "Day-align the eval due cutoff so a late run stops skipping a day"
+        },
+        {
+          "type": "fix",
+          "text": "Unrot 21 of 50 lib-test errors, isolating the blocker to one file (refs #5186)"
+        },
+        {
+          "type": "fix",
+          "text": "Repair RememberBody test initializers broken on main"
+        },
+        {
+          "type": "fix",
+          "text": "Stop leaking raw errors from the unauthenticated auth surface (refs #5210)"
+        },
+        {
+          "type": "fix",
+          "text": "Scan every root for both leak classes, closing the last blind spots (refs #5210)"
+        },
+        {
+          "type": "fix",
+          "text": "Day-align watchlist + intel scheduler cadence (Closes #5248)"
+        },
+        {
+          "type": "fix",
+          "text": "Route every tenant-settings writer through the branding projection (#3511 residual 1)"
+        },
+        {
+          "type": "fix",
+          "text": "Probe Anthropic with a live model; a 404 is not a bad key"
+        },
+        {
+          "type": "fix",
+          "text": "Gate the LMS surface on the lms entitlement, fail-closed"
+        },
+        {
+          "type": "fix",
+          "text": "Sanitize 5xx bodies on the money-path handlers (refs #4694, #5210)"
+        },
+        {
+          "type": "fix",
+          "text": "Real readiness probes, bounded requeue, and a DLQ gauge with a producer (part of #5212)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop the migration guard reporting \"unapplied\" when it cannot connect"
+        },
+        {
+          "type": "fix",
+          "text": "Store tenant logos in a dedicated public bucket"
+        },
+        {
+          "type": "fix",
+          "text": "Keep a template's slug resolvable after instantiation (Closes #5145)"
+        },
+        {
+          "type": "fix",
+          "text": "Restore JWT crypto provider — all authenticated requests 502 in prod"
+        },
+        {
+          "type": "fix",
+          "text": "Route all 160 remaining leak sites through the sanitizer (refs #5210)"
+        },
+        {
+          "type": "fix",
+          "text": "Day-align the stale-research failed-retry cutoff"
+        },
+        {
+          "type": "fix",
+          "text": "Route the remaining 50 leak sites through the sanitizer (refs #5210)"
+        },
+        {
+          "type": "fix",
+          "text": "Route the remaining 72 leak sites through the sanitizer (refs #5210)"
+        },
+        {
+          "type": "fix",
+          "text": "Store tenant logos with their content type"
+        },
+        {
+          "type": "fix",
+          "text": "Route the last 12 leak sites through the sanitizer (refs #5210)"
+        },
+        {
+          "type": "fix",
+          "text": "Route the last 33 leak sites through the sanitizer (refs #5210)"
+        },
+        {
+          "type": "fix",
+          "text": "Give the last four schedulers a catch-up fire gate"
+        },
+        {
+          "type": "fix",
+          "text": "Green the error-sanitization gate — fixing leaks broke its self-test"
+        },
+        {
+          "type": "fix",
+          "text": "Race-free _work reclaim + auto-repair externals symlink (#4465, #4466)"
+        },
+        {
+          "type": "fix",
+          "text": "Reconcile sweep so a lost spawn stops stranding the job (Closes #5291)"
+        },
+        {
+          "type": "fix",
+          "text": "Make every psql install tolerant of a duplicate PGDG apt source (Closes #5257)"
+        },
+        {
+          "type": "fix",
+          "text": "Build the tip of main, not the SHA the run was created at (Closes #5294)"
+        },
+        {
+          "type": "fix",
+          "text": "Deploy saasy-business on the org's own 64 GB Fly builder, not Depot (Closes #5289)"
+        },
+        {
+          "type": "fix",
+          "text": "Route roles and permissions to the tenant-scoped API"
+        },
+        {
+          "type": "fix",
+          "text": "Stop the runner broker respawning containers that are still booting"
+        },
+        {
+          "type": "fix",
+          "text": "Isolate eval invocations from agent memory (Closes #5282)"
+        },
+        {
+          "type": "fix",
+          "text": "Count unparseable queue timestamps apart from tooYoung (refs #5291)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop the reconcile sweep from starving the spawn path of REST budget"
+        },
+        {
+          "type": "fix",
+          "text": "Extend the #5206 origin guard to saasy-auth and saasy-brains (Closes #5309)"
+        },
+        {
+          "type": "fix",
+          "text": "Tenant-scope ops metrics and approvals, cap admin role grants"
+        },
+        {
+          "type": "fix",
+          "text": "Close contacts-cap, storage-quota and refund-race bypasses"
+        },
+        {
+          "type": "fix",
+          "text": "Run machine paths on the admin pool — tenant pool is blind under FORCE RLS"
+        },
+        {
+          "type": "fix",
+          "text": "Close the #5213 authz residue — guard bypasses, API-key revocation lag, SSO status gate"
+        },
+        {
+          "type": "fix",
+          "text": "Audit-log integrity — survive tenant delete, unforgeable ingestion, honest integrity score"
+        },
+        {
+          "type": "fix",
+          "text": "Size moved-aside copy (mv before du) to close residual #4466 window"
+        },
+        {
+          "type": "fix",
+          "text": "Pin every Fly build to the org's own builder with --depot=false (Closes #5308)"
+        },
+        {
+          "type": "fix",
+          "text": "Give the Deploy Watchdog's verdict a destination (Closes #5305)"
+        },
+        {
+          "type": "fix",
+          "text": "Point /admin-users at the routes user-service registers (Closes #5306)"
+        },
+        {
+          "type": "fix",
+          "text": "Route bare POST /api/v1/subscriptions to business-service (Closes #5319)"
+        },
+        {
+          "type": "fix",
+          "text": "Reformat branding page — main is red on frontend-gate"
+        },
+        {
+          "type": "fix",
+          "text": "Bound past_due dunning and stop unlimited re-trials"
+        },
+        {
+          "type": "fix",
+          "text": "Maintain the audit_events hash chain in every writer (Closes #5327)"
+        },
+        {
+          "type": "fix",
+          "text": "Clear cargo fmt drift on main so the Rustfmt gate can pass"
+        },
+        {
+          "type": "fix",
+          "text": "Accept fractional latency_ms in the health contract"
+        },
+        {
+          "type": "fix",
+          "text": "Fire the shared-crate cascade, and fix the matrix before it does"
+        },
+        {
+          "type": "fix",
+          "text": "Make the post-deploy smoke test capable of failing, and recover from OOM-poisoned build caches"
+        },
+        {
+          "type": "fix",
+          "text": "Route bare POST /api/v1/users to user-service (Closes #5337)"
+        },
+        {
+          "type": "fix",
+          "text": "Select vertical packs by id, not array position (Closes #4804)"
+        },
+        {
+          "type": "fix",
+          "text": "Route every stock change through the inventory ledger (Closes #4907)"
+        },
+        {
+          "type": "fix",
+          "text": "Make lint and typecheck able to fail on app source (Closes #5307)"
+        },
+        {
+          "type": "fix",
+          "text": "Build_mime_message test callers miss the new List-Unsubscribe param (main red)"
+        },
+        {
+          "type": "fix",
+          "text": "Reap dead-spawn registrations and rescue wedged busy+offline tombstones"
+        },
+        {
+          "type": "fix",
+          "text": "Route 4 of 8 bare collection paths, hold 4 closed with rationale (Closes #5343)"
+        },
+        {
+          "type": "fix",
+          "text": "Make Fly builder capacity a checked precondition of deploying (Closes #5371)"
+        },
+        {
+          "type": "fix",
+          "text": "Make the root eslint config a real shared floor (Closes #5357)"
+        },
+        {
+          "type": "fix",
+          "text": "Second factor on security-service /api/v1/internal/* (Closes #5333)"
+        },
+        {
+          "type": "fix",
+          "text": "Route SSO signup through the shared trial-eligibility guard (Closes #5347)"
+        },
+        {
+          "type": "fix",
+          "text": "Make the subscription gate fail closed on both paths (Closes #5346)"
+        },
+        {
+          "type": "fix",
+          "text": "Make the dead Slack notification path loud instead of silent"
+        },
+        {
+          "type": "fix",
+          "text": "Make pnpm test run a real runner and revive 6 dead page suites (Closes #5339)"
+        },
+        {
+          "type": "fix",
+          "text": "Sanitizer drops borders and widths from real signatures"
+        },
+        {
+          "type": "fix",
+          "text": "Reconnecting auth publishers, panic-safe consumer supervision, Sentry in data-management"
+        },
+        {
+          "type": "fix",
+          "text": "Stop Runtime Invariants cancelling its own runs on main"
+        },
+        {
+          "type": "fix",
+          "text": "Detect merges that land on main without their required gates (Closes #5381)"
+        },
+        {
+          "type": "fix",
+          "text": "Assign A/B variants locally instead of via an undeployed service (Closes #4802)"
+        },
+        {
+          "type": "fix",
+          "text": "Derive the product->feature bridge so a bundled product cannot be silently dropped (Closes #5384)"
+        },
+        {
+          "type": "fix",
+          "text": "Make the lint gate real and fix 4 conditional-hook bugs (Closes #5377)"
+        },
+        {
+          "type": "fix",
+          "text": "Make 5 echo lint scripts and 19 skipped typecheck scripts able to fail (Closes #5378, Closes #5379)"
+        },
+        {
+          "type": "fix",
+          "text": "Make a DB-gated test that skips in CI a failure, not a pass (Closes #5061)"
+        },
+        {
+          "type": "fix",
+          "text": "Clear the 11 lint findings that turned main red (Closes #5409)"
+        },
+        {
+          "type": "fix",
+          "text": "Emit !important as authored, not \"! important\""
+        },
+        {
+          "type": "fix",
+          "text": "Platform-wide fail-open sweep after #5346 — approval decisions authorized from request body, plus the gateway's one silent revocation fail-open"
+        },
+        {
+          "type": "fix",
+          "text": "One process-wide latch for env-mutating tests, and a check that keeps it adopted"
+        },
+        {
+          "type": "fix",
+          "text": "Post-merge guard was verifying 2 of main's 3 required checks"
+        },
+        {
+          "type": "fix",
+          "text": "Strip !important instead of preserving it"
+        },
+        {
+          "type": "fix",
+          "text": "Test the orchestrator's real dispatch instead of a stub it lost (Closes #5436)"
+        },
+        {
+          "type": "fix",
+          "text": "P0 invoicing hardening — recipient fallback, tenant-scoped doers, atomic capture, invoice search API"
+        },
+        {
+          "type": "fix",
+          "text": "Post-merge guard reported a bogus finding on every single run"
+        },
+        {
+          "type": "fix",
+          "text": "Run the test-compile planner on a hosted runner so the gate can start (Closes #4665)"
+        },
+        {
+          "type": "fix",
+          "text": "Blank DOCKER_HOST on the business deploy so flyctl stops rejecting it"
+        },
+        {
+          "type": "fix",
+          "text": "Create_order takes buyer from the token and seller from the listings (Closes #5374)"
+        },
+        {
+          "type": "fix",
+          "text": "Self-heal crashed runner listeners + normalize Restart="
+        },
+        {
+          "type": "fix",
+          "text": "Pin the port for the migration guard's psql calls (Closes #5478)"
+        },
+        {
+          "type": "fix",
+          "text": "Launch the container after the response, not before it (Closes #5424)"
+        },
+        {
+          "type": "fix",
+          "text": "Settle commission semantics, fix error classification, sync OpenAPI schemas (Closes #5466, Closes #5465)"
+        },
+        {
+          "type": "fix",
+          "text": "Count and surface the server-side token-revocation fail-open (Closes #5427)"
+        },
+        {
+          "type": "fix",
+          "text": "Derive the tenant from the verified JWT on two unauthenticated write paths (Closes #5373)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop treating a revoke 404 as a successful revocation (Closes #5387)"
+        },
+        {
+          "type": "fix",
+          "text": "Label ungrounded checklist guidance as unverified (Closes #5455)"
+        },
+        {
+          "type": "fix",
+          "text": "Delete the fail-open MFA verifier stub in security-service (Closes #5430)"
+        },
+        {
+          "type": "fix",
+          "text": "Point platform-admin tsconfig at real sources; derive tenant-portal tier list from the Rust registry (Closes #5358, Closes #5406)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop main runs of frontend-gate and deploy-freshness-guard cancelling each other"
+        },
+        {
+          "type": "fix",
+          "text": "Verify x-service-token before stripping it (Closes #5428)"
+        },
+        {
+          "type": "fix",
+          "text": "Serve the marketplace surface on /api/v1/marketplace/* and add the missing categories endpoint (Closes #5065)"
+        },
+        {
+          "type": "fix",
+          "text": "Give bulk_create_products a per-row SAVEPOINT so row errors stay row-local (Closes #5354)"
+        },
+        {
+          "type": "fix",
+          "text": "Unbreak pnpm lint on main (2 curly errors from #5482)"
+        },
+        {
+          "type": "fix",
+          "text": "Delete the fake authenticate_user chain (Closes #5491)"
+        },
+        {
+          "type": "fix",
+          "text": "Make the MFA brute-force throttle fail closed and the idle-timeout skip visible (Closes #5493)"
+        },
+        {
+          "type": "fix",
+          "text": "Round commission to minor units (Closes #5517)"
+        },
+        {
+          "type": "fix",
+          "text": "Take the process-wide env latch in write_authz_tests (unred main's backend-compile-gate)"
+        },
+        {
+          "type": "fix",
+          "text": "Align quote-tax test, crate-wide env guard, unstick backend gates"
+        },
+        {
+          "type": "fix",
+          "text": "Let platform staff edit the workspace navigation baseline"
+        },
+        {
+          "type": "fix",
+          "text": "Bake a GeoIP database into the image (Closes #5527)"
+        },
+        {
+          "type": "fix",
+          "text": "Align three admin-role hooks with their backend gates (Closes #5546)"
+        },
+        {
+          "type": "fix",
+          "text": "Derive the experiment tenant from the JWT, not the X-Tenant-ID header (Closes #4570)"
+        },
+        {
+          "type": "fix",
+          "text": "Delete the dead message-router integration; make dataset_rows_tests compile, run and pass (Closes #5386, Closes #5399)"
+        },
+        {
+          "type": "fix",
+          "text": "Disable the last permission-create affordance that could only 404"
+        },
+        {
+          "type": "fix",
+          "text": "Gate the Ask SaaSy grants tools on PRODUCT_GRANTS (Closes #4581)"
+        },
+        {
+          "type": "fix",
+          "text": "Make admin login work — session, refresh endpoints, dev-tools toggle"
+        },
+        {
+          "type": "fix",
+          "text": "Point the dead auth endpoints at routes that exist"
+        },
+        {
+          "type": "fix",
+          "text": "Repair two library crates that never compiled on main (Closes #5557)"
+        },
+        {
+          "type": "fix",
+          "text": "Add the missing Cargo.lock edge for test-env-guard (unred --locked builds on main)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop a non-deployed crate changing money serialization workspace-wide (Closes #5484)"
+        },
+        {
+          "type": "fix",
+          "text": "Repair 12 never-compiled targets in platform-resilience, platform-errors, messaging-core"
+        },
+        {
+          "type": "fix",
+          "text": "De-flake the QuoteApprovalRules save-toast assertion (Closes #5496)"
+        },
+        {
+          "type": "fix",
+          "text": "Compile the never-run security suite — 3 real defects found, left failing on purpose"
+        },
+        {
+          "type": "fix",
+          "text": "Deterministic grounding, topic-ranked offerings, and visible failures (Closes #4918)"
+        },
+        {
+          "type": "fix",
+          "text": "Scope the remaining WHERE id = $1 repository methods to their tenant (Closes #4832)"
+        },
+        {
+          "type": "fix",
+          "text": "Opt-out silently excluded nobody — fail closed on the cross-tenant list (Closes #5390)"
+        },
+        {
+          "type": "fix",
+          "text": "Split Measurements out of the Tracked Links nav object (Closes #5596)"
+        },
+        {
+          "type": "fix",
+          "text": "Give CronCheckIn a work count, and make zero-while-due alertable"
+        },
+        {
+          "type": "fix",
+          "text": "Authenticate the dashboard's axios client, and pin one @types/react (Closes #5595)"
+        },
+        {
+          "type": "fix",
+          "text": "Route /api/v1/portfolio/* to the integration service"
+        },
+        {
+          "type": "fix",
+          "text": "Count messages_delivered at delivery, not at publish (Closes #5085)"
+        },
+        {
+          "type": "fix",
+          "text": "Execute_query returns Err on a rejected query (Closes #5549)"
+        },
+        {
+          "type": "fix",
+          "text": "Round Decimal to Stripe minor units instead of truncating (Closes #5608)"
+        },
+        {
+          "type": "fix",
+          "text": "Pin the validated address against DNS rebinding, bound the DNS lookup"
+        },
+        {
+          "type": "fix",
+          "text": "Route /api/v1/portfolio/access/* to user-service"
+        },
+        {
+          "type": "fix",
+          "text": "Guard Sentry structured-field capture fleet-wide (Closes #5626)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop telling users a reset email was sent when it wasn't"
+        },
+        {
+          "type": "fix",
+          "text": "Delete the AdvancedSecurityManager stub subsystems (Closes #5520)"
+        },
+        {
+          "type": "fix",
+          "text": "Bind QueryParam::DateTime as timestamptz, not text (Closes #5550)"
+        },
+        {
+          "type": "fix",
+          "text": "Repair 10 of 11 never-compiled targets and wire a 519-line orphaned module"
+        },
+        {
+          "type": "fix",
+          "text": "Each service reports its own Sentry release (Closes #5629)"
+        },
+        {
+          "type": "fix",
+          "text": "One Decimal->cents conversion that refuses instead of defaulting (Closes #5619)"
+        },
+        {
+          "type": "fix",
+          "text": "Remove fail-open auth backend still live on main (Closes #5627)"
+        },
+        {
+          "type": "fix",
+          "text": "Delete the dead EncryptionManager module (Closes #5631)"
+        },
+        {
+          "type": "fix",
+          "text": "Update CreateInvoice test callers for the five new fields (Closes #5635)"
+        },
+        {
+          "type": "fix",
+          "text": "Statement cache handed connection-bound statements to the wrong connection (Closes #5551)"
+        },
+        {
+          "type": "fix",
+          "text": "Assert cron credentials at boot and fail closed per dispatch"
+        },
+        {
+          "type": "fix",
+          "text": "Route /api/v1/platform-admin/* to user-service"
+        },
+        {
+          "type": "fix",
+          "text": "Route security-service's own paths to it, not user-service"
+        },
+        {
+          "type": "fix",
+          "text": "Judge the mutation a read is hiding, not the whole command"
+        },
+        {
+          "type": "fix",
+          "text": "Align UX role gates with their backends — drop dead permission branches (Closes #5652)"
+        },
+        {
+          "type": "fix",
+          "text": "Seed the default routing rules and stop acking unroutable events as healthy (Closes #4819)"
+        },
+        {
+          "type": "fix",
+          "text": "SQL identifier validation, config-driven security headers, valid production preset (Closes #5579, #5580, #5581)"
+        },
+        {
+          "type": "fix",
+          "text": "Give /api/v1/onboarding back to user-service (Closes #5375)"
+        },
+        {
+          "type": "fix",
+          "text": "Scope fee extraction to the requirement's own block (Closes #5510)"
+        },
+        {
+          "type": "fix",
+          "text": "Commit the RLS policies the five core CRM tables already run in prod (Closes #4910)"
+        },
+        {
+          "type": "fix",
+          "text": "Route the bare /api/v1/events collection now the hold is discharged (#5373 follow-up)"
+        },
+        {
+          "type": "fix",
+          "text": "Reattach an orphaned doc comment and drop a duplicate #[test] left by #5688"
+        },
+        {
+          "type": "fix",
+          "text": "Actually schedule the AR collections daily pass"
+        },
+        {
+          "type": "fix",
+          "text": "Stop hiding operations read screens behind a role the backend does not have (Closes #5696)"
+        },
+        {
+          "type": "fix",
+          "text": "Re-point console calls at the endpoints the backend actually serves"
+        },
+        {
+          "type": "fix",
+          "text": "Enable RLS on the five timeseries analytics tables"
+        },
+        {
+          "type": "fix",
+          "text": "Enforce RLS on tenant_agent_eval_schedule without killing the cross-tenant eval sweep"
+        },
+        {
+          "type": "fix",
+          "text": "Renumber the 352 migration collision to 353"
+        },
+        {
+          "type": "fix",
+          "text": "Resync Cargo.lock and stop the drift recurring (Closes #5710)"
+        },
+        {
+          "type": "fix",
+          "text": "Admit global routing rules through the RLS policy on routing_rules (#4819 follow-up)"
+        },
+        {
+          "type": "fix",
+          "text": "Route tenant /reports/* to BusinessService — main is red on tenant-route coverage"
+        },
+        {
+          "type": "fix",
+          "text": "Say WHY a container port lookup failed"
+        },
+        {
+          "type": "fix",
+          "text": "Parse migration versions as base 10, not octal"
+        },
+        {
+          "type": "fix",
+          "text": "Collapse the split getCategories and delete the unreachable marketplace client"
+        },
+        {
+          "type": "fix",
+          "text": "Redact the AMQP credential in RabbitMQConfig's Debug output"
+        },
+        {
+          "type": "fix",
+          "text": "Clear rustfmt drift so the Rustfmt job stops being red on every PR"
+        },
+        {
+          "type": "fix",
+          "text": "Stop an empty tenant GUC hard-erroring the routing_rules policy"
+        },
+        {
+          "type": "fix",
+          "text": "Stop LLM client construction panicking on a missing API key (Closes #5724)"
+        },
+        {
+          "type": "fix",
+          "text": "Give EmptyState one owner so the barrel stops exporting the weaker component"
+        },
+        {
+          "type": "fix",
+          "text": "Let the repo-root lint-staged floor govern, and fix the three…"
+        },
+        {
+          "type": "fix",
+          "text": "Stop two clients calling /api/v1/rbac, which no backend registers"
+        },
+        {
+          "type": "fix",
+          "text": "Declare the totp-rs otpauth feature so TOTP arity stops depending on the build"
+        },
+        {
+          "type": "fix",
+          "text": "Cargo-target reaper dies on SIGPIPE before it prunes anything"
+        },
+        {
+          "type": "fix",
+          "text": "Make StateManager health mean something again"
+        },
+        {
+          "type": "fix",
+          "text": "Close the fail-open read on three user-service tenant policies"
+        },
+        {
+          "type": "fix",
+          "text": "Green the lib suite and delete the never-compiled benches (Closes #5614)"
+        },
+        {
+          "type": "fix",
+          "text": "Reconcile operations-service tenant policies with production"
+        },
+        {
+          "type": "fix",
+          "text": "Unbreak 13 of 20 dead test targets"
+        },
+        {
+          "type": "fix",
+          "text": "Run the all-tenants cost view on the owner pool"
+        },
+        {
+          "type": "fix",
+          "text": "Scope oauth_sync_cursors to its tenant, then close its fail-open policy"
+        },
+        {
+          "type": "fix",
+          "text": "Scope the AI-step audit write, then close its fail-open policy"
+        },
+        {
+          "type": "fix",
+          "text": "Format collections page — it fails frontend-gate on EVERY PR"
+        },
+        {
+          "type": "fix",
+          "text": "Accept the scheduler's null body on customer-health recompute-stale"
+        },
+        {
+          "type": "fix",
+          "text": "Unbreak pnpm lint on main (2 curly errors in collections page)"
+        },
+        {
+          "type": "fix",
+          "text": "Guard orders' ownership predicates instead of adding RLS (Closes #5512)"
+        },
+        {
+          "type": "fix",
+          "text": "Grandfather the 20260806 collision #5816 landed on main"
+        },
+        {
+          "type": "fix",
+          "text": "Teach the nightly RLS gate to see GUC-fail-open policies"
+        },
+        {
+          "type": "fix",
+          "text": "Cover all 14 deployed crates in the LLM metering gate (Closes #5488)"
+        },
+        {
+          "type": "fix",
+          "text": "Clean ALL saas-platform runners and cap sccache"
+        },
+        {
+          "type": "fix",
+          "text": "Repair the seed harness so unified-user-service DB suites can run (Closes #5741)"
+        },
+        {
+          "type": "fix",
+          "text": "Teach the stray-RLS classifier the GUC-unset escape (Closes #5837)"
+        },
+        {
+          "type": "fix",
+          "text": "Migration 355 used min(uuid), which does not exist — business deploys blocked"
+        },
+        {
+          "type": "fix",
+          "text": "Drop dead Helm checks from checklist.sh, fix set -e bugs that stopped it ever running"
+        },
+        {
+          "type": "fix",
+          "text": "Deterministic NBA business selection (Closes #5585)"
+        },
+        {
+          "type": "fix",
+          "text": "Reject an unusable COMMISSION_RATE at boot (Closes #5487)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop duplicating inventory SQL in chat tools, cover inventory tables in the schema-drift manifest"
+        },
+        {
+          "type": "fix",
+          "text": "Stop system-health reporting \"healthy\" over no data (Closes #5732)"
+        },
+        {
+          "type": "fix",
+          "text": "Close the two fail-open RLS policies on the rls.tenant_id GUC"
+        },
+        {
+          "type": "fix",
+          "text": "Read payments from the real ledger, and gate the endpoint (Closes #5825)"
+        },
+        {
+          "type": "fix",
+          "text": "Poll bootstrap advisory lock; sentinel-gated fast path (#5623 follow-up)"
+        },
+        {
+          "type": "fix",
+          "text": "Registry↔storefront parity — SaaSy Social + a CI guard for the next 17"
+        },
+        {
+          "type": "fix",
+          "text": "One defined rule for the tenant's primary business and user (Closes #5862)"
+        },
+        {
+          "type": "fix",
+          "text": "Size the compile-targets budget for a cold cache, not a warm one"
+        },
+        {
+          "type": "fix",
+          "text": "Stop advertising SAML SSO we have not built"
+        },
+        {
+          "type": "fix",
+          "text": "Settle invoice payments on the tenant's Stripe account, not ours (Closes #5850)"
+        },
+        {
+          "type": "fix",
+          "text": "Aggregate cross-tenant metrics on the cross-tenant pool"
+        },
+        {
+          "type": "fix",
+          "text": "Gate the metrics surface so platform-observability builds with `metrics` off (Closes #5646)"
+        },
+        {
+          "type": "fix",
+          "text": "Bind timestamps as timestamptz in two crates #5639 could not reach (Closes #5640)"
+        },
+        {
+          "type": "fix",
+          "text": "TruffleHog needs docker — move it back off the Cloudflare pool"
+        },
+        {
+          "type": "fix",
+          "text": "Stop a poisoned mutex permanently panicking the migration summary (Closes #5924)"
+        },
+        {
+          "type": "fix",
+          "text": "Make lint-staged-floor.test.ts formattable so format:check can pass"
+        },
+        {
+          "type": "fix",
+          "text": "Redact the AMQP credential in the two raw RABBITMQ_URL log sites (Closes #5748)"
+        },
+        {
+          "type": "fix",
+          "text": "RLS for the pipelines/analytics tables + FORCE on experiments (partial #5720)"
+        },
+        {
+          "type": "fix",
+          "text": "Run customer-health-recompute-stale's cross-tenant scan on the admin pool"
+        },
+        {
+          "type": "fix",
+          "text": "Make the timestamptz DB skip loud within the checker's window (Closes #5940)"
+        },
+        {
+          "type": "fix",
+          "text": "Seed treasury onboarding_status='active' in portal checkout test"
+        },
+        {
+          "type": "fix",
+          "text": "Move endpoint-parity-report to the cloudflare runner pool"
+        },
+        {
+          "type": "fix",
+          "text": "Stop rust-workspace-hygiene scanning dead paths, and fix a crash in its sibling job"
+        },
+        {
+          "type": "fix",
+          "text": "Make the reaper's fix reach the cron, and fail loudly on zero"
+        },
+        {
+          "type": "fix",
+          "text": "Make \"the tenant's representative user\" a total order (Closes #5913)"
+        },
+        {
+          "type": "fix",
+          "text": "Regenerate Cargo.lock after the crate retirement in #5957"
+        },
+        {
+          "type": "fix",
+          "text": "Back every plan-feature claim with an entitlement or quota"
+        },
+        {
+          "type": "fix",
+          "text": "Deny cross-tenant access when the primary tenant mismatches"
+        },
+        {
+          "type": "fix",
+          "text": "Pre-push hook now skips the full check suite on ref-deletion-only pushes"
+        },
+        {
+          "type": "fix",
+          "text": "Bring the five public security tables under migration control"
+        },
+        {
+          "type": "fix",
+          "text": "Route blessed crates through workspace versions (batch 1, cargo-verified)"
+        },
+        {
+          "type": "fix",
+          "text": "Route blessed crates through workspace versions (batch 2, cargo-verified)"
+        },
+        {
+          "type": "fix",
+          "text": "Three of the four P1s on the relanded transaction pipeline"
+        },
+        {
+          "type": "fix",
+          "text": "Catch compose build paths that reference a Dockerfile nobody has"
+        },
+        {
+          "type": "fix",
+          "text": "Route blessed crates through workspace versions (batch 3, lib-verified)"
+        },
+        {
+          "type": "fix",
+          "text": "Teach the webhook about the Connect account #5918 moved us to"
+        },
+        {
+          "type": "fix",
+          "text": "Sanitize orchestration 500 bodies via correlation-id chokepoint"
+        },
+        {
+          "type": "fix",
+          "text": "Stop exempting test files from the repo-root formatter"
+        },
+        {
+          "type": "fix",
+          "text": "Refresh the lockfile #5988 and #5989 left stale"
+        },
+        {
+          "type": "fix",
+          "text": "Guard the branding page's render-time token read"
+        },
+        {
+          "type": "fix",
+          "text": "Back permission checks with persisted, tenant-scoped role data"
+        },
+        {
+          "type": "fix",
+          "text": "Resolve invoice settlement per-business, not per-tenant"
+        },
+        {
+          "type": "fix",
+          "text": "Apply the IRC §1372 >2% S-corp shareholder rule to benefit tax"
+        },
+        {
+          "type": "fix",
+          "text": "Stop sending tenant alerts to deactivated owner/admins"
+        },
+        {
+          "type": "fix",
+          "text": "Clear the lint findings #5965 landed above baseline (Closes #6003)"
+        },
+        {
+          "type": "fix",
+          "text": "Unred main's env-test-guard — latch three budget test files, prune stale allowlist entries"
+        },
+        {
+          "type": "fix",
+          "text": "Hoist prettier plugins so root-cwd prettier can format tenant-portal (Closes #6001)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop the SW install failing and the LMS 402 console spam"
+        },
+        {
+          "type": "fix",
+          "text": "Stop exempting workspace=true from the forbidden-dependency gate"
+        },
+        {
+          "type": "fix",
+          "text": "Propagate Plaid removal deltas to the budget store (Closes #6026)"
+        },
+        {
+          "type": "fix",
+          "text": "Delete TenantSetupWizard and guard against invented pricing"
+        },
+        {
+          "type": "fix",
+          "text": "Repair the tenant_operations bench against the current API"
+        },
+        {
+          "type": "fix",
+          "text": "Unblock deploys — 016 assumed columns prod's security_alerts lacks"
+        },
+        {
+          "type": "fix",
+          "text": "Restore examples/ to real TypeScript, delete the zustand one"
+        },
+        {
+          "type": "fix",
+          "text": "Point the test suites at /login, not the 404 /auth/login"
+        },
+        {
+          "type": "fix",
+          "text": "Resolve saaspass through the shared entitlement resolver"
+        },
+        {
+          "type": "fix",
+          "text": "Scope the Plaid bank-verified stamp to the caller's tenant"
+        },
+        {
+          "type": "fix",
+          "text": "Drop tenant-service's unused sqlx/redis deps and guard against their return"
+        },
+        {
+          "type": "fix",
+          "text": "Resolve container ports against the runtime that owns them (Closes #5644)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop comprehensive-e2e reporting success when every test job was cancelled (Closes #6069)"
+        },
+        {
+          "type": "fix",
+          "text": "Close the lint-baseline headroom left by the #6055 fix"
+        },
+        {
+          "type": "fix",
+          "text": "Make the orchestrator persistence database-backend path compile and bind"
+        },
+        {
+          "type": "fix",
+          "text": "Compare the deployed SHA, not the release timestamp"
+        },
+        {
+          "type": "fix",
+          "text": "Unset DOCKER_HOST in the business deploy step"
+        },
+        {
+          "type": "fix",
+          "text": "Delete the dead wizard and the invented plan ladder"
+        },
+        {
+          "type": "fix",
+          "text": "Authenticate feature flags, and surface the 401 instead of swallowing it"
+        },
+        {
+          "type": "fix",
+          "text": "Check business ownership before Plaid mints a billable item"
+        },
+        {
+          "type": "fix",
+          "text": "Bind the revoke timestamps as text, and read the RETURNING row"
+        },
+        {
+          "type": "fix",
+          "text": "Typecheck against real shared-events, drop the dead modules"
+        },
+        {
+          "type": "fix",
+          "text": "Make --features boss a compiling standalone build"
+        },
+        {
+          "type": "fix",
+          "text": "Couple the dispatch table to service route registration"
+        },
+        {
+          "type": "fix",
+          "text": "Pin flyctl to 0.4.79 for the business deploy"
+        },
+        {
+          "type": "fix",
+          "text": "Pin flyctl 0.4.79 in every fly-deploy workflow"
+        },
+        {
+          "type": "fix",
+          "text": "Make the database-backend feature compile, and build it in CI"
+        },
+        {
+          "type": "fix",
+          "text": "Fail the boot on a malformed numeric env var"
+        },
+        {
+          "type": "fix",
+          "text": "Repair the Playwright auth foundation, which never worked"
+        },
+        {
+          "type": "fix",
+          "text": "Delete committed compiled test output, type the sources (#6114, #5792 backlog 2 of N)"
+        },
+        {
+          "type": "fix",
+          "text": "Pin tenant-tool HTTP dials at connect time against DNS rebinding (Closes #6016)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop the in-repo Terms mirror contradicting the plans we sell"
+        },
+        {
+          "type": "fix",
+          "text": "Delete the sourceless test_audit crate, make mockoon resolvable"
+        },
+        {
+          "type": "fix",
+          "text": "Gate the global event-routing control plane on operators"
+        },
+        {
+          "type": "fix",
+          "text": "Redact connection URIs on every logging path, generator first (Closes #5935)"
+        },
+        {
+          "type": "fix",
+          "text": "Serialise the two ACH mandate tests on the shared env latch"
+        },
+        {
+          "type": "fix",
+          "text": "Make the schema init actually runnable"
+        },
+        {
+          "type": "fix",
+          "text": "Repoint docker-compose.prod.yml at services that still exist"
+        },
+        {
+          "type": "fix",
+          "text": "Derive the negotiation tenant from the JWT, not the request body"
+        },
+        {
+          "type": "fix",
+          "text": "Gate the projection control plane on operators"
+        },
+        {
+          "type": "fix",
+          "text": "Wire the OCR provider and stop reporting a run that never happened as…"
+        },
+        {
+          "type": "fix",
+          "text": "Key adaptive-threshold EMAs on capability, not just tenant"
+        },
+        {
+          "type": "fix",
+          "text": "Reachable nightly job, verified backend-free lane, and a build-and-serve CI job"
+        },
+        {
+          "type": "fix",
+          "text": "Make a blind reconcile tick distinguishable from an idle one"
+        },
+        {
+          "type": "fix",
+          "text": "Derive the bundled-app bullets instead of retyping them"
+        },
+        {
+          "type": "fix",
+          "text": "Type the any's in the four packages whose tests actually run (#5792 backlog 3 of N)"
+        },
+        {
+          "type": "fix",
+          "text": "Keep the push connection alive while the pre-push hook runs"
+        },
+        {
+          "type": "fix",
+          "text": "Pin tenant-tool gRPC dials at connect time against DNS rebinding (Closes #6123)"
+        },
+        {
+          "type": "fix",
+          "text": "Actually invoke the #5206 origin guard from the shared middleware"
+        },
+        {
+          "type": "fix",
+          "text": "Typed integer nulls for absent BIGINT/INTEGER binds (Closes #6076)"
+        },
+        {
+          "type": "fix",
+          "text": "Make --all-targets compile for workflow-orchestrator and the two bench crates (Closes #6070, Closes #6119)"
+        },
+        {
+          "type": "fix",
+          "text": "Gate /api/v1/validate on service identity and meter it to a real tenant"
+        },
+        {
+          "type": "fix",
+          "text": "Bind a TIMESTAMPTZ null for an incomplete analytics row"
+        },
+        {
+          "type": "fix",
+          "text": "Tenant-scope generate_forecast, the one unguarded handler in its block"
+        },
+        {
+          "type": "fix",
+          "text": "Re-key the sanitization allowlist after validator/error.rs was split"
+        },
+        {
+          "type": "fix",
+          "text": "Make data-management's event subscriber real, and give it a key someone publishes"
+        },
+        {
+          "type": "fix",
+          "text": "Use subscript access, not StripeObject.get(), under pinned stripe>=15.3.1"
+        },
+        {
+          "type": "fix",
+          "text": "Preserve physical columns in DTO alias resolution"
+        },
+        {
+          "type": "fix",
+          "text": "Run the test suite — 0 tests to 64 (Closes #6156)"
+        },
+        {
+          "type": "fix",
+          "text": "Delete 4 dead test files, unblock the other 2"
+        },
+        {
+          "type": "fix",
+          "text": "Make root uv sync actually work"
+        },
+        {
+          "type": "fix",
+          "text": "Stop the prepare script breaking every frontend image build"
+        },
+        {
+          "type": "fix",
+          "text": "Execute the authorization suites event- and workflow-service only compile"
+        },
+        {
+          "type": "fix",
+          "text": "Unred env-test-guard on main — latch validator_brain_wiring, prune stale allowlist"
+        },
+        {
+          "type": "fix",
+          "text": "Bind typed nulls in the two shared param helpers"
+        },
+        {
+          "type": "fix",
+          "text": "Repair the legal_brain_tests target against the current brain-common API"
+        },
+        {
+          "type": "fix",
+          "text": "Point 8 build contexts at the base their dockerfile path assumes"
+        },
+        {
+          "type": "fix",
+          "text": "Commit the ai_models RLS prod already runs, and move platform writes to admin (Refs #5720)"
+        },
+        {
+          "type": "fix",
+          "text": "Repair the two broken test targets (Closes #6208)"
+        },
+        {
+          "type": "fix",
+          "text": "Repair drifted unit tests, drop two dead examples (closes the last crate in #5562)"
+        },
+        {
+          "type": "fix",
+          "text": "Sidebar IA repair + auth-flow chrome consistency"
+        },
+        {
+          "type": "fix",
+          "text": "Make three never-compiled targets build, and unhang the lib test suite"
+        },
+        {
+          "type": "fix",
+          "text": "Route auth/user/gdpr off direct sqlx/argon2 onto platform crates"
+        },
+        {
+          "type": "fix",
+          "text": "Attach the producer's trace context on the consumer side"
+        },
+        {
+          "type": "fix",
+          "text": "Parse ip_address to IpAddr before publishing, or send NULL"
+        },
+        {
+          "type": "fix",
+          "text": "Parse the envelopes publishers actually send"
+        },
+        {
+          "type": "fix",
+          "text": "Repair the five unit tests that were red on main"
+        },
+        {
+          "type": "fix",
+          "text": "Land the credential-rotation event #6229 left behind, and heartbeat the entitlement translator"
+        },
+        {
+          "type": "fix",
+          "text": "Say what the db error actually is, and stop the cross-tenant sweep depending on table ownership"
+        },
+        {
+          "type": "fix",
+          "text": "Make the tenant-portal lane able to fail, then cover outreach"
+        },
+        {
+          "type": "fix",
+          "text": "Stop telling operators a failed load means zero campaigns"
+        },
+        {
+          "type": "fix",
+          "text": "Attach one shared security-headers layer to all 13 deployed services"
+        },
+        {
+          "type": "fix",
+          "text": "Prove from_number ownership before it routes inbound calls"
+        },
+        {
+          "type": "fix",
+          "text": "Stop backend-compile-gate failing PRs that compile fine"
+        },
+        {
+          "type": "fix",
+          "text": "Reject malformed numeric env vars at boot"
+        },
+        {
+          "type": "fix",
+          "text": "Execute the remaining compile-only service legs"
+        },
+        {
+          "type": "fix",
+          "text": "Drop the archived compliance-service definition"
+        },
+        {
+          "type": "fix",
+          "text": "Make TruffleHog actually scan, and stop reporting its absence as a finding"
+        },
+        {
+          "type": "fix",
+          "text": "Declare billing/finance/crm as the mandatory base they are"
+        },
+        {
+          "type": "fix",
+          "text": "Remove stale db_test_silent_skips.txt entry blocking every PR's db-test-gates"
+        },
+        {
+          "type": "fix",
+          "text": "Teach the tenant-RLS drift checker about partitioned tables"
+        },
+        {
+          "type": "fix",
+          "text": "Latch the JWT_SECRET tests, and gate the leg they blocked"
+        },
+        {
+          "type": "fix",
+          "text": "Move the zombie reaper off the pool it exists to unblock"
+        },
+        {
+          "type": "fix",
+          "text": "Stop six lints muting the only required frontend typecheck"
+        },
+        {
+          "type": "fix",
+          "text": "Redact the live prod owner credential from a committed plan"
+        },
+        {
+          "type": "fix",
+          "text": "Stop the migration scripts pointing at a CASCADE drop of two deployed…"
+        },
+        {
+          "type": "fix",
+          "text": "Ship the backfill CLIs in the runtime image"
+        },
+        {
+          "type": "fix",
+          "text": "Enable opentelemetry-compat so the six #6404 services can boot (crash-on-boot on main)"
+        },
+        {
+          "type": "fix",
+          "text": "Route the founder-goals pair and the eSign KBA callback (#6287, #6149)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop /api/v1/intents failing dishonestly on a control plane that was…"
+        },
+        {
+          "type": "fix",
+          "text": "Scope the edge-routed validator endpoints to the caller's tenant"
+        },
+        {
+          "type": "fix",
+          "text": "Decide the 14 dead middleware_stack layers, wire request tracing"
+        },
+        {
+          "type": "fix",
+          "text": "Let the tokenless customer and signer past the edge (#5973, part 1)"
+        },
+        {
+          "type": "fix",
+          "text": "Migrate sweep/voice tests to EnvGuard (env-test-guard)"
+        },
+        {
+          "type": "fix",
+          "text": "Raise the sccache ceiling on the server side, unblocking timed-out compile gates"
+        },
+        {
+          "type": "fix",
+          "text": "Point the post-merge bypass detector at the gates that actually block"
+        },
+        {
+          "type": "fix",
+          "text": "Never let span-export setup stop a service booting"
+        },
+        {
+          "type": "fix",
+          "text": "Make the tenant-context session tests hermetic"
+        },
+        {
+          "type": "fix",
+          "text": "Order vendor events by mutation time, not the consumer's clock"
+        },
+        {
+          "type": "fix",
+          "text": "Enforce a chosen request body cap"
+        },
+        {
+          "type": "fix",
+          "text": "Classify 'please stop calling me' as the opt-out it is"
+        },
+        {
+          "type": "fix",
+          "text": "Sanitize raw 500 bodies in collections_voice + scheduling handlers"
+        },
+        {
+          "type": "fix",
+          "text": "Size the sccache ceiling to 35G against loaded disk, not idle"
+        },
+        {
+          "type": "fix",
+          "text": "Install flyctl ourselves with retries, fleet-wide (Closes #6300)"
+        },
+        {
+          "type": "fix",
+          "text": "Persist the API audit trail — real table, real caller, correct layer order"
+        },
+        {
+          "type": "fix",
+          "text": "Put sqlx-cli on PATH so the tenant-isolation gate can run"
+        },
+        {
+          "type": "fix",
+          "text": "Give payroll_filing a real purchase surface"
+        },
+        {
+          "type": "fix",
+          "text": "Confirm before a tenant test invoke dials the endpoint"
+        },
+        {
+          "type": "fix",
+          "text": "Point the sccache trim at the real cache dir, and report what was reclaimed"
+        },
+        {
+          "type": "fix",
+          "text": "Stop required repo-guards failing on main because #6454 was fixed"
+        },
+        {
+          "type": "fix",
+          "text": "Stamp GH_SHA on hand-deploys so the deploy watchdog can still see them"
+        },
+        {
+          "type": "fix",
+          "text": "Reconcile test-fixture ANN indexes to HNSW"
+        },
+        {
+          "type": "fix",
+          "text": "Drop control-plane-orchestrator from both migration scripts"
+        },
+        {
+          "type": "fix",
+          "text": "Mounted-guard the five loose render-time token reads"
+        },
+        {
+          "type": "fix",
+          "text": "Cap request wall-clock time, per route group"
+        },
+        {
+          "type": "fix",
+          "text": "Delete the never-compiled enhanced_handlers.rs"
+        },
+        {
+          "type": "fix",
+          "text": "Measure the sccache backups removed, not the whole cache dir"
+        },
+        {
+          "type": "fix",
+          "text": "Unpin saasy-business from the flyctl version that still has the bug"
+        },
+        {
+          "type": "fix",
+          "text": "Close the statement-surface gaps from the #6487 review pass"
+        },
+        {
+          "type": "fix",
+          "text": "Give every postgres service container an ephemeral host port"
+        },
+        {
+          "type": "fix",
+          "text": "Inject trace context from the tracing span, not OtelContext::current"
+        },
+        {
+          "type": "fix",
+          "text": "Post-merge gate scheduled sweep covered ~7h of its documented 48h window"
+        },
+        {
+          "type": "fix",
+          "text": "Drop the self-invalidating origin/main case from the sqlx-PATH test"
+        },
+        {
+          "type": "fix",
+          "text": "Keep the ephemeral postgres host port bound to loopback"
+        },
+        {
+          "type": "fix",
+          "text": "Performance-nightly python-benchmarks stops faking a database connection"
+        },
+        {
+          "type": "fix",
+          "text": "Give every redis and rabbitmq service container an ephemeral port"
+        },
+        {
+          "type": "fix",
+          "text": "Route on_true/on_false instead of silently ignoring them (Closes #6554)"
+        },
+        {
+          "type": "fix",
+          "text": "Refuse flyctl's broken wireguardless failover, so WireGuard failures say so"
+        },
+        {
+          "type": "fix",
+          "text": "Make psql and pg_isready use the resolved ephemeral postgres port"
+        },
+        {
+          "type": "fix",
+          "text": "Retire automated-regression-detection and boundary-tests — dead since 2026-08-10, one fabricating metrics"
+        },
+        {
+          "type": "fix",
+          "text": "Give the chaos compose stack ephemeral loopback ports, and keep the required gate green"
+        },
+        {
+          "type": "fix",
+          "text": "Delete the orchestration runner that could not run, and guard the class"
+        },
+        {
+          "type": "fix",
+          "text": "Bill all six order rails on first fulfilment (part 1 of #5978)"
+        },
+        {
+          "type": "fix",
+          "text": "Make performance-nightly's python-benchmarks measure a workload that runs"
+        },
+        {
+          "type": "fix",
+          "text": "Prune abandoned CI WireGuard peers on a schedule"
+        },
+        {
+          "type": "fix",
+          "text": "Make the baseline manager read the parser's output, not re-run pytest"
+        },
+        {
+          "type": "fix",
+          "text": "Stop two gates grading a gateway directory that is not in the tree"
+        },
+        {
+          "type": "fix",
+          "text": "Fix the database SLO tests whose workload was wrong, xfail the numbers nobody has calibrated"
+        },
+        {
+          "type": "fix",
+          "text": "Create the database chaos-engineering psqls, and guard it with a test that actually runs"
+        },
+        {
+          "type": "fix",
+          "text": "Repoint or remove performance-nightly's 7 dead rust-benchmarks legs"
+        },
+        {
+          "type": "fix",
+          "text": "A Condition step must never gate on its own expression"
+        },
+        {
+          "type": "fix",
+          "text": "Give each chaos run its own compose project, and unpin the infra container names"
+        },
+        {
+          "type": "fix",
+          "text": "Point the chaos harness at the stack it was actually given"
+        },
+        {
+          "type": "fix",
+          "text": "Make the shared timeout layer attachable, and attach it"
+        },
+        {
+          "type": "fix",
+          "text": "Autopay onto vaulted cards, with pre-due reminders"
+        },
+        {
+          "type": "fix",
+          "text": "Audit successful token refreshes; delete the writer that never wrote"
+        },
+        {
+          "type": "fix",
+          "text": "Make the migration chain apply to a fresh database"
+        },
+        {
+          "type": "fix",
+          "text": "Attach producer trace on the brain_completed consumer too"
+        },
+        {
+          "type": "fix",
+          "text": "Associate campaign and sequence modal labels with their controls"
+        },
+        {
+          "type": "fix",
+          "text": "Wait for customers empty state in #1461 regression test"
+        },
+        {
+          "type": "fix",
+          "text": "Translate Collections sidebar label"
+        },
+        {
+          "type": "fix",
+          "text": "Read pytest.ini [pytest] sections that were inert"
+        },
+        {
+          "type": "fix",
+          "text": "Do not cancel required gates when a PR merges"
+        },
+        {
+          "type": "fix",
+          "text": "Wait for loaded policy before clicking edit"
+        },
+        {
+          "type": "fix",
+          "text": "Translate Collections page heading"
+        },
+        {
+          "type": "fix",
+          "text": "Point email tracking URLs at the API host, not the portal"
+        },
+        {
+          "type": "fix",
+          "text": "Route tenant scheduling/voice/time-invoice paths to business-svc"
+        },
+        {
+          "type": "fix",
+          "text": "Return the revoked tenant from revoke_by_id"
+        },
+        {
+          "type": "fix",
+          "text": "Stop a green vitest run exiting 1 on a 60s birpc RPC timeout"
+        },
+        {
+          "type": "fix",
+          "text": "Wait for loaded governance policy before asserting"
+        },
+        {
+          "type": "fix",
+          "text": "Bind status_filter as a parameter in get_obligations"
+        },
+        {
+          "type": "fix",
+          "text": "Down migrations abort or drop the wrong objects"
+        },
+        {
+          "type": "fix",
+          "text": "Fail closed when rollback matches two down files"
+        },
+        {
+          "type": "fix",
+          "text": "Stop test-trace-propagation.sh calling a missing cargo target"
+        },
+        {
+          "type": "fix",
+          "text": "Stop jsdom navigation noise in green frontend runs"
+        },
+        {
+          "type": "fix",
+          "text": "Compile agent-platform without unused Instrument import"
+        },
+        {
+          "type": "fix",
+          "text": "Send /api/v1/analytics to data-management-service"
+        },
+        {
+          "type": "fix",
+          "text": "Stop f64 ULP flake in API response proptest"
+        },
+        {
+          "type": "fix",
+          "text": "Stop placeholder query_execution bench breaking cargo bench"
+        },
+        {
+          "type": "fix",
+          "text": "Enforce_tenant defaults to true in every build profile"
+        },
+        {
+          "type": "fix",
+          "text": "Move forbidden-deps ratchet pins after #6288 burn-down"
+        },
+        {
+          "type": "fix",
+          "text": "Stop gateway harness pointing at deleted api-gateway"
+        },
+        {
+          "type": "fix",
+          "text": "Read parsed_benchmarks.json instead of re-running cargo bench"
+        },
+        {
+          "type": "fix",
+          "text": "Cap reminder_cadence_days length on write"
+        },
+        {
+          "type": "fix",
+          "text": "Use the audited is_public_ip for BYO-AI URLs"
+        },
+        {
+          "type": "fix",
+          "text": "Align refresh-token test fixture with tenants shape"
+        },
+        {
+          "type": "fix",
+          "text": "Use the audited is_public_ip in corpus verify"
+        },
+        {
+          "type": "fix",
+          "text": "Seed a refresh hash the #4100 CAS can match"
+        },
+        {
+          "type": "fix",
+          "text": "Stop serving hardcoded zeros on public /metrics"
+        },
+        {
+          "type": "fix",
+          "text": "Stop ignoring webhook outbound backoff env vars"
+        },
+        {
+          "type": "fix",
+          "text": "Drop unread WEBHOOKS_OUT_RETRY_DELAY_SECS"
+        },
+        {
+          "type": "fix",
+          "text": "Prove official-mail order ownership before uploading bytes"
+        },
+        {
+          "type": "fix",
+          "text": "Bring the platform SMTP relay under the deliverability gate"
+        },
+        {
+          "type": "fix",
+          "text": "One live env var for webhook max attempts"
+        },
+        {
+          "type": "fix",
+          "text": "Stop chaos framework inventing measurements and always-passing"
+        },
+        {
+          "type": "fix",
+          "text": "Evaluate simulator conditions so on_failure is reachable"
+        },
+        {
+          "type": "fix",
+          "text": "Union FromRow columns when two structs share a table"
+        },
+        {
+          "type": "fix",
+          "text": "Stop chaos starting services the compose file does not have"
+        },
+        {
+          "type": "fix",
+          "text": "Attribute gen-expected-columns SQL to the struct, not the file"
+        },
+        {
+          "type": "fix",
+          "text": "Scope chaos container kills to the compose project"
+        },
+        {
+          "type": "fix",
+          "text": "Drop USING(TRUE) authenticated RLS policies"
+        },
+        {
+          "type": "fix",
+          "text": "Stop chaos cleanup pkill/tc on the shared host"
+        },
+        {
+          "type": "fix",
+          "text": "Stop GITHUB_ENV localhost URLs leaking into chaos compose"
+        },
+        {
+          "type": "fix",
+          "text": "Run database perf suite under FORCE RLS as a tenant role"
+        },
+        {
+          "type": "fix",
+          "text": "Bound or skip the hanging actions/cache save on runner-4"
+        },
+        {
+          "type": "fix",
+          "text": "Refuse to treat 054 as applied when ai_ml is missing"
+        },
+        {
+          "type": "fix",
+          "text": "Per-run CARGO_TARGET_DIR on rust-ci.yml and ci.yml"
+        },
+        {
+          "type": "fix",
+          "text": "Compare upload_artifacts to a boolean, not the string 'true'"
+        },
+        {
+          "type": "fix",
+          "text": "Point redis-cli at the resolved ephemeral redis port"
+        },
+        {
+          "type": "fix",
+          "text": "Make Detect Secrets Scan actually report findings"
+        },
+        {
+          "type": "fix",
+          "text": "Align 054 tenant_id with 023 VARCHAR"
+        },
+        {
+          "type": "fix",
+          "text": "Generalise dead workflow target-path check across all workflows"
+        },
+        {
+          "type": "fix",
+          "text": "Treat grep MATCH as MATCH under pipefail"
+        },
+        {
+          "type": "fix",
+          "text": "Repair five actionlint workflow defects by hand"
+        },
+        {
+          "type": "fix",
+          "text": "Re-export JWK APIs so integration-service drops jsonwebtoken"
+        },
+        {
+          "type": "fix",
+          "text": "Stop classifying every tenant tool as write"
+        },
+        {
+          "type": "fix",
+          "text": "Point vitest @/features at src/features"
+        },
+        {
+          "type": "fix",
+          "text": "Keep secret-scan-verdict.sh off the pipefail MATCH-as-MISS path"
+        },
+        {
+          "type": "fix",
+          "text": "Retarget ml-serving-api-paths after #6773 preview swap"
+        },
+        {
+          "type": "fix",
+          "text": "Rebuild analyze-deps when the SHA cache misses"
+        },
+        {
+          "type": "fix",
+          "text": "Declare empty prod feature set so the guard goes green"
+        },
+        {
+          "type": "fix",
+          "text": "Point prod compose targets at stages that exist"
+        },
+        {
+          "type": "fix",
+          "text": "Run only live orchestration test targets"
+        },
+        {
+          "type": "fix",
+          "text": "Stop three nav entries 404ing"
+        },
+        {
+          "type": "fix",
+          "text": "Stop mock panics, hermetic auth tests, bind [::]"
+        },
+        {
+          "type": "fix",
+          "text": "Stop the disk-pressure reclaim wiping a live runner workspace"
+        },
+        {
+          "type": "fix",
+          "text": "Make the security-hardened compose file loadable at all"
+        },
+        {
+          "type": "fix",
+          "text": "Stop repo-guards reddening every PR on a ref ephemeral runners lack"
+        },
+        {
+          "type": "fix",
+          "text": "Capture the chaos teardown's exit status without hiding the service name"
+        },
+        {
+          "type": "fix",
+          "text": "Prove personal/business pairing in grant_personal_comp"
+        },
+        {
+          "type": "fix",
+          "text": "Tenant guards error in every build profile"
+        },
+        {
+          "type": "fix",
+          "text": "Exclude personal tenants from scan_all and health listing"
+        },
+        {
+          "type": "fix",
+          "text": "Guard the service-account RLS hatch against the empty string"
+        },
+        {
+          "type": "fix",
+          "text": "Point dev frontend targets at runner"
+        },
+        {
+          "type": "fix",
+          "text": "Preserve JsonRejection status on ValidateRequest"
+        },
+        {
+          "type": "fix",
+          "text": "Load persisted rule sets on /rule-sets/[id]"
+        },
+        {
+          "type": "fix",
+          "text": "Exclude personal tenants from pricing-intel sweep"
+        },
+        {
+          "type": "fix",
+          "text": "Authenticate content-service calls with the internal token"
+        },
+        {
+          "type": "fix",
+          "text": "Authenticate content-service upload/download"
+        },
+        {
+          "type": "fix",
+          "text": "Honour job_history_retention_days and purge old executions"
+        },
+        {
+          "type": "fix",
+          "text": "Make orchestrate wiring tests pass under --features boss"
+        },
+        {
+          "type": "fix",
+          "text": "Do not double-count bounced sends on DSN replay"
+        },
+        {
+          "type": "fix",
+          "text": "Align formation_lifecycle_test DDL with BusinessProfile"
+        },
+        {
+          "type": "fix",
+          "text": "Make subsystem_wiring tests match post-#4568 auth"
+        },
+        {
+          "type": "fix",
+          "text": "Seed a legal entity_type in child-resource isolation tests"
+        },
+        {
+          "type": "fix",
+          "text": "Align remaining business_profiles test DDL with the model"
+        },
+        {
+          "type": "fix",
+          "text": "Make client-identifier test call get_client_identifier"
+        },
+        {
+          "type": "fix",
+          "text": "Make observability metrics unit tests pass on main"
+        },
+        {
+          "type": "fix",
+          "text": "ApiResponse null round-trip and health-check clippy"
+        },
+        {
+          "type": "fix",
+          "text": "Gate integration tests on the features they import"
+        },
+        {
+          "type": "fix",
+          "text": "Add missing expected-columns JSON Schema"
+        },
+        {
+          "type": "fix",
+          "text": "Keep quoted identifiers in expected-columns"
+        },
+        {
+          "type": "fix",
+          "text": "Apply builder connection_params on the deadpool path"
+        },
+        {
+          "type": "fix",
+          "text": "Make translation module doctest compile"
+        },
+        {
+          "type": "fix",
+          "text": "Drop unparseable audit ip_address like #6219"
+        },
+        {
+          "type": "fix",
+          "text": "Delete the unserved HTTP router"
+        },
+        {
+          "type": "fix",
+          "text": "Empty agent list must not yield max confidence"
+        },
+        {
+          "type": "fix",
+          "text": "Dispatch to the handler the bus actually registered"
+        },
+        {
+          "type": "fix",
+          "text": "Retry configured 5xx on idempotent HTTP methods"
+        },
+        {
+          "type": "fix",
+          "text": "Predict tenant-owned models, not only platform-wide"
+        },
+        {
+          "type": "fix",
+          "text": "Stale pending auto top-up must not consume the monthly cap"
+        },
+        {
+          "type": "fix",
+          "text": "Initialize_schema must use execute_raw, not the injection heuristic"
+        },
+        {
+          "type": "fix",
+          "text": "Record PaymentIntent id when auto top-up is declined"
+        },
+        {
+          "type": "fix",
+          "text": "Auto-resize the Fly builder instead of only reporting it"
+        },
+        {
+          "type": "fix",
+          "text": "Retry a deploy that died of the transient builder EOF"
+        },
+        {
+          "type": "fix",
+          "text": "Re-sync auto top-up payment method when the card rotates"
+        },
+        {
+          "type": "fix",
+          "text": "Read the rows, not an always-false cfg"
+        },
+        {
+          "type": "fix",
+          "text": "Close the two orchestration cross-tenant RLS holes"
+        },
+        {
+          "type": "fix",
+          "text": "Execute workflow steps dependency-first"
+        },
+        {
+          "type": "fix",
+          "text": "Explicit untenanted opt-out on health SELECT 1"
+        },
+        {
+          "type": "fix",
+          "text": "Grandfather three duplicate migration versions already on main"
+        },
+        {
+          "type": "fix",
+          "text": "Anonymize sales_leads on erasure DSAR"
+        },
+        {
+          "type": "fix",
+          "text": "Stamp execution_duration_ms on cancel"
+        },
+        {
+          "type": "fix",
+          "text": "Match JSON object left operands in Contains"
+        },
+        {
+          "type": "fix",
+          "text": "Ungate row-to-json from undeclared deadpool cfg"
+        },
+        {
+          "type": "fix",
+          "text": "Compile --lib tests so rows_to_json runs"
+        },
+        {
+          "type": "fix",
+          "text": "Tenant-aware QueryExecutionContext on health, warmup, customer read"
+        },
+        {
+          "type": "fix",
+          "text": "Ungate database row deserialize from undeclared deadpool cfg"
+        },
+        {
+          "type": "fix",
+          "text": "Compile undeclared src/export.rs"
+        },
+        {
+          "type": "fix",
+          "text": "Opt out schema/maintenance queries from tenant guard"
+        },
+        {
+          "type": "fix",
+          "text": "Retry the context-upload connection drop too, and wire hand deploys in"
+        },
+        {
+          "type": "fix",
+          "text": "Ungate deployment-orchestrator and notification-rules deadpool row paths"
+        },
+        {
+          "type": "fix",
+          "text": "Compile undeclared src/migrations.rs"
+        },
+        {
+          "type": "fix",
+          "text": "Scope business-health recalc to its own tenant under RLS"
+        },
+        {
+          "type": "fix",
+          "text": "Bill the recurring add-on on the domain Checkout rail"
+        },
+        {
+          "type": "fix",
+          "text": "Move sync_history repository off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Compile undeclared src/health_checks.rs"
+        },
+        {
+          "type": "fix",
+          "text": "Move github_task_links repository off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move integration_suggestions repository off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Compile undeclared src/monitoring.rs"
+        },
+        {
+          "type": "fix",
+          "text": "Compile undeclared src/collaboration_integration.rs"
+        },
+        {
+          "type": "fix",
+          "text": "Ungate leftover deadpool row paths"
+        },
+        {
+          "type": "fix",
+          "text": "Add admin DatabaseManager for dual-pool cutover"
+        },
+        {
+          "type": "fix",
+          "text": "Compile undeclared src/workflow_integration.rs"
+        },
+        {
+          "type": "fix",
+          "text": "Make cargo test --lib compile"
+        },
+        {
+          "type": "fix",
+          "text": "Unstick cache and health lib tests"
+        },
+        {
+          "type": "fix",
+          "text": "Run pipeline tests against a live RabbitMQ broker"
+        },
+        {
+          "type": "fix",
+          "text": "Ignore [tool:pytest] mentions in pytest.ini comments"
+        },
+        {
+          "type": "fix",
+          "text": "Route public LMS verify to content-service"
+        },
+        {
+          "type": "fix",
+          "text": "Move webhook_subscriptions repository off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Don't fail repo-guards when origin/main is missing"
+        },
+        {
+          "type": "fix",
+          "text": "Tenant load_session and load_snapshot queries"
+        },
+        {
+          "type": "fix",
+          "text": "Move webhook_deliveries repository off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Wire TenantService Platform client queries"
+        },
+        {
+          "type": "fix",
+          "text": "Ungate example DatabaseManager path"
+        },
+        {
+          "type": "fix",
+          "text": "Move tenant_webhook_secrets repository off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Tenant audit persist and opt out retention janitor"
+        },
+        {
+          "type": "fix",
+          "text": "Require tenant_id on repository queries"
+        },
+        {
+          "type": "fix",
+          "text": "Move ADP credentials repository off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move Calendly accounts repository off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Opt out migration DDL from tenant guard"
+        },
+        {
+          "type": "fix",
+          "text": "Move Gusto HRIS accounts repository off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "RLS-audit check_sending_domain_auth cron"
+        },
+        {
+          "type": "fix",
+          "text": "Implement AgentConfig and AgentMetrics reads"
+        },
+        {
+          "type": "fix",
+          "text": "Move AWS cost connections repository off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Tenant DataService query contexts"
+        },
+        {
+          "type": "fix",
+          "text": "Move Stripe cost connections repository off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Tenant AnalyticsService query contexts"
+        },
+        {
+          "type": "fix",
+          "text": "Tenant ModelService query contexts"
+        },
+        {
+          "type": "fix",
+          "text": "Move Neon connections repository off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move Azure cost connections repository off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move GCP cost connections repository off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move Gusto cost connections repository off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move Resend cost connections repository off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move Sentry cost connections repository off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move Twilio cost connections repository off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Allowlist four recovered public surfaces"
+        },
+        {
+          "type": "fix",
+          "text": "Move budget_normalizer sweep off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move MCP connector persistence off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Add QueryValue::Date bind"
+        },
+        {
+          "type": "fix",
+          "text": "Move QBO realm persistence off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move Canva persistence off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move Square persistence off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move Plaid items/identity persistence off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move DocuSign persistence off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move vendor_usage_snapshots off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move BambooHR persistence off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move FreshBooks persistence off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move Plaid transactions persistence off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move QBO entity mirrors off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move stripe_sync persistence off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Quota-service fails the boot on a malformed env var"
+        },
+        {
+          "type": "fix",
+          "text": "Move campaign_providers persistence off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move Slack worker persistence off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move Google Ads spend scheduler off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move suggestions persistence off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move email_sync persistence off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move crypto backfill persistence off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move leftover HRIS handler helpers off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move HRIS sync persistence off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move payroll_sync persistence off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move HRIS handler reads off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move OAuth token store off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Green + stabilize the test gate (ask-saasy #6989, hiveminded drift #7027, jsdom download-nav flake #6128)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop detect_conflicts treating Uuid::nil() as a shift identity"
+        },
+        {
+          "type": "fix",
+          "text": "Publish user.account.created so user_count can rise"
+        },
+        {
+          "type": "fix",
+          "text": "Stop re-filing a documented design decision as a stray"
+        },
+        {
+          "type": "fix",
+          "text": "Move IntegrationRepository off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move connected_systems persistence off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move social persistence off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move webhook event persistence off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move vertical_control persistence off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move vertical_integration persistence off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Scope the exa_enrich Uuid import to tests — main cannot build for prod"
+        },
+        {
+          "type": "fix",
+          "text": "Enforce UNIQUE(tenant_id, sku) on crm_products"
+        },
+        {
+          "type": "fix",
+          "text": "Move vertical outbox and health scrape off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move inventory_store persistence off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Discover close-sweep tenants on the admin pool under RLS"
+        },
+        {
+          "type": "fix",
+          "text": "Stop backend-compile-gate suppressing the deny lints prod enforces"
+        },
+        {
+          "type": "fix",
+          "text": "Fail the mono-quality typecheck job on type errors"
+        },
+        {
+          "type": "fix",
+          "text": "Gate hris_sync epoch re-export on cfg(test)"
+        },
+        {
+          "type": "fix",
+          "text": "Drop stale /api/v1/projections unrouted exemption"
+        },
+        {
+          "type": "fix",
+          "text": "Scan due export jobs on the admin pool"
+        },
+        {
+          "type": "fix",
+          "text": "Start a stopped Fly builder after deploy EOF retries"
+        },
+        {
+          "type": "fix",
+          "text": "Give saasy-business deploys 180 minutes and fail on cancel"
+        },
+        {
+          "type": "fix",
+          "text": "Take the shared env latch in remaining oauth test modules"
+        },
+        {
+          "type": "fix",
+          "text": "Learning-service fails the boot on a malformed env var"
+        },
+        {
+          "type": "fix",
+          "text": "Meter Exa spend and bound web_search per message"
+        },
+        {
+          "type": "fix",
+          "text": "Stop the drift console crashing on every real model"
+        },
+        {
+          "type": "fix",
+          "text": "Fix locking.rs formatting"
+        },
+        {
+          "type": "fix",
+          "text": "Compile remaining undeclared src modules"
+        },
+        {
+          "type": "fix",
+          "text": "Query public.tenants/users instead of platform.*"
+        },
+        {
+          "type": "fix",
+          "text": "Reconcile business_facts.user_count from seat-usage"
+        },
+        {
+          "type": "fix",
+          "text": "Share the env latch for INTERNAL_API_TOKEN billing tests"
+        },
+        {
+          "type": "fix",
+          "text": "Scraper-service fails the boot on a malformed env var"
+        },
+        {
+          "type": "fix",
+          "text": "Run DB-backed test targets in CI"
+        },
+        {
+          "type": "fix",
+          "text": "Sync Cargo.lock after #7095 dropped service-registry-client"
+        },
+        {
+          "type": "fix",
+          "text": "Restore compilation on main (#7088, #7094)"
+        },
+        {
+          "type": "fix",
+          "text": "Print skip sentinel in orchestration_rls_test"
+        },
+        {
+          "type": "fix",
+          "text": "Discharge #6369's obligation cycle when a paid maintenance filing completes"
+        },
+        {
+          "type": "fix",
+          "text": "Do not require audit event order in dispatch test"
+        },
+        {
+          "type": "fix",
+          "text": "Write the tenant policies migration 023 forgot on four ai_ml tables"
+        },
+        {
+          "type": "fix",
+          "text": "Read autopilot multi-agent migration from crate dir"
+        },
+        {
+          "type": "fix",
+          "text": "Flatten tokio_postgres errors in ml_drift RLS asserts"
+        },
+        {
+          "type": "fix",
+          "text": "Stop ALTER ROLE saasy_app in ml_drift RLS tests"
+        },
+        {
+          "type": "fix",
+          "text": "Wire ml_drift_rls_test into CI — and unbreak the leg it joins"
+        },
+        {
+          "type": "fix",
+          "text": "Remove the dead sync_files_connection_fail_open wrapper (unblocks rust-compile-gate)"
+        },
+        {
+          "type": "fix",
+          "text": "Remediate 2026-08 audit findings (1H/4M/8L)"
+        },
+        {
+          "type": "fix",
+          "text": "Reap cargo caches the pool never saw"
+        },
+        {
+          "type": "fix",
+          "text": "Reconcile workflow-automation-brain tests with gate and route behavior"
+        },
+        {
+          "type": "fix",
+          "text": "Deep-link renewal notifications to the obligation"
+        },
+        {
+          "type": "fix",
+          "text": "Bind claim_due stale window as bigint seconds, not TEXT-into-INTERVAL"
+        },
+        {
+          "type": "fix",
+          "text": "Guard 3 counts only queued runs that can still execute"
+        },
+        {
+          "type": "fix",
+          "text": "Per-client-IP rate limit on POST /api/v1/auth/register + flood cleanup script"
+        },
+        {
+          "type": "fix",
+          "text": "GLOBAL registration cap — per-IP windows alone provably under-deliver"
+        },
+        {
+          "type": "fix",
+          "text": "Edge-secret gate on registration — direct-to-origin scripts bypass Cloudflare WAF"
+        },
+        {
+          "type": "fix",
+          "text": "Fleet-global register limit — shared Redis windows behind local tier"
+        },
+        {
+          "type": "fix",
+          "text": "SQL-interpolation burn-down (#7180) + typed event payloads & gate upgrades"
+        },
+        {
+          "type": "fix",
+          "text": "Bypass auth for GET /.well-known/mcp"
+        },
+        {
+          "type": "fix",
+          "text": "Quiet detect-secrets false positives and loud DB-gated skips"
+        },
+        {
+          "type": "fix",
+          "text": "Reap leftover #[sqlx::test] databases"
+        },
+        {
+          "type": "fix",
+          "text": "#7180/#7181 follow-ups — drop watchdog-liveness, explicit grant test skips"
+        },
+        {
+          "type": "fix",
+          "text": "Unique login roles for remaining RLS probe suites"
+        },
+        {
+          "type": "fix",
+          "text": "Move outbound reconcile off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Move support-profile reveal ledger off sqlx"
+        },
+        {
+          "type": "fix",
+          "text": "Drop webhooks_in sqlx pool constructor"
+        },
+        {
+          "type": "fix",
+          "text": "Continue producer trace on undeployed MessageContext consumers"
+        },
+        {
+          "type": "fix",
+          "text": "Drop sqlx from the production Database wrapper"
+        },
+        {
+          "type": "fix",
+          "text": "Stop Sentry flood on expected LLM degradation"
+        },
+        {
+          "type": "fix",
+          "text": "Treat verification as a real #706 trigger"
+        },
+        {
+          "type": "fix",
+          "text": "Require CONFIRM_BACKFILL=1 for migration --backfill"
+        },
+        {
+          "type": "fix",
+          "text": "Hide DangerZone from non-admins and unify compose JWT default"
+        },
+        {
+          "type": "fix",
+          "text": "Price Ask SaaSy usage_log with model-aware cents"
+        },
+        {
+          "type": "fix",
+          "text": "Reject billing-email events with no CloudEvents id"
+        },
+        {
+          "type": "fix",
+          "text": "Make /health/ready able to fail"
+        },
+        {
+          "type": "fix",
+          "text": "Begin_tenant_tx for definition repository"
+        },
+        {
+          "type": "fix",
+          "text": "402 CRM report export without entitlement"
+        },
+        {
+          "type": "fix",
+          "text": "Commit retention anonymize and ledger in one tx"
+        },
+        {
+          "type": "fix",
+          "text": "Purge CRM tables on tenant.account.archived"
+        },
+        {
+          "type": "fix",
+          "text": "Begin_tenant_tx for saga repository"
+        },
+        {
+          "type": "fix",
+          "text": "Run Isolation Forest on the ops heartbeat"
+        },
+        {
+          "type": "fix",
+          "text": "Read CloudEvents nested tenant_id"
+        },
+        {
+          "type": "fix",
+          "text": "Send public site render to content-service"
+        },
+        {
+          "type": "fix",
+          "text": "Purge document tables on tenant.account.archived"
+        },
+        {
+          "type": "fix",
+          "text": "402 CRM deals export without entitlement"
+        },
+        {
+          "type": "fix",
+          "text": "Purge employees and candidates on tenant.account.archived"
+        },
+        {
+          "type": "fix",
+          "text": "Purge webhook tables on tenant.account.archived"
+        },
+        {
+          "type": "fix",
+          "text": "Purge support and settings on tenant.account.archived"
+        },
+        {
+          "type": "fix",
+          "text": "Point Fly health check at /health/ready"
+        },
+        {
+          "type": "fix",
+          "text": "Purge tenant tools and memories on tenant.account.archived"
+        },
+        {
+          "type": "fix",
+          "text": "Point Fly health check at a real /health/ready"
+        },
+        {
+          "type": "fix",
+          "text": "Purge LMS learner rows on tenant.account.archived"
+        },
+        {
+          "type": "fix",
+          "text": "Purge OAuth and connector credentials on tenant.account.archived"
+        },
+        {
+          "type": "fix",
+          "text": "Purge knowledge, sites, and folders on tenant.account.archived"
+        },
+        {
+          "type": "fix",
+          "text": "Purge HRIS employee mirrors on tenant.account.archived"
+        },
+        {
+          "type": "fix",
+          "text": "Purge QBO financial mirrors on tenant.account.archived"
+        },
+        {
+          "type": "fix",
+          "text": "402 CRM task and audit-log export without advanced_analytics"
+        },
+        {
+          "type": "fix",
+          "text": "Purge contents, versions, and crawler visits on tenant.account.archived"
+        },
+        {
+          "type": "fix",
+          "text": "Purge Plaid and FreshBooks rows on tenant.account.archived"
+        },
+        {
+          "type": "fix",
+          "text": "Purge Canva and vertical connections on tenant.account.archived"
+        },
+        {
+          "type": "fix",
+          "text": "Purge SaaSy Social rows on tenant.account.archived"
+        },
+        {
+          "type": "fix",
+          "text": "Purge leftover QBO satellites on tenant.account.archived"
+        },
+        {
+          "type": "fix",
+          "text": "Purge leftover tenant PII on tenant.account.archived"
+        },
+        {
+          "type": "fix",
+          "text": "GC object-storage blobs on tenant.account.archived"
+        },
+        {
+          "type": "fix",
+          "text": "Expect messages and Phase 0 ON_ERROR_STOP"
+        },
+        {
+          "type": "fix",
+          "text": "Run approval repo tenant writes inside begin_tenant_tx"
+        },
+        {
+          "type": "fix",
+          "text": "Purge vault and API keys on tenant.account.archived"
+        },
+        {
+          "type": "fix",
+          "text": "Run autopilot tenant writes inside begin_tenant_tx"
+        },
+        {
+          "type": "fix",
+          "text": "Purge satellite secrets on tenant.account.archived"
+        },
+        {
+          "type": "fix",
+          "text": "Run execution repo tenant writes inside begin_tenant_tx"
+        },
+        {
+          "type": "fix",
+          "text": "Run rule-set repo tenant writes inside begin_tenant_tx"
+        },
+        {
+          "type": "fix",
+          "text": "Run orchestration repo tenant writes inside begin_tenant_tx"
+        },
+        {
+          "type": "fix",
+          "text": "Purge payroll and billing PII on tenant.account.archived"
+        },
+        {
+          "type": "fix",
+          "text": "ENABLE RLS on tenant_playbook_config"
+        },
+        {
+          "type": "fix",
+          "text": "Run intel-monitoring tenant writes inside begin_tenant_tx"
+        },
+        {
+          "type": "fix",
+          "text": "Run playbook-config tenant writes inside begin_tenant_tx"
+        },
+        {
+          "type": "fix",
+          "text": "Run timeseries repo tenant writes inside begin_tenant_tx"
+        },
+        {
+          "type": "fix",
+          "text": "Wrap MonitoringDashboardRepository in begin_tenant_tx"
+        },
+        {
+          "type": "fix",
+          "text": "Wrap client telemetry writes in begin_tenant_tx"
+        },
+        {
+          "type": "fix",
+          "text": "Wrap MetricsRepository in begin_tenant_tx"
+        },
+        {
+          "type": "fix",
+          "text": "Wrap vertical_health list_components in begin_tenant_tx"
+        },
+        {
+          "type": "fix",
+          "text": "Wrap AlertRuleRepository tenant methods in begin_tenant_tx"
+        },
+        {
+          "type": "fix",
+          "text": "Wrap brand-kit tenant_branding reads in begin_tenant_tx"
+        },
+        {
+          "type": "fix",
+          "text": "Wrap NotificationRepository create in begin_tenant_tx"
+        },
+        {
+          "type": "fix",
+          "text": "Fail-closed SSRF on watchlist fetch URLs"
+        },
+        {
+          "type": "fix",
+          "text": "Use real regex for SQL-injection pattern matching"
+        },
+        {
+          "type": "fix",
+          "text": "Unbreak ai-platform/brains/workflows deploys — dead crates/core/billing member"
+        }
+      ]
+    },
+    {
       "version": "1.11.0",
       "date": "2026-07-20",
       "title": "Payroll in All 41 Wage States, Start a Business From an Idea, and Agents That Ask Before They Act",
