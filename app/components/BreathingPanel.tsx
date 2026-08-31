@@ -8,10 +8,10 @@ import { useCountUp } from '@/lib/useCountUp';
 const SCORE_DELTA = 6;
 
 const FEED = [
-  'Drafted client follow-up — Rivera Roofing',
-  'Flagged churn risk — Delgado HVAC',
-  'Filed WH-347 certified payroll — Local 412',
-  'Scheduled license renewal — permit #88-C',
+  'Drafted client follow-up · Rivera Roofing',
+  'Flagged churn risk · Delgado HVAC',
+  'Filed WH-347 certified payroll · Local 412',
+  'Scheduled license renewal · permit #88-C',
 ];
 
 /**
