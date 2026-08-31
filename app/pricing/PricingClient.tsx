@@ -107,7 +107,7 @@ export function PricingPageClient(): React.ReactElement {
             For scale: a typical 5-person business pays $320&ndash;500
             a month stitching together CRM, accounting, projects, email
             marketing, payroll, and automation tools. SaaSy replaces
-            that stack at one flat price &mdash; and hiring never
+            that stack at one flat price, and hiring never
             raises your software bill.
           </p>
 
@@ -323,7 +323,7 @@ export function PricingPageClient(): React.ReactElement {
               className="mt-4
                 text-lg text-saasy-muted"
             >
-              Run payroll natively in all 50 states plus DC — direct deposit,
+              Run payroll natively in all 50 states plus DC: direct deposit,
               W-2s, and withholding computed to the cent. Free on Growth
               and Scale plans during beta.
             </p>
@@ -383,14 +383,14 @@ export function PricingPageClient(): React.ReactElement {
                   </span>
                 </li>
                 <li className="flex items-center justify-between gap-4">
-                  <span>After beta &mdash; base</span>
+                  <span>After beta · base</span>
                   <span className="font-semibold text-white">
                     $29
                     <span className="text-saasy-muted">/mo</span>
                   </span>
                 </li>
                 <li className="flex items-center justify-between gap-4">
-                  <span>After beta &mdash; per employee</span>
+                  <span>After beta · per employee</span>
                   <span className="font-semibold text-white">
                     $4
                     <span className="text-saasy-muted">/mo</span>
@@ -402,7 +402,7 @@ export function PricingPageClient(): React.ReactElement {
                   text-sm text-saasy-muted"
               >
                 For comparison: leading standalone payroll starts at
-                $49/mo plus $6 per person &mdash; and it doesn&rsquo;t
+                $49/mo plus $6 per person, and it doesn&rsquo;t
                 talk to your books, CRM, or compliance calendar.
               </p>
               <a

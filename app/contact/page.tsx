@@ -5,18 +5,18 @@ import { MarketingFooter } from "../components/MarketingFooter";
 import { ContactForm } from "../components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact — SaaSy",
+  title: "Contact | SaaSy",
   description:
     "Questions about SaaSy, pricing, a vertical workflow, or a " +
-    "partnership? Send us a message — a real person replies within " +
+    "partnership? Send us a message. A real person replies within " +
     "one business day.",
   alternates: {
     canonical: "https://hellosaasy.ai/contact",
   },
   openGraph: {
-    title: "Contact — SaaSy",
+    title: "Contact | SaaSy",
     description:
-      "Send us a message — a real person replies within one " +
+      "Send us a message. A real person replies within one " +
       "business day.",
     url: "https://hellosaasy.ai/contact",
     siteName: "SaaSy",
@@ -26,9 +26,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     images: [ogImage("contact").url],
-    title: "Contact — SaaSy",
+    title: "Contact | SaaSy",
     description:
-      "Send us a message — a real person replies within one " +
+      "Send us a message. A real person replies within one " +
       "business day.",
   },
 };
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  name: "Contact — SaaSy",
+  name: "Contact | SaaSy",
   url: "https://hellosaasy.ai/contact",
   description:
     "Contact SaaSy with product, pricing, support, or partnership " +
@@ -113,8 +113,8 @@ export default function ContactPage(): React.ReactElement {
           </h1>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-saasy-muted">
             Question about the product, pricing, a vertical workflow, or
-            a partnership? Send it over. Our agents run the back office
-            &mdash; humans still read the mail.
+            a partnership? Send it over. Our agents run the back office.
+            Humans still read the mail.
           </p>
         </div>
       </header>
@@ -154,7 +154,7 @@ export default function ContactPage(): React.ReactElement {
               className="mt-6 border-t border-saasy-border/60 pt-5
                 text-sm leading-relaxed text-saasy-muted"
             >
-              SaaSy Solutions LLC is fully remote &mdash; no lobby, no
+              SaaSy Solutions LLC is fully remote: no lobby, no
               hold music. Email is the fastest way to reach us, and we
               reply within one business day.
             </p>

@@ -43,21 +43,21 @@ const integrations: Integration[] = [
     name: 'Slack',
     category: 'Real-time Alerts',
     description:
-      'Get daily business briefings and instant alerts — missed payments, compliance deadlines, key metrics — right in Slack where you already are.',
+      'Get daily business briefings and instant alerts (missed payments, compliance deadlines, key metrics) right in Slack where you already are.',
     status: 'Available',
   },
   {
     name: 'Google Workspace (Gmail)',
     category: 'Email',
     description:
-      'Connect your Google account and SaaSy sends and reads email on your behalf — follow-ups, briefings, and customer threads without leaving the app.',
+      'Connect your Google account and SaaSy sends and reads email on your behalf: follow-ups, briefings, and customer threads without leaving the app.',
     status: 'Available',
   },
   {
     name: 'Microsoft 365 (Outlook)',
     category: 'Email',
     description:
-      'Outlook shop? Connect Microsoft 365 and SaaSy handles email the same way — sending, reading, and keeping customer conversations in view.',
+      'Outlook shop? Connect Microsoft 365 and SaaSy handles email the same way, sending, reading, and keeping customer conversations in view.',
     status: 'Available',
   },
   {
@@ -78,7 +78,7 @@ const integrations: Integration[] = [
     name: 'ADP',
     category: 'Payroll & HRIS',
     description:
-      'Sync payroll and employee data from ADP so certified payroll, dues, and labor compliance run on real numbers — not re-keyed spreadsheets.',
+      'Sync payroll and employee data from ADP so certified payroll, dues, and labor compliance run on real numbers, not re-keyed spreadsheets.',
     status: 'Available',
   },
   {
@@ -106,21 +106,21 @@ const integrations: Integration[] = [
     name: 'Plaid',
     category: 'Banking',
     description:
-      'Link your bank accounts and SaaSy keeps balances and transactions synced daily — real cash-flow visibility without CSV exports.',
+      'Link your bank accounts and SaaSy keeps balances and transactions synced daily: real cash-flow visibility without CSV exports.',
     status: 'Available',
   },
   {
     name: 'Webhooks & API',
     category: 'Developer Tools',
     description:
-      'Signed inbound and outbound webhooks with retries, plus an open API on Growth plans and above — connect anything we haven’t built yet.',
+      'Signed inbound and outbound webhooks with retries, plus an open API on Growth plans and above. Connect anything we haven’t built yet.',
     status: 'Available',
   },
   {
     name: 'HubSpot',
     category: 'CRM & Contacts',
     description:
-      'Keep your customer relationships in one place — contacts, deals, and activity sync automatically so you never lose track of a lead.',
+      'Keep your customer relationships in one place. Contacts, deals, and activity sync automatically so you never lose track of a lead.',
     status: 'Coming Soon',
   },
   {
@@ -134,7 +134,7 @@ const integrations: Integration[] = [
     name: 'Salesforce',
     category: 'CRM & Sales Pipeline',
     description:
-      'Keep your customer relationships in one place — contacts, deals, and activity sync automatically between SaaSy and Salesforce.',
+      'Keep your customer relationships in one place. Contacts, deals, and activity sync automatically between SaaSy and Salesforce.',
     status: 'Coming Soon',
   },
   {
