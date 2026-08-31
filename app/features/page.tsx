@@ -18,7 +18,7 @@ import {
 } from "../components/Icons";
 
 export const metadata: Metadata = {
-  title: "Features — SaaSy",
+  title: "Features | SaaSy",
   description:
     "See SaaSy's customer health scoring, churn alerts, AI answers " +
     "grounded in your data, and integrations in real product " +
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     canonical: "https://hellosaasy.ai/features",
   },
   openGraph: {
-    title: "Features — SaaSy",
+    title: "Features | SaaSy",
     description:
       "Customer health scoring, churn alerts, Ask SaaSy AI answers, " +
       "and integrations, shown in real product screenshots.",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     images: [ogImage("features").url],
-    title: "Features — SaaSy",
+    title: "Features | SaaSy",
     description:
       "Customer health scoring, churn alerts, Ask SaaSy AI answers, " +
       "and integrations, shown in real product screenshots.",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Features — SaaSy",
+  name: "Features | SaaSy",
   url: "https://hellosaasy.ai/features",
   description:
     "Customer health scoring, churn alerts, Ask SaaSy AI, and " +

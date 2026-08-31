@@ -81,7 +81,7 @@ const SERVICES: Service[] = [
     name: "Custom Systems Development & Integration",
     description:
       "Need something the off-the-shelf tools can't do? We " +
-      "design and build custom AI solutions — machine learning " +
+      "design and build custom AI solutions: machine learning " +
       "models, NLP systems, computer vision, and API integrations " +
       "tailored to your exact needs.",
     highlights: [
@@ -158,7 +158,7 @@ export default function ServicesPage() {
           >
             SaaSy the platform handles the day-to-day. But when you
             need custom automations, deep integrations, or a
-            dedicated engineering partner &mdash; our consulting team
+            dedicated engineering partner, our consulting team
             at SaaSy Solutions designs, builds, and manages the
             systems that run your business.
           </p>
@@ -369,7 +369,7 @@ export default function ServicesPage() {
                 className="mt-3
                   text-sm text-saasy-muted"
               >
-                Full-stack systems ownership &mdash; your fractional
+                Full-stack systems ownership: your fractional
                 CTO and engineering partner.
               </p>
             </div>
@@ -405,8 +405,8 @@ export default function ServicesPage() {
           >
             Book a free consultation. We&apos;ll assess your current
             systems, identify the biggest opportunities, and
-            recommend a path forward &mdash; whether that&apos;s the
-            SaaSy platform, a consulting engagement, or both.
+            recommend a path forward (whether that&apos;s the
+            SaaSy platform, a consulting engagement, or both).
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <a

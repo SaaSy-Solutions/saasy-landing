@@ -5,7 +5,7 @@ import { MarketingFooter } from "../components/MarketingFooter";
 import { ogImage } from "../components/ogAssets";
 
 export const metadata: Metadata = {
-  title: "Compare — SaaSy vs Alternatives",
+  title: "Compare | SaaSy vs Alternatives",
   description:
     "See how SaaSy compares to spreadsheets, hiring, and other " +
     "tools for running your business.",
@@ -208,7 +208,7 @@ export default function ComparePage() {
               text-saasy-muted"
           >
             SaaSy gives you compliance tracking, CRM, smart guidance,
-            and proactive alerts in one platform &mdash; for less than
+            and proactive alerts in one platform, for less than
             the cost of a single part-time hire. Start your 14-day
             free trial and see the difference.
           </p>
