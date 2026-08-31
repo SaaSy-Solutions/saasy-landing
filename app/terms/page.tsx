@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Terms of Service | SaaSy",
   description:
     "Terms of Service for SaaSy, an intelligent business operating system by SaaSy Solutions LLC.",
+  alternates: {
+    canonical: "https://hellosaasy.ai/terms",
+  },
 };
 
 export default function TermsOfServicePage() {
@@ -35,7 +38,7 @@ export default function TermsOfServicePage() {
             Terms of Service
           </h1>
           <p className="mt-3  text-saasy-muted text-sm">
-            Last updated: March 2026
+            Last updated: August 28, 2026
           </p>
         </header>
 
@@ -116,14 +119,30 @@ export default function TermsOfServicePage() {
             <p className="text-saasy-muted  leading-relaxed mb-5">
               SaaSy offers three subscription plans, billed monthly:
             </p>
+            {/*
+              These limits are contractual, so they must match what the product
+              actually grants. Source of truth is TIER_FEATURE_CLAIMS in
+              packages/utils/pricing-constants/src/claims.ts in the
+              saas-platform repo, where every label is pinned to a live
+              entitlement code or a plan quota.
+
+              Corrected 2026-08-10 (SaaSy-Solutions/saas-platform#1471):
+                - Starter said "CRM (50 contacts)"; the product grants 1,000.
+                - Growth said "all modules", which is the claim saas-platform
+                  #5906 removed everywhere else — union and field service are
+                  paid add-ons that no plan includes.
+                - Scale said "dedicated onboarding", which maps to no
+                  entitlement the platform grants.
+            */}
             <div className="rounded-xl border border-saasy-border bg-saasy-card/50 divide-y divide-saasy-border">
               <div className="p-5">
                 <p className=" font-semibold text-white">
                   Starter &mdash; $49/month
                 </p>
                 <p className="mt-1  text-sm text-saasy-muted">
-                  1 business, compliance tracker, CRM (50 contacts), daily
-                  briefing, email alerts
+                  1 business, compliance tracker, CRM (1,000 contacts), daily
+                  briefing, email alerts, all 10 bundled apps (union &amp; field
+                  service sold separately)
                 </p>
               </div>
               <div className="p-5">
@@ -131,8 +150,9 @@ export default function TermsOfServicePage() {
                   Growth &mdash; $199/month
                 </p>
                 <p className="mt-1  text-sm text-saasy-muted">
-                  Up to 5 businesses, all modules, smart guidance, Slack alerts,
-                  API access
+                  Up to 5 businesses, CRM (10,000 contacts), AI guidance, Slack
+                  alerts, API access, all 10 bundled apps (union &amp; field
+                  service sold separately)
                 </p>
               </div>
               <div className="p-5">
@@ -140,8 +160,9 @@ export default function TermsOfServicePage() {
                   Scale &mdash; $399/month
                 </p>
                 <p className="mt-1  text-sm text-saasy-muted">
-                  Unlimited businesses, advanced analytics, priority
-                  support, custom automations, dedicated onboarding
+                  Unlimited businesses, unlimited CRM contacts, advanced
+                  analytics, priority support, custom automations, all 10
+                  bundled apps (union &amp; field service sold separately)
                 </p>
               </div>
             </div>
@@ -187,7 +208,15 @@ export default function TermsOfServicePage() {
             <p className="mt-3 text-saasy-muted  leading-relaxed">
               We do not offer partial refunds for unused time within a billing
               period. If you believe you are entitled to a refund due to
-              service issues, please contact our support team.
+              service issues, please contact our support team. The standalone
+              copy is at{" "}
+              <Link
+                href="/refund-policy"
+                className="text-saasy-pink-soft underline"
+              >
+                /refund-policy
+              </Link>
+              .
             </p>
           </section>
 
@@ -249,7 +278,14 @@ export default function TermsOfServicePage() {
             </ul>
             <p className="mt-3 text-saasy-muted  leading-relaxed">
               Violation of these terms may result in immediate suspension or
-              termination of your account.
+              termination of your account. The standalone copy is at{" "}
+              <Link
+                href="/acceptable-use"
+                className="text-saasy-pink-soft underline"
+              >
+                /acceptable-use
+              </Link>
+              . We do not process PHI.
             </p>
           </section>
 
@@ -331,6 +367,36 @@ export default function TermsOfServicePage() {
             </p>
           </section>
 
+          <section>
+            <h2 className="text-white  text-xl font-semibold mt-10 mb-4">
+              AI outputs and training
+            </h2>
+            <p className="text-saasy-muted  leading-relaxed">
+              Advisory text, scores, and drafts the Service generates are
+              suggestions, not legal, tax, or financial advice. You remain
+              responsible for filings and decisions. We do not use Customer
+              Data to train foundation models. Email{" "}
+              <a
+                href="mailto:privacy@hellosaasy.ai"
+                className="text-saasy-pink-soft underline"
+              >
+                privacy@hellosaasy.ai
+              </a>{" "}
+              to opt out of any future optional training program. The{" "}
+              <Link href="/dpa" className="text-saasy-pink-soft underline">
+                DPA
+              </Link>{" "}
+              and{" "}
+              <Link
+                href="/subprocessors"
+                className="text-saasy-pink-soft underline"
+              >
+                subprocessor list
+              </Link>{" "}
+              are part of these Terms.
+            </p>
+          </section>
+
           {/* 13. Contact */}
           <section>
             <h2 className="text-white  text-xl font-semibold mt-10 mb-4">
@@ -356,12 +422,24 @@ export default function TermsOfServicePage() {
           <p className=" text-sm text-saasy-muted">
             &copy; 2023–2026 SaaSy Solutions LLC. All rights reserved.
           </p>
-          <div className="mt-3 flex gap-6">
+          <div className="mt-3 flex flex-wrap gap-6">
             <Link
               href="/privacy"
               className=" text-sm text-saasy-pink-soft hover:text-saasy-rose underline"
             >
               Privacy Policy
+            </Link>
+            <Link
+              href="/dpa"
+              className=" text-sm text-saasy-pink-soft hover:text-saasy-rose underline"
+            >
+              DPA
+            </Link>
+            <Link
+              href="/subprocessors"
+              className=" text-sm text-saasy-pink-soft hover:text-saasy-rose underline"
+            >
+              Subprocessors
             </Link>
           </div>
         </footer>

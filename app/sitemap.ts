@@ -25,11 +25,17 @@ const STATIC_ROUTES: {
   { path: "/compare", changeFrequency: "monthly", priority: 0.7 },
   { path: "/services", changeFrequency: "monthly", priority: 0.7 },
   { path: "/integrations", changeFrequency: "monthly", priority: 0.6 },
+  { path: "/download", changeFrequency: "monthly", priority: 0.6 },
   { path: "/blog", changeFrequency: "weekly", priority: 0.6 },
   { path: "/changelog", changeFrequency: "weekly", priority: 0.5 },
   { path: "/contact", changeFrequency: "monthly", priority: 0.5 },
   { path: "/terms", changeFrequency: "monthly", priority: 0.3 },
   { path: "/privacy", changeFrequency: "monthly", priority: 0.3 },
+  { path: "/dpa", changeFrequency: "monthly", priority: 0.3 },
+  { path: "/subprocessors", changeFrequency: "monthly", priority: 0.3 },
+  { path: "/refund-policy", changeFrequency: "monthly", priority: 0.3 },
+  { path: "/acceptable-use", changeFrequency: "monthly", priority: 0.3 },
+  { path: "/cookies", changeFrequency: "monthly", priority: 0.3 },
   { path: "/sms-consent", changeFrequency: "monthly", priority: 0.3 },
 ];
 
