@@ -66,6 +66,7 @@ export function PricingPageClient(): React.ReactElement {
                 "CRM (1,000 contacts)",
                 "Daily briefing",
                 "Email alerts",
+                "Includes $5/mo AI usage",
               ]}
             />
             <PricingCard
@@ -79,7 +80,7 @@ export function PricingPageClient(): React.ReactElement {
                 "10 team seats",
                 "CRM (10,000 contacts)",
                 "Native payroll, 50 states + DC (beta perk)",
-                "Ask SaaSy AI guidance",
+                "Ask SaaSy AI guidance ($20/mo included)",
                 "Slack alerts",
                 "API access",
               ]}
@@ -96,6 +97,7 @@ export function PricingPageClient(): React.ReactElement {
                 "Priority support",
                 "Custom automations",
                 "Dedicated onboarding",
+                "$50/mo AI usage included",
               ]}
             />
           </div>
@@ -108,7 +110,10 @@ export function PricingPageClient(): React.ReactElement {
             a month stitching together CRM, accounting, projects, email
             marketing, payroll, and automation tools. SaaSy replaces
             that stack at one flat price, and hiring never
-            raises your software bill.
+            raises your software bill. Included AI usage is Starter $5
+            / Growth $20 / Scale $50 per month; extra is sold as $25
+            packs ($20 of additional AI budget). Document embeddings
+            and memory maintenance do not consume that allowance.
           </p>
 
           <p
