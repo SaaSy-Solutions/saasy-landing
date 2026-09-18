@@ -16,7 +16,7 @@ const FAQ_ITEMS = [
   {
     question: "How is AI usage billed?",
     answer:
-      "Each plan includes a monthly AI allowance: $5 on Starter, $20 on Growth (and on the 14-day trial), $50 on Scale. Interactive features such as Ask SaaSy, agents, and AI drafts count against it. Document embeddings and memory maintenance are on us. When you hit the allowance you can buy $25 packs that add $20 of extra budget, or connect your own AI key so those calls don't count. You'll see spend and remaining allowance under Billing → Usage.",
+      "Each plan includes monthly AI credits: 500 on Starter, 2,000 on Growth (and on the 14-day trial), 5,000 on Scale. Interactive features such as Ask SaaSy, agents, and AI drafts use credits. Document embeddings and memory maintenance are on us. When you run out you can buy $25 packs of 2,000 extra credits, or connect your own AI key so those calls don't count. You'll see remaining credits under Billing → Usage.",
   },
   {
     question: "Is my data used to train AI models?",
