@@ -309,6 +309,7 @@ export default function Home(): React.ReactElement {
                 "CRM (1,000 contacts)",
                 "Daily briefing",
                 "Email alerts",
+                "Includes 500 AI credits / mo",
               ]}
             />
             <PricingCard
@@ -322,7 +323,7 @@ export default function Home(): React.ReactElement {
                 "10 team seats",
                 "CRM (10,000 contacts)",
                 "Native payroll, 50 states + DC (beta perk)",
-                "Ask SaaSy AI guidance",
+                "Ask SaaSy AI guidance (2,000 credits / mo)",
                 "Slack alerts",
                 "API access",
               ]}
@@ -338,6 +339,7 @@ export default function Home(): React.ReactElement {
                 "Priority support",
                 "Custom automations",
                 "Dedicated onboarding",
+                "5,000 AI credits / mo",
               ]}
             />
           </div>
