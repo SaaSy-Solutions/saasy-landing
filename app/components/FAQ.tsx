@@ -14,6 +14,11 @@ const FAQ_ITEMS = [
       "Yes, and we're happy to bore you with specifics: AES-256 encryption at rest, TLS 1.2+ in transit, and strict per-account isolation. Your data never mingles with anyone else's, and you can export or delete it whenever you like.",
   },
   {
+    question: "How is AI usage billed?",
+    answer:
+      "Each plan includes a monthly AI allowance: $5 on Starter, $20 on Growth (and on the 14-day trial), $50 on Scale. Interactive features such as Ask SaaSy, agents, and AI drafts count against it. Document embeddings and memory maintenance are on us. When you hit the allowance you can buy $25 packs that add $20 of extra budget, or connect your own AI key so those calls don't count. You'll see spend and remaining allowance under Billing → Usage.",
+  },
+  {
     question: "Is my data used to train AI models?",
     answer:
       "No. Your data answers your questions and runs your workflows, full stop. The AI providers we use are contractually barred from training on your data, we don't build models on it either, and every AI call your account makes is metered and visible in your billing settings.",
