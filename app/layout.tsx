@@ -20,9 +20,10 @@ const poppins = Poppins({
 });
 
 const DESCRIPTION =
-  "The AI-powered back office for small business: CRM, payroll, " +
-  "compliance, and customer intelligence that flags problems before " +
-  "they cost you. Built for contractors, unions, and service firms.";
+  "The CRM that closes the loop: win the deal, deliver the work, " +
+  "invoice, and see payment land back on the record. Plus payroll, " +
+  "compliance, and customer intelligence for contractors, unions, " +
+  "and service firms.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://hellosaasy.ai"),
