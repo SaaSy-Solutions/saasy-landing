@@ -4,6 +4,11 @@ import { useState } from "react";
 
 const FAQ_ITEMS = [
   {
+    question: "Does the CRM talk to delivery and billing?",
+    answer:
+      "Yes. A won deal can spin up a delivery project in one click. The deal or project converts to a native invoice with a Stripe payment link. When they pay, Paid writes back onto the CRM record. That loop ships today — it is not a roadmap slide.",
+  },
+  {
     question: "How does SaaSy handle compliance tracking?",
     answer:
       "SaaSy watches your regulatory deadlines, tax filings, and license renewals for you. When something's coming due, you hear about it early enough to actually do something about it. Late fees fund other people's software.",

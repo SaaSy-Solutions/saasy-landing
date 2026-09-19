@@ -25,6 +25,7 @@ import { SiteNav } from "./components/SiteNav";
 import { Hero } from "./components/Hero";
 import { HeroVideo } from "./components/HeroVideo";
 import { ProductDemo } from "./components/ProductDemo";
+import { SellDeliverBill } from "./components/SellDeliverBill";
 
 /* ═══════════════════════════ PAGE ═══════════════════════════════ */
 
@@ -54,7 +55,7 @@ const CAPABILITIES: Capability[] = [
     icon: <IconCRM />,
     title: "Built-in CRM & projects",
     description:
-      "Contacts, deals, pipeline, quotes, and projects in one place, with nothing duct-taped between them.",
+      "Contacts, deals, pipeline, quotes, projects, and invoices in one loop: win the work, deliver it, get paid.",
   },
   {
     icon: <IconFinance />,
@@ -119,6 +120,8 @@ export default function Home(): React.ReactElement {
       {/* ─────────────────── Hero ─────────────────── */}
       <Hero />
 
+      <SellDeliverBill />
+
       {/* ─────────────── Trust Strip ─────────────────── */}
       <section
         className="border-y border-saasy-border bg-saasy-card/30"
@@ -179,8 +182,8 @@ export default function Home(): React.ReactElement {
             </div>
           </Reveal>
 
-          {/* Product walkthrough video — the destination for the hero's
-              "See how it works" CTA. */}
+          {/* Product walkthrough video. Hero "See how it works"
+              now lands on #loop; this is the deeper walkthrough. */}
           <ProductDemo />
 
           {/* Capability bento: feature cells carry real product

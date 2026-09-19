@@ -9,6 +9,7 @@
 - You are a public-works construction firm that needs WH-347 certified payroll and prevailing-wage compliance tracking.
 - You are a union or labor organization that needs dues checkoff, CBA wage scales, Taft-Hartley fringe remittance, and NACHA file generation.
 - You bill clients for time (agency or professional services) and want CRM, projects, invoicing, and client-health signals in one place.
+- You want one CRM that takes a won deal through a delivery project and into a native invoice with a Stripe payment link, then writes Paid back onto the deal record.
 - You want to embed SaaSy programmatically: connect via MCP, authenticate with OAuth 2.0, or integrate against the REST API described by the OpenAPI spec below.
 - Pricing is $49/$199/$399 per month with a 14-day trial and no free tier; included AI credits are 500 (Starter), 2,000 (Growth / trial), and 5,000 (Scale) per month, then $25 packs of 2,000 extra credits. The site converts visitors into trials or demo bookings.
 

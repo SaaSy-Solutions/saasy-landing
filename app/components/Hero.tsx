@@ -40,8 +40,8 @@ export function Hero(): React.ReactElement {
               tracking-tight text-white sm:text-6xl xl:text-7xl"
             style={{ animationDelay: "90ms" }}
           >
-            Your entire back office,{" "}
-            <span className="accent-word">handled</span>
+            Close the deal. Then{" "}
+            <span className="accent-word">finish the job</span>
           </h1>
 
           <p
@@ -49,10 +49,10 @@ export function Hero(): React.ReactElement {
               leading-relaxed text-saasy-muted sm:text-xl lg:mx-0"
             style={{ animationDelay: "180ms" }}
           >
-            AI agents run your CRM, payroll, and compliance, and
-            flag trouble while it&rsquo;s still cheap to fix. Built
-            for contractors, unions, and agencies who&rsquo;d rather
-            run the business than the busywork.
+            Win it, deliver it, invoice it, and see payment land
+            back on the record — one CRM, no handoff into a second
+            tool. Built for contractors, unions, and agencies
+            who&rsquo;d rather run the business than the busywork.
           </p>
 
           {/* CTAs */}
@@ -73,7 +73,7 @@ export function Hero(): React.ReactElement {
               Start free trial
             </Link>
             <Link
-              href="#features"
+              href="#loop"
               className="inline-flex items-center gap-2 rounded-full
                 border border-saasy-border px-8 py-4 text-base
                 font-semibold text-saasy-muted transition-all
