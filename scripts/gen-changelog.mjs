@@ -15,6 +15,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
+import { mergeWindow, mergedInWindow } from "./changelog-window.mjs";
 
 const REPO = "SaaSy-Solutions/saas-platform";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -128,11 +129,8 @@ async function fetchWindow(from, to, out, windows) {
   windows.push({ from, to, total });
 }
 
-async function fetchMergedPrs(sinceDate) {
-  // The original query was `merged:>sinceDate`, i.e. strictly after that day.
-  // Windows are inclusive, so start the day after to preserve the semantics.
-  const from = toISO(fromISO(sinceDate) + DAY_MS);
-  const to = toISO(Date.now());
+async function fetchMergedPrs(sinceDate, sourceThrough, through) {
+  const { from, to } = mergeWindow(sinceDate, sourceThrough, through);
   if (fromISO(from) > fromISO(to)) return [];
 
   const raw = [];
@@ -159,16 +157,18 @@ async function fetchMergedPrs(sinceDate) {
         `Refusing to draft a changelog from an incomplete read.`,
     );
   }
-  return prs;
+  return prs.filter((pr) => mergedInWindow(pr, sourceThrough, through));
 }
 
 const data = JSON.parse(readFileSync(dataPath, "utf8"));
+const sourceThrough = sinceArg ? null : data.entries[0]?.source_through || null;
 const latestDate = sinceArg
   || data.entries.map((e) => e.date).sort().at(-1)
   || "2026-01-01";
+const through = new Date().toISOString();
 
-console.error(`Fetching ${REPO} PRs merged after ${latestDate} ...`);
-const prs = await fetchMergedPrs(latestDate);
+console.error(`Fetching ${REPO} PRs merged after ${sourceThrough || latestDate} ...`);
+const prs = await fetchMergedPrs(latestDate, sourceThrough, through);
 console.error(`  ${prs.length} merged PRs found`);
 
 const seen = new Set();
@@ -201,10 +201,11 @@ if (items.length === 0) {
 
 // Date-stamped DRAFT entry. The CI workflow exports the date; locally we let the
 // script avoid new Date() coupling by reading CHANGELOG_DATE if present.
-const today = process.env.CHANGELOG_DATE || new Date().toISOString().slice(0, 10);
+const today = process.env.CHANGELOG_DATE || through.slice(0, 10);
 const draft = {
   version: `DRAFT-${today}`,
   date: today,
+  source_through: through,
   title: "Draft — edit version, title & wording before publishing",
   items,
 };

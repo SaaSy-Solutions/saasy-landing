@@ -18,6 +18,10 @@ on:
       since:
         description: "Override the 'merged after' date (YYYY-MM-DD)"
         required: false
+      refresh_open_draft:
+        description: "Replace an existing curation PR (discards its edits)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -39,7 +43,18 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Test draft guard
+        run: node --test scripts/changelog-draft-guard.test.mjs scripts/changelog-window.test.mjs
+
+      - name: Preserve an open curation PR
+        id: curation
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ALLOW_REFRESH: ${{ inputs.refresh_open_draft }}
+        run: node scripts/changelog-draft-guard.mjs
+
       - name: Generate draft entry
+        if: steps.curation.outputs.skip != 'true'
         env:
           GH_TOKEN: ${{ secrets.CHANGELOG_SOURCE_TOKEN }}
           SINCE: ${{ inputs.since }}
@@ -56,6 +71,7 @@ jobs:
           fi
 
       - name: Open curation PR
+        if: steps.curation.outputs.skip != 'true'
         uses: peter-evans/create-pull-request@v6
         with:
           # The org blocks the Actions bot from creating PRs, so prefer a
@@ -75,6 +91,8 @@ jobs:
             - Replace the `DRAFT-<date>` version with a real release number.
             - Rewrite the title and item wording for a customer audience.
             - Delete internal/noise items; keep what users actually see.
+            - Keep `source_through` intact: it lets the next draft include PRs
+              merged later on the same day as this one.
 
             The page reads `app/changelog/changelog.json` directly, so merging
             this triggers the Pages deploy.
