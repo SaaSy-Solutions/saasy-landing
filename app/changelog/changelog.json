@@ -1,6 +1,103 @@
 {
   "entries": [
     {
+      "version": "1.13.0",
+      "date": "2026-09-21",
+      "source_through": "2026-09-21T16:12:24Z",
+      "curated": true,
+      "title": "Projects, Connected Work, and More Control Over Your AI",
+      "items": [
+        {
+          "type": "feature",
+          "text": "Build a workflow or draft an agent by describing what you need in plain English. Start from a template, test the agent, and apply your own customizations before using it."
+        },
+        {
+          "type": "feature",
+          "text": "Ask SaaSy can work with files and images you attach, show action cards alongside an answer, and use the page you are on for context."
+        },
+        {
+          "type": "feature",
+          "text": "Choose a model for each agent and set user-specific autonomy rules. Agent versions must meet their evaluation threshold before activation."
+        },
+        {
+          "type": "feature",
+          "text": "Get a Chief of Staff daily operating brief in the workspace or through a connected collaboration channel."
+        },
+        {
+          "type": "feature",
+          "text": "Organize projects with milestones, budgets, reusable templates, and board or timeline views. Invite an external guest to a specific project."
+        },
+        {
+          "type": "feature",
+          "text": "Track team goals and key results, see workload and capacity, and receive a notice when an approval needs your decision."
+        },
+        {
+          "type": "feature",
+          "text": "Create contacts from bookings, calls, messages, and calendar activity. Import contacts in bulk with a preview and duplicate checks, and keep multiple email addresses and phone numbers on one record."
+        },
+        {
+          "type": "feature",
+          "text": "Use CRM deal-risk flags, pipeline anomaly detection, and follow-up suggestions based on relationship activity."
+        },
+        {
+          "type": "feature",
+          "text": "Capture leads through public forms, route them to an owner, and track the clicks that led to a lead or deal."
+        },
+        {
+          "type": "feature",
+          "text": "Request deposits and schedule milestone payments on invoices, send invoices and quotes by SMS, and track when an invoice is opened or viewed."
+        },
+        {
+          "type": "feature",
+          "text": "Manage customer credits for retainers, deposits, goodwill, and overpayments, and match bank transactions to cash journal entries."
+        },
+        {
+          "type": "feature",
+          "text": "Search connected documents, compare document versions, share files by role, and bring scanned invoices into your records."
+        },
+        {
+          "type": "feature",
+          "text": "Import a Bitwarden or CSV vault into SaaSPass, store more credential types including one-time codes, and set up emergency access with a waiting period."
+        },
+        {
+          "type": "feature",
+          "text": "Provision users with SCIM 2.0 and sign in through a SAML 2.0 identity provider."
+        },
+        {
+          "type": "feature",
+          "text": "Connect more systems, including Shopify, RevenueCat, and developer tools, and manage available connections from one settings page."
+        },
+        {
+          "type": "feature",
+          "text": "Send a support ticket from inside SaaSy instead of opening an email draft."
+        },
+        {
+          "type": "improvement",
+          "text": "Email, calendar, and Drive sync can resume after interruptions and report partial runs when a provider limits a fetch."
+        },
+        {
+          "type": "improvement",
+          "text": "The desktop app beta has an update feed, and the Apps page can point to the current installer."
+        },
+        {
+          "type": "fix",
+          "text": "Outreach sequences stop when a prospect replies, and mailbox owners control approval of messages sent from their account."
+        },
+        {
+          "type": "fix",
+          "text": "Invoice and payment flows verify payment before fulfilment, recover from interrupted creation, and keep customer edits."
+        },
+        {
+          "type": "fix",
+          "text": "Dashboards, health scores, and workflow pages show real data or a clear unavailable state instead of invented metrics."
+        },
+        {
+          "type": "fix",
+          "text": "Sign-out revokes the session, and connection and notification routes stay scoped to the signed-in user and workspace."
+        }
+      ]
+    },
+    {
       "version": "1.12.0",
       "date": "2026-08-31",
       "title": "SaaSy Class, Budgeting, and AI Agents You Can Actually Govern",

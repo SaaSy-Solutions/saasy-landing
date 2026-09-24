@@ -1,0 +1,41 @@
+name: Auto-merge curated changelog
+
+# This workflow executes only code from main. The PR's JSON is fetched through
+# the GitHub API and validated before the matching head SHA is merged.
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+    branches: [main]
+    paths:
+      - "app/changelog/changelog.json"
+
+permissions:
+  actions: write
+  contents: write
+  pull-requests: write
+
+jobs:
+  merge:
+    if: >-
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.event.pull_request.head.ref == 'changelog/draft'
+    runs-on: [self-hosted, linux, x64, saasy-landing]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Test curation gate
+        run: node --test scripts/auto-merge-curated-changelog.test.mjs
+
+      - name: Merge validated changelog PR
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/auto-merge-curated-changelog.mjs
