@@ -206,6 +206,7 @@ const draft = {
   version: `DRAFT-${today}`,
   date: today,
   source_through: through,
+  curated: false,
   title: "Draft — edit version, title & wording before publishing",
   items,
 };

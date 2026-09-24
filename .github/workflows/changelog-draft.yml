@@ -5,6 +5,7 @@ name: Draft changelog from merged PRs
 # the wording, version, and title before it ships to the public changelog.
 #
 # Runs weekly and on demand. It never publishes directly — the PR is the gate.
+# A separate workflow merges the PR when its entry has been curated and validated.
 #
 # Requires a repo/org secret CHANGELOG_SOURCE_TOKEN: a token with read access to
 # pull requests in SaaSy-Solutions/saas-platform (fine-grained PAT, "Pull
@@ -93,6 +94,8 @@ jobs:
             - Delete internal/noise items; keep what users actually see.
             - Keep `source_through` intact: it lets the next draft include PRs
               merged later on the same day as this one.
+            - Set `curated` to `true` after review. Validation then merges the
+              PR automatically; no separate merge action is needed.
 
             The page reads `app/changelog/changelog.json` directly, so merging
             this triggers the Pages deploy.
