@@ -2,6 +2,12 @@
 
 import Link from "next/link";
 import { FooterEmailCapture } from "./EmailCapture";
+import {
+  IconFacebook,
+  IconGitHub,
+  IconLinkedIn,
+  IconX,
+} from "./Icons";
 
 interface FooterLink {
   href: string;
@@ -84,6 +90,35 @@ const COLUMNS: FooterColumn[] = [
 const LINK_CLASSES =
   "text-saasy-muted text-sm hover:text-white transition-colors";
 
+interface SocialLink {
+  href: string;
+  label: string;
+  icon: () => React.ReactElement;
+}
+
+const SOCIALS: SocialLink[] = [
+  {
+    href: "https://linkedin.com/company/saasysolutions",
+    label: "SaaSy on LinkedIn",
+    icon: IconLinkedIn,
+  },
+  {
+    href: "https://x.com/saasysolutions",
+    label: "SaaSy on X",
+    icon: IconX,
+  },
+  {
+    href: "https://github.com/saasy-solutions",
+    label: "SaaSy on GitHub",
+    icon: IconGitHub,
+  },
+  {
+    href: "https://facebook.com/saasysolutionsllc",
+    label: "SaaSy Solutions on Facebook",
+    icon: IconFacebook,
+  },
+];
+
 export function MarketingFooter(): React.ReactElement {
   return (
     <footer className="border-t border-saasy-border bg-saasy-darker">
@@ -116,18 +151,43 @@ export function MarketingFooter(): React.ReactElement {
         {/* Newsletter signup */}
         <FooterEmailCapture />
 
-        {/* Copyright */}
-        <div
-          className="border-t border-saasy-border mt-10 pt-6
-            text-center text-saasy-muted text-sm [&>*]:mx-auto"
-        >
-          &copy; 2023&ndash;2026 SaaSy. A product by{" "}
-          <a
-            href="https://saasysolutionsllc.com"
-            className="hover:text-white transition-colors"
+        {/* Social + copyright */}
+        <div className="border-t border-saasy-border mt-10 pt-6">
+          <ul
+            className="flex items-center justify-center gap-6"
+            aria-label="SaaSy social profiles"
           >
-            SaaSy Solutions LLC
-          </a>
+            {SOCIALS.map((social) => {
+              const SocialIcon = social.icon;
+              return (
+                <li key={social.href}>
+                  <a
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener"
+                    aria-label={social.label}
+                    className="inline-flex h-9 w-9 items-center
+                      justify-center text-saasy-muted
+                      transition-colors hover:text-white"
+                  >
+                    <SocialIcon />
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+          <p
+            className="mt-4 text-center text-saasy-muted text-sm
+              [&>*]:mx-auto"
+          >
+            &copy; 2023&ndash;2026 SaaSy. A product by{" "}
+            <a
+              href="https://saasysolutionsllc.com"
+              className="hover:text-white transition-colors"
+            >
+              SaaSy Solutions LLC
+            </a>
+          </p>
         </div>
       </div>
     </footer>

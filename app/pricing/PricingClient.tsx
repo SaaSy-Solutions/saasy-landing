@@ -2,7 +2,13 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { PricingCard, PricingToggle } from "../components/Pricing";
+import {
+  PLAN_PRICES,
+  UNION_ADDON_PRICES,
+  getBillingLabel,
+  PricingCard,
+  PricingToggle,
+} from "../components/Pricing";
 import { IconCheck } from "../components/Icons";
 import { SiteNav } from "../components/SiteNav";
 import { MarketingFooter } from "../components/MarketingFooter";
@@ -11,15 +17,9 @@ import { FAQ } from "../components/FAQ";
 export function PricingPageClient(): React.ReactElement {
   const [interval, setInterval] = useState<"monthly" | "annual">("monthly");
 
-  const monthly = { starter: 49, growth: 199, scale: 399 };
-  const annual = { starter: 39, growth: 159, scale: 319 };
-  const prices = interval === "annual" ? annual : monthly;
-  const billingLabel =
-    interval === "annual" ? "/mo billed annually" : "/mo";
-  const unionAddon =
-    interval === "annual"
-      ? { band50: 79, band250: 199 }
-      : { band50: 99, band250: 249 };
+  const prices = PLAN_PRICES[interval];
+  const billingLabel = getBillingLabel(interval);
+  const unionAddon = UNION_ADDON_PRICES[interval];
 
   return (
     <div className="min-h-screen bg-saasy-dark">

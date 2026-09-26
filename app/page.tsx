@@ -15,7 +15,12 @@ import {
 } from "./components/Icons";
 import { Reveal } from "./components/Reveal";
 import { WhoItsFor } from "./components/WhoItsFor";
-import { PricingCard, PricingToggle } from "./components/Pricing";
+import {
+  PLAN_PRICES,
+  getBillingLabel,
+  PricingCard,
+  PricingToggle,
+} from "./components/Pricing";
 import { SocialProof } from "./components/SocialProof";
 import { TrustBadge } from "./components/TrustBadge";
 import { FAQ } from "./components/FAQ";
@@ -105,12 +110,8 @@ export default function Home(): React.ReactElement {
     "monthly" | "annual"
   >("monthly");
 
-  const monthlyPrices = { starter: 49, growth: 199, scale: 399 };
-  const annualPrices = { starter: 39, growth: 159, scale: 319 };
-  const prices =
-    pricingInterval === "annual" ? annualPrices : monthlyPrices;
-  const billingLabel =
-    pricingInterval === "annual" ? "/mo billed annually" : "/mo";
+  const prices = PLAN_PRICES[pricingInterval];
+  const billingLabel = getBillingLabel(pricingInterval);
 
   return (
     <div className="min-h-screen">

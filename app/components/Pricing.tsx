@@ -77,7 +77,31 @@ export function PricingCard({
   );
 }
 
-type BillingInterval = "monthly" | "annual";
+export type BillingInterval = "monthly" | "annual";
+
+/**
+ * Single source of truth for plan and add-on pricing, shared by the
+ * pricing page and the /unions page so the two can never drift apart.
+ * Annual is billed yearly at ~20% off monthly ("Save 20%" badge below).
+ */
+export const PLAN_PRICES: Record<
+  BillingInterval,
+  { starter: number; growth: number; scale: number }
+> = {
+  monthly: { starter: 49, growth: 199, scale: 399 },
+  annual: { starter: 39, growth: 159, scale: 319 },
+};
+
+export const UNION_ADDON_PRICES: Record<
+  BillingInterval,
+  { band50: number; band250: number }
+> = {
+  monthly: { band50: 99, band250: 249 },
+  annual: { band50: 79, band250: 199 },
+};
+
+export const getBillingLabel = (interval: BillingInterval): string =>
+  interval === "annual" ? "/mo billed annually" : "/mo";
 
 interface PricingToggleProps {
   interval: BillingInterval;
