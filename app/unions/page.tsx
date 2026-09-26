@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ogImage } from "../components/ogAssets";
 import { SiteNav } from "../components/SiteNav";
 import { MarketingFooter } from "../components/MarketingFooter";
+import { UnionPricing } from "./UnionPricing";
 
 const DESCRIPTION =
   "Union dues checkoff, CBA wage scales, Taft-Hartley fringe remittance, " +
@@ -305,80 +306,7 @@ export default function UnionsPage(): React.ReactElement {
         </section>
 
         {/* ─────────── Pricing ─────────── */}
-        <section
-          id="pricing"
-          className="border-t border-saasy-border py-24 sm:py-32"
-        >
-          <div className="mx-auto max-w-4xl px-6">
-            <div className="mx-auto mb-12 max-w-2xl text-center">
-              <h2 className="text-3xl font-bold text-white sm:text-4xl">
-                Priced by active members
-              </h2>
-              <p className="mt-4 text-lg text-saasy-muted">
-                The add-on attaches to a Growth ($199/mo) or Scale
-                ($399/mo) plan, so a 50-member shop runs $248/mo all
-                in, or $198/mo on annual billing. No per-seat games:
-                you pay for the members you actually remit for.
-              </p>
-            </div>
-
-            <div
-              className="mx-auto grid max-w-3xl gap-8
-                sm:grid-cols-2"
-            >
-              <div
-                className="rounded-2xl border border-saasy-border
-                  bg-saasy-card/50 p-8"
-              >
-                <h3 className="text-lg font-semibold text-white">
-                  Up to 50 members
-                </h3>
-                <div className="mt-3 flex items-baseline gap-1">
-                  <span className="text-4xl font-bold text-white">
-                    $99
-                  </span>
-                  <span className="text-saasy-muted">/mo</span>
-                </div>
-                <p className="mt-1 text-sm text-saasy-muted">
-                  $79/mo billed annually
-                </p>
-              </div>
-              <div
-                className="rounded-2xl border border-saasy-border
-                  bg-saasy-card/50 p-8"
-              >
-                <h3 className="text-lg font-semibold text-white">
-                  Up to 250 members
-                </h3>
-                <div className="mt-3 flex items-baseline gap-1">
-                  <span className="text-4xl font-bold text-white">
-                    $249
-                  </span>
-                  <span className="text-saasy-muted">/mo</span>
-                </div>
-                <p className="mt-1 text-sm text-saasy-muted">
-                  $199/mo billed annually
-                </p>
-              </div>
-            </div>
-
-            <p className="mx-auto mt-8 max-w-xl text-center text-sm text-saasy-muted">
-              Larger rosters (250+) are custom-quoted: tell us your
-              headcount and trades and we&rsquo;ll price it same-day.
-            </p>
-
-            <div className="mt-8 text-center">
-              <a
-                href="https://app.hellosaasy.ai/contact-sales?topic=union-add-on"
-                className="inline-flex rounded-full bg-saasy-rose
-                  px-8 py-4 text-base font-semibold text-white
-                  transition-colors hover:bg-saasy-rose-bright"
-              >
-                Talk to sales
-              </a>
-            </div>
-          </div>
-        </section>
+        <UnionPricing />
 
         {/* ─────────── Jargon, translated ─────────── */}
         <section className="border-t border-saasy-border py-24 sm:py-32">
