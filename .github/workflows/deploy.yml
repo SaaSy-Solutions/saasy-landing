@@ -35,6 +35,10 @@ jobs:
         env:
           NEXT_PUBLIC_POSTHOG_KEY: ${{ secrets.NEXT_PUBLIC_POSTHOG_KEY }}
           NEXT_PUBLIC_POSTHOG_HOST: https://us.i.posthog.com
+          # Desktop download surface reads the BETA channel feed while only
+          # unsigned beta installers exist (saas-platform #9807). Point back at
+          # the stable latest.json once a stable channel ships.
+          NEXT_PUBLIC_DESKTOP_UPDATE_FEED_URL: https://updates.hellosaasy.ai/beta/latest.json
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
