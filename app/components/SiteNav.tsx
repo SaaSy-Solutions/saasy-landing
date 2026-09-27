@@ -10,15 +10,18 @@ interface NavLink {
 }
 
 /**
- * Five top-level destinations — deliberately at the working-memory
- * limit. Customers, Services, and Integrations live in the footer; Compare is
- * linked from Pricing. /unions leads the nav as the strongest
- * vertical converter.
+ * Canonical nav set — the union of this nav and the product app's
+ * PublicNav (tenant-portal `components/PublicNav.tsx`), kept in lockstep
+ * per the marketing-design skill. Customers and Compare stay in the
+ * footer / Pricing page. This single list drives BOTH the desktop bar
+ * and the mobile drawer, so they can't drift apart.
  */
 const NAV_LINKS: NavLink[] = [
   { href: "/features", label: "Features" },
   { href: "/pricing", label: "Pricing" },
+  { href: "/services", label: "Services" },
   { href: "/unions", label: "For unions" },
+  { href: "/integrations", label: "Integrations" },
   { href: "/blog", label: "Blog" },
   { href: "https://docs.hellosaasy.ai", label: "Docs" },
 ];
