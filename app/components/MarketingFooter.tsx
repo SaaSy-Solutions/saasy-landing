@@ -187,6 +187,7 @@ export function MarketingFooter(): React.ReactElement {
             >
               SaaSy Solutions LLC
             </a>
+            , a woman-owned business.
           </p>
         </div>
       </div>
