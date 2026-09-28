@@ -26,6 +26,7 @@ import { TrustBadge } from "./components/TrustBadge";
 import { FAQ } from "./components/FAQ";
 import { BlogHighlights } from "./components/BlogHighlights";
 import { MarketingFooter } from "./components/MarketingFooter";
+import { FounderNote } from "./components/FounderNote";
 import { SiteNav } from "./components/SiteNav";
 import { Hero } from "./components/Hero";
 import { HeroVideo } from "./components/HeroVideo";
@@ -376,6 +377,13 @@ export default function Home(): React.ReactElement {
 
       {/* ─────────────── Blog Highlights ─────────── */}
       <BlogHighlights />
+
+      {/* ───────────── The humans behind it ───────── */}
+      <section className="border-t border-saasy-border py-24 sm:py-32">
+        <Reveal>
+          <FounderNote />
+        </Reveal>
+      </section>
 
       {/* ───────────── Final CTA ──────────────────── */}
       <section className="border-t border-saasy-border">

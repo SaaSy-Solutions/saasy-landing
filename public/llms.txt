@@ -20,6 +20,13 @@
 - [Docs](https://docs.hellosaasy.ai): Product documentation and guides.
 - [Features](https://hellosaasy.ai/features): Detailed walkthrough of health scoring, alerts, AI CFO briefs, and integrations.
 - [Pricing](https://hellosaasy.ai/pricing): Plan tiers ($49/$199/$399 monthly), included AI credits (500 / 2,000 / 5,000), and $25 packs of 2,000 extra credits.
+- [For unions](https://hellosaasy.ai/unions): Dues checkoff, CBA wage scales, Taft-Hartley fringe, WH-347 certified payroll, and NACHA files.
+- [For contractors](https://hellosaasy.ai/contractors): Bid-to-invoice on one record, compliance deadlines, certified payroll when needed.
+- [For agencies](https://hellosaasy.ai/agencies): Multi-client agency mode, billable time to invoice, contracts + eSign, client health scores.
+- [For field service](https://hellosaasy.ai/field-service): Quote-to-cash, payroll in 50 states + DC, license/insurance tracking, hiring.
+- [About](https://hellosaasy.ai/about): Who builds SaaSy (SaaSy Solutions LLC, woman-owned) and how to reach the team (cal.com/saasysolutionsllc).
+- [Partner program](https://hellosaasy.ai/affiliate): Recurring-revenue referral program — apply via sales@hellosaasy.ai.
+- [Recommended stack](https://hellosaasy.ai/partners): Integrations and bundled capabilities (eSign, SaaSPass, grant discovery).
 - [Contact](https://hellosaasy.ai/contact): Sales and support contact: sales@hellosaasy.ai / support@hellosaasy.ai.
 - [Privacy Policy](https://hellosaasy.ai/privacy): How SaaSy handles personal data (privacy@hellosaasy.ai).
 - [Terms of Service](https://hellosaasy.ai/terms): Terms governing use of SaaSy.

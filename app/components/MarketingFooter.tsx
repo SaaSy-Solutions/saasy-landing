@@ -28,6 +28,9 @@ const COLUMNS: FooterColumn[] = [
       { href: "/pricing", label: "Pricing" },
       { href: "/compare", label: "Compare" },
       { href: "/unions", label: "For unions" },
+      { href: "/contractors", label: "For contractors" },
+      { href: "/agencies", label: "For agencies" },
+      { href: "/field-service", label: "For field service" },
       { href: "/integrations", label: "Integrations" },
       { href: "/download", label: "Desktop app" },
       { href: "/changelog", label: "Changelog" },
@@ -36,13 +39,16 @@ const COLUMNS: FooterColumn[] = [
   {
     heading: "Company",
     links: [
+      { href: "/about", label: "About" },
       { href: "/customers", label: "Customers" },
       { href: "/services", label: "Services" },
       { href: "/blog", label: "Blog" },
+      { href: "/partners", label: "Recommended stack" },
+      { href: "/affiliate", label: "Partner program" },
       { href: "/contact", label: "Contact" },
       {
         href: "https://saasysolutionsllc.com",
-        label: "About",
+        label: "SaaSy Solutions LLC",
         external: true,
       },
     ],
