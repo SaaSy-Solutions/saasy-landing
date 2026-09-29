@@ -219,7 +219,7 @@ export default function PrivacyPolicyPage() {
                 hellosaasy.ai/subprocessors
               </Link>
               . Vercel is not a processor. The marketing site is on GitHub
-              Pages. The product app is on Cloudflare and Fly.io.
+              Pages. The product app is on Cloudflare and Hetzner.
             </p>
           </section>
 
