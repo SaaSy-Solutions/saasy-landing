@@ -52,10 +52,10 @@ const HOW_IT_WORKS = [
     step: "03",
     title: "Earn while they stay",
     body:
-      "Commission is recurring: as long as your referral remains a " +
-      "paying customer, you keep earning. The exact schedule is set " +
-      "with each partner when they join — we're keeping terms " +
-      "simple and putting them in writing.",
+      "You earn 30% of the referred account's subscription fees for " +
+      "their first 12 months of paid membership — paid on what they " +
+      "actually pay, not sticker price. Terms go in writing when you " +
+      "join.",
   },
 ];
 
@@ -85,11 +85,11 @@ const WHO_ITS_FOR = [
 const FAQ_ITEMS = [
   {
     q: "What commission does it pay?",
-    a: "Recurring, for as long as the referred customer stays paying. We're finalizing the exact percentage with the first cohort rather than publishing a number that changes later — apply and we'll share the current schedule before you commit to anything.",
+    a: "30% of the referred account's subscription fees for their first 12 months of paid membership. It pays on what the customer actually pays, and it's confirmed in writing when you're approved — before you share a single link.",
   },
   {
     q: "How are referrals tracked?",
-    a: "By a tracked link issued when you're approved. Signups through it are attributed to you through their trial and into the paying period.",
+    a: "By a tracked link issued when you're approved — it looks like app.hellosaasy.ai/signup?ref=your-code. Signups through it are attributed to you on the account record, through their trial and into the paying period.",
   },
   {
     q: "Can I refer a client and get SaaSy for myself instead?",
