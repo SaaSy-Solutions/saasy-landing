@@ -18,16 +18,10 @@ const ROWS: { name: string; purpose: string; data: string; country: string }[] =
       country: "USA",
     },
     {
-      name: "Fly.io, Inc.",
-      purpose: "Application hosting for backend services",
-      data: "Application data in transit, IP addresses, request logs",
-      country: "USA",
-    },
-    {
-      name: "Neon, Inc.",
-      purpose: "Managed PostgreSQL",
-      data: "Customer Data at rest: accounts, CRM, billing, health scores",
-      country: "USA",
+      name: "Hetzner Online GmbH",
+      purpose: "Infrastructure hosting for application backend services and PostgreSQL database",
+      data: "Customer Data at rest: accounts, CRM, billing, health scores; application data in transit, IP addresses, request logs",
+      country: "Germany",
     },
     {
       name: "Cloudflare, Inc.",
