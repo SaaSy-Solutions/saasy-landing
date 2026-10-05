@@ -2,7 +2,7 @@
 
 Programmatic, brand-consistent marketing videos for hellosaasy.ai. Self-contained
 Remotion project — its own `package.json` / `node_modules`, isolated from the
-Next.js site. Renders MP4s that are **hosted on Tigris** (Fly's S3-compatible
+Next.js site. Renders MP4s that are **hosted on Cloudflare R2** (S3-compatible
 object storage, bucket `saasy-marketing-assets`, public) and referenced by URL on
 the site via plain `<video>` tags — so the binaries stay out of the GitHub Pages
 repo and the static build stays small. The site's URL base lives in
@@ -34,7 +34,7 @@ src/
   Root.tsx          registers every composition
 scripts/
   render-all.mjs        render every still + clip into out/ (per-variant --props)
-  upload-to-tigris.py   upload out/ to the bucket (og/ -> og/, rest -> videos/)
+  upload-assets.py      upload out/ to the bucket (og/ -> og/, rest -> videos/)
 public/screenshots/ real demo-tenant screenshots (copied from ../public)
 ```
 
@@ -53,7 +53,7 @@ npm run dev          # opens Remotion Studio - scrub/preview every composition
 
 ## Render + publish
 
-Render into the gitignored `out/` folder, then upload to Tigris. The site picks
+Render into the gitignored `out/` folder, then upload to R2. The site picks
 up the new files automatically (same URLs; `immutable` cache, so re-renders are
 overwrites — hard-refresh to bust a browser cache during review).
 
@@ -76,25 +76,22 @@ npx remotion render SocialVertical out/social-vertical.mp4
 npx remotion render SocialSquare   out/social-square.mp4
 npx remotion render HowItWorks     out/how-it-works.mp4
 
-# Upload (creds from `flyctl storage` output / Tigris dashboard — never commit):
+# Upload (an R2 API token scoped to the bucket — never commit):
 AWS_ACCESS_KEY_ID=... AWS_SECRET_ACCESS_KEY=... \
-AWS_ENDPOINT_URL_S3=https://fly.storage.tigris.dev \
+AWS_ENDPOINT_URL_S3=https://<account-id>.r2.cloudflarestorage.com \
 BUCKET_NAME=saasy-marketing-assets \
-uv run --with boto3 --no-project python scripts/upload-to-tigris.py
+uv run --with boto3 --no-project python scripts/upload-assets.py
 ```
 
-The bucket was provisioned with `flyctl storage create -n saasy-marketing-assets
--o personal --public`. Public reads are served over the branded custom domain:
+The bucket is Cloudflare R2 `saasy-marketing-assets` (moved off Fly Tigris on
+2026-10-05). Public reads are served over the branded custom domain:
 `https://assets.hellosaasy.ai/videos/<file>.mp4`
 
-That's a **DNS-only** (un-proxied) Cloudflare CNAME
-`assets` → `saasy-marketing-assets.t3.tigrisbucket.io`, registered on the bucket
-via `flyctl storage update saasy-marketing-assets --custom-domain
-assets.hellosaasy.ai`; Tigris issues/renews the TLS cert through that CNAME, so
-it must stay DNS-only (orange-cloud proxying breaks cert renewal). The raw Tigris
-public domain (`saasy-marketing-assets.t3.tigrisfiles.io`) also works; the
-`fly.storage.tigris.dev` S3 API endpoint does NOT (it requires auth, 403s in a
-browser).
+`assets.hellosaasy.ai` is an R2 **custom domain** attached to the bucket
+(Cloudflare dashboard → R2 → bucket → Settings → Custom Domains), so Cloudflare
+manages its DNS record and TLS. The R2 S3 API endpoint is not a public URL; it
+requires auth. CI uploads with a token scoped to this one bucket
+(`AWS_ACCESS_KEY_ID`/`AWS_SECRET_ACCESS_KEY` secrets, `AWS_ENDPOINT_URL_S3` var).
 
 Quick one-frame sanity check (no full render):
 

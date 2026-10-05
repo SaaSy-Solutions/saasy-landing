@@ -1,6 +1,6 @@
 /**
  * Open Graph / social share images, rendered by Remotion (video/src/OgCard.tsx)
- * and hosted on the branded asset domain (same Tigris bucket as the videos).
+ * and hosted on the branded asset domain (same R2 bucket as the videos).
  * One card per marketing page + per blog post; see video/README.md to re-render.
  */
 const OG_BASE = "https://assets.hellosaasy.ai/og";
