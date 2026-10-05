@@ -1,6 +1,6 @@
 /**
  * Render every marketing asset into ./out, then upload with
- * scripts/upload-to-tigris.py. Plain ESM (run: `node scripts/render-all.mjs`).
+ * scripts/upload-assets.py. Plain ESM (run: `node scripts/render-all.mjs`).
  *
  * OG cards + blog teasers + feature clips are parameterized, so we render their
  * compositions once per variant by writing a temp props file and passing

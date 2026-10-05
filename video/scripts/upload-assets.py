@@ -1,16 +1,16 @@
-"""Upload rendered marketing assets to the public Tigris bucket.
+"""Upload rendered marketing assets to the public R2 bucket.
 
 The site references these by URL (see app/components/videoAssets.ts and
 ogAssets.ts), so they are NOT committed to the repo. Re-run after re-rendering.
 
 Usage:
-    # creds come from `flyctl storage` output / the Tigris dashboard — never
-    # commit them. Render first (node scripts/render-all.mjs -> video/out/),
+    # creds: an R2 API token scoped to this bucket (Cloudflare dashboard,
+    # R2, Manage API tokens) — never commit them. Render first (node scripts/render-all.mjs -> video/out/),
     # then:
     AWS_ACCESS_KEY_ID=... AWS_SECRET_ACCESS_KEY=... \
-    AWS_ENDPOINT_URL_S3=https://fly.storage.tigris.dev \
+    AWS_ENDPOINT_URL_S3=https://<account-id>.r2.cloudflarestorage.com \
     BUCKET_NAME=saasy-marketing-assets \
-    uv run --with boto3 --no-project python scripts/upload-to-tigris.py
+    uv run --with boto3 --no-project python scripts/upload-assets.py
 
 Maps the ./out tree to bucket keys (override the root dir with VIDEO_DIR):
     out/og/*.png        -> og/<file>           (image/png)
