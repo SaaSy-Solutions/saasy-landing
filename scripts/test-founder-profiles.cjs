@@ -26,7 +26,7 @@ for (const showAboutLink of [true, false]) {
     const html = renderToStaticMarkup(React.createElement(FounderNote, { showAboutLink }));
     for (const [name, url] of [
       ['Ray Clanan', 'https://www.linkedin.com/in/raymondclanan/'],
-      ['Macon Wright', 'https://www.linkedin.com/in/macon-wright/'],
+      ['Macon Wright', 'https://www.linkedin.com/in/macon-wright-125889104/'],
     ]) {
       const links = [...html.matchAll(/<a\b([^>]+)>/g)].map((match) => match[1]);
       const link = links.find((attributes) => attributes.includes(`aria-label="${name} on LinkedIn"`));

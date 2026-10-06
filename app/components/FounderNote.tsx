@@ -10,7 +10,7 @@ const TEAM = [
   {
     name: "Macon Wright",
     role: "Founder & CEO",
-    linkedin: "https://www.linkedin.com/in/macon-wright/",
+    linkedin: "https://www.linkedin.com/in/macon-wright-125889104/",
     photo: "/team/macon-wright.jpg",
     bio:
       "Technology entrepreneur and founder of SaaSier Inc., the " +
