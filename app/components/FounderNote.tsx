@@ -10,6 +10,7 @@ const TEAM = [
   {
     name: "Macon Wright",
     role: "Founder & CEO",
+    linkedin: "https://www.linkedin.com/in/macon-wright-125889104/",
     photo: "/team/macon-wright.jpg",
     bio:
       "Technology entrepreneur and founder of SaaSier Inc., the " +
@@ -20,9 +21,10 @@ const TEAM = [
   {
     name: "Ray Clanan",
     role: "CTO",
+    linkedin: "https://www.linkedin.com/in/raymondclanan/",
     photo: "/team/ray-clanan.jpg",
     bio:
-      "20+ years designing and building scalable platforms, from " +
+      "25+ years designing and building scalable platforms, from " +
       "enterprise systems to multi-tenant SaaS. He leads SaaSy's " +
       "architecture, and created MockForge, the open-source mocking " +
       "platform.",
@@ -82,6 +84,16 @@ export function FounderNote({
               <p className="mt-2 text-sm leading-relaxed text-saasy-muted">
                 {person.bio}
               </p>
+              <a
+                href={person.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${person.name} on LinkedIn`}
+                className="mt-3 inline-block text-sm font-medium text-saasy-pink-soft
+                  underline transition-colors hover:text-white"
+              >
+                Connect on LinkedIn
+              </a>
             </div>
           </div>
         ))}
