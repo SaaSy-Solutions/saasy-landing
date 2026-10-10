@@ -73,6 +73,42 @@ jobs:
         if: github.event_name == 'pull_request'
         run: pnpm run build
 
+      - name: Record PR artifact identity
+        if: >-
+          success() && github.event_name == 'pull_request'
+        env:
+          EXPECTED_PR_HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          import { execFileSync } from 'node:child_process';
+          import { writeFileSync } from 'node:fs';
+          const git = (ref) => execFileSync('git', ['rev-parse', ref], { encoding: 'utf8' }).trim();
+          const identity = {
+            expectedPrHead: process.env.EXPECTED_PR_HEAD,
+            checkoutSha: git('HEAD'),
+            checkoutTree: git('HEAD^{tree}'),
+            runId: process.env.GITHUB_RUN_ID,
+            runAttempt: process.env.GITHUB_RUN_ATTEMPT,
+          };
+          for (const name of ['expectedPrHead', 'checkoutSha', 'checkoutTree']) {
+            assert.match(identity[name], /^[0-9a-f]{40}$/);
+          }
+          for (const name of ['runId', 'runAttempt']) assert.match(identity[name], /^[0-9]+$/);
+          writeFileSync('out/_verification.json', JSON.stringify(identity, null, 2) + '\n', { flag: 'wx' });
+          NODE
+
+      - name: Preserve PR browser verification artifact
+        if: >-
+          success() && github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: landing-pr-${{ github.event.pull_request.number }}-${{ github.event.pull_request.head.sha }}
+          path: ./out
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 3
+
       - name: Build main for deployment
         if: >-
           github.ref == 'refs/heads/main' &&
