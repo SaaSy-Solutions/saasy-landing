@@ -1,7 +1,11 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useRef, useState, type FormEvent } from "react";
 import { OPS_API_BASE } from "../../lib/api";
+import { readCookieConsent } from "./CookieBanner";
+
+type FieldName = "name" | "email" | "message";
+type FieldErrors = Partial<Record<FieldName, string>>;
 
 type SubmitStatus = "idle" | "loading" | "success" | "error";
 
@@ -34,6 +38,10 @@ export function ContactForm(): React.ReactElement {
   const [company, setCompany] = useState<string>("");
   const [message, setMessage] = useState<string>("");
   const [status, setStatus] = useState<SubmitStatus>("idle");
+  const nameRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const messageRef = useRef<HTMLTextAreaElement>(null);
+  const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
   const [errorMsg, setErrorMsg] = useState<string>("");
 
   async function handleSubmit(
@@ -42,16 +50,19 @@ export function ContactForm(): React.ReactElement {
     e.preventDefault();
     setErrorMsg("");
 
-    if (!name.trim()) {
-      setErrorMsg("Please tell us your name.");
-      return;
-    }
-    if (!isValidEmail(email)) {
-      setErrorMsg("Please enter a valid email address.");
-      return;
+    const errors: FieldErrors = {};
+    if (!name.trim()) errors.name = "Please tell us your name.";
+    if (!isValidEmail(email.trim())) {
+      errors.email = "Please enter a valid email address.";
     }
     if (!message.trim()) {
-      setErrorMsg("Please write a message (that's the good part).");
+      errors.message = "Please write a message (that's the good part).";
+    }
+    setFieldErrors(errors);
+    if (errors.name || errors.email || errors.message) {
+      if (errors.name) nameRef.current?.focus();
+      else if (errors.email) emailRef.current?.focus();
+      else messageRef.current?.focus();
       return;
     }
 
@@ -78,11 +89,12 @@ export function ContactForm(): React.ReactElement {
         return;
       }
 
-      if (process.env.NEXT_PUBLIC_POSTHOG_KEY) {
+      if (process.env.NEXT_PUBLIC_POSTHOG_KEY && readCookieConsent() === "all") {
         // Dynamic import reuses the singleton AnalyticsProvider already
         // initialized in the layout without pulling posthog-js into
         // this page's chunk.
         void import("posthog-js").then(({ default: posthog }) => {
+          if (readCookieConsent() !== "all") return;
           posthog.capture("contact_form_submitted", {
             source: "landing-contact",
             has_company: company.trim().length > 0,
@@ -148,6 +160,7 @@ export function ContactForm(): React.ReactElement {
             Name
           </label>
           <input
+            ref={nameRef}
             id="contact-name"
             name="name"
             type="text"
@@ -155,10 +168,12 @@ export function ContactForm(): React.ReactElement {
             required
             maxLength={MAX_FIELD_LEN}
             placeholder="Alex Rivera"
+            aria-invalid={fieldErrors.name ? true : undefined}
+            aria-describedby={fieldErrors.name ? "contact-name-error" : undefined}
             value={name}
             onChange={(e) => {
               setName(e.target.value);
-              if (errorMsg) setErrorMsg("");
+              setFieldErrors((current) => ({ ...current, name: undefined }));
             }}
             className="mt-2 w-full rounded-lg border border-saasy-border
               bg-saasy-dark px-4 py-3 text-sm text-white
@@ -166,6 +181,11 @@ export function ContactForm(): React.ReactElement {
               focus:border-saasy-pink focus:outline-none
               focus:ring-1 focus:ring-saasy-pink"
           />
+          {fieldErrors.name && (
+            <p id="contact-name-error" role="alert" className="mt-2 text-sm text-red-400">
+              {fieldErrors.name}
+            </p>
+          )}
         </div>
 
         <div>
@@ -176,6 +196,7 @@ export function ContactForm(): React.ReactElement {
             Email
           </label>
           <input
+            ref={emailRef}
             id="contact-email"
             name="email"
             type="email"
@@ -183,10 +204,12 @@ export function ContactForm(): React.ReactElement {
             required
             maxLength={MAX_FIELD_LEN}
             placeholder="you@company.com"
+            aria-invalid={fieldErrors.email ? true : undefined}
+            aria-describedby={fieldErrors.email ? "contact-email-error" : undefined}
             value={email}
             onChange={(e) => {
               setEmail(e.target.value);
-              if (errorMsg) setErrorMsg("");
+              setFieldErrors((current) => ({ ...current, email: undefined }));
             }}
             className="mt-2 w-full rounded-lg border border-saasy-border
               bg-saasy-dark px-4 py-3 text-sm text-white
@@ -194,6 +217,11 @@ export function ContactForm(): React.ReactElement {
               focus:border-saasy-pink focus:outline-none
               focus:ring-1 focus:ring-saasy-pink"
           />
+          {fieldErrors.email && (
+            <p id="contact-email-error" role="alert" className="mt-2 text-sm text-red-400">
+              {fieldErrors.email}
+            </p>
+          )}
         </div>
       </div>
 
@@ -230,6 +258,7 @@ export function ContactForm(): React.ReactElement {
           How can we help?
         </label>
         <textarea
+          ref={messageRef}
           id="contact-message"
           name="message"
           required
@@ -242,16 +271,21 @@ export function ContactForm(): React.ReactElement {
           value={message}
           onChange={(e) => {
             setMessage(e.target.value);
-            if (errorMsg) setErrorMsg("");
+            setFieldErrors((current) => ({ ...current, message: undefined }));
           }}
-          aria-describedby={errorMsg ? "contact-error" : undefined}
-          aria-invalid={errorMsg ? true : undefined}
+          aria-describedby={fieldErrors.message ? "contact-message-error" : undefined}
+          aria-invalid={fieldErrors.message ? true : undefined}
           className="mt-2 w-full resize-y rounded-lg border
             border-saasy-border bg-saasy-dark px-4 py-3 text-sm
             text-white placeholder-saasy-muted transition-colors
             focus:border-saasy-pink focus:outline-none
             focus:ring-1 focus:ring-saasy-pink"
         />
+        {fieldErrors.message && (
+          <p id="contact-message-error" role="alert" className="mt-2 text-sm text-red-400">
+            {fieldErrors.message}
+          </p>
+        )}
       </div>
 
       {errorMsg && (
