@@ -2,6 +2,9 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { ContactForm } from '../../app/components/ContactForm';
 
+const analytics = vi.hoisted(() => ({ capture: vi.fn() }));
+vi.mock('posthog-js', () => ({ default: analytics }));
+
 const fetchMock = vi.fn<typeof fetch>();
 const input = (name: string) => screen.getByLabelText(name) as HTMLInputElement;
 function fill(name = 'Alex', email = 'alex@example.com', message = 'Please help') {
@@ -18,6 +21,9 @@ function associatedError(field: HTMLElement, text: string) {
 }
 
 beforeEach(() => {
+  vi.restoreAllMocks();
+  analytics.capture.mockReset();
+  localStorage.clear();
   fetchMock.mockReset();
   vi.stubGlobal('fetch', fetchMock);
   vi.stubEnv('NEXT_PUBLIC_POSTHOG_KEY', '');
@@ -85,5 +91,41 @@ describe('contact validation and delivery', () => {
     await screen.findByRole('alert');
     expect(screen.getByLabelText('How can we help?').hasAttribute('aria-invalid')).toBe(false);
     expect(screen.queryByText('Got it. Talk soon.')).toBeNull();
+  });
+});
+
+
+describe('contact success analytics consent', () => {
+  it.each([null, 'essential'])('does not capture a delivered message with consent %j', async (consent) => {
+    vi.stubEnv('NEXT_PUBLIC_POSTHOG_KEY', 'test-key-not-a-live-key');
+    if (consent) localStorage.setItem('saasy-cookie-consent', consent);
+    fetchMock.mockResolvedValue(new Response(null, { status: 201 }));
+    fill(); submit();
+    await screen.findByText('Got it. Talk soon.');
+    await vi.dynamicImportSettled();
+    expect(analytics.capture).not.toHaveBeenCalled();
+  });
+  it('captures delivered messages only with saved analytics consent', async () => {
+    vi.stubEnv('NEXT_PUBLIC_POSTHOG_KEY', 'test-key-not-a-live-key');
+    localStorage.setItem('saasy-cookie-consent', 'all');
+    fetchMock.mockResolvedValue(new Response(null, { status: 201 }));
+    fill(); submit();
+    await screen.findByText('Got it. Talk soon.');
+    await vi.dynamicImportSettled();
+    expect(analytics.capture).toHaveBeenCalledWith('contact_form_submitted', {
+      source: 'landing-contact', has_company: false,
+    });
+  });
+  it('preserves delivery success without capture when consent storage becomes blocked', async () => {
+    vi.stubEnv('NEXT_PUBLIC_POSTHOG_KEY', 'test-key-not-a-live-key');
+    localStorage.setItem('saasy-cookie-consent', 'all');
+    vi.spyOn(Storage.prototype, 'getItem').mockImplementation(() => {
+      throw new DOMException('blocked', 'SecurityError');
+    });
+    fetchMock.mockResolvedValue(new Response(null, { status: 201 }));
+    fill(); submit();
+    await screen.findByText('Got it. Talk soon.');
+    await vi.dynamicImportSettled();
+    expect(analytics.capture).not.toHaveBeenCalled();
   });
 });

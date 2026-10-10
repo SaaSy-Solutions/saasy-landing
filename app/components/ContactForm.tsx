@@ -2,6 +2,7 @@
 
 import { useRef, useState, type FormEvent } from "react";
 import { OPS_API_BASE } from "../../lib/api";
+import { readCookieConsent } from "./CookieBanner";
 
 type FieldName = "name" | "email" | "message";
 type FieldErrors = Partial<Record<FieldName, string>>;
@@ -88,11 +89,12 @@ export function ContactForm(): React.ReactElement {
         return;
       }
 
-      if (process.env.NEXT_PUBLIC_POSTHOG_KEY) {
+      if (process.env.NEXT_PUBLIC_POSTHOG_KEY && readCookieConsent() === "all") {
         // Dynamic import reuses the singleton AnalyticsProvider already
         // initialized in the layout without pulling posthog-js into
         // this page's chunk.
         void import("posthog-js").then(({ default: posthog }) => {
+          if (readCookieConsent() !== "all") return;
           posthog.capture("contact_form_submitted", {
             source: "landing-contact",
             has_company: company.trim().length > 0,
