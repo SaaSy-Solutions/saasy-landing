@@ -70,7 +70,7 @@ describe('contact validation and delivery', () => {
     await screen.findByText('Got it. Talk soon.');
     expect(fetchMock).toHaveBeenCalledTimes(1);
     const [url, request] = fetchMock.mock.calls[0];
-    expect(String(url)).toMatch(/\/api\/v1\/contact\/sales$/);
+    expect(String(url)).toBe('https://api.hellosaasy.ai/api/v1/contact/sales');
     expect(request?.method).toBe('POST');
     expect(JSON.parse(String(request?.body))).toEqual({name:'Alex',email:'alex@example.com',company:'Acme',message:'Please help',source:'landing-contact'});
   });
