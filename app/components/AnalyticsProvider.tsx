@@ -35,6 +35,7 @@ export function AnalyticsProvider() {
     window.addEventListener('saasy-cookie-consent', start);
 
     const onClick = (event: MouseEvent) => {
+      if (!started || readCookieConsent() !== 'all') return;
       const node = event.target;
       if (!(node instanceof Element)) return;
       const anchor = node.closest('a[data-cta]');
