@@ -23,7 +23,10 @@ export function AnalyticsProvider() {
       if (started || readCookieConsent() !== 'all') return;
       started = true;
       posthog.init(key, {
-        api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST ?? 'https://us.i.posthog.com',
+        // First-party proxy (infra/posthog-ingest-worker) so ad blockers do
+        // not drop events; ui_host keeps toolbar links on posthog.com.
+        api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST ?? '/ingest',
+        ui_host: 'https://us.posthog.com',
         person_profiles: 'identified_only',
         capture_pageview: 'history_change',
         capture_pageleave: true,

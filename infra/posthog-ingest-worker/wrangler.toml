@@ -1,0 +1,5 @@
+name = "hellosaasy-posthog-ingest"
+main = "worker.mjs"
+compatibility_date = "2026-09-01"
+workers_dev = false
+routes = [{ pattern = "hellosaasy.ai/ingest/*", zone_name = "hellosaasy.ai" }]
