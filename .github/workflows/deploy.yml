@@ -16,13 +16,13 @@ concurrency:
 
 jobs:
   build:
-    # Fork PR code must never execute on this persistent self-hosted runner.
+    # Fork PRs are skipped: the build needs repository secrets they never receive.
     if: >-
       (github.event_name == 'pull_request' &&
        github.event.pull_request.head.repo.full_name == github.repository) ||
       (github.ref == 'refs/heads/main' &&
        (github.event_name == 'push' || github.event_name == 'workflow_dispatch'))
-    runs-on: [self-hosted, Linux, X64, saasy-landing]
+    runs-on: ubuntu-24.04
     timeout-minutes: 30
     env:
       NODE_OPTIONS: --max-old-space-size=4096
@@ -136,7 +136,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: [self-hosted, Linux, X64, saasy-landing]
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     needs: build
     steps:

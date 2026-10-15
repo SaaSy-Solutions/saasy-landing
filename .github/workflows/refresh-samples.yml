@@ -21,7 +21,7 @@ permissions:
 
 jobs:
   refresh:
-    runs-on: [self-hosted, linux, x64, saasy-landing]
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
