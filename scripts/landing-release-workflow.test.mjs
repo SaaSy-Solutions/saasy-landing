@@ -30,10 +30,12 @@ function allows(expression, eventName, ref, sameRepository = true, successful = 
   return Function("github", "success", `"use strict"; return (${expression});`)(github, () => successful);
 }
 
-test("checks main PRs using only the dedicated self-hosted landing pool", () => {
+test("checks main PRs only on free standard GitHub-hosted runners", () => {
   assert.match(workflow, /on:\n  pull_request:\n    branches: \["main"\]/);
-  assert.doesNotMatch(workflow, /pull_request_target|ubuntu-latest|ubuntu-\d|blacksmith|cloudflare/);
-  assert.equal((workflow.match(/runs-on: \[self-hosted, Linux, X64, saasy-landing\]/g) ?? []).length, 2);
+  // Public repo: standard hosted runners are free; self-hosted, larger
+  // (-N-cores/-arm) and third-party runners are not allowed here.
+  assert.doesNotMatch(workflow, /pull_request_target|self-hosted|blacksmith|cloudflare|-cores|-arm/);
+  assert.equal((workflow.match(/runs-on: ubuntu-24\.04\n/g) ?? []).length, 2);
   assert.match(build, /timeout-minutes: 30/);
   assert.match(deploy, /timeout-minutes: 10/);
 });
