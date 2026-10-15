@@ -1,5 +1,6 @@
 "use client";
 
+
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -16,7 +17,7 @@ interface NavLink {
  * footer / Pricing page. This single list drives BOTH the desktop bar
  * and the mobile drawer, so they can't drift apart.
  */
-const NAV_LINKS: NavLink[] = [
+const NAV_LINKS: NavLink[] = [{ href: "/resources", label: "Resources" },
   { href: "/features", label: "Features" },
   { href: "/pricing", label: "Pricing" },
   { href: "/services", label: "Services" },
