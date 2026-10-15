@@ -1,6 +1,6 @@
 /**
  * Hero product-demo video. Replaces the static HeroScreenshot with the
- * Remotion-rendered loop (video/src/HeroLoop.tsx), served from Tigris.
+ * Remotion-rendered loop (video/src/HeroLoop.tsx), served from R2.
  *
  * Autoplays muted + looped (the only way browsers allow hero autoplay) —
  * unless the visitor prefers reduced motion, in which case AutoplayVideo

@@ -1,6 +1,6 @@
 /**
  * "How it works" explainer player. Embeds the Remotion-rendered explainer
- * (video/src/HowItWorks.tsx, served from Tigris) as the demo the hero's
+ * (video/src/HowItWorks.tsx, served from R2) as the demo the hero's
  * "See how it works" CTA scrolls to.
  *
  * Uses native `controls` (not autoplay) since it's a 75s narrative the visitor

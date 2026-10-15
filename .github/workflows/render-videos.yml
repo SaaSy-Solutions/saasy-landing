@@ -2,7 +2,7 @@ name: Render & upload marketing videos
 
 # Manual only — never runs on push, so it can't interfere with the Pages
 # deploy. Renders the Remotion compositions in video/ and uploads the MP4s to
-# the public Tigris bucket (saasy-marketing-assets). The site references them by
+# the public R2 bucket (saasy-marketing-assets). The site references them by
 # URL, so nothing is committed back to the repo.
 #
 # Dispatch against the branch that contains the video/ project, e.g.:
@@ -67,10 +67,10 @@ jobs:
       - name: Setup uv
         uses: astral-sh/setup-uv@v5
 
-      - name: Upload to Tigris
+      - name: Upload to R2
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_ENDPOINT_URL_S3: ${{ vars.AWS_ENDPOINT_URL_S3 }}
           BUCKET_NAME: ${{ vars.BUCKET_NAME }}
-        run: uv run --with boto3 --no-project python scripts/upload-to-tigris.py
+        run: uv run --with boto3 --no-project python scripts/upload-assets.py
