@@ -3,14 +3,16 @@ import { cleanup, fireEvent, render, screen } from '@testing-library/react';
 import { CookieBanner, COOKIE_CONSENT_KEY, readCookieConsent } from '../../app/components/CookieBanner';
 import { AnalyticsProvider } from '../../app/components/AnalyticsProvider';
 
-const sdk = vi.hoisted(() => ({ init: vi.fn(), capture: vi.fn() }));
+const sdk = vi.hoisted(() => ({ init: vi.fn(), capture: vi.fn(), register: vi.fn() }));
 vi.mock('posthog-js', () => ({ default: sdk }));
 
 beforeEach(() => {
   vi.restoreAllMocks();
   window.localStorage.clear();
+  window.sessionStorage.clear();
   sdk.init.mockReset();
   sdk.capture.mockReset();
+  sdk.register.mockReset();
   vi.stubEnv('NEXT_PUBLIC_POSTHOG_KEY', 'test-key-not-a-live-key');
 });
 afterEach(() => { cleanup(); vi.unstubAllEnvs(); });
@@ -105,5 +107,24 @@ describe('cookie consent storage and analytics', () => {
   it('does not start or capture without a public analytics key', () => {
     vi.stubEnv('NEXT_PUBLIC_POSTHOG_KEY', '');
     localStorage.setItem(COOKIE_CONSENT_KEY, 'all'); view(); noTracking();
+  });
+
+  it('captures an AI referral landing only after analytics consent', () => {
+    vi.spyOn(document, 'referrer', 'get').mockReturnValue('https://chatgpt.com/');
+    view();
+    expect(sdk.register).not.toHaveBeenCalled();
+    expect(sdk.capture).not.toHaveBeenCalled();
+    fireEvent.click(screen.getByRole('button', { name: 'Accept analytics' }));
+    expect(sdk.register).toHaveBeenCalledWith({ ai_referrer: 'chatgpt' });
+    expect(sdk.capture).toHaveBeenCalledWith('ai_referral_landing', expect.objectContaining({
+      ai_engine: 'chatgpt', referrer_host: 'chatgpt.com', $set_once: { initial_ai_referrer: 'chatgpt' },
+    }));
+  });
+  it('never captures an AI referral for essential-only consent', () => {
+    vi.spyOn(document, 'referrer', 'get').mockReturnValue('https://perplexity.ai/');
+    localStorage.setItem(COOKIE_CONSENT_KEY, 'essential');
+    view();
+    expect(sdk.register).not.toHaveBeenCalled();
+    expect(sdk.capture).not.toHaveBeenCalled();
   });
 });

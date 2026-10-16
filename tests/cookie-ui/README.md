@@ -7,6 +7,7 @@ production components and the rendered test harness; the PostHog SDK is mocked,
 so these tests make no analytics or provider requests.
 
 These DOM tests cover consent reads, banner visibility, persistence failures,
-accessible retry feedback and analytics initialization/capture gating. They do
+accessible retry feedback and analytics initialization/capture gating, plus
+AI-referral classification (`lib/ai-referrer.ts`) and its consent gating. They do
 not verify the live release, browser deployment, or analytics auto-capture after
 an already initialized SDK loses storage access.
