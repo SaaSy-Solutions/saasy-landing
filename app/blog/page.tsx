@@ -6,7 +6,7 @@ import { POSTS } from "./content";
 import { ogImage } from "../components/ogAssets";
 
 export const metadata: Metadata = {
-  title: "Blog | SaaSy",
+  title: "Blog | Hello SaaSy",
   description:
     "Insights on business operations, founder strategies, " +
     "and scaling with automation.",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     canonical: "https://hellosaasy.ai/blog",
   },
   openGraph: {
-    siteName: "SaaSy",
+    siteName: "Hello SaaSy",
     type: "website",
     images: [ogImage("blog")],
   },

@@ -4,7 +4,7 @@ import { PrintButton } from "../components/PrintButton";
 import { H, LegalDoc, P } from "../components/LegalDoc";
 
 export const metadata: Metadata = {
-  title: "Data Processing Addendum | SaaSy",
+  title: "Data Processing Addendum | Hello SaaSy",
   description:
     "Data Processing Addendum for SaaSy Solutions LLC customers.",
   alternates: { canonical: "https://hellosaasy.ai/dpa" },

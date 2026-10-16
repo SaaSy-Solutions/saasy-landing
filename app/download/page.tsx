@@ -12,7 +12,7 @@ import { IconCheck } from "../components/Icons";
 const OG = ogImage("home");
 
 export const metadata: Metadata = {
-  title: "Download the SaaSy desktop app | SaaSy",
+  title: "Download the Hello SaaSy desktop app | Hello SaaSy",
   description:
     "Install the SaaSy desktop app to keep your documents in sync with a " +
     "folder on your computer, on Windows, macOS, and Linux. Or add the " +
@@ -21,19 +21,19 @@ export const metadata: Metadata = {
     canonical: "https://hellosaasy.ai/download",
   },
   openGraph: {
-    title: "Download the SaaSy desktop app",
+    title: "Download the Hello SaaSy desktop app",
     description:
       "Keep your documents in sync with a folder on your computer. " +
       "Windows, macOS, and Linux, plus a mobile web app.",
     url: "https://hellosaasy.ai/download",
-    siteName: "SaaSy",
+    siteName: "Hello SaaSy",
     type: "website",
     images: [OG],
   },
   twitter: {
     card: "summary_large_image",
     images: [OG.url],
-    title: "Download the SaaSy desktop app",
+    title: "Download the Hello SaaSy desktop app",
     description:
       "Keep your documents in sync with a folder on your computer. " +
       "Windows, macOS, and Linux, plus a mobile web app.",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  name: "SaaSy Desktop",
+  name: "Hello SaaSy Desktop",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Windows, macOS, Linux",
   url: "https://hellosaasy.ai/download",
@@ -53,7 +53,7 @@ const structuredData = {
     "with your SaaSy documents, so files land where your team already works.",
   isPartOf: {
     "@type": "WebSite",
-    name: "SaaSy",
+    name: "Hello SaaSy",
     url: "https://hellosaasy.ai",
   },
 };

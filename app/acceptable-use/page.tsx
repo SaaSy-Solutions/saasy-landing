@@ -3,7 +3,7 @@ import Link from "next/link";
 import { H, LegalDoc, P } from "../components/LegalDoc";
 
 export const metadata: Metadata = {
-  title: "Acceptable Use Policy | SaaSy",
+  title: "Acceptable Use Policy | Hello SaaSy",
   description: "What you may not do with SaaSy.",
   alternates: { canonical: "https://hellosaasy.ai/acceptable-use" },
 };

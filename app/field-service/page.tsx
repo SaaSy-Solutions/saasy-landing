@@ -11,22 +11,22 @@ const DESCRIPTION =
   "into the same system.";
 
 export const metadata: Metadata = {
-  title: "For Field Service — SaaSy",
+  title: "For Field Service — Hello SaaSy",
   description: DESCRIPTION,
   alternates: {
     canonical: "https://hellosaasy.ai/field-service",
   },
   openGraph: {
-    title: "For Field Service — SaaSy",
+    title: "For Field Service — Hello SaaSy",
     description: DESCRIPTION,
     url: "https://hellosaasy.ai/field-service",
-    siteName: "SaaSy",
+    siteName: "Hello SaaSy",
     type: "website",
     images: [ogImage("field-service")],
   },
   twitter: {
     card: "summary_large_image",
-    title: "For Field Service — SaaSy",
+    title: "For Field Service — Hello SaaSy",
     description: DESCRIPTION,
     images: [ogImage("field-service").url],
   },

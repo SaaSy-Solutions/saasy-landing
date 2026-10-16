@@ -3,7 +3,7 @@ import Link from "next/link";
 import { SmsConsentForm } from "../components/SmsConsentForm";
 
 export const metadata: Metadata = {
-  title: "SMS Consent | SaaSy",
+  title: "SMS Consent | Hello SaaSy",
   description:
     "Opt in to receive SMS messages from SaaSy. Review what messages we send, how often, and how to opt out at any time.",
   alternates: {

@@ -11,22 +11,22 @@ const DESCRIPTION =
   "payroll when the job calls for it.";
 
 export const metadata: Metadata = {
-  title: "For Contractors — SaaSy",
+  title: "For Contractors — Hello SaaSy",
   description: DESCRIPTION,
   alternates: {
     canonical: "https://hellosaasy.ai/contractors",
   },
   openGraph: {
-    title: "For Contractors — SaaSy",
+    title: "For Contractors — Hello SaaSy",
     description: DESCRIPTION,
     url: "https://hellosaasy.ai/contractors",
-    siteName: "SaaSy",
+    siteName: "Hello SaaSy",
     type: "website",
     images: [ogImage("contractors")],
   },
   twitter: {
     card: "summary_large_image",
-    title: "For Contractors — SaaSy",
+    title: "For Contractors — Hello SaaSy",
     description: DESCRIPTION,
     images: [ogImage("contractors").url],
   },

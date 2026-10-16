@@ -3,7 +3,7 @@ import Link from "next/link";
 import { H, LegalDoc, P } from "../components/LegalDoc";
 
 export const metadata: Metadata = {
-  title: "Refund Policy | SaaSy",
+  title: "Refund Policy | Hello SaaSy",
   description: "Cancellation and refund terms for SaaSy subscriptions.",
   alternates: { canonical: "https://hellosaasy.ai/refund-policy" },
 };

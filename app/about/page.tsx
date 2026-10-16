@@ -12,22 +12,22 @@ const DESCRIPTION =
   "write the code.";
 
 export const metadata: Metadata = {
-  title: "About — SaaSy",
+  title: "About — Hello SaaSy",
   description: DESCRIPTION,
   alternates: {
     canonical: "https://hellosaasy.ai/about",
   },
   openGraph: {
-    title: "About — SaaSy",
+    title: "About — Hello SaaSy",
     description: DESCRIPTION,
     url: "https://hellosaasy.ai/about",
-    siteName: "SaaSy",
+    siteName: "Hello SaaSy",
     type: "website",
     images: [ogImage("about")],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About — SaaSy",
+    title: "About — Hello SaaSy",
     description: DESCRIPTION,
     images: [ogImage("about").url],
   },
