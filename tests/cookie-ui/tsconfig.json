@@ -28,6 +28,7 @@
     "*.ts",
     "*.tsx",
     "../../app/components/CookieBanner.tsx",
-    "../../app/components/AnalyticsProvider.tsx"
+    "../../app/components/AnalyticsProvider.tsx",
+    "../../lib/ai-referrer.ts"
   ]
 }
