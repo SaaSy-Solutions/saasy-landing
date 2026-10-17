@@ -51,7 +51,7 @@ const CAPABILITIES: Capability[] = [
     icon: <IconAI />,
     title: "Customer health scoring",
     description:
-      "Every account scored 0-100 on usage, payments, and support signals. You see who's drifting toward the exit while there's still time to call.",
+      "Every account scored from what SaaSy can see: invoices paid, late, or failed, plus client-portal logins and CRM activity. You see who's drifting toward the exit while there's still time to call.",
     span: "md:col-span-2 md:row-span-2",
     screenshot: {
       src: "/screenshots/churn-alerts.png",

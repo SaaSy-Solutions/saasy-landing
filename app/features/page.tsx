@@ -67,7 +67,7 @@ const structuredData = {
     operatingSystem: "Web",
     url: "https://hellosaasy.ai",
     featureList: [
-      "Customer health scoring",
+      "Customer health scoring from invoice payments and client activity",
       "Churn risk alerts",
       "Ask SaaSy AI answers grounded in your data",
       "AI CFO weekly executive brief",
@@ -110,8 +110,9 @@ const CAPABILITIES: Capability[] = [
     icon: <IconAI />,
     title: "Health scoring",
     body:
-      "Every account scored 0-100 on usage, support load, payment " +
-      "behavior, and expansion signals, recalculated as new data lands.",
+      "Every account scored on invoice payment status (paid, late, or " +
+      "failed), client-portal logins, and CRM activity. Support tickets " +
+      "and in-product usage are not part of the score yet.",
   },
   {
     icon: <IconAlerts />,
@@ -237,10 +238,11 @@ export default function FeaturesPage(): React.ReactElement {
         <FeatureShowcase
           reverse
           title="Score every customer on signals that matter"
-          body="Every account scored 0-100 on usage frequency,
-            support tickets, payment behavior, and expansion
-            patterns. Sorted so the ones who need attention show
-            up first."
+          body="Every account scored on whether its invoices get
+            paid, run late, or fail, plus client-portal logins and
+            CRM activity. Accounts with no signals read as not
+            scored, not as a made-up number. Sorted so the ones who
+            need attention show up first."
           image="/screenshots/churn-alerts.png"
           video={revVideoUrl("feature-clip-churn.mp4")}
           alt="Full customer health grid with color-coded scores from critical red to healthy green"
@@ -263,9 +265,9 @@ export default function FeaturesPage(): React.ReactElement {
 
                   text-lg leading-relaxed text-saasy-muted"
               >
-                The signals SaaSy watches so you don&rsquo;t have to. Each
-                one feeds the same health score, so nothing lives in a
-                silo you forget to check.
+                The signals SaaSy watches so you don&rsquo;t have to,
+                in one account, so nothing lives in a silo you forget
+                to check.
               </p>
             </div>
 
@@ -400,12 +402,11 @@ export default function FeaturesPage(): React.ReactElement {
                 Connect Stripe, Slack, Gmail or Microsoft 365 email,
                 payroll providers, and your bank via Plaid today.
                 HubSpot, Salesforce, and Jira are on the roadmap.
-                Every connected source feeds the same per-customer
-                health score. OAuth in about a minute, no CSV uploads.
+                OAuth in about a minute, no CSV uploads.
               </p>
               <ul className="mt-6 space-y-3">
                 {[
-                  "One health score from every connected source",
+                  "Your tools and records in one account",
                   "Read-only scopes; revoke access anytime",
                   "Encrypted in transit and at rest",
                 ].map((point) => (

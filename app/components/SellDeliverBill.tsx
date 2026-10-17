@@ -3,8 +3,10 @@
  * (saasy-landing#8). Every step is a capability that ships today:
  * scored deals + next-best-action, one-click deal→project, native
  * invoice + Stripe payment link, paid status back on the CRM record.
- * Do not add usage/payment health-scoring claims here — that writer
- * is still dark (saas-platform#8311).
+ * Health-score claims elsewhere must stay limited to the inputs the
+ * scorer reads today (saas-platform#8574, closing #8311): invoice
+ * paid/overdue/failed, client-portal logins, CRM activity. Support
+ * tickets, NPS, and API usage have no producer yet.
  */
 
 interface LoopStep {
