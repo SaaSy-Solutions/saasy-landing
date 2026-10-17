@@ -5,7 +5,7 @@ import { MarketingFooter } from "../components/MarketingFooter";
 import { ogImage } from "../components/ogAssets";
 
 export const metadata: Metadata = {
-  title: "Customers | SaaSy",
+  title: "Customers | Hello SaaSy",
   description:
     "SaaSy is in beta. Real, named customer stories will live " +
     "here as our first founders hit their milestones.",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     canonical: "https://hellosaasy.ai/customers",
   },
   openGraph: {
-    siteName: "SaaSy",
+    siteName: "Hello SaaSy",
     type: "website",
     images: [ogImage("customers")],
   },

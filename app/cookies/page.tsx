@@ -3,7 +3,7 @@ import Link from "next/link";
 import { H, LegalDoc, P } from "../components/LegalDoc";
 
 export const metadata: Metadata = {
-  title: "Cookie Policy | SaaSy",
+  title: "Cookie Policy | Hello SaaSy",
   description: "How SaaSy uses cookies on hellosaasy.ai and app.hellosaasy.ai.",
   alternates: { canonical: "https://hellosaasy.ai/cookies" },
 };

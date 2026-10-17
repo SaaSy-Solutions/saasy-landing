@@ -27,7 +27,7 @@ const DESCRIPTION =
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://hellosaasy.ai"),
-  title: "SaaSy: Your entire back office, handled",
+  title: "Hello SaaSy: Your entire back office, handled",
   alternates: {
     // Homepage canonical. The homepage is a client component and cannot
     // export metadata itself; every other page overrides this via its own
@@ -45,16 +45,16 @@ export const metadata: Metadata = {
     "customer health scoring",
   ],
   openGraph: {
-    title: "SaaSy: Your entire back office, handled",
+    title: "Hello SaaSy: Your entire back office, handled",
     description: DESCRIPTION,
     url: "https://hellosaasy.ai",
-    siteName: "SaaSy",
+    siteName: "Hello SaaSy",
     type: "website",
     images: [ogImage("home")],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SaaSy: Your entire back office, handled",
+    title: "Hello SaaSy: Your entire back office, handled",
     description: DESCRIPTION,
     images: [ogImage("home").url],
   },
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  name: "SaaSy",
+  name: "Hello SaaSy",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
   description: DESCRIPTION,
@@ -90,6 +90,14 @@ const structuredData = {
       },
     ],
     url: "https://saasysolutionsllc.com",
+    // Official profiles (same set as the footer) so search and AI tools
+    // resolve the company as one entity, not the unrelated older "SaaSy".
+    sameAs: [
+      "https://linkedin.com/company/saasysolutions",
+      "https://x.com/SaaSyLLC",
+      "https://github.com/saasy-solutions",
+      "https://facebook.com/saasysolutionsllc",
+    ],
   },
 };
 

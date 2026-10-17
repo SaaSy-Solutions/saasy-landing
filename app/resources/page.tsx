@@ -15,22 +15,22 @@ const DESCRIPTION =
   "for small business teams.";
 
 export const metadata: Metadata = {
-  title: "Resources | HelloSaaSy",
+  title: "Resources | Hello SaaSy",
   description: DESCRIPTION,
   alternates: {
     canonical: "https://hellosaasy.ai/resources",
   },
   openGraph: {
-    title: "Resources | HelloSaaSy",
+    title: "Resources | Hello SaaSy",
     description: DESCRIPTION,
     url: "https://hellosaasy.ai/resources",
-    siteName: "SaaSy",
+    siteName: "Hello SaaSy",
     type: "website",
     images: [OG],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Resources | HelloSaaSy",
+    title: "Resources | Hello SaaSy",
     description: DESCRIPTION,
     images: [OG.url],
   },

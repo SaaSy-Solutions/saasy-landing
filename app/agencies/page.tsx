@@ -11,22 +11,22 @@ const DESCRIPTION =
   "the renewal conversation.";
 
 export const metadata: Metadata = {
-  title: "For Agencies — SaaSy",
+  title: "For Agencies — Hello SaaSy",
   description: DESCRIPTION,
   alternates: {
     canonical: "https://hellosaasy.ai/agencies",
   },
   openGraph: {
-    title: "For Agencies — SaaSy",
+    title: "For Agencies — Hello SaaSy",
     description: DESCRIPTION,
     url: "https://hellosaasy.ai/agencies",
-    siteName: "SaaSy",
+    siteName: "Hello SaaSy",
     type: "website",
     images: [ogImage("agencies")],
   },
   twitter: {
     card: "summary_large_image",
-    title: "For Agencies — SaaSy",
+    title: "For Agencies — Hello SaaSy",
     description: DESCRIPTION,
     images: [ogImage("agencies").url],
   },

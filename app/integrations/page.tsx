@@ -6,7 +6,7 @@ import { ogImage } from '../components/ogAssets';
 import { revVideoUrl } from '../components/videoAssets';
 
 export const metadata: Metadata = {
-  title: 'Integrations | SaaSy',
+  title: 'Integrations | Hello SaaSy',
   description:
     'Connect SaaSy with the tools you already use. Stripe, Slack, Gmail, ' +
     'Microsoft 365, Twilio, Plaid, ADP, Gusto, BambooHR, Rippling, and more.',
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     canonical: "https://hellosaasy.ai/integrations",
   },
   openGraph: {
-    siteName: 'SaaSy',
+    siteName: 'Hello SaaSy',
     type: 'website',
     images: [ogImage('integrations')],
   },

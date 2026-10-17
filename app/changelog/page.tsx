@@ -5,7 +5,7 @@ import { videoUrl } from "../components/videoAssets";
 import changelogData from "./changelog.json";
 
 export const metadata: Metadata = {
-  title: "Changelog | SaaSy",
+  title: "Changelog | Hello SaaSy",
   description:
     "See what\u2019s new in SaaSy: features, " +
     "improvements, and fixes.",

@@ -20,11 +20,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = POSTS.find(p => p.slug === slug);
   if (!post) {
-    return { title: "Post Not Found | SaaSy" };
+    return { title: "Post Not Found | Hello SaaSy" };
   }
   const image = ogImageForPost(post.slug, post.title);
   return {
-    title: `${post.title} | SaaSy Blog`,
+    title: `${post.title} | Hello SaaSy Blog`,
     description: post.excerpt,
     alternates: {
       canonical: `/blog/${post.slug}`,
@@ -33,7 +33,7 @@ export async function generateMetadata({
       title: post.title,
       description: post.excerpt,
       url: `https://hellosaasy.ai/blog/${post.slug}`,
-      siteName: "SaaSy",
+      siteName: "Hello SaaSy",
       type: "article",
       images: [image],
     },

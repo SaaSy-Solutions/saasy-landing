@@ -18,7 +18,7 @@ import {
 } from "../components/Icons";
 
 export const metadata: Metadata = {
-  title: "Features | SaaSy",
+  title: "Features | Hello SaaSy",
   description:
     "See SaaSy's customer health scoring, churn alerts, AI answers " +
     "grounded in your data, and integrations in real product " +
@@ -27,19 +27,19 @@ export const metadata: Metadata = {
     canonical: "https://hellosaasy.ai/features",
   },
   openGraph: {
-    title: "Features | SaaSy",
+    title: "Features | Hello SaaSy",
     description:
       "Customer health scoring, churn alerts, Ask SaaSy AI answers, " +
       "and integrations, shown in real product screenshots.",
     url: "https://hellosaasy.ai/features",
-    siteName: "SaaSy",
+    siteName: "Hello SaaSy",
     type: "website",
     images: [ogImage("features")],
   },
   twitter: {
     card: "summary_large_image",
     images: [ogImage("features").url],
-    title: "Features | SaaSy",
+    title: "Features | Hello SaaSy",
     description:
       "Customer health scoring, churn alerts, Ask SaaSy AI answers, " +
       "and integrations, shown in real product screenshots.",
@@ -50,19 +50,19 @@ export const metadata: Metadata = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Features | SaaSy",
+  name: "Features | Hello SaaSy",
   url: "https://hellosaasy.ai/features",
   description:
     "Customer health scoring, churn alerts, Ask SaaSy AI, and " +
     "one-click integrations, shown in real product screenshots.",
   isPartOf: {
     "@type": "WebSite",
-    name: "SaaSy",
+    name: "Hello SaaSy",
     url: "https://hellosaasy.ai",
   },
   mainEntity: {
     "@type": "SoftwareApplication",
-    name: "SaaSy",
+    name: "Hello SaaSy",
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
     url: "https://hellosaasy.ai",

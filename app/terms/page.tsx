@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | SaaSy",
+  title: "Terms of Service | Hello SaaSy",
   description:
     "Terms of Service for SaaSy, an intelligent business operating system by SaaSy Solutions LLC.",
   alternates: {

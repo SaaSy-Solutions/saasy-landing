@@ -10,22 +10,22 @@ const DESCRIPTION =
   "small businesses our way. Early cohort open now.";
 
 export const metadata: Metadata = {
-  title: "Partner Program — SaaSy",
+  title: "Partner Program — Hello SaaSy",
   description: DESCRIPTION,
   alternates: {
     canonical: "https://hellosaasy.ai/affiliate",
   },
   openGraph: {
-    title: "Partner Program — SaaSy",
+    title: "Partner Program — Hello SaaSy",
     description: DESCRIPTION,
     url: "https://hellosaasy.ai/affiliate",
-    siteName: "SaaSy",
+    siteName: "Hello SaaSy",
     type: "website",
     images: [ogImage("affiliate")],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Partner Program — SaaSy",
+    title: "Partner Program — Hello SaaSy",
     description: DESCRIPTION,
     images: [ogImage("affiliate").url],
   },
