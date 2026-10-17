@@ -54,10 +54,11 @@ const STACK: StackGroup[] = [
           "data flows back onto the customer record automatically.",
       },
       {
-        name: "Plaid",
+        name: "QuickBooks Online",
         why:
-          "Bank connections for the numbers the AI CFO brief reads " +
-          "every week.",
+          "Your books sync into SaaSy, and the AI CFO brief shows " +
+          "QuickBooks invoice, bill, and payment totals next to its " +
+          "own numbers.",
       },
     ],
   },
