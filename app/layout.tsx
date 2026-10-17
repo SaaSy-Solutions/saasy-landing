@@ -60,9 +60,43 @@ export const metadata: Metadata = {
   },
 };
 
+const PUBLISHER = {
+  "@type": "Organization",
+  "@id": "https://saasysolutionsllc.com/#organization",
+  name: "SaaSy Solutions LLC",
+  url: "https://saasysolutionsllc.com",
+  parentOrganization: {
+    "@type": "Organization",
+    "@id": "https://saasierinc.com/#organization",
+    name: "SaaSier Inc",
+    url: "https://saasierinc.com",
+  },
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      contactType: "sales",
+      email: "sales@hellosaasy.ai",
+    },
+    {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      email: "support@hellosaasy.ai",
+    },
+  ],
+  // Official profiles (same set as the footer) so search and AI tools
+  // resolve the company as one entity, not the unrelated older "SaaSy".
+  sameAs: [
+    "https://linkedin.com/company/saasysolutions",
+    "https://x.com/SaaSyLLC",
+    "https://github.com/saasy-solutions",
+    "https://facebook.com/saasysolutionsllc",
+  ],
+};
+
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
+  "@id": "https://hellosaasy.ai/#software",
   name: "Hello SaaSy",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
@@ -74,31 +108,11 @@ const structuredData = {
     highPrice: "399",
     priceCurrency: "USD",
   },
-  creator: {
-    "@type": "Organization",
-    name: "SaaSy Solutions LLC",
-    contactPoint: [
-      {
-        "@type": "ContactPoint",
-        contactType: "sales",
-        email: "sales@hellosaasy.ai",
-      },
-      {
-        "@type": "ContactPoint",
-        contactType: "customer support",
-        email: "support@hellosaasy.ai",
-      },
-    ],
-    url: "https://saasysolutionsllc.com",
-    // Official profiles (same set as the footer) so search and AI tools
-    // resolve the company as one entity, not the unrelated older "SaaSy".
-    sameAs: [
-      "https://linkedin.com/company/saasysolutions",
-      "https://x.com/SaaSyLLC",
-      "https://github.com/saasy-solutions",
-      "https://facebook.com/saasysolutionsllc",
-    ],
-  },
+  // Entity graph: the app is made and published by SaaSy Solutions LLC,
+  // a subsidiary of SaaSier Inc. Stable @ids let search and AI tools join
+  // this node with the same organizations described on their own sites.
+  creator: PUBLISHER,
+  publisher: PUBLISHER,
 };
 
 export default function RootLayout({
