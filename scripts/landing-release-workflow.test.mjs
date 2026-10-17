@@ -153,3 +153,19 @@ test("artifact identity records the real checkout tree and refuses malformed or 
     rmSync(directory, { recursive: true, force: true });
   }
 });
+
+test("IndexNow ping runs only after a successful main deploy, uses no secrets, never blocks the release", () => {
+  const key = "b7e4c2a9f1d84630a5c7e2b9d0f3a614";
+  const keyFile = readFileSync(new URL(`../public/${key}.txt`, import.meta.url), "utf8");
+  assert.equal(keyFile, key);
+  assert.doesNotMatch(build, /indexnow/i);
+  const step = deploy.split("      - name: Notify IndexNow\n")[1];
+  assert.ok(step, "IndexNow step lives in the main-only deploy job");
+  assert.ok(deploy.indexOf("uses: actions/deploy-pages@v4") < deploy.indexOf("Notify IndexNow"));
+  assert.match(step, /if: success\(\)\n        continue-on-error: true/);
+  assert.match(step, /https:\/\/hellosaasy\.ai\/sitemap\.xml/);
+  assert.match(step, /https:\/\/api\.indexnow\.org\/indexnow/);
+  assert.match(step, /keyLocation: `https:\/\/hellosaasy\.ai\/\$\{key\}\.txt`/);
+  assert.ok(step.includes(`INDEXNOW_KEY: ${key}`));
+  assert.doesNotMatch(step, /secrets\.|permissions:/);
+});
