@@ -78,7 +78,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "What integrations do you support?",
     answer:
-      "Stripe (financials), Slack (alerts), Gmail and Microsoft 365 email, Twilio SMS, Google and Outlook calendar sync, bank feeds through Plaid, and payroll providers (ADP, Gusto, BambooHR, Rippling) all connect today. HubSpot, Salesforce, and Jira are on the roadmap. Growth plans and above also get an open API, if you'd rather build your own.",
+      "Stripe (financials), Slack (alerts), Gmail and Microsoft 365 email, Twilio SMS, Google and Outlook calendar sync, and payroll providers (ADP, Gusto, BambooHR, Rippling) all connect today. Bank linking through Plaid is coming soon, and HubSpot, Salesforce, and Jira are on the roadmap. Growth plans and above also get an open API, if you'd rather build your own.",
   },
   {
     question: "How long does setup take?",

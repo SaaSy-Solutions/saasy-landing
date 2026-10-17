@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Integrations | Hello SaaSy',
   description:
     'Connect SaaSy with the tools you already use. Stripe, Slack, Gmail, ' +
-    'Microsoft 365, Twilio, Plaid, ADP, Gusto, BambooHR, Rippling, and more.',
+    'Microsoft 365, Twilio, ADP, Gusto, BambooHR, Rippling, and more.',
   alternates: {
     canonical: "https://hellosaasy.ai/integrations",
   },
@@ -103,18 +103,18 @@ const integrations: Integration[] = [
     status: 'Available',
   },
   {
-    name: 'Plaid',
-    category: 'Banking',
-    description:
-      'Link your bank accounts and SaaSy keeps balances and transactions synced daily: real cash-flow visibility without CSV exports.',
-    status: 'Available',
-  },
-  {
     name: 'Webhooks & API',
     category: 'Developer Tools',
     description:
       'Signed inbound and outbound webhooks with retries, plus an open API on Growth plans and above. Connect anything we haven’t built yet.',
     status: 'Available',
+  },
+  {
+    name: 'Plaid',
+    category: 'Banking',
+    description:
+      'Link your bank accounts so balances and transactions sync daily: cash-flow visibility without CSV exports.',
+    status: 'Coming Soon',
   },
   {
     name: 'HubSpot',

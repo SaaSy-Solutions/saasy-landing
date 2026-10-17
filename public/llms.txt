@@ -29,7 +29,7 @@
 - [For contractors](https://hellosaasy.ai/contractors): Bid-to-invoice on one record, compliance deadlines, certified payroll when needed.
 - [For agencies](https://hellosaasy.ai/agencies): Multi-client agency mode, billable time to invoice, contracts + eSign, client health scores.
 - [For field service](https://hellosaasy.ai/field-service): Quote-to-cash, payroll in 50 states + DC (Growth and up), license/insurance tracking, hiring.
-- [Integrations](https://hellosaasy.ai/integrations): Stripe, Slack, Gmail, Microsoft 365, calendar sync, Twilio, Plaid, ADP, Gusto, BambooHR, Rippling, and webhooks/API available today; HubSpot, Salesforce, Intercom, and Jira coming soon.
+- [Integrations](https://hellosaasy.ai/integrations): Stripe, Slack, Gmail, Microsoft 365, calendar sync, Twilio, ADP, Gusto, BambooHR, Rippling, and webhooks/API available today; Plaid bank linking, HubSpot, Salesforce, Intercom, and Jira coming soon.
 - [Compare](https://hellosaasy.ai/compare): How Hello SaaSy compares to spreadsheets, hiring, and separate point tools.
 - [About](https://hellosaasy.ai/about): Who builds SaaSy (SaaSy Solutions LLC, woman-owned) and how to reach the team (cal.com/saasysolutionsllc).
 - [Partner program](https://hellosaasy.ai/affiliate): Referral program paying 30% of a referred account's subscription fees for its first 12 months; apply via sales@hellosaasy.ai.
