@@ -399,8 +399,8 @@ export default function FeaturesPage(): React.ReactElement {
 
                   text-lg leading-relaxed text-saasy-muted"
               >
-                Connect Stripe, Slack, Gmail or Microsoft 365 email,
-                and payroll providers today. Bank linking through Plaid
+                Connect Stripe, QuickBooks Online, Slack, Gmail or
+                Microsoft 365 email, and payroll providers today. Bank linking through Plaid
                 is coming soon, and HubSpot, Salesforce, and Jira are on
                 the roadmap.
                 OAuth in about a minute, no CSV uploads.
