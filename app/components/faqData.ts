@@ -73,7 +73,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Can I switch plans or cancel anytime?",
     answer:
-      "Yes to both. Switch or cancel whenever you like: no contracts, no cancellation fees, no retention specialist calling you at dinner. Tell us the change and our team makes it, effective at the start of your next billing cycle.",
+      "Yes to both: no contracts, no cancellation fees, no retention specialist calling you at dinner. An account owner or billing admin does either one in Settings → Billing. A plan change takes effect right away, and by default the price difference is prorated onto your next invoice. When you cancel you are not charged again, and unused time in the current period is not refunded. Your data stays restorable for 30 days: click Reactivate in Settings → Billing to pick up where you left off.",
   },
   {
     question: "What integrations do you support?",

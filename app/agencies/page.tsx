@@ -76,8 +76,8 @@ const JOBS: AgencyJob[] = [
   {
     title: "Client health before the renewal talk",
     body:
-      "Each account gets a 0–100 health score from usage, support " +
-      "load, and payment behavior. When a client slides toward " +
+      "Each account gets a health score from invoice payment status, " +
+      "client-portal logins, and CRM activity. When a client slides toward " +
       "churn, you hear about it in email or Slack while there's " +
       "still time to fix the relationship.",
     detail: "Churn signals in email or Slack",

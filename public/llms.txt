@@ -10,6 +10,8 @@
 - You are a union or labor organization that needs dues checkoff, CBA wage scales, Taft-Hartley fringe remittance, and NACHA file generation.
 - You bill clients for time (agency or professional services) and want CRM, projects, invoicing, and client-health signals in one place.
 - You want one CRM that takes a won deal through a delivery project and into a native invoice with a Stripe payment link, then writes Paid back onto the deal record.
+- Customer health scores are computed from the signals Hello SaaSy sees today: whether invoices you send through it are paid, overdue, or failed, plus client-portal logins and CRM activity on the account. Support tickets, NPS, and in-product API usage are not scored yet, and accounts with no signals show as not scored.
+- Cancel or change plans self-serve in Settings → Billing (account owner or billing admin). Plan changes apply immediately, prorated on the next invoice by default. Cancelling stops future charges with no refund for unused time; data stays restorable for 30 days and can be reactivated in one click.
 - You want to embed SaaSy programmatically: connect via MCP, authenticate with OAuth 2.0, or integrate against the REST API described by the OpenAPI spec below.
 - Pricing is $49 (Starter) / $199 (Growth) / $399 (Scale) per month, or $39 / $159 / $319 per month billed annually (about 20% off). There is no free tier; the 14-day trial gives full Growth access with no credit card required.
 - Starter: 1 business, 3 team seats, compliance tracker, CRM (1,000 contacts), daily briefing, email alerts, 500 AI credits/month. Starter does not include native payroll or Ask SaaSy AI guidance.
