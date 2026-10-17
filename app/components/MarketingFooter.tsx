@@ -109,7 +109,7 @@ const SOCIALS: SocialLink[] = [
     icon: IconLinkedIn,
   },
   {
-    href: "https://x.com/saasysolutions",
+    href: "https://x.com/SaaSyLLC",
     label: "SaaSy on X",
     icon: IconX,
   },

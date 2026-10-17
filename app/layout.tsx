@@ -94,7 +94,7 @@ const structuredData = {
     // resolve the company as one entity, not the unrelated older "SaaSy".
     sameAs: [
       "https://linkedin.com/company/saasysolutions",
-      "https://x.com/saasysolutions",
+      "https://x.com/SaaSyLLC",
       "https://github.com/saasy-solutions",
       "https://facebook.com/saasysolutionsllc",
     ],
