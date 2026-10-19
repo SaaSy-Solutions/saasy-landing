@@ -43,7 +43,7 @@ const integrations: Integration[] = [
     name: 'QuickBooks Online',
     category: 'Accounting',
     description:
-      'Connect QuickBooks and SaaSy mirrors your customers, vendors, invoices, bills, payments, and accounts, plus your Profit & Loss. An admin can send a SaaSy invoice to QuickBooks, and QuickBooks customers are suggested as matches to your CRM records for you to confirm.',
+      'Connect QuickBooks and SaaSy mirrors your customers, vendors, invoices, bills, payments, and accounts, plus your Profit & Loss. An admin can send a SaaSy invoice to QuickBooks.',
     status: 'Available',
   },
   {
