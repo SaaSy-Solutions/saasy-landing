@@ -10,22 +10,22 @@ const DESCRIPTION =
   "consulting team behind the platform.";
 
 export const metadata: Metadata = {
-  title: "Partners & Recommended Stack — SaaSy",
+  title: "Partners & Recommended Stack — Hello SaaSy",
   description: DESCRIPTION,
   alternates: {
     canonical: "https://hellosaasy.ai/partners",
   },
   openGraph: {
-    title: "Partners & Recommended Stack — SaaSy",
+    title: "Partners & Recommended Stack — Hello SaaSy",
     description: DESCRIPTION,
     url: "https://hellosaasy.ai/partners",
-    siteName: "SaaSy",
+    siteName: "Hello SaaSy",
     type: "website",
     images: [ogImage("partners")],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Partners & Recommended Stack — SaaSy",
+    title: "Partners & Recommended Stack — Hello SaaSy",
     description: DESCRIPTION,
     images: [ogImage("partners").url],
   },
@@ -121,7 +121,7 @@ const STACK: StackGroup[] = [
 
 const BUNDLED = [
   {
-    name: "SaaSy eSign",
+    name: "Hello SaaSy eSign",
     body: "Legally binding e-signature with every version kept — no DocuSign bill on top.",
   },
   {

@@ -11,22 +11,22 @@ const DESCRIPTION =
   "employers and prevailing-wage contractors.";
 
 export const metadata: Metadata = {
-  title: "Union & Labor Compliance | SaaSy",
+  title: "Union & Labor Compliance | Hello SaaSy",
   description: DESCRIPTION,
   alternates: {
     canonical: "https://hellosaasy.ai/unions",
   },
   openGraph: {
-    title: "Union & Labor Compliance | SaaSy",
+    title: "Union & Labor Compliance | Hello SaaSy",
     description: DESCRIPTION,
     url: "https://hellosaasy.ai/unions",
-    siteName: "SaaSy",
+    siteName: "Hello SaaSy",
     type: "website",
     images: [ogImage("unions")],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Union & Labor Compliance | SaaSy",
+    title: "Union & Labor Compliance | Hello SaaSy",
     description: DESCRIPTION,
     images: [ogImage("unions").url],
   },

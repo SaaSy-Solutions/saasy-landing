@@ -3,7 +3,7 @@ import Link from "next/link";
 import { H, LegalDoc, P } from "../components/LegalDoc";
 
 export const metadata: Metadata = {
-  title: "Subprocessors | SaaSy",
+  title: "Subprocessors | Hello SaaSy",
   description:
     "Third parties that process customer data for SaaSy Solutions LLC.",
   alternates: { canonical: "https://hellosaasy.ai/subprocessors" },

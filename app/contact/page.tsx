@@ -5,7 +5,7 @@ import { MarketingFooter } from "../components/MarketingFooter";
 import { ContactForm } from "../components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact | SaaSy",
+  title: "Contact | Hello SaaSy",
   description:
     "Questions about SaaSy, pricing, a vertical workflow, or a " +
     "partnership? Send us a message. A real person replies within " +
@@ -14,19 +14,19 @@ export const metadata: Metadata = {
     canonical: "https://hellosaasy.ai/contact",
   },
   openGraph: {
-    title: "Contact | SaaSy",
+    title: "Contact | Hello SaaSy",
     description:
       "Send us a message. A real person replies within one " +
       "business day.",
     url: "https://hellosaasy.ai/contact",
-    siteName: "SaaSy",
+    siteName: "Hello SaaSy",
     type: "website",
     images: [ogImage("contact")],
   },
   twitter: {
     card: "summary_large_image",
     images: [ogImage("contact").url],
-    title: "Contact | SaaSy",
+    title: "Contact | Hello SaaSy",
     description:
       "Send us a message. A real person replies within one " +
       "business day.",
@@ -37,14 +37,14 @@ export const metadata: Metadata = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  name: "Contact | SaaSy",
+  name: "Contact | Hello SaaSy",
   url: "https://hellosaasy.ai/contact",
   description:
     "Contact SaaSy with product, pricing, support, or partnership " +
     "questions.",
   isPartOf: {
     "@type": "WebSite",
-    name: "SaaSy",
+    name: "Hello SaaSy",
     url: "https://hellosaasy.ai",
   },
   publisher: {

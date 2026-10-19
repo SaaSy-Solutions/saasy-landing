@@ -5,7 +5,7 @@ import { MarketingFooter } from "../components/MarketingFooter";
 import { ogImage } from "../components/ogAssets";
 
 export const metadata: Metadata = {
-  title: "Compare | SaaSy vs Alternatives",
+  title: "Compare | Hello SaaSy vs Alternatives",
   description:
     "See how SaaSy compares to spreadsheets, hiring, and other " +
     "tools for running your business.",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     canonical: "https://hellosaasy.ai/compare",
   },
   openGraph: {
-    siteName: "SaaSy",
+    siteName: "Hello SaaSy",
     type: "website",
     images: [ogImage("compare")],
   },
