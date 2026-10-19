@@ -4,6 +4,7 @@ import "./globals.css";
 import { ogImage } from "./components/ogAssets";
 import { AnalyticsProvider } from "./components/AnalyticsProvider";
 import { CookieBanner } from "./components/CookieBanner";
+import { ErrorMonitoring } from "./components/ErrorMonitoring";
 
 /**
  * Poppins is the brand's designated web font (the style guide's primary,
@@ -111,6 +112,7 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} antialiased`}
       >
+        <ErrorMonitoring />
         <AnalyticsProvider />
         <CookieBanner />
         <script

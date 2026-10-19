@@ -3,12 +3,17 @@
 import { useEffect } from 'react';
 import posthog from 'posthog-js';
 import { readCookieConsent } from './CookieBanner';
+import { trackAiReferralFromDocument } from '../../lib/ai-referrer';
 
 /**
  * Initializes PostHog (same project as app.hellosaasy.ai — the default
  * cross-subdomain cookie on .hellosaasy.ai carries one identity from
  * marketing visit through signup) and tracks CTA clicks via a single
  * delegated listener so CTA components can stay server components.
+ *
+ * AI referrals: the first consented page load of a session that came from
+ * an AI assistant registers `ai_referrer` and captures `ai_referral_landing`
+ * (see lib/ai-referrer.ts).
  *
  * CTA contract: any <a data-cta="<source>"> pointing at /signup or
  * /contact-sales is tracked. `plan` is read from the link's ?plan= param.
@@ -32,6 +37,9 @@ export function AnalyticsProvider() {
         capture_pageleave: true,
         disable_session_recording: true,
       });
+      // Attribute visits from AI assistants (ChatGPT, Perplexity, ...) once
+      // per session, only after consent has started PostHog.
+      trackAiReferralFromDocument(posthog);
     };
 
     start();
