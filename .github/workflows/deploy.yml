@@ -144,3 +144,43 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      # IndexNow (Bing, Yandex, Seznam, Naver...): tell engines which URLs
+      # just shipped. Runs only after a successful main deploy; it is public
+      # (no secrets, no extra permissions) and never fails the release.
+      - name: Notify IndexNow
+        if: success()
+        continue-on-error: true
+        timeout-minutes: 3
+        env:
+          INDEXNOW_KEY: b7e4c2a9f1d84630a5c7e2b9d0f3a614
+        run: |
+          set -euo pipefail
+          # Give the Pages CDN a moment to serve the new build (and key file).
+          sleep 30
+          curl -fsS --retry 5 --retry-delay 10 --retry-all-errors \
+            https://hellosaasy.ai/sitemap.xml -o sitemap.xml
+          node --input-type=module <<'NODE'
+          import { readFileSync, writeFileSync } from 'node:fs';
+          const xml = readFileSync('sitemap.xml', 'utf8');
+          const urlList = [...xml.matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/g)]
+            .map((match) => match[1])
+            .filter((url) => url.startsWith('https://hellosaasy.ai'));
+          if (urlList.length === 0) throw new Error('sitemap.xml had no hellosaasy.ai <loc> entries');
+          const key = process.env.INDEXNOW_KEY;
+          writeFileSync('indexnow.json', JSON.stringify({
+            host: 'hellosaasy.ai',
+            key,
+            keyLocation: `https://hellosaasy.ai/${key}.txt`,
+            urlList,
+          }));
+          console.log(`Submitting ${urlList.length} URLs to IndexNow`);
+          NODE
+          curl -sS --retry 3 --retry-delay 10 -o indexnow-response.txt -w '%{http_code}\n' \
+            -X POST https://api.indexnow.org/indexnow \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            --data-binary @indexnow.json | tee indexnow-status.txt
+          cat indexnow-response.txt || true
+          status=$(cat indexnow-status.txt)
+          # 200 OK and 202 Accepted (key validation pending) are both success.
+          case "$status" in 200|202) ;; *) echo "IndexNow returned HTTP $status"; exit 1 ;; esac
