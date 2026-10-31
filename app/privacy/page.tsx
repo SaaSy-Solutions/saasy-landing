@@ -38,7 +38,7 @@ export default function PrivacyPolicyPage() {
             Privacy Policy
           </h1>
           <p className="mt-3  text-saasy-muted text-sm">
-            Last updated: August 28, 2026
+            Last updated: October 31, 2026
           </p>
         </header>
 
@@ -107,14 +107,49 @@ export default function PrivacyPolicyPage() {
               </div>
               <div>
                 <h3 className=" font-semibold text-white">
-                  Bank transaction history
+                  Bank account information (via Plaid)
                 </h3>
                 <p className="mt-1 text-saasy-muted  leading-relaxed">
-                  If you connect a bank account, Plaid collects account-holder
-                  identity, balances, merchant detail, and transaction history
-                  and syncs a copy to us for bookkeeping features. Plaid holds
-                  its own copy under its policy. Disconnecting a bank starts
-                  deletion of our copy. We do not see your bank password.
+                  We use Plaid Inc. (&quot;Plaid&quot;) to connect your bank,
+                  card, and other financial accounts. When you choose to
+                  connect an account, Plaid collects information from your
+                  financial institution and shares it with us. Depending on
+                  the account, this may include the account holder&apos;s name
+                  and contact details on file with the institution; the
+                  account name, type, and the last four digits of the account
+                  and routing numbers; current and available balances and
+                  credit limits; and transaction history, including amount,
+                  date, merchant name, category, and location.
+                </p>
+                <p className="mt-2 text-saasy-muted  leading-relaxed">
+                  We use this information to verify that you own the account,
+                  show your balances and transactions, support bookkeeping and
+                  reconciliation, and detect recurring charges so we can
+                  suggest subscriptions and renewals for you to track. We do
+                  not sell it or use it for advertising. We never receive or
+                  store your bank username or password.
+                </p>
+                <p className="mt-2 text-saasy-muted  leading-relaxed">
+                  By connecting an account, you authorize Plaid to collect and
+                  share this information with us, and you acknowledge that
+                  Plaid&apos;s handling of your data is governed by the{' '}
+                  <a
+                    href="https://plaid.com/legal/#end-user-privacy-policy"
+                    className="text-saasy-pink-soft hover:text-saasy-rose underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Plaid End User Privacy Policy
+                  </a>
+                  . Plaid keeps its own copy under that policy.
+                </p>
+                <p className="mt-2 text-saasy-muted  leading-relaxed">
+                  We keep bank data for as long as the account stays
+                  connected. When you disconnect an account, we ask Plaid to
+                  revoke our access and delete that account&apos;s balances
+                  and transactions from our systems. Renewals or subscriptions
+                  you saved from detected charges stay in your workspace until
+                  you delete them.
                 </p>
               </div>
             </div>
