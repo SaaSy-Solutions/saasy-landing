@@ -22,10 +22,10 @@ export function AnswerBlock(): React.ReactElement {
             className="text-sm font-semibold uppercase tracking-wider
               text-saasy-pink-soft"
           >
-            Hello SaaSy in one paragraph
+            AI back-office software for small businesses
           </h2>
           <p className="mt-3 text-lg leading-relaxed text-saasy-text">
-            Hello SaaSy is a back-office platform for small and
+            Hello SaaSy is AI back-office software for small and
             mid-sized businesses: contractors, unions, agencies, and
             service firms. A won deal moves through delivery, invoicing,
             and payment on one record. Starter is ${starter}/month with
