@@ -193,7 +193,14 @@ export function MarketingFooter(): React.ReactElement {
             >
               SaaSy Solutions LLC
             </a>
-            , a woman-owned business.
+            , a woman-owned business and a{" "}
+            <a
+              href="https://saasierinc.com"
+              className="hover:text-white transition-colors"
+            >
+              SaaSier Inc
+            </a>{" "}
+            company.
           </p>
         </div>
       </div>

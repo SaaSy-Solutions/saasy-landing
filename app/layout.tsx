@@ -71,6 +71,7 @@ const PUBLISHER = {
     "@id": "https://saasierinc.com/#organization",
     name: "SaaSier Inc",
     url: "https://saasierinc.com",
+    sameAs: ["https://www.linkedin.com/company/saasierinc"],
   },
   contactPoint: [
     {
