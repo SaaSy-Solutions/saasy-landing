@@ -99,6 +99,16 @@ const structuredData = {
   "@type": "SoftwareApplication",
   "@id": "https://hellosaasy.ai/#software",
   name: "Hello SaaSy",
+  alternateName: ["HelloSaaSy", "Hello Saasy"],
+  // The product's own brand, so "Hello SaaSy" resolves to this site rather
+  // than only to its publisher, SaaSy Solutions LLC.
+  brand: {
+    "@type": "Brand",
+    "@id": "https://hellosaasy.ai/#brand",
+    name: "Hello SaaSy",
+    alternateName: ["HelloSaaSy", "Hello Saasy"],
+    url: "https://hellosaasy.ai",
+  },
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
   description: DESCRIPTION,
