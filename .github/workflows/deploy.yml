@@ -45,11 +45,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: "pnpm"
-          cache-dependency-path: |
-            pnpm-lock.yaml
-            tests/contact-ui/pnpm-lock.yaml
-            tests/cookie-ui/pnpm-lock.yaml
+          # No `cache:`: the pnpm store cache was billed GitHub Actions
+          # storage (see .github/scripts/runner_guard.py).
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -107,7 +104,7 @@ jobs:
           path: ./out
           include-hidden-files: true
           if-no-files-found: error
-          retention-days: 3
+          retention-days: 1
 
       - name: Build main for deployment
         if: >-

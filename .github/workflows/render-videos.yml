@@ -66,6 +66,9 @@ jobs:
 
       - name: Setup uv
         uses: astral-sh/setup-uv@v5
+        with:
+          # setup-uv caches by default on hosted runners (billed storage).
+          enable-cache: false
 
       - name: Upload to R2
         env:

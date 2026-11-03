@@ -81,7 +81,7 @@ test("secrets, Pages artifact and deployment are restricted to main releases", (
 });
 
 test("frozen pnpm installs execute both UI harnesses and all script regressions", () => {
-  assert.doesNotMatch(workflow, /\bnpm (?:ci|install|run)\b|cache: "npm"/);
+  assert.doesNotMatch(workflow, /\bnpm (?:ci|install|run)\b|cache: "(?:npm|pnpm)"/);
   assert.match(build, /uses: pnpm\/action-setup@v4[\s\S]*version: "10\.26\.0"/);
   assert.match(build, /run: pnpm install --frozen-lockfile/);
   assert.match(build, /run: node --test scripts\/\*\.test\.mjs/);
@@ -89,8 +89,9 @@ test("frozen pnpm installs execute both UI harnesses and all script regressions"
     for (const command of ["install --frozen-lockfile", "test", "typecheck"]) {
       assert.ok(build.includes(`pnpm --dir tests/${directory} ${command}`));
     }
-    assert.ok(build.includes(`tests/${directory}/pnpm-lock.yaml`));
   }
+  // The pnpm store cache was billed Actions storage; frozen installs need none.
+  assert.doesNotMatch(build, /cache-dependency-path:|^\s+cache: /m);
 });
 
 test("PR queues cannot occupy the main deployment concurrency group", () => {
@@ -115,7 +116,7 @@ test("preserves successful PR builds with public identity; never uploads a faile
   assert.match(upload.body, /uses: actions\/upload-artifact@v4/);
   assert.doesNotMatch(upload.body, /upload-pages-artifact/);
   assert.ok(upload.body.includes("name: landing-pr-${{ github.event.pull_request.number }}-${{ github.event.pull_request.head.sha }}"));
-  assert.match(upload.body, /path: \.\/out\n          include-hidden-files: true\n          if-no-files-found: error\n          retention-days: 3/);
+  assert.match(upload.body, /path: \.\/out\n          include-hidden-files: true\n          if-no-files-found: error\n          retention-days: 1/);
   assert.match(identity.body, /EXPECTED_PR_HEAD: \$\{\{ github.event.pull_request.head.sha \}\}/);
   assert.match(identity.body, /expectedPrHead: process.env.EXPECTED_PR_HEAD/);
   assert.match(identity.body, /checkoutSha: git\('HEAD'\)/);
