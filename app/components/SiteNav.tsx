@@ -28,7 +28,10 @@ const NAV_LINKS: NavLink[] = [{ href: "/resources", label: "Resources" },
 ];
 
 /** Unified site navigation for all pages. */
-export function SiteNav(): React.ReactElement {
+export function SiteNav({
+  signupHref = 'https://app.hellosaasy.ai/signup',
+  signupLabel = 'Start free trial',
+}: { signupHref?: string; signupLabel?: string } = {}): React.ReactElement {
   const [open, setOpen] = useState<boolean>(false);
   const pathname = usePathname();
 
@@ -101,14 +104,14 @@ export function SiteNav(): React.ReactElement {
               Sign in
             </Link>
             <Link
-              href="https://app.hellosaasy.ai/signup"
+              href={signupHref}
               data-cta="nav"
               className="hidden rounded-full bg-saasy-rose px-4
                 py-2 text-sm font-semibold text-white
                 transition-colors hover:bg-saasy-rose-bright
                 md:flex"
             >
-              Start free trial
+              {signupLabel}
             </Link>
 
             {/* Hamburger button — visible only below md. 44px tap
@@ -256,7 +259,7 @@ export function SiteNav(): React.ReactElement {
             Sign in
           </Link>
           <Link
-            href="https://app.hellosaasy.ai/signup"
+            href={signupHref}
             data-cta="nav_mobile"
             onClick={close}
             className="w-full rounded-full bg-saasy-rose px-4
@@ -264,7 +267,7 @@ export function SiteNav(): React.ReactElement {
               font-semibold text-white
               transition-colors hover:bg-saasy-rose-bright"
           >
-            Start free trial
+            {signupLabel}
           </Link>
         </div>
       </div>

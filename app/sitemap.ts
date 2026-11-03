@@ -20,6 +20,7 @@ const STATIC_ROUTES: {
   { path: "", changeFrequency: "weekly", priority: 1.0 },
   { path: "/features", changeFrequency: "weekly", priority: 0.9 },
   { path: "/pricing", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/small-business-saturday", changeFrequency: "weekly", priority: 0.7 },
   { path: "/unions", changeFrequency: "weekly", priority: 1.0 },
   { path: "/contractors", changeFrequency: "weekly", priority: 0.8 },
   { path: "/agencies", changeFrequency: "weekly", priority: 0.8 },
