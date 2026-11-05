@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import posthog from 'posthog-js';
 import { readCookieConsent } from './CookieBanner';
 import { trackAiReferralFromDocument } from '../../lib/ai-referrer';
+import { campaignSource } from '../../lib/small-business-saturday';
 
 /**
  * Initializes PostHog (same project as app.hellosaasy.ai — the default
@@ -61,7 +62,11 @@ export function AnalyticsProvider() {
       } else if (url.pathname.includes('/signup')) {
         posthog.capture(
           'cta_signup_clicked',
-          { source, plan: url.searchParams.get('plan') ?? undefined },
+          {
+            source,
+            plan: url.searchParams.get('plan') ?? undefined,
+            campaign_source: campaignSource(url.searchParams.get('src')) ?? undefined,
+          },
           { transport: 'sendBeacon' }
         );
       }

@@ -48,6 +48,16 @@ describe('cookie consent storage and analytics', () => {
     fireEvent.click(screen.getByRole('link', { name: 'Sign up' }));
     expect(sdk.capture).toHaveBeenCalledWith('cta_signup_clicked', { source: 'test', plan: 'starter' }, { transport: 'sendBeacon' });
   });
+  it('attributes campaign signup clicks to the exact tagged post after consent', () => {
+    localStorage.setItem(COOKIE_CONSENT_KEY, 'all');
+    render(<><AnalyticsProvider /><a data-cta="small_business_saturday"
+      href="https://app.hellosaasy.ai/signup?plan=growth&billing=monthly&src=macon-linkedin"
+      onClick={(event) => event.preventDefault()}>Choose Growth</a></>);
+    fireEvent.click(screen.getByRole('link', { name: 'Choose Growth' }));
+    expect(sdk.capture).toHaveBeenCalledWith('cta_signup_clicked', {
+      source: 'small_business_saturday', plan: 'growth', campaign_source: 'macon-linkedin',
+    }, { transport: 'sendBeacon' });
+  });
   it.each(['invalid', '', '{"choice":"all"}'])('shows the banner and fails closed for malformed consent %j', (value) => {
     localStorage.setItem(COOKIE_CONSENT_KEY, value);
     view();
