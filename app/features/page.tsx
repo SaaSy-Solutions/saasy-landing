@@ -401,7 +401,7 @@ export default function FeaturesPage(): React.ReactElement {
               >
                 Connect Stripe, QuickBooks Online, Slack, Gmail or
                 Microsoft 365 email, and payroll providers today. Bank linking through Plaid
-                is coming soon, and HubSpot, Salesforce, and Jira are on
+                is available now, and HubSpot, Salesforce, and Jira are on
                 the roadmap.
                 OAuth in about a minute, no CSV uploads.
               </p>

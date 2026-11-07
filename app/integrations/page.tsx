@@ -121,7 +121,7 @@ const integrations: Integration[] = [
     category: 'Banking',
     description:
       'Link your bank accounts so balances and transactions sync daily: cash-flow visibility without CSV exports.',
-    status: 'Coming Soon',
+    status: 'Available',
   },
   {
     name: 'HubSpot',

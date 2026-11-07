@@ -84,7 +84,7 @@ const CAPABILITIES: Capability[] = [
   },
   {
     icon: <IconLedger />,
-    title: "Native payroll, 50 states + DC",
+    title: "Native payroll, 41 states + DC",
     description:
       "Direct deposit, W-2s, and WH-347 certified payroll for government work, built in, not bolted on.",
     span: "md:col-span-2",
@@ -331,7 +331,7 @@ export function HomeClient(): React.ReactElement {
                 "Up to 5 businesses",
                 "10 team seats",
                 "CRM (10,000 contacts)",
-                "Native payroll, 50 states + DC (beta perk)",
+                "Native payroll, 41 states + DC (beta perk)",
                 "Ask SaaSy AI guidance (2,000 credits / mo)",
                 "Slack alerts",
                 "API access",

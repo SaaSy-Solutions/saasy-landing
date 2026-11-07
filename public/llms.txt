@@ -15,7 +15,7 @@
 - You want to embed SaaSy programmatically: connect via MCP, authenticate with OAuth 2.0, or integrate against the REST API described by the OpenAPI spec below.
 - Pricing is $49 (Starter) / $199 (Growth) / $399 (Scale) per month, or $39 / $159 / $319 per month billed annually (about 20% off). There is no free tier; the 14-day trial gives full Growth access with no credit card required.
 - Starter: 1 business, 3 team seats, compliance tracker, CRM (1,000 contacts), daily briefing, email alerts, 500 AI credits/month. Starter does not include native payroll or Ask SaaSy AI guidance.
-- Growth adds up to 5 businesses, 10 seats, CRM (10,000 contacts), native payroll in 50 states + DC (a beta perk), Ask SaaSy AI guidance (2,000 credits/month), Slack alerts, and API access. Scale adds unlimited businesses, advanced analytics, priority support, custom automations, dedicated onboarding, and 5,000 credits/month.
+- Growth adds up to 5 businesses, 10 seats, CRM (10,000 contacts), native payroll in 41 states + DC (a beta perk), Ask SaaSy AI guidance (2,000 credits/month), Slack alerts, and API access. Scale adds unlimited businesses, advanced analytics, priority support, custom automations, dedicated onboarding, and 5,000 credits/month.
 - Extra AI credits are $25 per pack of 2,000, or connect your own AI key. The Union & Labor Compliance add-on is priced by active members ($99/month up to 50, $249/month up to 250, custom above that) and is added to Growth or Scale.
 
 ## Site
@@ -28,8 +28,8 @@
 - [For unions](https://hellosaasy.ai/unions): Dues checkoff, CBA wage scales, Taft-Hartley fringe, WH-347 certified payroll, and NACHA files.
 - [For contractors](https://hellosaasy.ai/contractors): Bid-to-invoice on one record, compliance deadlines, certified payroll when needed.
 - [For agencies](https://hellosaasy.ai/agencies): Multi-client agency mode, billable time to invoice, contracts + eSign, client health scores.
-- [For field service](https://hellosaasy.ai/field-service): Quote-to-cash, payroll in 50 states + DC (Growth and up), license/insurance tracking, hiring.
-- [Integrations](https://hellosaasy.ai/integrations): Stripe, QuickBooks Online, Slack, Gmail, Microsoft 365, calendar sync, Twilio, ADP, Gusto, BambooHR, Rippling, and webhooks/API available today; Plaid bank linking, HubSpot, Salesforce, Intercom, and Jira coming soon.
+- [For field service](https://hellosaasy.ai/field-service): Quote-to-cash, payroll in 41 states + DC (Growth and up), license/insurance tracking, hiring.
+- [Integrations](https://hellosaasy.ai/integrations): Stripe, QuickBooks Online, Slack, Gmail, Microsoft 365, calendar sync, Twilio, ADP, Gusto, BambooHR, Rippling, Plaid bank linking, and webhooks/API available today; HubSpot, Salesforce, Intercom, and Jira coming soon.
 - [Compare](https://hellosaasy.ai/compare): How Hello SaaSy compares to spreadsheets, hiring, and separate point tools.
 - [About](https://hellosaasy.ai/about): Who builds SaaSy (SaaSy Solutions LLC, woman-owned) and how to reach the team (cal.com/saasysolutionsllc).
 - [Partner program](https://hellosaasy.ai/affiliate): Referral program paying 30% of a referred account's subscription fees for its first 12 months; apply via sales@hellosaasy.ai.

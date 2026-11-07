@@ -6,8 +6,8 @@ import { MarketingFooter } from "../components/MarketingFooter";
 
 const DESCRIPTION =
   "For field-service businesses — HVAC, plumbing, electrical, and " +
-  "the trades: quote to cash on one record, payroll in all 50 " +
-  "states, license and insurance dates watched, and hiring built " +
+  "the trades: quote to cash on one record, payroll in 41 " +
+  "states + DC, license and insurance dates watched, and hiring built " +
   "into the same system.";
 
 export const metadata: Metadata = {
@@ -70,10 +70,10 @@ const JOBS: ServiceJob[] = [
   {
     title: "Payroll that doesn't fight you",
     body:
-      "Native payroll covers all 50 states + DC on Growth — techs, " +
+      "Native payroll covers 41 states + DC on Growth — techs, " +
       "office staff, overtime — without exporting to a separate " +
       "payroll vendor and re-importing the journal entries.",
-    detail: "50 states + DC, on the Growth plan",
+    detail: "41 states + DC, on the Growth plan",
   },
   {
     title: "Hire the next tech without a second tool",
