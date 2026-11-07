@@ -27,6 +27,12 @@ interface ChangelogEntry {
 // Source of truth is changelog.json, which scripts/gen-changelog.mjs drafts
 // from merged saas-platform PRs (see .github/workflows/changelog-draft.yml).
 const CHANGELOG = changelogData.entries as ChangelogEntry[];
+// Uncurated generator drafts (curated: false) are never rendered publicly.
+// CHANGELOG itself stays unfiltered because the header clip's content-addressed
+// filename must match what render-whatsnew.yml computes from changelog.json.
+const PUBLISHED = (changelogData.entries as (ChangelogEntry & { curated?: boolean })[]).filter(
+  entry => entry.curated !== false,
+);
 
 // The header clip is re-rendered by .github/workflows/render-whatsnew.yml from
 // the latest 3 entries. Uploads are cached immutably, so the filename is
@@ -105,7 +111,7 @@ export default function ChangelogPage() {
         </div>
 
         <div className="mt-12 space-y-12">
-          {CHANGELOG.map(entry => (
+          {PUBLISHED.map(entry => (
             <div key={entry.version}>
               <div className="flex items-center gap-3">
                 <span

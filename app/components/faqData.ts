@@ -22,7 +22,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "What's included at each price?",
     answer:
-      `Starter is $${starter}/month: 1 business, 3 team seats, the compliance tracker, CRM for up to 1,000 contacts, the daily briefing, email alerts, and 500 AI credits a month. Growth is $${growth}/month: up to 5 businesses, 10 seats, 10,000 contacts, native payroll in 50 states + DC, Ask SaaSy AI guidance with 2,000 credits, Slack alerts, and API access. Scale is $${scale}/month: unlimited businesses, advanced analytics, priority support, custom automations, dedicated onboarding, and 5,000 credits. Annual billing saves about 20%.`,
+      `Starter is $${starter}/month: 1 business, 3 team seats, the compliance tracker, CRM for up to 1,000 contacts, the daily briefing, email alerts, and 500 AI credits a month. Growth is $${growth}/month: up to 5 businesses, 10 seats, 10,000 contacts, native payroll in 41 states + DC, Ask SaaSy AI guidance with 2,000 credits, Slack alerts, and API access. Scale is $${scale}/month: unlimited businesses, advanced analytics, priority support, custom automations, dedicated onboarding, and 5,000 credits. Annual billing saves about 20%.`,
   },
   {
     question: "Is Hello SaaSy live, or still in beta?",
@@ -78,7 +78,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "What integrations do you support?",
     answer:
-      "Stripe (financials), QuickBooks Online (accounting), Slack (alerts), Gmail and Microsoft 365 email, Twilio SMS, Google and Outlook calendar sync, and payroll providers (ADP, Gusto, BambooHR, Rippling) all connect today. Bank linking through Plaid is coming soon, and HubSpot, Salesforce, and Jira are on the roadmap. Growth plans and above also get an open API, if you'd rather build your own.",
+      "Stripe (financials), QuickBooks Online (accounting), Slack (alerts), Gmail and Microsoft 365 email, Twilio SMS, Google and Outlook calendar sync, and payroll providers (ADP, Gusto, BambooHR, Rippling) all connect today. Bank linking through Plaid is available now, and HubSpot, Salesforce, and Jira are on the roadmap. Growth plans and above also get an open API, if you'd rather build your own.",
   },
   {
     question: "How long does setup take?",

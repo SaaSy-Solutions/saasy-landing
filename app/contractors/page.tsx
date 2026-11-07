@@ -87,7 +87,7 @@ const JOBS: ContractorJob[] = [
 const FAQ_ITEMS = [
   {
     q: "We're not a union shop. Is this still for us?",
-    a: "Yes. Everything above works without the union add-on — pipeline, projects, invoicing, compliance dates, and payroll in all 50 states + DC. The union add-on is only for employers who remit dues or file certified payroll.",
+    a: "Yes. Everything above works without the union add-on — pipeline, projects, invoicing, compliance dates, and payroll in 41 states + DC. The union add-on is only for employers who remit dues or file certified payroll.",
   },
   {
     q: "Does SaaSy do estimating or takeoffs?",
