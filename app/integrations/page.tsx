@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Integrations | Hello SaaSy',
   description:
     'Connect SaaSy with the tools you already use. Stripe, QuickBooks Online, ' +
-    'Slack, Gmail, Microsoft 365, Twilio, ADP, Gusto, BambooHR, Rippling, and more.',
+    'Slack, Gmail, Microsoft 365, Twilio, Plaid, and more. ADP, Gusto, BambooHR and Rippling coming soon.',
   alternates: {
     canonical: "https://hellosaasy.ai/integrations",
   },
@@ -86,28 +86,28 @@ const integrations: Integration[] = [
     category: 'Payroll & HRIS',
     description:
       'Sync payroll and employee data from ADP so certified payroll, dues, and labor compliance run on real numbers, not re-keyed spreadsheets.',
-    status: 'Available',
+    status: 'Coming Soon',
   },
   {
     name: 'Gusto',
     category: 'Payroll & HRIS',
     description:
       'Connect Gusto and your payroll data flows into SaaSy automatically, keeping compliance and reporting grounded in what you actually paid.',
-    status: 'Available',
+    status: 'Coming Soon',
   },
   {
     name: 'BambooHR',
     category: 'Payroll & HRIS',
     description:
       'Pull employee and HR data from BambooHR so your people records, onboarding, and compliance tracking stay in step with your HRIS.',
-    status: 'Available',
+    status: 'Coming Soon',
   },
   {
     name: 'Rippling',
     category: 'Payroll & HRIS',
     description:
       'Sync payroll and workforce data from Rippling into SaaSy, so labor costs and compliance reporting reflect the source of truth.',
-    status: 'Available',
+    status: 'Coming Soon',
   },
   {
     name: 'Webhooks & API',

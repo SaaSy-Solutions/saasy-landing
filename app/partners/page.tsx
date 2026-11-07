@@ -95,8 +95,8 @@ const STACK: StackGroup[] = [
       {
         name: "Gusto / ADP / BambooHR / Rippling",
         why:
-          "If payroll history lives elsewhere, we connect to it " +
-          "rather than making you migrate on day one.",
+          "Coming soon: if payroll history lives elsewhere, we will connect " +
+          "to it rather than making you migrate on day one.",
       },
       {
         name: "LCPtracker",
