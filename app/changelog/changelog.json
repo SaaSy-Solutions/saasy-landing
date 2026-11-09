@@ -1,6 +1,2983 @@
 {
   "entries": [
     {
+      "version": "DRAFT-2026-11-09",
+      "date": "2026-11-09",
+      "source_through": "2026-11-09T16:08:16.628Z",
+      "curated": false,
+      "title": "Draft — edit version, title & wording before publishing",
+      "items": [
+        {
+          "type": "feature",
+          "text": "Hire a catalog template onto its own schedule"
+        },
+        {
+          "type": "feature",
+          "text": "Deliver a saved tenant routine as an in-app brief"
+        },
+        {
+          "type": "feature",
+          "text": "SaaSy 3D companion program"
+        },
+        {
+          "type": "feature",
+          "text": "AR with the live look, cross-device progress, presence polish"
+        },
+        {
+          "type": "feature",
+          "text": "SaaSy is she, sassy, with a she/they/he setting"
+        },
+        {
+          "type": "feature",
+          "text": "Valuation & projection packages"
+        },
+        {
+          "type": "feature",
+          "text": "Brand-grade art polish for SaaSy"
+        },
+        {
+          "type": "feature",
+          "text": "Weekly SaaSy recap video and owner email"
+        },
+        {
+          "type": "feature",
+          "text": "Upload or pick a document and send as a draft"
+        },
+        {
+          "type": "feature",
+          "text": "Fetch Instagram, X, YouTube, TikTok, and Reddit post metrics"
+        },
+        {
+          "type": "feature",
+          "text": "Instagram single-image and carousel posts"
+        },
+        {
+          "type": "feature",
+          "text": "Optional post approval with client review links"
+        },
+        {
+          "type": "feature",
+          "text": "Publish Facebook Page posts from the composer"
+        },
+        {
+          "type": "feature",
+          "text": "Reusable templates for NDA send"
+        },
+        {
+          "type": "feature",
+          "text": "Unified inbox for Facebook and Instagram comments and DMs"
+        },
+        {
+          "type": "feature",
+          "text": "Comment-keyword auto-DMs via Meta Private Replies"
+        },
+        {
+          "type": "feature",
+          "text": "Plain-English Social Analytics insights"
+        },
+        {
+          "type": "feature",
+          "text": "Agency desk and white-label client reports"
+        },
+        {
+          "type": "feature",
+          "text": "Job-complete draft ideas and Plan my week"
+        },
+        {
+          "type": "feature",
+          "text": "Import natively scheduled posts into the calendar"
+        },
+        {
+          "type": "feature",
+          "text": "Record Stripe account id on webhook claims"
+        },
+        {
+          "type": "feature",
+          "text": "Subscriptions view, spend totals, active toggle; one plan surface"
+        },
+        {
+          "type": "feature",
+          "text": "Shared renewal reminder recipients"
+        },
+        {
+          "type": "feature",
+          "text": "Usage-based (pay as you go) subscription pricing"
+        },
+        {
+          "type": "feature",
+          "text": "Tenant-owned PostHog and Sentry connections"
+        },
+        {
+          "type": "feature",
+          "text": "Publish data resource system-role permissions schema"
+        },
+        {
+          "type": "feature",
+          "text": "30/7 reminder default and one notice when an auto-renewal passes"
+        },
+        {
+          "type": "feature",
+          "text": "Ontology registry, edge semantics and canonical lookup"
+        },
+        {
+          "type": "feature",
+          "text": "Edit a renewal's reminder schedule in the editor"
+        },
+        {
+          "type": "feature",
+          "text": "Add tenant-isolated password MFA challenge schema"
+        },
+        {
+          "type": "feature",
+          "text": "Bind trusted sessions to credential revisions"
+        },
+        {
+          "type": "feature",
+          "text": "Cited graph context in Ask SaaSy chat"
+        },
+        {
+          "type": "feature",
+          "text": "Resolve QuickBooks and Stripe customers to CRM with reviewable evidence"
+        },
+        {
+          "type": "feature",
+          "text": "Cited business-graph context in person-started agent turns"
+        },
+        {
+          "type": "feature",
+          "text": "Relationships explorer for the business graph"
+        },
+        {
+          "type": "feature",
+          "text": "Automate guarded Redis leaf renewal"
+        },
+        {
+          "type": "feature",
+          "text": "Scheduled sweep with work counts, payment nodes and bounded paths"
+        },
+        {
+          "type": "feature",
+          "text": "Business signals and recommendations through the approval queue"
+        },
+        {
+          "type": "feature",
+          "text": "Multi-organization MCP consent and non-home tenant role fix"
+        },
+        {
+          "type": "feature",
+          "text": "Churn predictions with provenance, outcomes and backtested evaluation"
+        },
+        {
+          "type": "feature",
+          "text": "Product participation API for Aether (LPE 1/n)"
+        },
+        {
+          "type": "feature",
+          "text": "Evolution:decide scope and decision receipt recovery (LPE 2/n)"
+        },
+        {
+          "type": "feature",
+          "text": "Development handoff and reauthorization (LPE 3/n)"
+        },
+        {
+          "type": "feature",
+          "text": "Development delivery reports (LPE 4/n)"
+        },
+        {
+          "type": "feature",
+          "text": "Jev perception cost bound and LPE perception contract (perception 1/n)"
+        },
+        {
+          "type": "feature",
+          "text": "Add the connected financial grants ledger"
+        },
+        {
+          "type": "feature",
+          "text": "Add the finite prepared financial key class"
+        },
+        {
+          "type": "feature",
+          "text": "Ask SaaSy social endpoints and scheduled briefs (integration half of #11351)"
+        },
+        {
+          "type": "feature",
+          "text": "Ask SaaSy social tools with user-confirmed scheduling (business half of #11351)"
+        },
+        {
+          "type": "feature",
+          "text": "Getting-started checklist progress and dismiss API"
+        },
+        {
+          "type": "feature",
+          "text": "Getting-started checklist on the dashboard and nav"
+        },
+        {
+          "type": "feature",
+          "text": "Per-goal AI cost trends view (brain, gateway, tenant portal)"
+        },
+        {
+          "type": "feature",
+          "text": "Publish per-tenant security.tenant.verdict, consumed by proactive"
+        },
+        {
+          "type": "feature",
+          "text": "Attribute LLM spend to immutable prompt revisions"
+        },
+        {
+          "type": "feature",
+          "text": "Wire ML A/B testing, models and document generation to real routes (plan A6)"
+        },
+        {
+          "type": "feature",
+          "text": "Wire /integrations to unified-integration-service (A2a)"
+        },
+        {
+          "type": "feature",
+          "text": "Value Delivered engagement, journey, milestones, forecast and health panels"
+        },
+        {
+          "type": "feature",
+          "text": "Threat-intel lookups (AbuseIPDB, OTX, VirusTotal) and remove fabricated feed data"
+        },
+        {
+          "type": "feature",
+          "text": "Record and query data lineage"
+        },
+        {
+          "type": "feature",
+          "text": "DSAR operator console on real ops routes plus status PATCH (A5)"
+        },
+        {
+          "type": "feature",
+          "text": "Explicit admin-approved Aether ↔ tenant link (PKCE public client, no API key) (#12439 part 2)"
+        },
+        {
+          "type": "feature",
+          "text": "Tenant-scoped by-id search recommendation admin routes (plan B7, #12250)"
+        },
+        {
+          "type": "feature",
+          "text": "Workflow pause/resume and the Agent Decisions inbox on approvals (plan B10b + A1)"
+        },
+        {
+          "type": "feature",
+          "text": "One-off billing facts backfill (recompute from billing tables, no event republish)"
+        },
+        {
+          "type": "feature",
+          "text": "Per-connection disconnect and webhook (plan A2b)"
+        },
+        {
+          "type": "feature",
+          "text": "Experiment by-id edit/delete, user assignment and result recording (plan A6b)"
+        },
+        {
+          "type": "feature",
+          "text": "Versioned data transform pipelines (import, export, preview, lineage)"
+        },
+        {
+          "type": "feature",
+          "text": "Read-only delegation log from the brain (plan A3b)"
+        },
+        {
+          "type": "feature",
+          "text": "Platform-admin SSO with Google and Microsoft — link-first, MFA always (plan B8)"
+        },
+        {
+          "type": "feature",
+          "text": "Tenant-scoped CNP ledger reads and one coordination page (plan A3)"
+        },
+        {
+          "type": "feature",
+          "text": "GitHub platform-admin sign-in — OAuth 2.0, TOTP always (plan B8)"
+        },
+        {
+          "type": "feature",
+          "text": "Pure crate for HTML facts, M1 SEO rules, compare and report"
+        },
+        {
+          "type": "feature",
+          "text": "Record final URL, redirect chain, headers and body hash per fetch"
+        },
+        {
+          "type": "feature",
+          "text": "Search Intelligence site connections and ADR-022"
+        },
+        {
+          "type": "feature",
+          "text": "Add search_intel crawl runs, frontier and snapshots (U13)"
+        },
+        {
+          "type": "feature",
+          "text": "Render site pages per path and serve per-host robots.txt and sitemap.xml"
+        },
+        {
+          "type": "feature",
+          "text": "Add validated per-page SEO metadata"
+        },
+        {
+          "type": "feature",
+          "text": "Add page revision history with restore"
+        },
+        {
+          "type": "feature",
+          "text": "Minimum CDN slice — Cloudflare status, analytics and audited purge (plan B2/D5)"
+        },
+        {
+          "type": "feature",
+          "text": "Web-page ingestion configs and runs over saasy-scraper (plan B9 backend)"
+        },
+        {
+          "type": "feature",
+          "text": "Honest Data Ingestion screens on /api/v1/ingestion (plan B9 frontend)"
+        },
+        {
+          "type": "feature",
+          "text": "Schedule 4 dormant cron sweeps in-process; keep voice place-call manual"
+        },
+        {
+          "type": "feature",
+          "text": "Show Prompt Studio in the sidebar now that the brain registry is live"
+        },
+        {
+          "type": "feature",
+          "text": "Turnstile widget on the sign-up form"
+        },
+        {
+          "type": "feature",
+          "text": "Drive search_intel crawl runs through scraper-service with a lease sweeper (U14)"
+        },
+        {
+          "type": "feature",
+          "text": "Add Search Intelligence dashboard read path"
+        },
+        {
+          "type": "feature",
+          "text": "Per-page SEO metadata, canonical and JSON-LD in hosted site render"
+        },
+        {
+          "type": "feature",
+          "text": "Persist search_intel findings and recommendations on run completion (U15)"
+        },
+        {
+          "type": "feature",
+          "text": "Run report and run-to-run comparison (U16)"
+        },
+        {
+          "type": "feature",
+          "text": "Serve platform admin at admin.hellosaasy.ai, tailnet-only"
+        },
+        {
+          "type": "feature",
+          "text": "Automate monthly DB-IP pin bump; fail stale pins on release"
+        },
+        {
+          "type": "feature",
+          "text": "Real Recent Activity from brain's prompt audit trail"
+        },
+        {
+          "type": "feature",
+          "text": "Mount the Square webhook receiver"
+        },
+        {
+          "type": "feature",
+          "text": "Register search_intelligence_basic as a grant-only product"
+        },
+        {
+          "type": "feature",
+          "text": "Square commerce mirror schema (migration 109)"
+        },
+        {
+          "type": "feature",
+          "text": "Square commerce pull-sync"
+        },
+        {
+          "type": "feature",
+          "text": "Site_page_seo apply and rollback tools behind bound approval"
+        },
+        {
+          "type": "feature",
+          "text": "Square connect, sync status and read views"
+        },
+        {
+          "type": "feature",
+          "text": "Publish auth outcomes from user-service; ingest them in security-service"
+        },
+        {
+          "type": "feature",
+          "text": "Internal apply and rollback of approved SEO proposals (U19)"
+        },
+        {
+          "type": "feature",
+          "text": "Search Intelligence proposal review, approval card and apply status (U22)"
+        },
+        {
+          "type": "feature",
+          "text": "Publish dataset change events from the live handlers"
+        },
+        {
+          "type": "feature",
+          "text": "Tenant rollback requests queue an approved rollback (U19b)"
+        },
+        {
+          "type": "feature",
+          "text": "Re-crawl verification and compare outcome in the outcome ledger (U21)"
+        },
+        {
+          "type": "feature",
+          "text": "Honor Idempotency-Key on founder-goal create"
+        },
+        {
+          "type": "feature",
+          "text": "D66 proposal optimistic concurrency (draft_version)"
+        },
+        {
+          "type": "feature",
+          "text": "Proposal view carries the latest verification (U21b)"
+        },
+        {
+          "type": "feature",
+          "text": "Search Intelligence re-crawl to verify and honest verification display (U22b)"
+        },
+        {
+          "type": "feature",
+          "text": "Feedback-only read without customer emails or public tokens"
+        },
+        {
+          "type": "feature",
+          "text": "Customer pulse read for one business (new, active, at-risk customers)"
+        },
+        {
+          "type": "feature",
+          "text": "Saasy.get_executive_brief read tool for the shared Chief of Staff (#12438 part 1)"
+        },
+        {
+          "type": "feature",
+          "text": "Council review — independent advisory reviewers, saasy.council_review (#13059 slice 1)"
+        },
+        {
+          "type": "feature",
+          "text": "Owner-consented mcp:write runs ordinary writes directly (Aether full access)"
+        },
+        {
+          "type": "feature",
+          "text": "Bulk AI buyer-type classification of leads"
+        },
+        {
+          "type": "feature",
+          "text": "Central business library (offerings, prices, voice, never-promise rules) for every agent and MCP client"
+        },
+        {
+          "type": "feature",
+          "text": "Guided integration setup — agents ask only for what's missing"
+        },
+        {
+          "type": "feature",
+          "text": "Guided integration setup for external MCP clients"
+        },
+        {
+          "type": "feature",
+          "text": "Native prospect search model, ICP preview and pre-spend estimate (#13110 PR 1)"
+        },
+        {
+          "type": "feature",
+          "text": "Save prospects into the CRM with merge review and provenance (#13110 PR 4)"
+        },
+        {
+          "type": "feature",
+          "text": "OAuth provider catalog as data (#8461 PR 2a)"
+        },
+        {
+          "type": "feature",
+          "text": "Paid external-data capabilities through budget admission (#13109 PR 1)"
+        },
+        {
+          "type": "feature",
+          "text": "OAuth2 connector definitions with guided consent (#8461 PR 2b)"
+        },
+        {
+          "type": "feature",
+          "text": "Connector catalog with enable and OAuth connect (#8461 PR 4a)"
+        },
+        {
+          "type": "feature",
+          "text": "Search_tools and execute_tool reads work past the first turn (#8461 PR 3)"
+        },
+        {
+          "type": "feature",
+          "text": "Run prospect searches through paid-data dispatch (#13110 PR 2)"
+        },
+        {
+          "type": "feature",
+          "text": "Model Hub compare models and per-model usage stats"
+        },
+        {
+          "type": "feature",
+          "text": "Review builder-made connector definitions (#8461 PR 4b)"
+        },
+        {
+          "type": "feature",
+          "text": "Find and verify work emails for prospects (#13110 PR 3)"
+        },
+        {
+          "type": "feature",
+          "text": "The OAuth connect path reads the provider catalog (#13178a)"
+        },
+        {
+          "type": "feature",
+          "text": "Tenant-registered OAuth apps for custom providers (#13178b1)"
+        },
+        {
+          "type": "feature",
+          "text": "Custom-provider OAuth connectors through the tenant's own app (#13178b2)"
+        },
+        {
+          "type": "feature",
+          "text": "The connector builder maps a spec's OAuth authorization-code flow (#13178c)"
+        },
+        {
+          "type": "feature",
+          "text": "Prospect search tools for agents and scheduled workflows (#13110 PR 5)"
+        },
+        {
+          "type": "feature",
+          "text": "A SaaSPass vault item as the credential in setup and the catalog"
+        },
+        {
+          "type": "feature",
+          "text": "Build a connector from an API's docs"
+        },
+        {
+          "type": "feature",
+          "text": "Review and apply connector definition updates"
+        },
+        {
+          "type": "feature",
+          "text": "Account claims and the stage evidence floor"
+        },
+        {
+          "type": "feature",
+          "text": "ICP qualification of accounts"
+        },
+        {
+          "type": "feature",
+          "text": "Tenant-owned provider credentials and paid data usage (#13109 PR 2)"
+        },
+        {
+          "type": "feature",
+          "text": "Claim verification and a claim-cited account point of view"
+        },
+        {
+          "type": "feature",
+          "text": "Buyer-type classification of companies and a market map"
+        },
+        {
+          "type": "feature",
+          "text": "Outreach drafts follow a qualified account's strategy"
+        },
+        {
+          "type": "feature",
+          "text": "Remember a person's agent turns in the conversation they own"
+        },
+        {
+          "type": "feature",
+          "text": "Run each agent chat in its own named conversation"
+        },
+        {
+          "type": "feature",
+          "text": "Turn agent graph context on by default"
+        },
+        {
+          "type": "feature",
+          "text": "Revenue and churn over a period"
+        },
+        {
+          "type": "feature",
+          "text": "Scheduled full sync + reconciliation + P&L pull, webhook realm fan-out, keepalive default-on, Ashburn runbook"
+        },
+        {
+          "type": "feature",
+          "text": "Preserve Item environment provenance before production linking"
+        },
+        {
+          "type": "feature",
+          "text": "Standard DataGrid (URL-persisted sort/filters) + Renewals adopts it"
+        },
+        {
+          "type": "feature",
+          "text": "ITEM webhooks, update-mode relink, Identity consent, JWT default, full safety net"
+        },
+        {
+          "type": "feature",
+          "text": "Verified home-currency snapshot for single-currency CFO evidence"
+        },
+        {
+          "type": "feature",
+          "text": "Financials lists adopt DataGrid"
+        },
+        {
+          "type": "feature",
+          "text": "Migrate CRM list pages to shared DataGrid"
+        },
+        {
+          "type": "feature",
+          "text": "Read-only accounts-receivable aging endpoint"
+        },
+        {
+          "type": "feature",
+          "text": "Integrated renewals stack (#13330 #13343 #13348 #13355 #13362 #13340)"
+        },
+        {
+          "type": "feature",
+          "text": "Read-only QuickBooks data view with tenant-scoped mirror list API"
+        },
+        {
+          "type": "feature",
+          "text": "Client contracts, contract periods and per-entry billed state (#13398 part 3)"
+        },
+        {
+          "type": "feature",
+          "text": "One-time contract timelog import (#13398 part 5)"
+        },
+        {
+          "type": "feature",
+          "text": "Per-business set-asides with quarterly estimated-tax rollup (#13398 part 4)"
+        },
+        {
+          "type": "feature",
+          "text": "Compact filter toolbar for the shared DataGrid"
+        },
+        {
+          "type": "feature",
+          "text": "Import and sync tenant Stripe invoices, scoped to each business"
+        },
+        {
+          "type": "feature",
+          "text": "Isolate renewal price observation migration 666"
+        },
+        {
+          "type": "feature",
+          "text": "Server-side DataGrid mode, offerings as the exemplar"
+        },
+        {
+          "type": "feature",
+          "text": "Isolate renewal owner migration 667"
+        },
+        {
+          "type": "feature",
+          "text": "Isolate renewal lifecycle verification migration 668"
+        },
+        {
+          "type": "feature",
+          "text": "Isolate renewal accrual and invoice migration 669"
+        },
+        {
+          "type": "feature",
+          "text": "Isolate linked credit schema 670 and require balance source"
+        },
+        {
+          "type": "feature",
+          "text": "Subcontractor COIs on the shared DataGrid"
+        },
+        {
+          "type": "feature",
+          "text": "Ratchet raw list tables in tenant-portal; DataGrid migration guide"
+        },
+        {
+          "type": "feature",
+          "text": "Settings lists on the shared DataGrid"
+        },
+        {
+          "type": "feature",
+          "text": "People lists on the shared DataGrid"
+        },
+        {
+          "type": "feature",
+          "text": "Saasy.calendar_today and saasy.mail_search over the caller's own synced calendar and mail"
+        },
+        {
+          "type": "feature",
+          "text": "Store Graph read state, importance and flag (migration 675); important unread count in saasy.mail_search"
+        },
+        {
+          "type": "feature",
+          "text": "SaaSPass lists on the shared DataGrid"
+        },
+        {
+          "type": "feature",
+          "text": "Rename Capture Inbox labels to Capture"
+        },
+        {
+          "type": "feature",
+          "text": "MCP tools for the capture inbox; idempotent create with a label (migration 683)"
+        },
+        {
+          "type": "feature",
+          "text": "Add guarded account history coordination schema"
+        },
+        {
+          "type": "feature",
+          "text": "Add Integration account history schema prerequisite"
+        },
+        {
+          "type": "feature",
+          "text": "Customers at-risk and opportunities lists on the shared DataGrid"
+        },
+        {
+          "type": "feature",
+          "text": "Payments lists on the shared DataGrid"
+        },
+        {
+          "type": "feature",
+          "text": "Field-service, funding, agency and admin lists on the shared DataGrid"
+        },
+        {
+          "type": "feature",
+          "text": "Preserve immutable deposit spending claims"
+        },
+        {
+          "type": "feature",
+          "text": "Fail-closed injection scan and verifier for AI email drafts; per-mailbox send ledger (migration 689)"
+        },
+        {
+          "type": "feature",
+          "text": "Keep wide tables accessible and add mobile cards"
+        },
+        {
+          "type": "feature",
+          "text": "Store reviewed company guidance and private profiles (#13711, 1/4)"
+        },
+        {
+          "type": "feature",
+          "text": "Condense rows and show configured reminders"
+        },
+        {
+          "type": "feature",
+          "text": "Add line create edit and remove controls"
+        },
+        {
+          "type": "feature",
+          "text": "Navigate months and copy future plans"
+        },
+        {
+          "type": "feature",
+          "text": "Scoped company and personal guidance reads (#13711, 2/4)"
+        },
+        {
+          "type": "feature",
+          "text": "Tenant-portal guidance editing screens (#13711, 3/4)"
+        },
+        {
+          "type": "feature",
+          "text": "Add previous/next month navigation"
+        },
+        {
+          "type": "feature",
+          "text": "Deploy.sh --pause-backups for the retention-starved rollout window"
+        },
+        {
+          "type": "feature",
+          "text": "Archive a non-renewal bank detection from the older-renewals step"
+        },
+        {
+          "type": "feature",
+          "text": "Post bank transactions into the native GL (production bank source for business_bootstrap)"
+        },
+        {
+          "type": "feature",
+          "text": "Say what approving a pending action executes"
+        },
+        {
+          "type": "feature",
+          "text": "CRM tasks bulk reassign/priority/due-date + stale detection"
+        },
+        {
+          "type": "feature",
+          "text": "Per-business GL books — business_id on journal entries and report filters"
+        },
+        {
+          "type": "feature",
+          "text": "Detect internal bank transfers in business_bootstrap before classification"
+        },
+        {
+          "type": "feature",
+          "text": "SaaSPass rotation-risk endpoint + badge (slice 1)"
+        },
+        {
+          "type": "feature",
+          "text": "Surface rotation-risk band + used-by-N in the vault list and detail modal"
+        },
+        {
+          "type": "feature",
+          "text": "SaaSPass offboarding access endpoint (part 3, slice 1)"
+        },
+        {
+          "type": "feature",
+          "text": "SaaSPass offboarding view + bulk-rotate checklist"
+        },
+        {
+          "type": "feature",
+          "text": "Minimum relevance for Ask SaaSy memory recall"
+        },
+        {
+          "type": "feature",
+          "text": "Map budget categories to GL accounts"
+        },
+        {
+          "type": "feature",
+          "text": "Refresh startup-program recommendations when a vendor connects"
+        },
+        {
+          "type": "improvement",
+          "text": "Platform-admin vitest isolate:false (8x faster)"
+        },
+        {
+          "type": "improvement",
+          "text": "Extract applicability policy crate pilot"
+        },
+        {
+          "type": "improvement",
+          "text": "Preserve guard coverage with safe accelerated YAML"
+        },
+        {
+          "type": "improvement",
+          "text": "Extract pure sourcing engine into its own crate"
+        },
+        {
+          "type": "improvement",
+          "text": "Extract payroll domain into an independently tested crate"
+        },
+        {
+          "type": "improvement",
+          "text": "Isolate billing and budget domain builds"
+        },
+        {
+          "type": "improvement",
+          "text": "Isolate CRM delivery policy compilation"
+        },
+        {
+          "type": "improvement",
+          "text": "Audit rebuild inputs and preserve critical-path evidence"
+        },
+        {
+          "type": "improvement",
+          "text": "Isolate Union pay policy from the Business service"
+        },
+        {
+          "type": "improvement",
+          "text": "Extract general-ledger invariants into a domain crate"
+        },
+        {
+          "type": "improvement",
+          "text": "Extract the inventory cost engine into a domain crate"
+        },
+        {
+          "type": "improvement",
+          "text": "Extract tracked-link target policy into a domain crate"
+        },
+        {
+          "type": "improvement",
+          "text": "Extract measurement geometry into a domain crate"
+        },
+        {
+          "type": "improvement",
+          "text": "Extract habit streak statistics into a domain crate"
+        },
+        {
+          "type": "improvement",
+          "text": "Extract deposit match scoring into a domain crate"
+        },
+        {
+          "type": "improvement",
+          "text": "Extract lead assignment routing into a domain crate"
+        },
+        {
+          "type": "fix",
+          "text": "Give each fleet agent its own cadence"
+        },
+        {
+          "type": "fix",
+          "text": "Money contract, durable price history, role gates (follow-up to #10264)"
+        },
+        {
+          "type": "fix",
+          "text": "Restore business compile, align drifty gates, sanitize error bodies"
+        },
+        {
+          "type": "fix",
+          "text": "Complete native bookings and keep booking mail dispatchable (recomposed)"
+        },
+        {
+          "type": "fix",
+          "text": "Drop four more never-succeeding people verbs, govern calendar verbs, gate invariants (follow-up to #10736)"
+        },
+        {
+          "type": "fix",
+          "text": "Location transfers stay value-neutral under costing, per-receipt GRNI, revoke cost-table DELETE (follow-up to #10731)"
+        },
+        {
+          "type": "fix",
+          "text": "Bound refresh-jti tracking, access-only hop tokens, repair auth tests and user fixture (#10853, #10854, #10764)"
+        },
+        {
+          "type": "fix",
+          "text": "Server-side vault filter, soonest-first expiring, readable shares"
+        },
+        {
+          "type": "fix",
+          "text": "Recall approval fix-forward 2 — exact search_path pin, server-stamped evidence (570)"
+        },
+        {
+          "type": "fix",
+          "text": "Low-stock alerts — ops-down short-circuit, RLS tests, terminal delivery failures"
+        },
+        {
+          "type": "fix",
+          "text": "Sales orders — pin trigger functions, refusal mapping (574)"
+        },
+        {
+          "type": "fix",
+          "text": "Refuse retrying inventory intents HiveMinded rejected as already-applied"
+        },
+        {
+          "type": "fix",
+          "text": "Hand exec-watch discovery and scans to Business owner API"
+        },
+        {
+          "type": "fix",
+          "text": "Safety incident event-id conflict + incident lock (571)"
+        },
+        {
+          "type": "fix",
+          "text": "Move scraper refinery ledger out of public and revoke saasy CREATE on app schemas"
+        },
+        {
+          "type": "fix",
+          "text": "Surface uncoverable items, per-tenant currency, unit normalization (575)"
+        },
+        {
+          "type": "fix",
+          "text": "Add confirmed tenant-scoped watch removal"
+        },
+        {
+          "type": "fix",
+          "text": "Query saved contacts with tenant ownership"
+        },
+        {
+          "type": "fix",
+          "text": "Land verified contracts, bounds and visible error recovery on main"
+        },
+        {
+          "type": "fix",
+          "text": "Meter completion once per tenant job"
+        },
+        {
+          "type": "fix",
+          "text": "Preserve Stripe webhook retry integrity"
+        },
+        {
+          "type": "fix",
+          "text": "Correct ten percent connected subscription preview"
+        },
+        {
+          "type": "fix",
+          "text": "Preserve approved email identity and lifecycle for dogfooding"
+        },
+        {
+          "type": "fix",
+          "text": "Persist cleared dates and cadence"
+        },
+        {
+          "type": "fix",
+          "text": "Preserve campaign sending context and recover email workflows"
+        },
+        {
+          "type": "fix",
+          "text": "Restore Business and Brain validation and network contracts"
+        },
+        {
+          "type": "fix",
+          "text": "Keep authentication codes out of inbox digests"
+        },
+        {
+          "type": "fix",
+          "text": "Freeze authorized workflow sender and preserve email ownership"
+        },
+        {
+          "type": "fix",
+          "text": "Clear clippy-ratchet findings in business and brain"
+        },
+        {
+          "type": "fix",
+          "text": "Authorize vault import targets before writes"
+        },
+        {
+          "type": "fix",
+          "text": "Repair and execute Twilio and inventory regressions"
+        },
+        {
+          "type": "fix",
+          "text": "Guard scoped account reads and operations"
+        },
+        {
+          "type": "fix",
+          "text": "Verify contact credit balances and require native regressions"
+        },
+        {
+          "type": "fix",
+          "text": "Qualify tenant outcomes and private release maps"
+        },
+        {
+          "type": "fix",
+          "text": "Normalize flat request detail responses for the tenant UI"
+        },
+        {
+          "type": "fix",
+          "text": "Reject incomplete signer rows in both creation forms"
+        },
+        {
+          "type": "fix",
+          "text": "Qualify fail-closed PostgreSQL TLS activation"
+        },
+        {
+          "type": "fix",
+          "text": "Verify invoice credit applications and preserve retries"
+        },
+        {
+          "type": "fix",
+          "text": "Fence contact detail reads by current owner"
+        },
+        {
+          "type": "fix",
+          "text": "Preserve blank selections and inherit profile contacts"
+        },
+        {
+          "type": "fix",
+          "text": "Use maintenance pool for global sync retention"
+        },
+        {
+          "type": "fix",
+          "text": "Fence business-scoped suggestion actions and retain balances"
+        },
+        {
+          "type": "fix",
+          "text": "Empty Stripe account sync and shared credential lookup"
+        },
+        {
+          "type": "fix",
+          "text": "Scope Company Profile consumers to the selected business"
+        },
+        {
+          "type": "fix",
+          "text": "Preserve native trials and validate checkout business ownership"
+        },
+        {
+          "type": "fix",
+          "text": "Bind invoice seller and home-office to business identity"
+        },
+        {
+          "type": "fix",
+          "text": "Use canonical profile IDs for selected branding and discovery"
+        },
+        {
+          "type": "fix",
+          "text": "Repair multi-account Stripe overlap with main"
+        },
+        {
+          "type": "fix",
+          "text": "Purge QuickBooks state on disconnect"
+        },
+        {
+          "type": "fix",
+          "text": "Fence document OCR and immutable version source state"
+        },
+        {
+          "type": "fix",
+          "text": "Preserve append-only signature certificate events"
+        },
+        {
+          "type": "fix",
+          "text": "Route shared-number inbound SMS by outbound history"
+        },
+        {
+          "type": "fix",
+          "text": "Guard selected Shopify release with supervised containment"
+        },
+        {
+          "type": "fix",
+          "text": "Cycle-safe reminders, locked fulfillments, business scope"
+        },
+        {
+          "type": "fix",
+          "text": "Restore locked Python feature compilation"
+        },
+        {
+          "type": "fix",
+          "text": "Scan maintained images and install Syft without root"
+        },
+        {
+          "type": "fix",
+          "text": "Route bounded Rust formatting to light runners"
+        },
+        {
+          "type": "fix",
+          "text": "Bound raw nightly k6 report retention"
+        },
+        {
+          "type": "fix",
+          "text": "Retire backend allow-list children on cancellation"
+        },
+        {
+          "type": "fix",
+          "text": "Restore locked Python bridge compatibility"
+        },
+        {
+          "type": "fix",
+          "text": "Preserve complete secret-scan evidence without artifact storage"
+        },
+        {
+          "type": "fix",
+          "text": "Route and allowlist Twilio and Resend webhooks"
+        },
+        {
+          "type": "fix",
+          "text": "Sentry owns exceptions; one Sentry release per build"
+        },
+        {
+          "type": "fix",
+          "text": "Refuse a caller-supplied from_number on outbound voice calls"
+        },
+        {
+          "type": "fix",
+          "text": "Only billing admins can order paid Launch Services add-ons"
+        },
+        {
+          "type": "fix",
+          "text": "Adopt verified Hive TLS without restarting shared Redis"
+        },
+        {
+          "type": "fix",
+          "text": "Deploy controlled DLQ recovery with verified Redis trust"
+        },
+        {
+          "type": "fix",
+          "text": "Skip observer finalization for unselected backend phases"
+        },
+        {
+          "type": "fix",
+          "text": "One alert per credit event, a used-up alert, and no dropped deadline alerts"
+        },
+        {
+          "type": "fix",
+          "text": "Fall back to a super admin as a tenant's alert contact"
+        },
+        {
+          "type": "fix",
+          "text": "Restrict global catalog writes to migration owners"
+        },
+        {
+          "type": "fix",
+          "text": "Used-up and low-balance alerts follow observed usage"
+        },
+        {
+          "type": "fix",
+          "text": "Preserve linked records when merging contacts"
+        },
+        {
+          "type": "fix",
+          "text": "Pin affected portals to patched Next 16.3.8"
+        },
+        {
+          "type": "fix",
+          "text": "Preserve linked records when merging companies and leads"
+        },
+        {
+          "type": "fix",
+          "text": "Recover missing legacy tables before archive deletion continues"
+        },
+        {
+          "type": "fix",
+          "text": "Meter, cap and dedupe record SMS through contact_sms_log"
+        },
+        {
+          "type": "fix",
+          "text": "Compose native job guards and safe setup diagnostics"
+        },
+        {
+          "type": "fix",
+          "text": "Retain node audit reports without paid artifact storage"
+        },
+        {
+          "type": "fix",
+          "text": "Guard Integration observer retirement after attempted phases"
+        },
+        {
+          "type": "fix",
+          "text": "Isolate report fixtures and privately prepare local build targets"
+        },
+        {
+          "type": "fix",
+          "text": "Retain the shared environment guard in contact SMS tests"
+        },
+        {
+          "type": "fix",
+          "text": "Retain qualifier failure evidence and verified source snapshots"
+        },
+        {
+          "type": "fix",
+          "text": "Honest, fast-failing Draft with AI errors (not 'not configured' on timeouts)"
+        },
+        {
+          "type": "fix",
+          "text": "Scope task activity notes and retain original retry identity"
+        },
+        {
+          "type": "fix",
+          "text": "Raise saasy-integrations mem_limit 512m -> 1g (OOM 8x/72h)"
+        },
+        {
+          "type": "fix",
+          "text": "Isolate publisher staging and stabilize native setup"
+        },
+        {
+          "type": "fix",
+          "text": "Stop CRM offline outbox from getting stuck; never call a failed write \"Saved\""
+        },
+        {
+          "type": "fix",
+          "text": "Cap same-day cargo target growth and skip other repos"
+        },
+        {
+          "type": "fix",
+          "text": "Stop retention workers running DDL every tick"
+        },
+        {
+          "type": "fix",
+          "text": "Revoke logout tokens under tenant RLS and fail closed"
+        },
+        {
+          "type": "fix",
+          "text": "Authenticate exec-cadence, CoS-brief and sibling scheduler POSTs"
+        },
+        {
+          "type": "fix",
+          "text": "Omit temperature for Claude models that reject it; don't trip LLM breaker on request 4xx"
+        },
+        {
+          "type": "fix",
+          "text": "Refuse localhost notification URL fallback in production"
+        },
+        {
+          "type": "fix",
+          "text": "Bound inbound webhook event cache (memory leak)"
+        },
+        {
+          "type": "fix",
+          "text": "Treat a tenant with no owner/admin as a data state"
+        },
+        {
+          "type": "fix",
+          "text": "Probe tenant routes for the internal token without logging"
+        },
+        {
+          "type": "fix",
+          "text": "Stop nightly_refresh reporting timeout every run"
+        },
+        {
+          "type": "fix",
+          "text": "Vertical health settlement query no longer trips the SQL-injection guard"
+        },
+        {
+          "type": "fix",
+          "text": "GitHub OAuth refresh requests JSON and decodes form/error bodies"
+        },
+        {
+          "type": "fix",
+          "text": "Scope the activity transaction to its business, not its author"
+        },
+        {
+          "type": "fix",
+          "text": "Record OpenJEV Jev receipts as price-pending, not unpriced"
+        },
+        {
+          "type": "fix",
+          "text": "Declare real cron max_runtime for autopilot and eval sweep"
+        },
+        {
+          "type": "fix",
+          "text": "Price OpenJEV at the Jev rate ($0.042/MTok input) instead of provisional $0"
+        },
+        {
+          "type": "fix",
+          "text": "Bind the CRM offline outbox and list cache to the verified actor"
+        },
+        {
+          "type": "fix",
+          "text": "Tolerate thinking blocks in Anthropic plain completions"
+        },
+        {
+          "type": "fix",
+          "text": "Stop retrying OAuth grants awaiting reconnect"
+        },
+        {
+          "type": "fix",
+          "text": "Enforce one owner per Stripe connected account (610)"
+        },
+        {
+          "type": "fix",
+          "text": "Require verified PostgreSQL TLS for Hive clients"
+        },
+        {
+          "type": "fix",
+          "text": "Add AMQPS and HTTPS management listeners to RabbitMQ"
+        },
+        {
+          "type": "fix",
+          "text": "Take the shared env latch in social inbox webhook tests"
+        },
+        {
+          "type": "fix",
+          "text": "Give the proof scan bridge a bound observer client"
+        },
+        {
+          "type": "fix",
+          "text": "Make crm_notes the single task note store (Activity tab merges notes)"
+        },
+        {
+          "type": "fix",
+          "text": "Keep a bounded stack on captured frontend errors in prod"
+        },
+        {
+          "type": "fix",
+          "text": "Bind only routable agent event families, unbind legacy '#'"
+        },
+        {
+          "type": "fix",
+          "text": "Don't trip the circuit breaker on deliberate application 503s"
+        },
+        {
+          "type": "fix",
+          "text": "Fail boot instead of defaulting peer URLs to Fly .internal hosts"
+        },
+        {
+          "type": "fix",
+          "text": "Stop logging raw token jti on revocation fail-open path"
+        },
+        {
+          "type": "fix",
+          "text": "Share one HTTP client across webhooks_in dispatches"
+        },
+        {
+          "type": "fix",
+          "text": "Authenticate enrichment health refresh (DLQ source for #11998)"
+        },
+        {
+          "type": "fix",
+          "text": "Authenticate checklist call to integration-service"
+        },
+        {
+          "type": "fix",
+          "text": "Transcode Windows-1252 bytes in the sam.gov CSV instead of dropping rows"
+        },
+        {
+          "type": "fix",
+          "text": "Owner-less tenant is a data state in all notification consumers"
+        },
+        {
+          "type": "fix",
+          "text": "Stop losing cron check-in close envelopes"
+        },
+        {
+          "type": "fix",
+          "text": "Lex SQL before the injection guard checks for patterns"
+        },
+        {
+          "type": "fix",
+          "text": "Keep the PostHog source-map helper in the Docker context"
+        },
+        {
+          "type": "fix",
+          "text": "Re-open AMQP publish channels after a broker restart"
+        },
+        {
+          "type": "fix",
+          "text": "Bind vertical-health sync-run literals as params"
+        },
+        {
+          "type": "fix",
+          "text": "Renumber renewal reminder recipients migration 635 -> 637"
+        },
+        {
+          "type": "fix",
+          "text": "Confirm DLQ replay publishes before acking"
+        },
+        {
+          "type": "fix",
+          "text": "Stop concatenation WARN firing on static quoted literals"
+        },
+        {
+          "type": "fix",
+          "text": "Stop per-call root attestation timing out the provenance scan"
+        },
+        {
+          "type": "fix",
+          "text": "Schedule memory lifecycle sweep from persisted last run"
+        },
+        {
+          "type": "fix",
+          "text": "Re-open BossEventPublisher channel after broker restart"
+        },
+        {
+          "type": "fix",
+          "text": "Stop forwarding to self-referential agent endpoints"
+        },
+        {
+          "type": "fix",
+          "text": "Delay first DLQ sweep and expose missing DLQ series"
+        },
+        {
+          "type": "fix",
+          "text": "One catch-all for platform_events.dlx instead of two"
+        },
+        {
+          "type": "fix",
+          "text": "Exit on broker loss and add heartbeat healthcheck"
+        },
+        {
+          "type": "fix",
+          "text": "Run checkout-trial repo-guards after setup-uv"
+        },
+        {
+          "type": "fix",
+          "text": "Apply salience decay once per elapsed interval"
+        },
+        {
+          "type": "fix",
+          "text": "Store exactly one copy per dead letter"
+        },
+        {
+          "type": "fix",
+          "text": "Match boot billing rule to seed; park unparseable lifecycle events"
+        },
+        {
+          "type": "fix",
+          "text": "Skip HTTP forward quietly for capabilities-only agents"
+        },
+        {
+          "type": "fix",
+          "text": "Clear the remaining AMQP, SQL and post-merge gate failures on main"
+        },
+        {
+          "type": "fix",
+          "text": "Decay read-time salience only after last_decayed_at"
+        },
+        {
+          "type": "fix",
+          "text": "Keep dataset query failures in the error state"
+        },
+        {
+          "type": "fix",
+          "text": "Fail closed when MCP scope has no principal"
+        },
+        {
+          "type": "fix",
+          "text": "Stop reloading the login page on a dead session"
+        },
+        {
+          "type": "fix",
+          "text": "Fail user readiness when the configured database failed to start"
+        },
+        {
+          "type": "fix",
+          "text": "Record and echo the MCP OAuth client on token responses"
+        },
+        {
+          "type": "fix",
+          "text": "Keep revocations in effect through the JWT clock leeway"
+        },
+        {
+          "type": "fix",
+          "text": "Discover cron tenants on the admin pool, report work counts"
+        },
+        {
+          "type": "fix",
+          "text": "OAuth consent sends an expired session through sign-in"
+        },
+        {
+          "type": "fix",
+          "text": "Check live membership and custom-role standing before SSO issuance"
+        },
+        {
+          "type": "fix",
+          "text": "Persist tenant feature-flag rollout percentage"
+        },
+        {
+          "type": "fix",
+          "text": "Email campaign/sequence QA UX defects (2026-10-17)"
+        },
+        {
+          "type": "fix",
+          "text": "Give each campaign detail a private query; update tests #11207 left failing"
+        },
+        {
+          "type": "fix",
+          "text": "Campaign QA fixes, business team signatures and pre-send checks"
+        },
+        {
+          "type": "fix",
+          "text": "Cancel takes effect at period end; fix legacy cancel, plan-change copy, manual health recompute"
+        },
+        {
+          "type": "fix",
+          "text": "Fail closed when authoritative token validation is unavailable"
+        },
+        {
+          "type": "fix",
+          "text": "Resolve Strategy Network translation and signature logo CSP"
+        },
+        {
+          "type": "fix",
+          "text": "Point invoice/prompt/audit/tenant calls at real routes"
+        },
+        {
+          "type": "fix",
+          "text": "Discover only live tenants in admin-pool crons; brief active tenants only"
+        },
+        {
+          "type": "fix",
+          "text": "Unescape Rust line continuations in route-coverage scan"
+        },
+        {
+          "type": "fix",
+          "text": "Account for the social agency desk and shared report routes"
+        },
+        {
+          "type": "fix",
+          "text": "Take the shared env latch in the sweep cron-token test"
+        },
+        {
+          "type": "fix",
+          "text": "Send camelCase body for change password"
+        },
+        {
+          "type": "fix",
+          "text": "Route Security Configuration 'Create policy' to security-service"
+        },
+        {
+          "type": "fix",
+          "text": "RLS-audit detect_business_signals; live tenants only, scoped passes"
+        },
+        {
+          "type": "fix",
+          "text": "Harden sign-up rate limits against the 2026-08 flood shape (#12215, 1/3)"
+        },
+        {
+          "type": "fix",
+          "text": "Keep public sign-ups pending until the owner verifies email (#12215, 2/3)"
+        },
+        {
+          "type": "fix",
+          "text": "Reject non-finite or non-positive epsilon before the gate"
+        },
+        {
+          "type": "fix",
+          "text": "Honor confirmed duplicate overrides on contact create and update"
+        },
+        {
+          "type": "fix",
+          "text": "Align the contact list total with caller visibility"
+        },
+        {
+          "type": "fix",
+          "text": "Match latent API client request bodies to backend structs"
+        },
+        {
+          "type": "fix",
+          "text": "Point outbound-credit and error-boundary calls at real routes"
+        },
+        {
+          "type": "fix",
+          "text": "Claim ownerless applicant tasks when a job gets an owner"
+        },
+        {
+          "type": "fix",
+          "text": "Resend webhook resolves sends on the admin pool, writes in tenant scope"
+        },
+        {
+          "type": "fix",
+          "text": "Server-side Turnstile check on public sign-up, off until keys (#12215, 3/3)"
+        },
+        {
+          "type": "fix",
+          "text": "Refuse unpublished compiler command lines"
+        },
+        {
+          "type": "fix",
+          "text": "Remove dangling private source-map references"
+        },
+        {
+          "type": "fix",
+          "text": "Resolve fixture dep-info from its workspace and treat zombies as gone"
+        },
+        {
+          "type": "fix",
+          "text": "Never reactivate a cancelled booking on reschedule"
+        },
+        {
+          "type": "fix",
+          "text": "Cast untyped SQL parameters blocking repo-guards"
+        },
+        {
+          "type": "fix",
+          "text": "Resume presence after throttled requests with queued navigation"
+        },
+        {
+          "type": "fix",
+          "text": "Select both migration-chain legs when a migration moves between services"
+        },
+        {
+          "type": "fix",
+          "text": "Preserve PostHog timestamps during privacy redaction"
+        },
+        {
+          "type": "fix",
+          "text": "Remove service containers' anonymous volumes in host cleanup"
+        },
+        {
+          "type": "fix",
+          "text": "Drain fsn-01 Docker GC by removing runner labels first"
+        },
+        {
+          "type": "fix",
+          "text": "Report unavailable safety evidence instead of zero violations"
+        },
+        {
+          "type": "fix",
+          "text": "Open saved workflow builder from detail edit actions"
+        },
+        {
+          "type": "fix",
+          "text": "Retry R2 retention proofs; retention never fails the backup"
+        },
+        {
+          "type": "fix",
+          "text": "Keep sidebar companion canvas visible"
+        },
+        {
+          "type": "fix",
+          "text": "Overdue sweep discovers on the admin pool; cap first-run dunning"
+        },
+        {
+          "type": "fix",
+          "text": "Restore the OCR completion lease predicate dropped in #12314"
+        },
+        {
+          "type": "fix",
+          "text": "Retention discovery on the admin pool; report-only unless RETENTION_PURGE_ENFORCE"
+        },
+        {
+          "type": "fix",
+          "text": "Require explicit opt-in before replaying mutations"
+        },
+        {
+          "type": "fix",
+          "text": "Ignore keyless command palette shortcut events"
+        },
+        {
+          "type": "fix",
+          "text": "Remove dangling anonymous volumes older than 6h in host cleanup"
+        },
+        {
+          "type": "fix",
+          "text": "Bind OAuth initiate/complete, sync and actions to the principal's tenant"
+        },
+        {
+          "type": "fix",
+          "text": "Require tenant admin for DSAR create/export/anonymize/reject and audit them"
+        },
+        {
+          "type": "fix",
+          "text": "Refresh every tenant cache after bulk actions"
+        },
+        {
+          "type": "fix",
+          "text": "Gate DSAR console reads to tenant admins"
+        },
+        {
+          "type": "fix",
+          "text": "Persist recommendation algorithm updates with tenant isolation"
+        },
+        {
+          "type": "fix",
+          "text": "Write audit_events rows for role create/update/delete"
+        },
+        {
+          "type": "fix",
+          "text": "Let users without TOTP step up with their password"
+        },
+        {
+          "type": "fix",
+          "text": "Retire the client-side audit logger"
+        },
+        {
+          "type": "fix",
+          "text": "Connect Agent Health to proactive runtime data"
+        },
+        {
+          "type": "fix",
+          "text": "Persist versioned Prompt Studio configuration in Brain"
+        },
+        {
+          "type": "fix",
+          "text": "Implement audited platform subscription invoice workflows"
+        },
+        {
+          "type": "fix",
+          "text": "RLS-audit every HTTP cron route; fix canary/icfr/flywheel discovery"
+        },
+        {
+          "type": "fix",
+          "text": "Wire workflows Duplicate/schedules and tenant bulk actions to real routes (B10a + B1)"
+        },
+        {
+          "type": "fix",
+          "text": "Re-derive live standing on token refresh and tenant switch"
+        },
+        {
+          "type": "fix",
+          "text": "Label bulk selection cancellation"
+        },
+        {
+          "type": "fix",
+          "text": "Agent conversations are private to the person who opened them"
+        },
+        {
+          "type": "fix",
+          "text": "Signed OAuth state binds a pending connection and an allowlisted return page"
+        },
+        {
+          "type": "fix",
+          "text": "Fail-closed RLS on vertical_connections (migration 106, #12439 part 1)"
+        },
+        {
+          "type": "fix",
+          "text": "Derive allowlist client IPs from the edge, never Fly-Client-IP"
+        },
+        {
+          "type": "fix",
+          "text": "Attribute collections by payment time and distinct invoices"
+        },
+        {
+          "type": "fix",
+          "text": "Classify expected cleanup delivery failures"
+        },
+        {
+          "type": "fix",
+          "text": "Recognize chunk IDs during private map cleanup"
+        },
+        {
+          "type": "fix",
+          "text": "Acknowledge and bound Sentry cron check-in delivery"
+        },
+        {
+          "type": "fix",
+          "text": "Reconcile agency reports after restart"
+        },
+        {
+          "type": "fix",
+          "text": "Serialize automatic agency monthly report generation"
+        },
+        {
+          "type": "fix",
+          "text": "Preserve Helm template input language"
+        },
+        {
+          "type": "fix",
+          "text": "Claim won deal fees once across project invoice conversion"
+        },
+        {
+          "type": "fix",
+          "text": "Compare-and-set DSAR reject and fulfill"
+        },
+        {
+          "type": "fix",
+          "text": "Stop trusting Fly-Client-IP in the remaining services"
+        },
+        {
+          "type": "fix",
+          "text": "Release DSAR claims orphaned in processing"
+        },
+        {
+          "type": "fix",
+          "text": "Health-billing consumer reads billing-service data.payload envelope"
+        },
+        {
+          "type": "fix",
+          "text": "Facts consumer reads billing-service data.payload envelope"
+        },
+        {
+          "type": "fix",
+          "text": "Search-recommendation creates fail with 503 instead of faking an id"
+        },
+        {
+          "type": "fix",
+          "text": "Atomically fence terminal parent descendants"
+        },
+        {
+          "type": "fix",
+          "text": "Bind and map the actual CRM contact event"
+        },
+        {
+          "type": "fix",
+          "text": "Preserve merged lead conversion and enrollment send history"
+        },
+        {
+          "type": "fix",
+          "text": "Keep paging summaries valid UTF-8"
+        },
+        {
+          "type": "fix",
+          "text": "Fence sequence admission against entity merges"
+        },
+        {
+          "type": "fix",
+          "text": "Bind copied observer fixture after exec readiness"
+        },
+        {
+          "type": "fix",
+          "text": "Remove denied unwraps from billing ownership fixture"
+        },
+        {
+          "type": "fix",
+          "text": "Run the first retention pass at startup"
+        },
+        {
+          "type": "fix",
+          "text": "Run brief and native-import sweeps after restart"
+        },
+        {
+          "type": "fix",
+          "text": "Confine machine API keys — MCP and direct-network containment"
+        },
+        {
+          "type": "fix",
+          "text": "Make --all-targets clippy pass for the workflow service"
+        },
+        {
+          "type": "fix",
+          "text": "SSRF guard on outbound webhook delivery and subscriptions"
+        },
+        {
+          "type": "fix",
+          "text": "Clean saas-platform workspaces while drained; daily targeted drain on fsn-01"
+        },
+        {
+          "type": "fix",
+          "text": "Admin-only, audited, rate-limited award and execute"
+        },
+        {
+          "type": "fix",
+          "text": "Model docker volume calls in service-container volume test"
+        },
+        {
+          "type": "fix",
+          "text": "Classify admin SSO inventory entries and refresh reports"
+        },
+        {
+          "type": "fix",
+          "text": "Bind verify_mfa to the password step with a single-use challenge"
+        },
+        {
+          "type": "fix",
+          "text": "Allow read-only merge-base command chains"
+        },
+        {
+          "type": "fix",
+          "text": "Honor explicit Codex command workdirs"
+        },
+        {
+          "type": "fix",
+          "text": "Clear tenant cache and report actual removals"
+        },
+        {
+          "type": "fix",
+          "text": "Unblock i18n completeness — give the Send-as signAs translator its own name"
+        },
+        {
+          "type": "fix",
+          "text": "Bypass JWT auth for X-Cron-Token cron routes (backfill + 3 integration callers)"
+        },
+        {
+          "type": "fix",
+          "text": "Cancel requests when their authenticated session ends"
+        },
+        {
+          "type": "fix",
+          "text": "Loud DB skips and a repo-guards budget that finishes"
+        },
+        {
+          "type": "fix",
+          "text": "Wire the compile-gate provenance observer"
+        },
+        {
+          "type": "fix",
+          "text": "Record brain-common explicit_sampling test target in coverage baseline"
+        },
+        {
+          "type": "fix",
+          "text": "Runtime-configurable admin SSO providers"
+        },
+        {
+          "type": "fix",
+          "text": "Bake a sha256-pinned DB-IP country database into the image"
+        },
+        {
+          "type": "fix",
+          "text": "Catch sampled and tool-calling LLM dispatches in the metering guard"
+        },
+        {
+          "type": "fix",
+          "text": "Allow PayPal billing webhook past edge auth"
+        },
+        {
+          "type": "fix",
+          "text": "Send admin SSO callback to the API host"
+        },
+        {
+          "type": "fix",
+          "text": "Sweep stale native-observer /run namespaces in host cleanup"
+        },
+        {
+          "type": "fix",
+          "text": "Classify ADMIN_SSO_REDIRECT_BASE_URL as internal env"
+        },
+        {
+          "type": "fix",
+          "text": "Allow the Tailscale platform-admin origin via GATEWAY_CORS_EXTRA_ORIGINS"
+        },
+        {
+          "type": "fix",
+          "text": "Unwrap the /auth/me envelope and show Data Ingestion"
+        },
+        {
+          "type": "fix",
+          "text": "Real counts in AI Engineering header badges"
+        },
+        {
+          "type": "fix",
+          "text": "Restore dark-mode contrast on agent activity dashboard"
+        },
+        {
+          "type": "fix",
+          "text": "Dark-mode contrast sweep across ~20 admin pages"
+        },
+        {
+          "type": "fix",
+          "text": "Unwrap profile update responses before caching"
+        },
+        {
+          "type": "fix",
+          "text": "Show the server reason in the Run blocked toast"
+        },
+        {
+          "type": "fix",
+          "text": "Retry psql connect failures in apply-migrations"
+        },
+        {
+          "type": "fix",
+          "text": "Send the backend role contract from User Roles"
+        },
+        {
+          "type": "fix",
+          "text": "Bound the migration-parity ledger read"
+        },
+        {
+          "type": "fix",
+          "text": "Exact-match the signed Stripe webhook allowlist"
+        },
+        {
+          "type": "fix",
+          "text": "Bind dataset schema as JSONB on update"
+        },
+        {
+          "type": "fix",
+          "text": "Unmeasured model scores are null; remove unreachable prompt list/test routes"
+        },
+        {
+          "type": "fix",
+          "text": "Drop the unanchored integrations/webhooks public rule"
+        },
+        {
+          "type": "fix",
+          "text": "Stable event_id, real total_count and 1-based paging on /threats"
+        },
+        {
+          "type": "fix",
+          "text": "Make dataset PUT a partial update of writable fields"
+        },
+        {
+          "type": "fix",
+          "text": "Typed binds for every security-service writer; wire event intake"
+        },
+        {
+          "type": "fix",
+          "text": "Preserve standalone checkout through email verification"
+        },
+        {
+          "type": "fix",
+          "text": "List and audit custom roles in the tenant being managed"
+        },
+        {
+          "type": "fix",
+          "text": "IP block/whitelist writes actually persist"
+        },
+        {
+          "type": "fix",
+          "text": "Offer assignable permissions and render ui-core toasts"
+        },
+        {
+          "type": "fix",
+          "text": "Match feedback position by UUID and result type"
+        },
+        {
+          "type": "fix",
+          "text": "Preserve purchased subscriptions during unreviewed package transitions"
+        },
+        {
+          "type": "fix",
+          "text": "Restore main frontend CI"
+        },
+        {
+          "type": "fix",
+          "text": "Raise the Hive api database pool to 15+5 for Shopify webhook bursts"
+        },
+        {
+          "type": "fix",
+          "text": "Own checkout and package transitions across retries"
+        },
+        {
+          "type": "fix",
+          "text": "Sanitize CDN provider_error 502 body"
+        },
+        {
+          "type": "fix",
+          "text": "Support can read but not write tenant custom roles"
+        },
+        {
+          "type": "fix",
+          "text": "Finish backend fixture and test-census qualification"
+        },
+        {
+          "type": "fix",
+          "text": "Expose passive shared embedding capability health"
+        },
+        {
+          "type": "fix",
+          "text": "Show saved Sales Kit after offering detail reload"
+        },
+        {
+          "type": "fix",
+          "text": "Reuse weekly Tarpaulin report for coverage enforcement"
+        },
+        {
+          "type": "fix",
+          "text": "Backport signup CAPTCHA inventory classification"
+        },
+        {
+          "type": "fix",
+          "text": "Enforce isolated bounded local Cargo commands"
+        },
+        {
+          "type": "fix",
+          "text": "Add an open (no hold) status to the deployment policy"
+        },
+        {
+          "type": "fix",
+          "text": "Decode the product-event duplicate check as int8"
+        },
+        {
+          "type": "fix",
+          "text": "Remove the unsaved role colour selector"
+        },
+        {
+          "type": "fix",
+          "text": "Derive sanitization gate roots from roster; sanitize data-management 5xx bodies"
+        },
+        {
+          "type": "fix",
+          "text": "Untracked model cost is null; recommendations send operator input"
+        },
+        {
+          "type": "fix",
+          "text": "Scope platform-admin cross-tenant requests to the managed tenant"
+        },
+        {
+          "type": "fix",
+          "text": "IP allowlist/blocklist 500 on INET decode; validate adds"
+        },
+        {
+          "type": "fix",
+          "text": "Flag connected Square installs missing the webhook signing key at boot and in health (SAASY-API-1N)"
+        },
+        {
+          "type": "fix",
+          "text": "Wire Test Model button to real predict"
+        },
+        {
+          "type": "fix",
+          "text": "Remove fabricated login testimonial, fix auth skip-link target"
+        },
+        {
+          "type": "fix",
+          "text": "Pass rust benchmark artifacts to the perf collector as separate paths"
+        },
+        {
+          "type": "fix",
+          "text": "Publish gateway and user-service on ephemeral loopback ports"
+        },
+        {
+          "type": "fix",
+          "text": "Domain-packs stale tests/doctests, migrated service-integration DB, brand-lookup tokens"
+        },
+        {
+          "type": "fix",
+          "text": "Reap named per-run buildx builders and their _state volumes"
+        },
+        {
+          "type": "fix",
+          "text": "Cap each runner's test-compile target dir in host cleanup"
+        },
+        {
+          "type": "fix",
+          "text": "Gate prompt registry and graph context on the context features"
+        },
+        {
+          "type": "fix",
+          "text": "Stream compile-targets output so a timed-out run shows its work"
+        },
+        {
+          "type": "fix",
+          "text": "Send the openid scope once in OIDC authorize URLs"
+        },
+        {
+          "type": "fix",
+          "text": "Sanitize 5xx bodies rendering error-variant payloads"
+        },
+        {
+          "type": "fix",
+          "text": "Replace the never-compiling ai-monitoring perf bench leg"
+        },
+        {
+          "type": "fix",
+          "text": "Flag 5xx bodies rendering error-variant payload fields"
+        },
+        {
+          "type": "fix",
+          "text": "Bind the custom-domain verify flip to the polled hostname"
+        },
+        {
+          "type": "fix",
+          "text": "Keep SaaSy JSON-LD unless the request Host is a tenant site host"
+        },
+        {
+          "type": "fix",
+          "text": "Gate tool_proposal like factory, its only caller"
+        },
+        {
+          "type": "fix",
+          "text": "Keep Criterion benchmark ids and estimates in the Rust parser"
+        },
+        {
+          "type": "fix",
+          "text": "Type the provider parameter in the employee outbox payload"
+        },
+        {
+          "type": "fix",
+          "text": "Inherit axum and tokio from the workspace"
+        },
+        {
+          "type": "fix",
+          "text": "Bootstrap the user-service schema before its shared-database suites"
+        },
+        {
+          "type": "fix",
+          "text": "Finish the pyo3 0.29 Bound migration for default features"
+        },
+        {
+          "type": "fix",
+          "text": "Stop build.rs spawning a nested cargo that deadlocks"
+        },
+        {
+          "type": "fix",
+          "text": "A 408 or 429 from business-service is not a definite refusal"
+        },
+        {
+          "type": "fix",
+          "text": "Bound object key work in the lossless JSON formatter"
+        },
+        {
+          "type": "fix",
+          "text": "Create user_activities so GDPR export and anonymize stop 500ing"
+        },
+        {
+          "type": "fix",
+          "text": "Drop the mongodb feature that cannot compile"
+        },
+        {
+          "type": "fix",
+          "text": "Resolve missing inference_kind from model_type on load"
+        },
+        {
+          "type": "fix",
+          "text": "Patch fixable RUSTSEC advisories; document unreachable zip extract advisories"
+        },
+        {
+          "type": "fix",
+          "text": "Cross-tenant admin user routes, internal-token tenant scope, threats/analyze authz"
+        },
+        {
+          "type": "fix",
+          "text": "Migration 066 down keeps the cluster-wide sweeper role"
+        },
+        {
+          "type": "fix",
+          "text": "A politeness floor spaces every request to a host"
+        },
+        {
+          "type": "fix",
+          "text": "Writers queued behind a tenant-archive purge refuse instead of re-creating rows"
+        },
+        {
+          "type": "fix",
+          "text": "Make the workspace lib-test build compile (Rust Integration Tests unit job)"
+        },
+        {
+          "type": "fix",
+          "text": "Formatting-only JSON-LD edits say so beside the editor"
+        },
+        {
+          "type": "fix",
+          "text": "Repair RLS probes that never ran; fix HRIS relay purge rejected as injection"
+        },
+        {
+          "type": "fix",
+          "text": "Record user-service db_bootstrap in the target coverage contract"
+        },
+        {
+          "type": "fix",
+          "text": "Native observer qualifies Cargo worker-thread children and runner 2.338"
+        },
+        {
+          "type": "fix",
+          "text": "Persist inference_kind and scoring_strategy in ai_models.metadata"
+        },
+        {
+          "type": "fix",
+          "text": "Retire the portal service worker on site hosts"
+        },
+        {
+          "type": "fix",
+          "text": "Gate internal routes on the token before body extraction"
+        },
+        {
+          "type": "fix",
+          "text": "Audit session.revoke_all with the caller as actor"
+        },
+        {
+          "type": "fix",
+          "text": "Every creator the tenant purges cover refuses an archived tenant"
+        },
+        {
+          "type": "fix",
+          "text": "Compile search recommendations under --no-default-features"
+        },
+        {
+          "type": "fix",
+          "text": "Release the CRM tenant-purge savepoint once"
+        },
+        {
+          "type": "fix",
+          "text": "Sanitize unexpected ACH setup failures"
+        },
+        {
+          "type": "fix",
+          "text": "Let in-flight cron ticks finish on shutdown"
+        },
+        {
+          "type": "fix",
+          "text": "Clear post-baseline ratchet findings in brain and business"
+        },
+        {
+          "type": "fix",
+          "text": "Bind Stripe account cache to session"
+        },
+        {
+          "type": "fix",
+          "text": "Alert from the host when Redis renewal stops reaching it"
+        },
+        {
+          "type": "fix",
+          "text": "Retire unrouted HomePage, cover the live dashboard"
+        },
+        {
+          "type": "fix",
+          "text": "Release Hidden Hollow Shopify SKU recovery"
+        },
+        {
+          "type": "fix",
+          "text": "Anchor staged ESLint parser roots per package"
+        },
+        {
+          "type": "fix",
+          "text": "Resubscribe the reply consumer after the broker connection drops"
+        },
+        {
+          "type": "fix",
+          "text": "Per-kind backup retention lock; correct the RLS-bypass invariant"
+        },
+        {
+          "type": "fix",
+          "text": "SSRF-guard External inference URLs"
+        },
+        {
+          "type": "fix",
+          "text": "Authenticate /api/v1/admin/* before reading the body"
+        },
+        {
+          "type": "fix",
+          "text": "Accept terse autoapply listings without a count summary"
+        },
+        {
+          "type": "fix",
+          "text": "Restore the native observer's exited-leader fallback"
+        },
+        {
+          "type": "fix",
+          "text": "Revoke runtime mutation on append-only history tables"
+        },
+        {
+          "type": "fix",
+          "text": "Revoke runtime mutation on append-only vertical audit trails"
+        },
+        {
+          "type": "fix",
+          "text": "Revoke runtime rewrite of the immutable consumption ledger"
+        },
+        {
+          "type": "fix",
+          "text": "Revoke runtime mutation on the rule event audit"
+        },
+        {
+          "type": "fix",
+          "text": "Enforce the LLM ledgers as far as their writers allow"
+        },
+        {
+          "type": "fix",
+          "text": "Revoke runtime rewrite of the sync change feed"
+        },
+        {
+          "type": "fix",
+          "text": "Make the migration chain apply on a fresh database"
+        },
+        {
+          "type": "fix",
+          "text": "Set decoded_cleanly in the research_company test ScrapeResponse"
+        },
+        {
+          "type": "fix",
+          "text": "Delete tenant blobs inside the fenced document purge"
+        },
+        {
+          "type": "fix",
+          "text": "Turn repo-guards and cargo-lockfile-gate green on main"
+        },
+        {
+          "type": "fix",
+          "text": "Repair five backend-required suites broken by parallel merges"
+        },
+        {
+          "type": "fix",
+          "text": "Authorize tenant and config writes before parsing the body"
+        },
+        {
+          "type": "fix",
+          "text": "Upgrade direct ZIP and spreadsheet dependencies"
+        },
+        {
+          "type": "fix",
+          "text": "Pin production Node images to patched LTS"
+        },
+        {
+          "type": "fix",
+          "text": "Bound post-upload backup housekeeping and keep stalls warn-only"
+        },
+        {
+          "type": "fix",
+          "text": "Fence chunked upload completion and clean up its leftovers"
+        },
+        {
+          "type": "fix",
+          "text": "Emit readOnlyHint on HelloSaaSy inbound tools/list (aether#1172)"
+        },
+        {
+          "type": "fix",
+          "text": "Static customer-history SQL in prospect search"
+        },
+        {
+          "type": "fix",
+          "text": "Regenerate expected-columns for the connector OAuth tables"
+        },
+        {
+          "type": "fix",
+          "text": "Chunked upload follow-up — keep replay objects, commit before delete, guard checksum abort"
+        },
+        {
+          "type": "fix",
+          "text": "Guard test_infrastructure.sh ROOT against CDPATH"
+        },
+        {
+          "type": "fix",
+          "text": "Guard self-directory resolution against CDPATH in 14 scripts"
+        },
+        {
+          "type": "fix",
+          "text": "Clear new ratchet findings in brain and business on main"
+        },
+        {
+          "type": "fix",
+          "text": "Load private MockForge server credentials"
+        },
+        {
+          "type": "fix",
+          "text": "Read the OAuth provider catalog without a tenant context"
+        },
+        {
+          "type": "fix",
+          "text": "Wait for prospect discovery and verification before workflow continuation"
+        },
+        {
+          "type": "fix",
+          "text": "Pin mise pnpm to 10.26.0 to match packageManager"
+        },
+        {
+          "type": "fix",
+          "text": "Resolve prod-psql through the Ashburn Postgres container"
+        },
+        {
+          "type": "fix",
+          "text": "Classify-buyer-type honors Idempotency-Key"
+        },
+        {
+          "type": "fix",
+          "text": "Company classify-buyer-type honors Idempotency-Key too"
+        },
+        {
+          "type": "fix",
+          "text": "Run graph_context database tests in the Brain DB gate"
+        },
+        {
+          "type": "fix",
+          "text": "Skip core.sshCommand when ssh config already keeps alive"
+        },
+        {
+          "type": "fix",
+          "text": "Snapshot balances from /accounts/get, not the Balance product"
+        },
+        {
+          "type": "fix",
+          "text": "Run the restore drill in a throwaway cluster off the pgdata volume"
+        },
+        {
+          "type": "fix",
+          "text": "Resolve shared PR verification failures"
+        },
+        {
+          "type": "fix",
+          "text": "Resolve UI shim fixture aliases without baseUrl"
+        },
+        {
+          "type": "fix",
+          "text": "CRM list pages read the real list response shape"
+        },
+        {
+          "type": "fix",
+          "text": "Include authoritative renewal counts and due details (#13450 part 1)"
+        },
+        {
+          "type": "fix",
+          "text": "CRM offline queue stops failing changes it never sent; each stuck change is retryable or discardable with a reason"
+        },
+        {
+          "type": "fix",
+          "text": "Triage proposals at the source and at read time (#13450 part 2)"
+        },
+        {
+          "type": "fix",
+          "text": "Enforce session deadlines across refresh and tenant switches"
+        },
+        {
+          "type": "fix",
+          "text": "Repair shared test contracts and API inventory"
+        },
+        {
+          "type": "fix",
+          "text": "Vault grid scrolls instead of clipping"
+        },
+        {
+          "type": "fix",
+          "text": "Team vault view lists items moved to Team"
+        },
+        {
+          "type": "fix",
+          "text": "Restore Python adapter bridge and database configuration"
+        },
+        {
+          "type": "fix",
+          "text": "Longer upstream timeout for the buyer-type classify routes"
+        },
+        {
+          "type": "fix",
+          "text": "NL generator honours negation, maps schedule, assignee, title and content"
+        },
+        {
+          "type": "fix",
+          "text": "List reads the service envelope and badges every saved workflow"
+        },
+        {
+          "type": "fix",
+          "text": "Separate complete Trivy reports from severity verdicts"
+        },
+        {
+          "type": "fix",
+          "text": "Resolve checkout plan to billing plan; fail cleanly and recoverably"
+        },
+        {
+          "type": "fix",
+          "text": "Preserve client contracts during company merges"
+        },
+        {
+          "type": "fix",
+          "text": "Record integration_sync_history for every QBO mirror sync"
+        },
+        {
+          "type": "fix",
+          "text": "Sales Kit save shows a confirmed result or an error; upsert scoped to the tenant's product"
+        },
+        {
+          "type": "fix",
+          "text": "Project brain scores into customer_health_scores and store the score bucket as status"
+        },
+        {
+          "type": "fix",
+          "text": "Protected owner passes owner and billing-admin gates via token roles"
+        },
+        {
+          "type": "fix",
+          "text": "Grid/no-raw-table honours datagrid-exempt markers"
+        },
+        {
+          "type": "fix",
+          "text": "Skip robots-only crawler tokens and hash each crawler's own IP"
+        },
+        {
+          "type": "fix",
+          "text": "Refuse read-only delegated tokens on agent invoke and brain writes"
+        },
+        {
+          "type": "fix",
+          "text": "Qualify the exact GitHub runner 2.338.2 executable pair"
+        },
+        {
+          "type": "fix",
+          "text": "Size encrypted staging from the newest completed backup"
+        },
+        {
+          "type": "fix",
+          "text": "Keep codedig security baseline routes off the public edge"
+        },
+        {
+          "type": "fix",
+          "text": "Resolve checkout catalog plans before entitlement writes"
+        },
+        {
+          "type": "fix",
+          "text": "Qualify Operations SHA-1 after ZIP merge"
+        },
+        {
+          "type": "fix",
+          "text": "Reopen codedig /admin and GraphQL at the edge"
+        },
+        {
+          "type": "fix",
+          "text": "Preserve scoped vault server sorting and folder labels"
+        },
+        {
+          "type": "fix",
+          "text": "Recover uncertain replies and clarify conversation history"
+        },
+        {
+          "type": "fix",
+          "text": "Preserve owner roles, session deadlines and uncertain request recovery"
+        },
+        {
+          "type": "fix",
+          "text": "Compose durable turns and approved action status receipts"
+        },
+        {
+          "type": "fix",
+          "text": "Merge reviewed churn population and event-window correction"
+        },
+        {
+          "type": "fix",
+          "text": "Business lib tests compile again (manual SMS import + test schema)"
+        },
+        {
+          "type": "fix",
+          "text": "Preserve cold folder filters and verify native team receipts"
+        },
+        {
+          "type": "fix",
+          "text": "Preserve pinned restore helpers across launcher imports"
+        },
+        {
+          "type": "fix",
+          "text": "Correct Chief of Staff dispatch arguments"
+        },
+        {
+          "type": "fix",
+          "text": "Reopen codedig signup and security baselines; keep GitLab sign-in paused"
+        },
+        {
+          "type": "fix",
+          "text": "Integrate reviewed SBS safeguards into feature branch"
+        },
+        {
+          "type": "fix",
+          "text": "Bind client accounts and fence uncertain delivery across MCP"
+        },
+        {
+          "type": "fix",
+          "text": "Integrate calendar occupancy, private attribution and currency-safe renewals"
+        },
+        {
+          "type": "fix",
+          "text": "Qualify Hello SaaSy cutover catalog and operator source"
+        },
+        {
+          "type": "fix",
+          "text": "Bind Stripe writeback to durable cash and provider evidence"
+        },
+        {
+          "type": "fix",
+          "text": "Reopen codedig GitLab sign-in at the edge"
+        },
+        {
+          "type": "fix",
+          "text": "Pin verified Hive notification release"
+        },
+        {
+          "type": "fix",
+          "text": "SMS readiness preflight works against the real host"
+        },
+        {
+          "type": "fix",
+          "text": "Wait for final PostgreSQL fixture server"
+        },
+        {
+          "type": "fix",
+          "text": "Repair Business checkout and USD budget fixtures"
+        },
+        {
+          "type": "fix",
+          "text": "Reconcile Business chat admission count"
+        },
+        {
+          "type": "fix",
+          "text": "Business lib tests compile on main again (calendar import, sbs_offer, cron guard sweep source)"
+        },
+        {
+          "type": "fix",
+          "text": "Restore All my renewals through internal memberships"
+        },
+        {
+          "type": "fix",
+          "text": "Show invoice and accrual panels before editor actions"
+        },
+        {
+          "type": "fix",
+          "text": "Deploy corrected Mockforge demo scenario configuration"
+        },
+        {
+          "type": "fix",
+          "text": "Host branding and pasted signature images on HelloSaaSy"
+        },
+        {
+          "type": "fix",
+          "text": "Show people names across vault access surfaces"
+        },
+        {
+          "type": "fix",
+          "text": "Move duplicate business migration 687_early_partner_promotion to 695"
+        },
+        {
+          "type": "fix",
+          "text": "Record the business test filters added by #13623 in the coverage contract"
+        },
+        {
+          "type": "fix",
+          "text": "Keep the billing-day anchor when marking Renewed"
+        },
+        {
+          "type": "fix",
+          "text": "Use packaged Mockforge demo examples"
+        },
+        {
+          "type": "fix",
+          "text": "Retain unresolved lapsed costs in budgets"
+        },
+        {
+          "type": "fix",
+          "text": "Keep transaction Split controls visible"
+        },
+        {
+          "type": "fix",
+          "text": "Reuse Operating ledgers and remove UUID labels"
+        },
+        {
+          "type": "fix",
+          "text": "Strip INACTIVE suffix and cap tenant toasts"
+        },
+        {
+          "type": "fix",
+          "text": "Verify only new or changed local backup sets, full check weekly"
+        },
+        {
+          "type": "fix",
+          "text": "Caller headers merge with, not replace, the API client's headers"
+        },
+        {
+          "type": "fix",
+          "text": "Restore one-line needs/runs-on lists that #13713 reflowed (repo-guards red on main)"
+        },
+        {
+          "type": "fix",
+          "text": "A pending bank link the server never recorded no longer blocks Verify"
+        },
+        {
+          "type": "fix",
+          "text": "Older-renewal step no longer waits forever after a remount"
+        },
+        {
+          "type": "fix",
+          "text": "Keep the Business test target warm on FSN02"
+        },
+        {
+          "type": "fix",
+          "text": "Unaccepted bank suggestions no longer block bank-account reassignment"
+        },
+        {
+          "type": "fix",
+          "text": "One shared /auth/me cache for session reads"
+        },
+        {
+          "type": "fix",
+          "text": "Accept the reviewed manual-dispatch opt-in on native binary uploads"
+        },
+        {
+          "type": "fix",
+          "text": "Host-tunable aggressive cleanup threshold so fsn-02 keeps its build cache"
+        },
+        {
+          "type": "fix",
+          "text": "--pause-backups outlasts the nightly pg-backup and restores without a lease failure"
+        },
+        {
+          "type": "fix",
+          "text": "Show money with currency symbols everywhere"
+        },
+        {
+          "type": "fix",
+          "text": "Keep test-compile runner targets warm across idle gaps"
+        },
+        {
+          "type": "fix",
+          "text": "Add renewal and Edit bring the form into view"
+        },
+        {
+          "type": "fix",
+          "text": "Hide archived offerings by default and label them Archived"
+        },
+        {
+          "type": "fix",
+          "text": "Disambiguate duplicate nav labels"
+        },
+        {
+          "type": "fix",
+          "text": "Balance sheet subtracts expenses from current-period earnings"
+        },
+        {
+          "type": "fix",
+          "text": "Close stale tasks as cancelled, not completed"
+        },
+        {
+          "type": "fix",
+          "text": "Save the remittance due day and notice lead time on locals"
+        },
+        {
+          "type": "fix",
+          "text": "Run security-service saaspass tests in the backend matrix"
+        },
+        {
+          "type": "fix",
+          "text": "Billing-health writes no memory when a check finds nothing"
+        },
+        {
+          "type": "fix",
+          "text": "Stop dunning and charging invoices Stripe collects"
+        },
+        {
+          "type": "fix",
+          "text": "Compile the operations lib test target under full features"
+        },
+        {
+          "type": "fix",
+          "text": "Show the older invoice first when deposit matches tie"
+        },
+        {
+          "type": "fix",
+          "text": "Ignore category GL mappings whose account went inactive"
+        },
+        {
+          "type": "fix",
+          "text": "Only billing admins may start the bootstrap or seed the chart"
+        },
+        {
+          "type": "fix",
+          "text": "Category GL mapping review fixes, and run the finance tests in CI"
+        },
+        {
+          "type": "fix",
+          "text": "Accept .docx/.xlsx uploads (OOXML ZIP containers)"
+        },
+        {
+          "type": "fix",
+          "text": "Make check-docs-links.sh run and fail on broken links"
+        },
+        {
+          "type": "fix",
+          "text": "Replace unwrap with reasoned expect in mail_thread_filing_test"
+        },
+        {
+          "type": "fix",
+          "text": "Port social disconnect test to revoke_account API"
+        },
+        {
+          "type": "fix",
+          "text": "Drop impossible u16 port upper-bound check in canary config"
+        },
+        {
+          "type": "fix",
+          "text": "Use char-array pattern in draft_safety verifier"
+        },
+        {
+          "type": "fix",
+          "text": "Renewals proof script tracks current detected-obligation binds"
+        },
+        {
+          "type": "fix",
+          "text": "Make cost-efficiency and resource-planning unit suites green"
+        },
+        {
+          "type": "fix",
+          "text": "Serialize first-boot notifications table creation"
+        },
+        {
+          "type": "fix",
+          "text": "Invalidate rotation-risk cache on risk-input mutations"
+        },
+        {
+          "type": "fix",
+          "text": "Cap bulk task actions at five in-flight requests"
+        },
+        {
+          "type": "fix",
+          "text": "Load guidance sources with react-query"
+        },
+        {
+          "type": "fix",
+          "text": "Union locals PATCH can clear optional fields with null"
+        },
+        {
+          "type": "fix",
+          "text": "Point video-worker operators at the Ashburn env file"
+        },
+        {
+          "type": "fix",
+          "text": "Workflow-engine Quick Start doctest compiles again"
+        },
+        {
+          "type": "fix",
+          "text": "Wrap shared-value-objects doctests in a Result main"
+        },
+        {
+          "type": "fix",
+          "text": "Follow DataSourceConfig credentials field rename in bench"
+        },
+        {
+          "type": "fix",
+          "text": "Voip_crypto tests take the process-wide env latch"
+        },
+        {
+          "type": "fix",
+          "text": "Router tests own their temp storage dir instead of leaking it"
+        },
+        {
+          "type": "fix",
+          "text": "Incidents Load more appends instead of replacing"
+        },
+        {
+          "type": "fix",
+          "text": "Associate ConfirmDialog description with the dialog"
+        },
+        {
+          "type": "fix",
+          "text": "Exclude unscored health rows from the three remaining readers"
+        },
+        {
+          "type": "fix",
+          "text": "AnomalyDetector baselines reach the detectors"
+        },
+        {
+          "type": "fix",
+          "text": "Filter personal spend and dedupe detected renewals against the register"
+        },
+        {
+          "type": "fix",
+          "text": "Bump dompurify to 3.4.17 (SAFE_FOR_TEMPLATES bypass) + pin lockfile to all architectures"
+        },
+        {
+          "type": "fix",
+          "text": "List supported architectures explicitly so installs keep native deps"
+        },
+        {
+          "type": "fix",
+          "text": "Mirror finished renders into the content bucket so documents can be downloaded"
+        },
+        {
+          "type": "fix",
+          "text": "German stale-task rule keeps both {days} arguments"
+        },
+        {
+          "type": "fix",
+          "text": "Accept common business file types safely; file-unavailable instead of 500; no endless extracting (#13941, #13942)"
+        },
+        {
+          "type": "fix",
+          "text": "Stop sweeping soft-deleted tenants"
+        }
+      ]
+    },
+    {
       "version": "DRAFT-2026-10-12",
       "date": "2026-10-12",
       "source_through": "2026-10-12T16:13:04.712Z",
