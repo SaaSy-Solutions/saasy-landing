@@ -1,6 +1,115 @@
 {
   "entries": [
     {
+      "version": "1.14.0",
+      "date": "2026-11-09",
+      "source_through": "2026-11-09T16:08:16.628Z",
+      "curated": true,
+      "title": "Social Media Management, Deeper Integrations, and Smarter Prospecting",
+      "items": [
+        {
+          "type": "feature",
+          "text": "Manage social media from SaaSy: schedule and publish Facebook Page and Instagram posts, including single-image and carousel posts."
+        },
+        {
+          "type": "feature",
+          "text": "A unified inbox for Facebook and Instagram comments and DMs, with keyword-triggered auto-replies through Meta Private Replies."
+        },
+        {
+          "type": "feature",
+          "text": "Plain-English social analytics, pulling post metrics from Instagram, X, YouTube, TikTok, and Reddit into one view."
+        },
+        {
+          "type": "feature",
+          "text": "Optional post approval with client review links, reusable templates, and an agency desk with white-label client reports."
+        },
+        {
+          "type": "feature",
+          "text": "Connect Square alongside Stripe and QuickBooks to sync and view your commerce data inside SaaSy."
+        },
+        {
+          "type": "feature",
+          "text": "Import and sync your Stripe invoices, scoped to each business you run."
+        },
+        {
+          "type": "feature",
+          "text": "A read-only QuickBooks data view backed by a per-business mirror of your records."
+        },
+        {
+          "type": "feature",
+          "text": "Guided integration setup that asks only for what is missing, plus a connector catalog to enable tools and connect them over OAuth."
+        },
+        {
+          "type": "feature",
+          "text": "Build a connector straight from an API's documentation, then review connector definitions before they go live."
+        },
+        {
+          "type": "feature",
+          "text": "Native prospect search with an ideal-customer-profile preview and a cost estimate before you spend."
+        },
+        {
+          "type": "feature",
+          "text": "Save prospects into your CRM with merge review and provenance, find and verify work emails, and classify buyer types."
+        },
+        {
+          "type": "feature",
+          "text": "Ask SaaSy now answers with cited context from your business graph and remembers each conversation you own."
+        },
+        {
+          "type": "feature",
+          "text": "A relationships explorer for your business graph, and automatic matching of QuickBooks and Stripe customers to your CRM with reviewable evidence."
+        },
+        {
+          "type": "feature",
+          "text": "Churn predictions with provenance and backtested accuracy, plus revenue and churn views over any period you choose."
+        },
+        {
+          "type": "feature",
+          "text": "Per-business general ledger books, bank transactions posted into the ledger, and budget categories mapped to GL accounts."
+        },
+        {
+          "type": "feature",
+          "text": "A single view of your subscriptions with spend totals, plus usage-based (pay as you go) pricing."
+        },
+        {
+          "type": "feature",
+          "text": "Shared renewal reminders with editable schedules and recipients, and a clear notice when an auto-renewal passes."
+        },
+        {
+          "type": "feature",
+          "text": "SaaSPass vault adds rotation-risk badges and an offboarding view with a bulk-rotate checklist."
+        },
+        {
+          "type": "feature",
+          "text": "Client contracts with billing periods, one-time timelog import, and per-business set-asides with quarterly estimated-tax rollups."
+        },
+        {
+          "type": "feature",
+          "text": "A getting-started checklist on your dashboard to guide account setup."
+        },
+        {
+          "type": "feature",
+          "text": "Connect your own PostHog and Sentry projects for analytics and error tracking."
+        },
+        {
+          "type": "improvement",
+          "text": "Sortable, filterable data tables across CRM, financials, people, payments, and settings, now consistent and mobile-friendly."
+        },
+        {
+          "type": "improvement",
+          "text": "Approval prompts now spell out exactly what approving a pending action will do."
+        },
+        {
+          "type": "improvement",
+          "text": "More relevant Ask SaaSy memory recall, with business-graph context turned on by default."
+        },
+        {
+          "type": "improvement",
+          "text": "Safer AI email drafts: a built-in safety check runs before anything is sent."
+        }
+      ]
+    },
+    {
       "version": "DRAFT-2026-10-12",
       "date": "2026-10-12",
       "source_through": "2026-10-12T16:13:04.712Z",
